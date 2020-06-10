@@ -1,4 +1,5 @@
 
+
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -21,6 +22,15 @@
 	- [Commissions Report](#commissions-report) (subscriptions/commissions-report)
 	- [Deposit Addresses](#deposit-addresses) (subscriptions/deposit)
 	- [Invoices](#invoices) (subscriptions/invoices)
+	- [Subscriptions Change Package](#subscriptions-change-package) (subscriptions/change-package)
+	- [Subscriptions Change Setting](#subscriptions-change-setting) (subscriptions/change-setting)
+	- [Subscriptions Disable Private Server](#subscriptions-disable-private-server) (subscriptions/disable-private-server)
+	- [Subscriptions Disable Shared Server](#subscriptions-disable-shared-server) (subscriptions/disable-shared-server)
+	- [Subscriptions Enable Private Server](#subscriptions-enable-private-server) (subscriptions/enable-private-server)
+	- [Subscriptions Enable Shared Server](#subscriptions-enable-shared-server) (subscriptions/enable-shared-server)
+	- [Subscriptions List Private Servers](#subscriptions-list-private-servers) (subscriptions/list-private-servers)
+	- [Subscriptions List Shared Servers](#subscriptions-list-shared-servers) (subscriptions/list-shared-servers)
+	- [Subscriptions Package Recommendation](#subscriptions-package-recommendation) (subscriptions/package-recommendation)
 - Exchange Api Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
 	- [Delete Exchange API Key](#delete-exchange-api-key) (exchange-api-keys/delete)
@@ -87,7 +97,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **[CLOSED-BETA-VERSION]**
 * All endpoints return either a JSON object or array.
-* There are currently 59 endpoints as part of version 2.
+* There are currently 68 endpoints as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -268,6 +278,122 @@ GET /api/v2/subscriptions/details
 **Parameters:**
 None
 
+**Successful Response:**
+```javascript
+{
+    "data": {
+        "subscription": {
+            "enabled": true,
+            "name": "Free Basic",
+            "price": 0
+        },
+        "user_settings": {
+            "enabled": true,
+            "twofactor": true,
+            "private_hosting": false,
+            "private_hive": false,
+            "api_access": true,
+            "ratelimit": {
+                "ms": 1000
+            }
+        },
+        "strategies": {
+            "enabled": true,
+            "commissions": 0.002,
+            "orderbook_refresh": 500,
+            "liquidity_check_maximum": 100,
+            "algos_excluded": [
+                "maker_taker",
+                "market_maker_taker",
+                "twap",
+                "matrix_price_movement"
+            ],
+            "maximum": {
+                "strategies": 10,
+                "templates": 3,
+                "concurrent_exchange_api_key": 2,
+                "duration": 21600
+            },
+            "ratelimit": {
+                "orders_per_second": 1
+            },
+            "spread": {
+                "maximum": 30,
+                "minimum": -30
+            },
+            "price_offset": {
+                "maximum": 10,
+                "minimum": -10
+            },
+            "qty_parent": {
+                "maximum": 0.01,
+                "minimum": 0
+            },
+            "qty_child": {
+                "maximum": 0.01,
+                "minimum": 0
+            },
+            "sleep_interval": {
+                "maximum": 30,
+                "minimum": 2
+            },
+            "export": {
+                "transactions_rows": 10000
+            },
+            "servers": {
+                "shared_resource": true,
+                "private_resource": false,
+                "locations": {
+                    "private": {
+                        "active": [],
+                        "inactive": []
+                    },
+                    "shared": {
+                        "active": [
+                            "Singapore"
+                        ],
+                        "inactive": [
+                            "Frankfurt",
+                            "London",
+                            "Bangalore",
+                            "Toronto",
+                            "Amsterdam"
+                        ]
+                    }
+                }
+            }
+        },
+        "subaccounts": {
+            "enabled": true,
+            "maximum_accounts": 0,
+            "qty_parent": {
+                "maximum": 1
+            },
+            "qty_child": {
+                "minimum": 0.5
+            },
+            "exchanges": [
+                "binance",
+                "bitfinex"
+            ],
+            "see_all_strategies": false,
+            "export": false,
+            "exchange_api_keys": {
+                "share_master": false,
+                "add_own": false
+            },
+            "api_access": false,
+            "force_twofactor": true
+        },
+        "exchange_api_keys": {
+            "enabled": true,
+            "maximum_stored": 3
+        }
+    },
+    }
+```
+
+
 ## Cancel Subscription
 
 
@@ -303,6 +429,96 @@ None
 
 ```
 GET /api/v2/subscriptions/invoices
+```
+
+**Parameters:**
+None
+
+## Subscriptions Change Package
+
+
+```
+GET /api/v2/subscriptions/change-package
+```
+
+**Parameters:**
+None
+
+## Subscriptions Change Setting
+
+
+```
+GET /api/v2/subscriptions/change-setting
+```
+
+**Parameters:**
+None
+
+## Subscriptions Disable Private Server
+
+
+```
+GET /api/v2/subscriptions/disable-private-server
+```
+
+**Parameters:**
+None
+
+## Subscriptions Disable Shared Server
+
+
+```
+GET /api/v2/subscriptions/disable-shared-server
+```
+
+**Parameters:**
+None
+
+## Subscriptions Enable Private Server
+
+
+```
+GET /api/v2/subscriptions/enable-private-server
+```
+
+**Parameters:**
+None
+
+## Subscriptions Enable Shared Server
+
+
+```
+GET /api/v2/subscriptions/enable-shared-server
+```
+
+**Parameters:**
+None
+
+## Subscriptions List Private Servers
+
+
+```
+GET /api/v2/subscriptions/list-private-servers
+```
+
+**Parameters:**
+None
+
+## Subscriptions List Shared Servers
+
+
+```
+GET /api/v2/subscriptions/list-shared-servers
+```
+
+**Parameters:**
+None
+
+## Subscriptions Package Recommendation
+
+
+```
+GET /api/v2/subscriptions/package-recommendation
 ```
 
 **Parameters:**
