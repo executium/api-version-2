@@ -1,6 +1,3 @@
-
-
-
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -24,7 +21,7 @@
 	- [Invoices](#invoices) (subscriptions/invoices)
 - Exchange Api Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
-	- [Delete](#delete) (exchange-api-keys/delete)
+	- [Delete Exchange API Key](#delete-exchange-api-key) (exchange-api-keys/delete)
 	- [List](#list) (exchange-api-keys/list)
 - Strategy
 	- [Create New Strategy](#create-new-strategy) (strategy/create)
@@ -42,7 +39,7 @@
 - Subaccounts
 	- [Create Subaccount](#create-subaccount) (subaccounts/create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/list)
-	- [Delete](#delete) (subaccounts/delete)
+	- [Delete Subaccount](#delete-subaccount) (subaccounts/delete)
 	- [Edit Subaccount](#edit-subaccount) (subaccounts/edit)
 - User
 	- [Close Account](#close-account) (user/close-account)
@@ -293,25 +290,32 @@ secret | 4 | YES |  | API secret
 password | 0 | NO |  | Some exchanges, such as OKEx require a password to be provided.
 
 
-## Delete
-
+## Delete Exchange API Key
+Delete a Exchange API Key from your account. In the event that the key is being used by a running strategy you will not be able to remove the key until that has been stopped.
 
 ```
 GET /api/v2/exchange-api-keys/delete
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id | 0 | YES |  | Provide the ID of the key you wish to remove,
+
 
 ## List
-
+A full list of accessible Exchange API Keys in your account. This will not show the API keys secrets. If a subaccount user is accessing the API key list they will only see according to their permissions.
 
 ```
 GET /api/v2/exchange-api-keys/list
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit | 0 | NO | 10 | 
+page | 0 | NO | 1 | 
+
 
 ## Create New Strategy
 Create a new strategy, you will be required to make additional modifications using other endpoints such as the algo selector and updating the information within.
@@ -501,6 +505,7 @@ export_enabled | 0 | YES |  | The subaccount ability to export data (true/false)
 share_accounts_apikeys | 0 | YES |  | Allow or deny the subaccount to have access to all of the keys in the account (true/false).
 manage_own_apikeys | 0 | YES |  | Provide the subaccount the ability to manage their own api keys (true/false).
 force_twofactor | 0 | YES |  | Force the subaccount to setup two factor on their account (true/false)
+allow_api_access | 0 | YES |  | Allow or deny the subaccount access to the account API, in the event the account is given access new API keys for the subaccount will need to be generated (true/false).
 
 
 ## List All Subaccounts
@@ -513,7 +518,7 @@ GET /api/v2/subaccounts/list
 **Parameters:**
 None
 
-## Delete
+## Delete Subaccount
 
 
 ```
