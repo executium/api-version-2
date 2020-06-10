@@ -37,7 +37,7 @@
 	- [Create Subaccount](#create-subaccount) (subaccounts/create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/list)
 	- [Delete](#delete) (subaccounts/delete)
-	- [Edit](#edit) (subaccounts/edit)
+	- [Edit Subaccount](#edit-subaccount) (subaccounts/edit)
 - User
 	- [Close Account](#close-account) (user/close-account)
 	- [User Account Balance](#user-account-balance) (user/account-balance)
@@ -253,7 +253,7 @@ GET /api/v2/exchange-api-keys/add
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 exchange | 0 | YES |  | See the supported exchanges via the `strategy/list-exchanges` endpoint
-label | 6 | YES |  | Label the 
+label | 6 | YES |  | The label will appear when selecting your API keys for strategies. 
 token | 5 | YES |  | API key/token
 secret | 4 | YES |  | API secret
 password | 0 | NO |  | Some exchanges, such as OKEx require a password to be provided.
@@ -414,14 +414,26 @@ GET /api/v2/public/spreads/data
 None
 
 ## Create Subaccount
-
+The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
 
 ```
 GET /api/v2/subaccounts/create
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+name | 5 | YES |  | Provide the subaccount users name.
+email | 5 | YES |  | Provide the subaccount users e-mail address.
+parent_maximum | 0 | YES | 0.1 | Maximum parent in BTC that the subaccount can place per strategy
+child_maximum | 0 | YES | 0.01 | Maximum child in BTC that the subaccount can place per strategy
+exchanges_enabled | 0 | YES | All | Select which exchanges the subaccount has access too for strategy management.
+concurrent_strategies_maximum | 0 | YES |  | The amount of strategies that the subaccount can run concurrently.
+export_enabled | 0 | YES |  | The subaccount ability to export data (true/false)
+share_accounts_apikeys | 0 | YES |  | Allow or deny the subaccount to have access to all of the keys in the account (true/false).
+manage_own_apikeys | 0 | YES |  | Provide the subaccount the ability to manage their own api keys (true/false).
+force_twofactor | 0 | YES |  | Force the subaccount to setup two factor on their account (true/false)
+
 
 ## List All Subaccounts
 
@@ -443,7 +455,7 @@ GET /api/v2/subaccounts/delete
 **Parameters:**
 None
 
-## Edit
+## Edit Subaccount
 
 
 ```
