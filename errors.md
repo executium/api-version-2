@@ -62,4 +62,12 @@ Every request will be accompanied by `meta` data. This provides the end user val
     }
 ```
 
+## 10xx Network Issues
+
+## 50xx Internal Issues with Executium
+Any codes which fall in the 5000-6000 range are issues relating directory to the executium trading system. When you encounter these errors there is little to nothing you as a user can do. While we will be aware at the same time as you, and working towards a solution, we do request you send your request and response data to support@executium.com as this will prove helpful.
+
+
+
+
     
