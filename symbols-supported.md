@@ -1,4 +1,4 @@
-# Support Symbols by Exchange on Executium
+# Support Symbols by Exchange on Executium - Currently: 4553
 The following tables list the exchanges and the symbols executium supports for algo creation.
 
 ## Binance Supported Symbols in Executium (updated: 10th June 2020)
