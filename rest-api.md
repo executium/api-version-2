@@ -1,11 +1,26 @@
 **Table of Contents**
 
-  - [Accessibility](#accessibility)
-  - [General Information](#general-information)
-  - [HTTP Return Codes](#http-return-codes)
-  - [Error Codes](#error-codes)
-  - [General Information on Endpoints](#general-information-on-endpoints)
-  
+- [Accessibility](#accessibility)
+- [General Information](#general-information)
+- [HTTP Return Codes](#http-return-codes)
+- [Error Codes](#error-codes)
+- [General Information on Endpoints](#general-information-on-endpoints)
+- System
+	- [Check Server Time](#check-server-time) (system/timestamp)
+	- [Endpoints](#endpoints) (system/endpoints)
+	- [Ping REST API](#ping-rest-api) (system/ping)
+- Subscriptions
+	- [Subscription Detail](#subscription-detail) (subscriptions/details)
+- Exchange API Keys
+	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
+- Strategy
+	- [Create New Strategy](#create-new-strategy) (strategy/create)
+	- [User Strategy Overview](#user-strategy-overview) (strategy/data/all)
+	- [User Strategy List](#user-strategy-list) (strategy/data/list)
+	- [Trading Algorithms](#trading-algorithms) (strategy/list-algorithms)
+	- [Exchange List](#exchange-list) (strategy/list-exchanges)
+
+
 # Public REST API Version 2 for Executium (private beta)
 
 ## Accessibility
@@ -48,4 +63,22 @@ Sample Payload below:
 * Parameters may be sent in any order.
 * If a parameter sent in both the `query string` and `request body`, the `query string` parameter will take priority.
 
+## Check Server Time
 
+## Endpoints
+
+## Ping REST API
+
+## Subscription Detail
+
+## Add Exchange API Credentials
+
+## Create New Strategy
+
+## User Strategy Overview
+
+## User Strategy List
+
+## Trading Algorithms
+
+## Exchange List
