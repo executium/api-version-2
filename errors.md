@@ -63,27 +63,48 @@ Every request will be accompanied by `meta` data. This provides the end user val
 ```
 
 ## 10xx Network Issues
+All codes in the 1000 to 1999 range relate to network issues.
+
+#### 1810 - Rate Limited
+You are sending to many requests. You can increase your allowance by consulting your executium subscription and upgrading to a higher tier.
+
+```json
+    "data": {
+        "code": 1810,
+        "error": "Ratelimit. Next access allowable at 1591765010484. Limit set to 1 request per 1000ms"
+    },
+```   
+
+
+#### 1820 - Unprocessable Entity
+The `authorization` parameters sent as part of the header has malformed. This means it cannot be read so we cannot determine your API `secret` and the attached payload.
 
 ## 20xx User Input Issues
-Codes within the range of 2000-3000 relate to user input errors, these can range from missing fields, illegal characters, or authorization problems.
+Codes within the range of 2000-2999 relate to user input errors, these can range from missing fields, illegal characters, or authorization problems.
 
-#### 2000 API Key invalid
+#### 2000 - API Key invalid
 - The provided API Key, parameter `key` was not valid. 
 
-#### 2001 Missing API Key
+#### 2001 - Missing API Key
 - The API key parameter named `key` was not present. This must be sent as part of the header.
 
-#### 2100 Missing Authorization String
--The `authorization` parameter was not present, you are required to send this as a header.
+#### 2100 - Missing Authorization String
+- The `authorization` parameter was not present, you are required to send this as a header.
 
-#### 2300 Missing Authorization String
--The `authorization` parameter was not present, you are required to send this as a header.
+#### 2300 - Missing required information to proceed
+- Review the provided feedback objects, you have issues relating to malformed inputs. Review if present `missing_parameters`, `incorrect_value_lengths` and/or `missing_information`. These will be part of the payload returned and can be used as a pointer related to what information you have to address.
+
+#### 2500 - Unknown Endpoint
+- You provided an invalid endpoint that we do not support
 
 ## 50xx Internal Issues with Executium
-Any codes which fall in the 5000-6000 range are issues relating directory to the executium trading system. When you encounter these errors there is little to nothing you as a user can do. While we will be aware at the same time as you, and working towards a solution, we do request you send your request and response data to support@executium.com as this will prove helpful.
+Any codes which fall in the 5000-5999 range are issues relating directory to the executium trading system. When you encounter these errors there is little to nothing you as a user can do. While we will be aware at the same time as you, and working towards a solution, we do request you send your request and response data to support@executium.com as this will prove helpful.
 
 #### 5000 - Internal database error
 - An issue with the executium core engine has occured, the service will be unavilable for you on that particular request until an engineer has provided a fix.
+
+#### 5100 - Empty End point data
+- You requested an endpoint the server matched but did not pipe as expected. In this extrmeley rare/ near impossible event please contact support@executium.com
 
 
 
