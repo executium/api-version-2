@@ -58,6 +58,7 @@ Every request will be accompanied by `meta` data. This provides the end user val
         "ms": 1591763909956,
         "time": 1591763909,
         "uid": 1,
+	"status":422,
         "process_time": "0.007602"
     }
 ```
@@ -65,8 +66,11 @@ Every request will be accompanied by `meta` data. This provides the end user val
 ## 10xx Network Issues
 All codes in the 1000 to 1999 range relate to network issues.
 
-#### 1810 - Rate Limited
-You are sending to many requests. You can increase your allowance by consulting your executium subscription and upgrading to a higher tier.
+#### 1500 - IP banned due to ignoring ratelimit
+- IP banned due to repeated requests following information that the sender has been violating the ratelimits of their account.  The IP ban will stay in effect at the discretion of the system.
+
+#### 1510 - Rate Limited
+- You are sending to many requests. You can increase your allowance by consulting your executium subscription and upgrading to a higher tier.
 
 ```json
     "data": {
