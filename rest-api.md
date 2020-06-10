@@ -1,5 +1,6 @@
 
 
+
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -17,7 +18,7 @@
 	- [System Status](#system-status) (system/status)
 	- [List Announcements](#list-announcements) (system/list-announcements)
 - Subscriptions
-	- [Subscription Detail](#subscription-detail) (subscriptions/details)
+	- [Subscriptions Details](#subscriptions-details) (subscriptions/details)
 	- [Cancel Subscription](#cancel-subscription) (subscriptions/cancel)
 	- [Commissions Report](#commissions-report) (subscriptions/commissions-report)
 	- [Deposit Addresses](#deposit-addresses) (subscriptions/deposit)
@@ -31,6 +32,7 @@
 	- [Subscriptions List Private Servers](#subscriptions-list-private-servers) (subscriptions/list-private-servers)
 	- [Subscriptions List Shared Servers](#subscriptions-list-shared-servers) (subscriptions/list-shared-servers)
 	- [Subscriptions Package Recommendation](#subscriptions-package-recommendation) (subscriptions/package-recommendation)
+	- [Commissions Rate](#commissions-rate) (subscriptions/commissions-rate)
 - Exchange Api Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
 	- [Delete Exchange API Key](#delete-exchange-api-key) (exchange-api-keys/delete)
@@ -97,7 +99,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **[CLOSED-BETA-VERSION]**
 * All endpoints return either a JSON object or array.
-* There are currently 68 endpoints as part of version 2.
+* There are currently 69 endpoints as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -268,7 +270,7 @@ GET /api/v2/system/list-announcements
 **Parameters:**
 None
 
-## Subscription Detail
+## Subscriptions Details
 A breakdown on your current subscription with executium. The subscription details provide a full insight into all components of your subscription plan.
 
 ```
@@ -390,7 +392,7 @@ None
             "maximum_stored": 3
         }
     },
-    }
+}
 ```
 
 
@@ -519,6 +521,16 @@ None
 
 ```
 GET /api/v2/subscriptions/package-recommendation
+```
+
+**Parameters:**
+None
+
+## Commissions Rate
+Outputs the current commissions rate that the user is paying per successful transactions. The rate will vary from account to account dependant on their subscription.
+
+```
+GET /api/v2/subscriptions/commissions-rate
 ```
 
 **Parameters:**
