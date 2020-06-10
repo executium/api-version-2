@@ -22,7 +22,23 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 ## HTTP Return Codes
 
 * HTTP `4XX` return codes are used for malformed requests where the issue exists with the sender.
+* HTTP `422` return code is applied when a user input is unexpected.
 * HTTP `429` return code is used when breaking a request rate limit.
 * HTTP `418` return code is used when an IP has been banned automatically for continuing to send requests after receiving `429` codes.
 * HTTP `5XX` return codes are used for internal errors where the issue is with the executium side.
+
+## Error Codes
+* Any endpoint has the ability to return an ERROR
+
+Sample Payload below:
+```javascript
+
+ "data": {
+        "code": 1440,
+        "error": "Missing POST parameter(s) required to proceed, review 'missing_parameters' for more information."
+    },
+   
+```
+
+* We provide a comprehensive run down on codes in [Errors Codes](./errors.md).
 
