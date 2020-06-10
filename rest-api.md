@@ -14,7 +14,7 @@
 	- [List Validation Functions](#list-validation-functions) (system/list-validation-functions)
 	- [Symbols](#symbols) (system/symbols)
 	- [System Status](#system-status) (system/status)
-	- [System List Announcements](#system-list-announcements) (system/list-announcements)
+	- [List Announcements](#list-announcements) (system/list-announcements)
 - Subscriptions
 	- [Subscription Detail](#subscription-detail) (subscriptions/details)
 	- [Cancel Subscription](#cancel-subscription) (subscriptions/cancel)
@@ -73,8 +73,8 @@
 	- [Finance List Depoists](#finance-list-depoists) (finance/list-depoists)
 	- [Finance List Withdraws](#finance-list-withdraws) (finance/list-withdraws)
 - Tests
-	- [Tests Black Scholes Calculator](#tests-black-scholes-calculator) (tests/black-scholes-calculator)
-	- [Tests Black Scholes Implied Volatility Calculator](#tests-black-scholes-implied-volatility-calculator) (tests/black-scholes-implied-volatility-calculator)
+	- [Black Scholes Calculator](#black-scholes-calculator) (tests/black-scholes-calculator)
+	- [Black Scholes Implied Volatility Calculator](#black-scholes-implied-volatility-calculator) (tests/black-scholes-implied-volatility-calculator)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -248,7 +248,7 @@ GET /api/v2/system/status
 **Parameters:**
 None
 
-## System List Announcements
+## List Announcements
 
 
 ```
@@ -561,7 +561,7 @@ GET /api/v2/strategy/stop-all-strategies
 None
 
 ## Strategy Update
-
+Strategies can only be updated when they are stopped. If the strategy is active the update attempt will not be processed.
 
 ```
 GET /api/v2/strategy/update
@@ -872,7 +872,7 @@ GET /api/v2/finance/list-withdraws
 **Parameters:**
 None
 
-## Tests Black Scholes Calculator
+## Black Scholes Calculator
 
 
 ```
@@ -882,7 +882,7 @@ GET /api/v2/tests/black-scholes-calculator
 **Parameters:**
 None
 
-## Tests Black Scholes Implied Volatility Calculator
+## Black Scholes Implied Volatility Calculator
 
 
 ```
