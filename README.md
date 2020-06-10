@@ -19,32 +19,35 @@ Name | Description
 ## Supported Exchanges in Version 2
 A table of supported exchanges in executium for version 2. The following table is the status as of 10th June 2020.
 
-Exchange | Active | Symbols Active
------------- | ------------ | ------------
-Binance|Yes|583
-Bitfinex|Yes|294
-Bitflyer|Yes|0
-Bithumb|Yes|109
-Bitmart|Yes|0
-Bitmax|Yes|201
-Bitmex|Yes|13
-Bitstamp|Yes|15
-Bittrex|Yes|415
-Coinbase|Yes|0
-Coinbasepro|Yes|59
-Coincheck|Yes|0
-Deribit|Yes|8
-Ftx|Yes|288
-Gateio|Yes|469
-Huobipro|Yes|558
-Indodax|Yes|0
-Itbit|Yes|0
-Kraken|Yes|155
-Kucoin|Yes|437
-Liquid|Yes|176
-Okex|Yes|365
-Poloniex|Yes|149
-Upbit|Yes|259
+
+The following table is the status as of 10th June 2020.
+
+Exchange | Executium Code |Active | Symbols Count
+------------ | ------------ | ------------ | ------------
+Binance|binance|Yes|583
+Bitfinex|bitfinex|Yes|294
+Bitflyer|bitflyer|Yes|0
+Bithumb|bithumb|Yes|109
+Bitmart|bitmart|Yes|0
+Bitmax|bitmax|Yes|201
+Bitmex|bitmex|Yes|13
+Bitstamp|bitstamp|Yes|15
+Bittrex|bittrex|Yes|415
+Coinbase|coinbase|Yes|0
+Coinbasepro|coinbasepro|Yes|59
+Coincheck|coincheck|Yes|0
+Deribit|deribit|Yes|8
+Ftx|ftx|Yes|288
+Gateio|gateio|Yes|469
+Huobipro|huobipro|Yes|558
+Indodax|indodax|Yes|0
+Itbit|itbit|Yes|0
+Kraken|kraken|Yes|155
+Kucoin|kucoin|Yes|437
+Liquid|liquid|Yes|176
+Okex|okex|Yes|365
+Poloniex|poloniex|Yes|149
+Upbit|upbit|Yes|259
 
 ## Supported Symbols in Version 2
 We have increased our symbols and exchange support with version 2, as of the 10th June 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
