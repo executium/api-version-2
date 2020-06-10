@@ -1,7 +1,7 @@
 # Executium Error Codes for Version 2
 Errors with executium will consist of two parts within the `data` object where you can determine if the data has been returned successfully or not.
 
-```json
+```javascript
 
  "data": {
         "code": 1440,
@@ -12,7 +12,7 @@ Errors with executium will consist of two parts within the `data` object where y
 
 We then provide additional parameters to help the end user determine if they attached all required parameters
 
-```json
+```javascript
    "missing_parameters": [
         "exchange",
         "label",
@@ -23,7 +23,7 @@ We then provide additional parameters to help the end user determine if they att
 
 In the event they provide the parameters but they do not provide the values as expect, a `missing_information` and/or `incorrect_value_lengths` parameters will be provided. The `incorrect_value_lengths` object will highlight the name of the provided parameter which is incorrectly formatted, for example `token minimum length 5`
 
-```json
+```javascript
 
 "missing_parameters": [
     "label",
@@ -51,7 +51,7 @@ In the event they provide the parameters but they do not provide the values as e
 ## Meta Object
 Every request will be accompanied by `meta` data. This provides the end user valuable information about their request such as if the was  authorized or not. The `meta` data of a return requests can be a valued asset when debugging any request.
 
-```json
+```javascript
     "meta": {
         "endpoint": "exchange-api-keys/add",
         "auth_required": true,
@@ -72,7 +72,7 @@ All codes in the 1000 to 1999 range relate to network issues.
 #### 1510 - Rate Limited
 - You are sending to many requests. You can increase your allowance by consulting your executium subscription and upgrading to a higher tier.
 
-```json
+```javascript
     "data": {
         "code": 1810,
         "error": "Ratelimit. Next access allowable at 1591765010484. Limit set to 1 request per 1000ms"
@@ -121,7 +121,7 @@ Error message | Description
 ## More about Unprocessable Entity
 For illustration purposes, find attached the php class function of `auth()`. This serves as an example of how we build our authorization string.
 
-``` php
+```php
 
 public function auth()
 {
