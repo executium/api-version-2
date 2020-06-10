@@ -1,4 +1,6 @@
 
+
+
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -13,6 +15,7 @@
 	- [Information](#information) (system/information)
 	- [List Validation Functions](#list-validation-functions) (system/list-validation-functions)
 	- [Symbols](#symbols) (system/symbols)
+	- [System Status](#system-status) (system/status)
 - Subscriptions
 	- [Subscription Detail](#subscription-detail) (subscriptions/details)
 	- [Cancel Subscription](#cancel-subscription) (subscriptions/cancel)
@@ -31,6 +34,9 @@
 	- [Exchange List](#exchange-list) (strategy/list-exchanges)
 	- [Debug Data](#debug-data) (strategy/data/debug)
 	- [Save Template](#save-template) (strategy/save-template)
+	- [Strategy List Templates](#strategy-list-templates) (strategy/list-templates)
+	- [Strategy Start](#strategy-start) (strategy/start)
+	- [Strategy Stop](#strategy-stop) (strategy/stop)
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
 - Subaccounts
@@ -41,6 +47,13 @@
 - User
 	- [Close Account](#close-account) (user/close-account)
 	- [User Account Balance](#user-account-balance) (user/account-balance)
+	- [User Access History](#user-access-history) (user/access-history)
+	- [User Account Details](#user-account-details) (user/account-details)
+	- [User List Referrals](#user-list-referrals) (user/list-referrals)
+- Wallets
+	- [Wallets Fetch Deposit Address](#wallets-fetch-deposit-address) (wallets/fetch-deposit-address)
+	- [Wallets List Balances](#wallets-list-balances) (wallets/list-balances)
+	- [Wallets Withdraw](#wallets-withdraw) (wallets/withdraw)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -198,6 +211,16 @@ None
 
 ```
 GET /api/v2/system/symbols
+```
+
+**Parameters:**
+None
+
+## System Status
+
+
+```
+GET /api/v2/system/status
 ```
 
 **Parameters:**
@@ -418,6 +441,36 @@ copy_strategy_id | 0 | YES |  | Provide the strategy ID you would like to save a
 label | 0 | NO |  | Optional field. If left blank or not provided the strategy template will be saved as the strategy name.
 
 
+## Strategy List Templates
+
+
+```
+GET /api/v2/strategy/list-templates
+```
+
+**Parameters:**
+None
+
+## Strategy Start
+
+
+```
+GET /api/v2/strategy/start
+```
+
+**Parameters:**
+None
+
+## Strategy Stop
+
+
+```
+GET /api/v2/strategy/stop
+```
+
+**Parameters:**
+None
+
 ## Spreads
 
 
@@ -529,6 +582,66 @@ password | 5 | YES |  | Provide your account password.
 
 ```
 GET /api/v2/user/account-balance
+```
+
+**Parameters:**
+None
+
+## User Access History
+
+
+```
+GET /api/v2/user/access-history
+```
+
+**Parameters:**
+None
+
+## User Account Details
+
+
+```
+GET /api/v2/user/account-details
+```
+
+**Parameters:**
+None
+
+## User List Referrals
+
+
+```
+GET /api/v2/user/list-referrals
+```
+
+**Parameters:**
+None
+
+## Wallets Fetch Deposit Address
+
+
+```
+GET /api/v2/wallets/fetch-deposit-address
+```
+
+**Parameters:**
+None
+
+## Wallets List Balances
+
+
+```
+GET /api/v2/wallets/list-balances
+```
+
+**Parameters:**
+None
+
+## Wallets Withdraw
+
+
+```
+GET /api/v2/wallets/withdraw
 ```
 
 **Parameters:**
