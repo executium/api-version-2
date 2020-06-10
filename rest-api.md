@@ -95,6 +95,17 @@ GET /api/v2/system/timestamp
 **Parameters:**
 None
 
+**Successful Response:**
+```javascript
+{
+    "data": {
+        "seconds": 1591780920,
+        "milliseconds ": 1591780920709
+    },
+}
+```
+
+
 ## Endpoints
 A list of all the available endpoints.
 
