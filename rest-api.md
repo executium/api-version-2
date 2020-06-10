@@ -34,9 +34,14 @@
 	- [Strategy List Templates](#strategy-list-templates) (strategy/list-templates)
 	- [Strategy Start](#strategy-start) (strategy/start)
 	- [Strategy Stop](#strategy-stop) (strategy/stop)
+	- [Strategy List Active Strategies](#strategy-list-active-strategies) (strategy/list-active-strategies)
+	- [Strategy List Strategy Transactions](#strategy-list-strategy-transactions) (strategy/list-strategy-transactions)
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
 	- [Fetch Symbol Price](#fetch-symbol-price) (public/fetch-symbol-price)
+	- [Public Bitcoin Price Tracker](#public-bitcoin-price-tracker) (public/bitcoin-price-tracker)
+	- [Public Fetch Symbol Trades](#public-fetch-symbol-trades) (public/fetch-symbol-trades)
+	- [Public Realtime Bitcoin Profit](#public-realtime-bitcoin-profit) (public/realtime-bitcoin-profit)
 - Subaccounts
 	- [Create Subaccount](#create-subaccount) (subaccounts/create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/list)
@@ -48,10 +53,16 @@
 	- [User Access History](#user-access-history) (user/access-history)
 	- [User Account Details](#user-account-details) (user/account-details)
 	- [User List Referrals](#user-list-referrals) (user/list-referrals)
+	- [User Active Sessions](#user-active-sessions) (user/active-sessions)
+	- [User Security Settings](#user-security-settings) (user/security-settings)
 - Wallets
 	- [Wallets Fetch Deposit Address](#wallets-fetch-deposit-address) (wallets/fetch-deposit-address)
 	- [Wallets List Balances](#wallets-list-balances) (wallets/list-balances)
 	- [Wallets Withdraw](#wallets-withdraw) (wallets/withdraw)
+- Finance
+	- [Finance List Commissions Paid](#finance-list-commissions-paid) (finance/list-commissions-paid)
+	- [Finance List Recent Transactions](#finance-list-recent-transactions) (finance/list-recent-transactions)
+	- [Finance List Top Strategy Pnl](#finance-list-top-strategy-pnl) (finance/list-top-strategy-pnl)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -476,6 +487,26 @@ GET /api/v2/strategy/stop
 **Parameters:**
 None
 
+## Strategy List Active Strategies
+
+
+```
+GET /api/v2/strategy/list-active-strategies
+```
+
+**Parameters:**
+None
+
+## Strategy List Strategy Transactions
+
+
+```
+GET /api/v2/strategy/list-strategy-transactions
+```
+
+**Parameters:**
+None
+
 ## Spreads
 
 
@@ -500,6 +531,36 @@ symbol |  | YES |  | The executium code, which can be found at [exchanges-suppor
 side |  | YES |  | Choice: 'asks' or 'bids'; If you input 'buy' it will show 'asks'; If you input 'sell' it will show 'bids'; No other inputs will be accepted.
 level |  | NO | 1 | The orderbook level, from 1 to 10
 
+
+## Public Bitcoin Price Tracker
+
+
+```
+GET /api/v2/public/bitcoin-price-tracker
+```
+
+**Parameters:**
+None
+
+## Public Fetch Symbol Trades
+
+
+```
+GET /api/v2/public/fetch-symbol-trades
+```
+
+**Parameters:**
+None
+
+## Public Realtime Bitcoin Profit
+
+
+```
+GET /api/v2/public/realtime-bitcoin-profit
+```
+
+**Parameters:**
+None
 
 ## Create Subaccount
 The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
@@ -638,6 +699,26 @@ GET /api/v2/user/list-referrals
 **Parameters:**
 None
 
+## User Active Sessions
+
+
+```
+GET /api/v2/user/active-sessions
+```
+
+**Parameters:**
+None
+
+## User Security Settings
+
+
+```
+GET /api/v2/user/security-settings
+```
+
+**Parameters:**
+None
+
 ## Wallets Fetch Deposit Address
 
 
@@ -663,6 +744,36 @@ None
 
 ```
 GET /api/v2/wallets/withdraw
+```
+
+**Parameters:**
+None
+
+## Finance List Commissions Paid
+
+
+```
+GET /api/v2/finance/list-commissions-paid
+```
+
+**Parameters:**
+None
+
+## Finance List Recent Transactions
+
+
+```
+GET /api/v2/finance/list-recent-transactions
+```
+
+**Parameters:**
+None
+
+## Finance List Top Strategy Pnl
+
+
+```
+GET /api/v2/finance/list-top-strategy-pnl
 ```
 
 **Parameters:**
