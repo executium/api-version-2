@@ -1,3 +1,4 @@
+
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -13,6 +14,7 @@
 	- [List Validation Functions](#list-validation-functions) (system/list-validation-functions)
 	- [Symbols](#symbols) (system/symbols)
 	- [System Status](#system-status) (system/status)
+	- [System List Announcements](#system-list-announcements) (system/list-announcements)
 - Subscriptions
 	- [Subscription Detail](#subscription-detail) (subscriptions/details)
 	- [Cancel Subscription](#cancel-subscription) (subscriptions/cancel)
@@ -23,6 +25,8 @@
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
 	- [Delete Exchange API Key](#delete-exchange-api-key) (exchange-api-keys/delete)
 	- [List Exchange API Keys](#list-exchange-api-keys) (exchange-api-keys/list)
+	- [Exchange Api Keys Check Balances](#exchange-api-keys-check-balances) (exchange-api-keys/check-balances)
+	- [Exchange Api Keys Test](#exchange-api-keys-test) (exchange-api-keys/test)
 - Strategy
 	- [Create New Strategy](#create-new-strategy) (strategy/create)
 	- [User Strategy Overview](#user-strategy-overview) (strategy/data/all)
@@ -36,12 +40,15 @@
 	- [Strategy Stop](#strategy-stop) (strategy/stop)
 	- [Strategy List Active Strategies](#strategy-list-active-strategies) (strategy/list-active-strategies)
 	- [Strategy List Strategy Transactions](#strategy-list-strategy-transactions) (strategy/list-strategy-transactions)
+	- [Strategy Stop All Strategies](#strategy-stop-all-strategies) (strategy/stop-all-strategies)
+	- [Strategy Update](#strategy-update) (strategy/update)
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
 	- [Fetch Symbol Price](#fetch-symbol-price) (public/fetch-symbol-price)
 	- [Public Bitcoin Price Tracker](#public-bitcoin-price-tracker) (public/bitcoin-price-tracker)
 	- [Public Fetch Symbol Trades](#public-fetch-symbol-trades) (public/fetch-symbol-trades)
 	- [Public Realtime Bitcoin Profit](#public-realtime-bitcoin-profit) (public/realtime-bitcoin-profit)
+	- [Public Exchange Information](#public-exchange-information) (public/exchange-information)
 - Subaccounts
 	- [Create Subaccount](#create-subaccount) (subaccounts/create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/list)
@@ -63,6 +70,11 @@
 	- [Finance List Commissions Paid](#finance-list-commissions-paid) (finance/list-commissions-paid)
 	- [Finance List Recent Transactions](#finance-list-recent-transactions) (finance/list-recent-transactions)
 	- [Finance List Top Strategy Pnl](#finance-list-top-strategy-pnl) (finance/list-top-strategy-pnl)
+	- [Finance List Depoists](#finance-list-depoists) (finance/list-depoists)
+	- [Finance List Withdraws](#finance-list-withdraws) (finance/list-withdraws)
+- Tests
+	- [Tests Black Scholes Calculator](#tests-black-scholes-calculator) (tests/black-scholes-calculator)
+	- [Tests Black Scholes Implied Volatility Calculator](#tests-black-scholes-implied-volatility-calculator) (tests/black-scholes-implied-volatility-calculator)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -75,6 +87,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **[CLOSED-BETA-VERSION]**
 * All endpoints return either a JSON object or array.
+* There are currently 59 endpoints as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -235,6 +248,16 @@ GET /api/v2/system/status
 **Parameters:**
 None
 
+## System List Announcements
+
+
+```
+GET /api/v2/system/list-announcements
+```
+
+**Parameters:**
+None
+
 ## Subscription Detail
 A breakdown on your current subscription with executium. The subscription details provide a full insight into all components of your subscription plan.
 
@@ -328,6 +351,26 @@ Name | MinLength | Required | Default | Description
 limit |  | NO | 10 | 
 page |  | NO | 1 | 
 
+
+## Exchange Api Keys Check Balances
+
+
+```
+GET /api/v2/exchange-api-keys/check-balances
+```
+
+**Parameters:**
+None
+
+## Exchange Api Keys Test
+
+
+```
+GET /api/v2/exchange-api-keys/test
+```
+
+**Parameters:**
+None
 
 ## Create New Strategy
 Create a new strategy, you will be required to make additional modifications using other endpoints such as the algo selector and updating the information within.
@@ -507,6 +550,26 @@ GET /api/v2/strategy/list-strategy-transactions
 **Parameters:**
 None
 
+## Strategy Stop All Strategies
+
+
+```
+GET /api/v2/strategy/stop-all-strategies
+```
+
+**Parameters:**
+None
+
+## Strategy Update
+
+
+```
+GET /api/v2/strategy/update
+```
+
+**Parameters:**
+None
+
 ## Spreads
 
 
@@ -557,6 +620,16 @@ None
 
 ```
 GET /api/v2/public/realtime-bitcoin-profit
+```
+
+**Parameters:**
+None
+
+## Public Exchange Information
+
+
+```
+GET /api/v2/public/exchange-information
 ```
 
 **Parameters:**
@@ -774,6 +847,46 @@ None
 
 ```
 GET /api/v2/finance/list-top-strategy-pnl
+```
+
+**Parameters:**
+None
+
+## Finance List Depoists
+
+
+```
+GET /api/v2/finance/list-depoists
+```
+
+**Parameters:**
+None
+
+## Finance List Withdraws
+
+
+```
+GET /api/v2/finance/list-withdraws
+```
+
+**Parameters:**
+None
+
+## Tests Black Scholes Calculator
+
+
+```
+GET /api/v2/tests/black-scholes-calculator
+```
+
+**Parameters:**
+None
+
+## Tests Black Scholes Implied Volatility Calculator
+
+
+```
+GET /api/v2/tests/black-scholes-implied-volatility-calculator
 ```
 
 **Parameters:**
