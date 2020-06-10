@@ -1,8 +1,5 @@
 
 
-
-
-
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -190,7 +187,7 @@ None
 Text the connectivity to the REST API
 
 ```
-GET /api/v2/system/ping
+POST /api/v2/system/ping
 ```
 
 **Parameters:**
@@ -559,7 +556,7 @@ None
 Provide Exchange API credentials for usage with your executium strategies. Once added they will be confirmed and then be made available to strategies.
 
 ```
-GET /api/v2/exchange-api-keys/add
+POST /api/v2/exchange-api-keys/add
 ```
 
 **Parameters:**
@@ -576,7 +573,7 @@ password |  | NO |  | Some exchanges, such as OKEx require a password to be prov
 Delete a Exchange API Key from your account. In the event that the key is being used by a running strategy you will not be able to remove the key until that has been stopped.
 
 ```
-GET /api/v2/exchange-api-keys/delete
+POST /api/v2/exchange-api-keys/delete
 ```
 
 **Parameters:**
@@ -589,7 +586,7 @@ id |  | YES |  | Provide the ID of the key you wish to remove.
 A full list of accessible Exchange API Keys in your account. This will not show the API keys secrets. If a subaccount user is accessing the API key list they will only see according to their permissions.
 
 ```
-GET /api/v2/exchange-api-keys/list
+POST /api/v2/exchange-api-keys/list
 ```
 
 **Parameters:**
@@ -623,7 +620,7 @@ None
 Create a new strategy, you will be required to make additional modifications using other endpoints such as the algo selector and updating the information within.
 
 ```
-GET /api/v2/strategy/create
+POST /api/v2/strategy/create
 ```
 
 **Parameters:**
@@ -680,7 +677,7 @@ None
 A complete list of user created strategies
 
 ```
-GET /api/v2/strategy/data/list
+POST /api/v2/strategy/data/list
 ```
 
 **Parameters:**
@@ -737,7 +734,7 @@ None
 You can save strategies which you like as templates to use again in the future.
 
 ```
-GET /api/v2/strategy/save-template
+POST /api/v2/strategy/save-template
 ```
 
 **Parameters:**
@@ -841,7 +838,7 @@ None
 
 
 ```
-GET /api/v2/public/fetch-symbol-price
+POST /api/v2/public/fetch-symbol-price
 ```
 
 **Parameters:**
@@ -896,7 +893,7 @@ None
 The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
 
 ```
-GET /api/v2/subaccounts/create
+POST /api/v2/subaccounts/create
 ```
 
 **Parameters:**
@@ -949,7 +946,7 @@ None
 If you wish to close your account with executium this is the endpoint. We may require that you close your account via the website.
 
 ```
-GET /api/v2/user/close-account
+POST /api/v2/user/close-account
 ```
 
 **Parameters:**
@@ -1151,15 +1148,18 @@ None
 
 ## Test Server Location Speed To Exchange
 As part of a sound strategy configuration, selecting the right location to run the strategy is essential. The speed test allows you to select an executium server location to ping an exchange to figure the speed between the two points. Previous speed tests are also provided in the `previous` array.
+	
+When selecting a server to run your speed test from utilize the endpoints `/api/v2/subscriptions/list-private-servers` or ``
+	
 
 ```
-GET /api/v2/tests/server-location-speed-to-exchange
+POST /api/v2/tests/server-location-speed-to-exchange
 ```
 
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-server_location |  | YES |  | Executium server location.
+server_id |  | YES |  | Executium server location.
 exchange1 |  | YES |  | The first exchange to ping.
 exchange1 |  | YES |  | The second exchange to ping.
 
