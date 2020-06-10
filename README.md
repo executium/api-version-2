@@ -32,3 +32,11 @@ Liquid|Yes|176
 Okex|Yes|365
 Poloniex|Yes|149
 Upbit|Yes|259
+
+## Supported Symbols in Version 2
+We have increased our symbols and exchange support with version 2, five-fold as of the 10th June 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
+
+> What does executium support? (10th June 2020)
+> We currently support 12 exchanges, 140 symbols and 869 market spreads
+
+We are adding and updating symbols supported by executium daily, the list for [Symbols Supported](./symbols-supported.md) can be monitored. We intend to update this support list weekly with version 2, and for a real-time look at support you can access via the api endpoint `system/symbols` for a full list of support symbols, or keep up to date in real-time via the executium website.
