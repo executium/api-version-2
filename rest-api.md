@@ -240,6 +240,21 @@ GET /api/v2/system/list-validation-functions
 **Parameters:**
 None
 
+**Successful Response:**
+```javascript
+{
+    "data": [
+        "js_millisecond_update",
+        "is_email",
+        "password_auth",
+        "is_valid_symbol",
+        "is_valid_side",
+        "is_valid_level"
+    ]
+}
+```
+
+
 ## Symbols
 
 
