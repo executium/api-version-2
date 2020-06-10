@@ -38,7 +38,7 @@ We have increased our symbols and exchange support with version 2, five-fold as 
 
 Version | Exchanges Supported | Symbols Supported | Market Spreads
 ------------ | ------------ | ------------  | ------------
-Version 2|24|4553|10,362,628
+Version 2|24|4,553|10,362,628
 Version 1|12|140|869
 
 We are adding and updating symbols supported by executium daily, the list for [Symbols Supported](./symbols-supported.md) can be monitored. We intend to update this support list weekly with version 2, and for a real-time look at support you can access via the api endpoint `system/symbols` for a full list of support symbols, or keep up to date in real-time via the executium website.
