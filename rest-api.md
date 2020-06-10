@@ -2,6 +2,7 @@
 
 
 
+
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -89,6 +90,7 @@
 - Tests
 	- [Black Scholes Calculator](#black-scholes-calculator) (tests/black-scholes-calculator)
 	- [Black Scholes Implied Volatility Calculator](#black-scholes-implied-volatility-calculator) (tests/black-scholes-implied-volatility-calculator)
+	- [Test Server Location Speed To Exchange](#test-server-location-speed-to-exchange) (tests/server-location-speed-to-exchange)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -101,7 +103,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **[CLOSED-BETA-VERSION]**
 * All endpoints return either a JSON object or array.
-* There are currently 70 endpoints as part of version 2.
+* There are currently 71 endpoints as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -1146,3 +1148,18 @@ GET /api/v2/tests/black-scholes-implied-volatility-calculator
 
 **Parameters:**
 None
+
+## Test Server Location Speed To Exchange
+As part of a sound strategy configuration, selecting the right location to run the strategy is essential. The speed test allows you to select an executium server location to ping an exchange to figure the speed between the two points. Previous speed tests are also provided in the `previous` array.
+
+```
+GET /api/v2/tests/server-location-speed-to-exchange
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+server_location |  | YES |  | Executium server location.
+exchange1 |  | YES |  | The first exchange to ping.
+exchange1 |  | YES |  | The second exchange to ping.
+
