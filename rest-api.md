@@ -33,12 +33,19 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 Sample Payload below:
 ```javascript
 
- "data": {
-        "code": 1440,
-        "error": "Missing POST parameter(s) required to proceed, review 'missing_parameters' for more information."
-    },
+"data": {
+  "code": 1440,
+  "error": "Missing POST parameter(s) required to proceed, review 'missing_parameters' for more information."
+},
    
 ```
 
 * We provide a comprehensive run down on codes in [Errors Codes](./errors.md).
+
+## General Information on Endpoints
+* For `POST` endpoints, the parameters must be sent as a `query string` or in the `request body`.
+* For `GET` endpoints, parameters must be sent as a `query string`.
+* Parameters may be sent in any order.
+* If a parameter sent in both the `query string` and `request body`, the `query string` parameter will take priority.
+
 
