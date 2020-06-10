@@ -1,9 +1,4 @@
 
-
-
-
-
-
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -20,9 +15,9 @@
 	- [Symbols](#symbols) (system/symbols)
 - Subscriptions
 	- [Subscription Detail](#subscription-detail) (subscriptions/details)
-	- [Cancel](#cancel) (subscriptions/cancel)
+	- [Cancel Subscription](#cancel-subscription) (subscriptions/cancel)
 	- [Commissions Report](#commissions-report) (subscriptions/commissions-report)
-	- [Deposit](#deposit) (subscriptions/deposit)
+	- [Deposit Addresses](#deposit-addresses) (subscriptions/deposit)
 	- [Invoices](#invoices) (subscriptions/invoices)
 - Exchange Api Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
@@ -39,12 +34,13 @@
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
 - Subaccounts
-	- [Create](#create) (subaccounts/create)
-	- [List](#list) (subaccounts/list)
+	- [Create Subaccount](#create-subaccount) (subaccounts/create)
+	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/list)
 	- [Delete](#delete) (subaccounts/delete)
 	- [Edit](#edit) (subaccounts/edit)
 - User
 	- [Close Account](#close-account) (user/close-account)
+	- [User Account Balance](#user-account-balance) (user/account-balance)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -187,7 +183,7 @@ GET /api/v2/subscriptions/details
 **Parameters:**
 None
 
-## Cancel
+## Cancel Subscription
 
 
 ```
@@ -207,8 +203,8 @@ GET /api/v2/subscriptions/commissions-report
 **Parameters:**
 None
 
-## Deposit
-
+## Deposit Addresses
+List all of your deposit addresses in your account
 
 ```
 GET /api/v2/subscriptions/deposit
@@ -398,7 +394,7 @@ GET /api/v2/public/spreads/data
 **Parameters:**
 None
 
-## Create
+## Create Subaccount
 
 
 ```
@@ -408,7 +404,7 @@ GET /api/v2/subaccounts/create
 **Parameters:**
 None
 
-## List
+## List All Subaccounts
 
 
 ```
@@ -443,6 +439,16 @@ None
 
 ```
 GET /api/v2/user/close-account
+```
+
+**Parameters:**
+None
+
+## User Account Balance
+
+
+```
+GET /api/v2/user/account-balance
 ```
 
 **Parameters:**
