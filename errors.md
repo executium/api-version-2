@@ -64,8 +64,27 @@ Every request will be accompanied by `meta` data. This provides the end user val
 
 ## 10xx Network Issues
 
+## 20xx User Input Issues
+Codes within the range of 2000-3000 relate to user input errors, these can range from missing fields, illegal characters, or authorization problems.
+
+#### 2000 API Key invalid
+- The provided API Key, parameter `key` was not valid. 
+
+#### 2001 Missing API Key
+- The API key parameter named `key` was not present. This must be sent as part of the header.
+
+#### 2100 Missing Authorization String
+-The `authorization` parameter was not present, you are required to send this as a header.
+
+#### 2300 Missing Authorization String
+-The `authorization` parameter was not present, you are required to send this as a header.
+
 ## 50xx Internal Issues with Executium
 Any codes which fall in the 5000-6000 range are issues relating directory to the executium trading system. When you encounter these errors there is little to nothing you as a user can do. While we will be aware at the same time as you, and working towards a solution, we do request you send your request and response data to support@executium.com as this will prove helpful.
+
+#### 5000 - Internal database error
+- An issue with the executium core engine has occured, the service will be unavilable for you on that particular request until an engineer has provided a fix.
+
 
 
 
