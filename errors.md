@@ -106,8 +106,32 @@ Any codes which fall in the 5000-5999 range are issues relating directory to the
 #### 5100 - Empty End point data
 - You requested an endpoint the server matched but did not pipe as expected. In this extrmeley rare/ near impossible event please contact support@executium.com
 
+## Unable to authorize with the executium version 2 API
+If you are unable to authorize we recommend you use our `php-api-sdk` for closer inspection where you can dig deeper into how we manage headers. The following messages will provide some potential help if you are having issues authorizing.
 
+Error message | Description
+------------ | ------------
+"Ratelimit." | You should consult your subscription and upgrade your package
+"Unprocessable Entity" | Check that you are authenticating your `authorization` string correctly
 
+## More about Unprocessable Entity
+For illustration purposes, find attached the php class function of `auth()`. This serves as an example of how we build our authorization string.
+
+``` php
+
+public function auth()
+{
+	$b01 = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode('{"typ":"JWT","alg":"HS256"}'));
+	$b02 = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode(json_encode($this->payload)));
+	$sig = hash_hmac('sha256', $b01 . "." . $b02, $this->api_secret, true);
+	$b03 = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($sig));
+	return $b01.'.'.$b02.'.'.$b03;
+}
+
+```
+
+## Furthur help
+If you are having issues that you cannot resolve please reach out to us at support@executium.com.
 
 
     
