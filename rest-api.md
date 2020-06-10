@@ -1,3 +1,5 @@
+
+
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -9,8 +11,15 @@
 	- [Check Server Time](#check-server-time) (system/timestamp)
 	- [Endpoints](#endpoints) (system/endpoints)
 	- [Ping REST API](#ping-rest-api) (system/ping)
+	- [Information](#information) (system/information)
+	- [List Validation Functions](#list-validation-functions) (system/list-validation-functions)
+	- [Symbols](#symbols) (system/symbols)
 - Subscriptions
 	- [Subscription Detail](#subscription-detail) (subscriptions/details)
+	- [Cancel](#cancel) (subscriptions/cancel)
+	- [Commissions Report](#commissions-report) (subscriptions/commissions-report)
+	- [Deposit](#deposit) (subscriptions/deposit)
+	- [Invoices](#invoices) (subscriptions/invoices)
 - Exchange API Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
 - Strategy
@@ -19,6 +28,15 @@
 	- [User Strategy List](#user-strategy-list) (strategy/data/list)
 	- [Trading Algorithms](#trading-algorithms) (strategy/list-algorithms)
 	- [Exchange List](#exchange-list) (strategy/list-exchanges)
+	- [Data](#data) (strategy/data/debug)
+	- [Save Template](#save-template) (strategy/save-template)
+- Public
+	- [Spreads](#spreads) (public/spreads/data)
+- Subaccounts
+	- [Create](#create) (subaccounts/create)
+	- [List](#list) (subaccounts/list)
+- User
+	- [Close Account](#close-account) (user/close-account)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -64,21 +82,274 @@ Sample Payload below:
 * If a parameter sent in both the `query string` and `request body`, the `query string` parameter will take priority.
 
 ## Check Server Time
+Test connectivity to our REST API and get the current server time with a timestamp and millisecond timing.
+
+```
+GET /api/v2/system/timestamp
+```
+
+**Parameters:**
+None
 
 ## Endpoints
+A list of all the available endpoints.
+
+```
+GET /api/v2/system/endpoints
+```
+
+**Parameters:**
+None
 
 ## Ping REST API
+Text the connectivity to the REST API
+
+```
+GET /api/v2/system/ping
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+milliseconds | 0 | NO | 0 | Provide a milliseconds timestamp and then the server will provide a subtracted return value from your input. For more information about millisecond functions visit https://github.com/executium/millisecond-functions
+
+
+**Successful Response:**
+```javascript
+{
+  "data": {
+    "our_server_ms": 1591777804071,
+    "your_sent_ms": "1591777804158",
+    "difference": -87,
+    "equation": "our_server_ms - your_sent_ms",
+    "note": "Always make sure your devices time is synchronized for best results."
+  },
+  "meta": {
+    "api_version": 2,
+    "system_version": "2.0.5",
+    "status": 200,
+    "endpoint": "system/ping",
+    "auth_required": false,
+    "ms": 1591777804071,
+    "time": 1591777804,
+    "uid": -1,
+    "process_time": "0.000204"
+  }
+}
+```
+
+
+## Information
+
+
+```
+GET /api/v2/system/information
+```
+
+**Parameters:**
+None
+
+## List Validation Functions
+
+
+```
+GET /api/v2/system/list-validation-functions
+```
+
+**Parameters:**
+None
+
+## Symbols
+
+
+```
+GET /api/v2/system/symbols
+```
+
+**Parameters:**
+None
 
 ## Subscription Detail
+A breakdown on your current subscription with executium. The subscription details provide a full insight into all components of your subscription plan.
+
+```
+GET /api/v2/subscriptions/details
+```
+
+**Parameters:**
+None
+
+## Cancel
+
+
+```
+GET /api/v2/subscriptions/cancel
+```
+
+**Parameters:**
+None
+
+## Commissions Report
+
+
+```
+GET /api/v2/subscriptions/commissions-report
+```
+
+**Parameters:**
+None
+
+## Deposit
+
+
+```
+GET /api/v2/subscriptions/deposit
+```
+
+**Parameters:**
+None
+
+## Invoices
+
+
+```
+GET /api/v2/subscriptions/invoices
+```
+
+**Parameters:**
+None
 
 ## Add Exchange API Credentials
+Provide Exchange API credentials for usage with your executium strategies. Once added they will be confirmed and then be made available to strategies.
+
+```
+GET /api/v2/exchange-api-keys/add
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+exchange | 0 | YES |  | 
+label | 6 | YES |  | 
+token | 5 | YES |  | 
+secret | 4 | YES |  | 
+password | 0 | NO |  | Some exchanges, such as OKEx require a password to be provided.
+
 
 ## Create New Strategy
+Create a new strategy, you will be required to make additional modifications using other endpoints such as the algo selector and updating the information within.
+
+```
+GET /api/v2/strategy/create
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+label | 6 | YES |  | 
+algo | 0 | YES |  | 
+
 
 ## User Strategy Overview
+A compiled list of the users strategies. This data includes what is currently active, inactive and all totals related.
+
+```
+GET /api/v2/strategy/data/all
+```
+
+**Parameters:**
+None
 
 ## User Strategy List
+A complete list of user created strategies
+
+```
+GET /api/v2/strategy/data/list
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit | 0 | NO | 10 | 
+page | 0 | NO | 1 | 
+
 
 ## Trading Algorithms
+A full list of executium trading algorithms. You will be required to reference your subscription to understand which algorithms are available for usage for you on your current strategy.
+
+```
+GET /api/v2/strategy/list-algorithms
+```
+
+**Parameters:**
+None
 
 ## Exchange List
+A full list of exchanges that excutium support
+
+```
+GET /api/v2/strategy/list-exchanges
+```
+
+**Parameters:**
+None
+
+## Data
+
+
+```
+GET /api/v2/strategy/data/debug
+```
+
+**Parameters:**
+None
+
+## Save Template
+
+
+```
+GET /api/v2/strategy/save-template
+```
+
+**Parameters:**
+None
+
+## Spreads
+
+
+```
+GET /api/v2/public/spreads/data
+```
+
+**Parameters:**
+None
+
+## Create
+
+
+```
+GET /api/v2/subaccounts/create
+```
+
+**Parameters:**
+None
+
+## List
+
+
+```
+GET /api/v2/subaccounts/list
+```
+
+**Parameters:**
+None
+
+## Close Account
+
+
+```
+GET /api/v2/user/close-account
+```
+
+**Parameters:**
+None
