@@ -1,6 +1,9 @@
 
 
 
+
+
+
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -29,7 +32,7 @@
 	- [Create New Strategy](#create-new-strategy) (strategy/create)
 	- [User Strategy Overview](#user-strategy-overview) (strategy/data/all)
 	- [User Strategy List](#user-strategy-list) (strategy/data/list)
-	- [Trading Algorithms](#trading-algorithms) (strategy/list-algorithms)
+	- [List All Trading Algorithms](#list-all-trading-algorithms) (strategy/list-algorithms)
 	- [Exchange List](#exchange-list) (strategy/list-exchanges)
 	- [Data](#data) (strategy/data/debug)
 	- [Save Template](#save-template) (strategy/save-template)
@@ -122,23 +125,23 @@ milliseconds | 0 | NO | 0 | Provide a milliseconds timestamp and then the server
 **Successful Response:**
 ```javascript
 {
-  \"data\": {
-    \"our_server_ms\": 1591777804071,
-    \"your_sent_ms\": \"1591777804158\",
-    \"difference\": -87,
-    \"equation\": \"our_server_ms - your_sent_ms\",
-    \"note\": \"Always make sure your devices time is synchronized for best results.\"
+  "data": {
+    "our_server_ms": 1591777804071,
+    "your_sent_ms": "1591777804158",
+    "difference": -87,
+    "equation": "our_server_ms - your_sent_ms",
+    "note": "Always make sure your devices time is synchronized for best results."
   },
-  \"meta\": {
-    \"api_version\": 2,
-    \"system_version\": \"2.0.5\",
-    \"status\": 200,
-    \"endpoint\": \"system/ping\",
-    \"auth_required\": false,
-    \"ms\": 1591777804071,
-    \"time\": 1591777804,
-    \"uid\": -1,
-    \"process_time\": \"0.000204\"
+  "meta": {
+    "api_version": 2,
+    "system_version": "2.0.5",
+    "status": 200,
+    "endpoint": "system/ping",
+    "auth_required": false,
+    "ms": 1591777804071,
+    "time": 1591777804,
+    "uid": -1,
+    "process_time": "0.000204"
   }
 }
 ```
@@ -278,31 +281,31 @@ algo | 0 | YES |  |
 **Successful Response:**
 ```javascript
 {
-    \"data\": {
-        \"status\": true,
-        \"id\": [],
-        \"uid\": \"1\",
-        \"label\": \"Example of a strategy label\",
-        \"message\": \"New - Testing Credentials\"
+    "data": {
+        "status": true,
+        "id": [],
+        "uid": "1",
+        "label": "Example of a strategy label",
+        "message": "New - Testing Credentials"
     },
-    \"meta\": {
-        \"api_version\": 2,
-        \"system_version\": \"2.0.5\",
-        \"status\": 200,
-        \"auth_success\": true,
-        \"rateLimits\": {
-            \"minute\": 60
+    "meta": {
+        "api_version": 2,
+        "system_version": "2.0.5",
+        "status": 200,
+        "auth_success": true,
+        "rateLimits": {
+            "minute": 60
         },
-        \"subscription\": {
-            \"id\": \"0\",
-            \"name\": \"Free\"
+        "subscription": {
+            "id": "0",
+            "name": "Free"
         },
-        \"endpoint\": \"strategy/create\",
-        \"auth_required\": true,
-        \"ms\": 1591778250176,
-        \"time\": 1591778250,
-        \"uid\": 1,
-        \"process_time\": \"0.020210\"
+        "endpoint": "strategy/create",
+        "auth_required": true,
+        "ms": 1591778250176,
+        "time": 1591778250,
+        "uid": 1,
+        "process_time": "0.020210"
     }
 }
 ```
@@ -332,7 +335,7 @@ limit | 0 | NO | 10 |
 page | 0 | NO | 1 | 
 
 
-## Trading Algorithms
+## List All Trading Algorithms
 A full list of executium trading algorithms. You will be required to reference your subscription to understand which algorithms are available for usage for you on your current strategy.
 
 ```
@@ -341,6 +344,19 @@ GET /api/v2/strategy/list-algorithms
 
 **Parameters:**
 None
+
+**Successful Response:**
+```javascript
+{
+    "data": [
+        {
+            "id": "25",
+            "group_name": "CANDLESTICKS",
+            "name": "BULLISH HARAMI "
+        },
+    ]
+```
+
 
 ## Exchange List
 A full list of exchanges that excutium support
