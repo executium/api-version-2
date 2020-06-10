@@ -229,10 +229,10 @@ GET /api/v2/exchange-api-keys/add
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-exchange | 0 | YES |  | 
-label | 6 | YES |  | 
-token | 5 | YES |  | 
-secret | 4 | YES |  | 
+exchange | 0 | YES |  | See the supported exchanges via the `strategy/list-exchanges` endpoint
+label | 6 | YES |  | Label the 
+token | 5 | YES |  | API key/token
+secret | 4 | YES |  | API secret
 password | 0 | NO |  | Some exchanges, such as OKEx require a password to be provided.
 
 
@@ -248,6 +248,39 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 label | 6 | YES |  | 
 algo | 0 | YES |  | 
+
+
+**Successful Response:**
+```javascript
+{
+    "data": {
+        "status": true,
+        "id": [],
+        "uid": "1",
+        "label": "Example of a strategy label",
+        "message": "New - Testing Credentials"
+    },
+    "meta": {
+        "api_version": 2,
+        "system_version": "2.0.5",
+        "status": 200,
+        "auth_success": true,
+        "rateLimits": {
+            "minute": 60
+        },
+        "subscription": {
+            "id": "0",
+            "name": "Free"
+        },
+        "endpoint": "strategy/create",
+        "auth_required": true,
+        "ms": 1591778250176,
+        "time": 1591778250,
+        "uid": 1,
+        "process_time": "0.020210"
+    }
+}
+```
 
 
 ## User Strategy Overview
