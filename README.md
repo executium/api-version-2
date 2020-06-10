@@ -13,7 +13,8 @@ Name | Description
 ------------ | ------------
 [rest-api.md](./rest-api.md) | Detailed information on the Executium V2 Rest API (/api/v2)
 [errors.md](./errors.md) | Details and descriptions of error messages from the Rest API
-[supported-symbols.md](./supported-symbols.md) | Information related to the current supported symbols by executium.
+[symbols-supported.md](./symbols-supported.md) | Information related to the current supported symbols by executium.
+[exchanges-supported.md](./exchanges-supported.md) | Information related to the current supported exchanges by executium.
 
 ## Supported Exchanges in Version 2
 A table of supported exchanges in executium for version 2. The following table is the status as of 10th June 2020.
