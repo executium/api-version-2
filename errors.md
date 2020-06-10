@@ -130,7 +130,7 @@ public function auth()
 
 ```
 
-## Furthur help
+## Further help
 If you are having issues that you cannot resolve please reach out to us at support@executium.com.
 
 
