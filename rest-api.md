@@ -1,5 +1,6 @@
 
 
+
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -20,8 +21,10 @@
 	- [Commissions Report](#commissions-report) (subscriptions/commissions-report)
 	- [Deposit](#deposit) (subscriptions/deposit)
 	- [Invoices](#invoices) (subscriptions/invoices)
-- Exchange API Keys
+- Exchange Api Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
+	- [Delete](#delete) (exchange-api-keys/delete)
+	- [List](#list) (exchange-api-keys/list)
 - Strategy
 	- [Create New Strategy](#create-new-strategy) (strategy/create)
 	- [User Strategy Overview](#user-strategy-overview) (strategy/data/all)
@@ -35,6 +38,8 @@
 - Subaccounts
 	- [Create](#create) (subaccounts/create)
 	- [List](#list) (subaccounts/list)
+	- [Delete](#delete) (subaccounts/delete)
+	- [Edit](#edit) (subaccounts/edit)
 - User
 	- [Close Account](#close-account) (user/close-account)
 
@@ -117,23 +122,23 @@ milliseconds | 0 | NO | 0 | Provide a milliseconds timestamp and then the server
 **Successful Response:**
 ```javascript
 {
-  "data": {
-    "our_server_ms": 1591777804071,
-    "your_sent_ms": "1591777804158",
-    "difference": -87,
-    "equation": "our_server_ms - your_sent_ms",
-    "note": "Always make sure your devices time is synchronized for best results."
+  \"data\": {
+    \"our_server_ms\": 1591777804071,
+    \"your_sent_ms\": \"1591777804158\",
+    \"difference\": -87,
+    \"equation\": \"our_server_ms - your_sent_ms\",
+    \"note\": \"Always make sure your devices time is synchronized for best results.\"
   },
-  "meta": {
-    "api_version": 2,
-    "system_version": "2.0.5",
-    "status": 200,
-    "endpoint": "system/ping",
-    "auth_required": false,
-    "ms": 1591777804071,
-    "time": 1591777804,
-    "uid": -1,
-    "process_time": "0.000204"
+  \"meta\": {
+    \"api_version\": 2,
+    \"system_version\": \"2.0.5\",
+    \"status\": 200,
+    \"endpoint\": \"system/ping\",
+    \"auth_required\": false,
+    \"ms\": 1591777804071,
+    \"time\": 1591777804,
+    \"uid\": -1,
+    \"process_time\": \"0.000204\"
   }
 }
 ```
@@ -236,6 +241,26 @@ secret | 4 | YES |  | API secret
 password | 0 | NO |  | Some exchanges, such as OKEx require a password to be provided.
 
 
+## Delete
+
+
+```
+GET /api/v2/exchange-api-keys/delete
+```
+
+**Parameters:**
+None
+
+## List
+
+
+```
+GET /api/v2/exchange-api-keys/list
+```
+
+**Parameters:**
+None
+
 ## Create New Strategy
 Create a new strategy, you will be required to make additional modifications using other endpoints such as the algo selector and updating the information within.
 
@@ -253,31 +278,31 @@ algo | 0 | YES |  |
 **Successful Response:**
 ```javascript
 {
-    "data": {
-        "status": true,
-        "id": [],
-        "uid": "1",
-        "label": "Example of a strategy label",
-        "message": "New - Testing Credentials"
+    \"data\": {
+        \"status\": true,
+        \"id\": [],
+        \"uid\": \"1\",
+        \"label\": \"Example of a strategy label\",
+        \"message\": \"New - Testing Credentials\"
     },
-    "meta": {
-        "api_version": 2,
-        "system_version": "2.0.5",
-        "status": 200,
-        "auth_success": true,
-        "rateLimits": {
-            "minute": 60
+    \"meta\": {
+        \"api_version\": 2,
+        \"system_version\": \"2.0.5\",
+        \"status\": 200,
+        \"auth_success\": true,
+        \"rateLimits\": {
+            \"minute\": 60
         },
-        "subscription": {
-            "id": "0",
-            "name": "Free"
+        \"subscription\": {
+            \"id\": \"0\",
+            \"name\": \"Free\"
         },
-        "endpoint": "strategy/create",
-        "auth_required": true,
-        "ms": 1591778250176,
-        "time": 1591778250,
-        "uid": 1,
-        "process_time": "0.020210"
+        \"endpoint\": \"strategy/create\",
+        \"auth_required\": true,
+        \"ms\": 1591778250176,
+        \"time\": 1591778250,
+        \"uid\": 1,
+        \"process_time\": \"0.020210\"
     }
 }
 ```
@@ -372,6 +397,26 @@ None
 
 ```
 GET /api/v2/subaccounts/list
+```
+
+**Parameters:**
+None
+
+## Delete
+
+
+```
+GET /api/v2/subaccounts/delete
+```
+
+**Parameters:**
+None
+
+## Edit
+
+
+```
+GET /api/v2/subaccounts/edit
 ```
 
 **Parameters:**
