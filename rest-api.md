@@ -105,6 +105,25 @@ GET /api/v2/system/endpoints
 **Parameters:**
 None
 
+**Successful Response:**
+```javascript
+{
+    "data": [
+        {
+            "path": "system/timestamp",
+            "parent": "System",
+            "name": "Check Server Time",
+            "description": "Test connectivity to our REST API and get the current server time with a timestamp and millisecond timing.",
+            "auth_required": false,
+            "parameters": []
+        },
+		...
+		...
+	]
+}
+```
+
+
 ## Ping REST API
 Text the connectivity to the REST API
 
