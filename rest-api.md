@@ -1,6 +1,7 @@
 
 
 
+
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -54,6 +55,7 @@
 	- [Strategy List Strategy Transactions](#strategy-list-strategy-transactions) (strategy/list-strategy-transactions)
 	- [Strategy Stop All Strategies](#strategy-stop-all-strategies) (strategy/stop-all-strategies)
 	- [Strategy Update](#strategy-update) (strategy/update)
+	- [Strategy List Strategy Options](#strategy-list-strategy-options) (strategy/list-strategy-options)
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
 	- [Fetch Symbol Price](#fetch-symbol-price) (public/fetch-symbol-price)
@@ -99,7 +101,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **[CLOSED-BETA-VERSION]**
 * All endpoints return either a JSON object or array.
-* There are currently 69 endpoints as part of version 2.
+* There are currently 70 endpoints as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -808,6 +810,16 @@ Strategies can only be updated when they are stopped. If the strategy is active 
 
 ```
 GET /api/v2/strategy/update
+```
+
+**Parameters:**
+None
+
+## Strategy List Strategy Options
+
+
+```
+GET /api/v2/strategy/list-strategy-options
 ```
 
 **Parameters:**
