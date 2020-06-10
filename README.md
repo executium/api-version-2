@@ -4,7 +4,7 @@
 Executium version 2 is currently in private beta mode as we look to launch our new version of executium which has hundreds of new options and an extensive API which can connect with your business. 
 
 ## All Official Documentation for Executium
-* Announcements regarding changes, upgrades, important exchange information, fixes, etc. to the API, Trading System and Streams will be reported here: **UPDATING-URL**
+* Announcements regarding changes, upgrades, important exchange information, fixes, etc. to the API and Trading System will be reported here: **UPDATING-URL**
 * Endpoints, parameters, payloads, etc. outlined in the documents in this repo are considered **official releases** and **supported by executium**.
 * The use of any other endpoints, parameters, or payloads, etc. not outlined in this repo and the documents within are **not supported** and you **use them at your own risk and with no guarantees of functionality**.
 
@@ -13,7 +13,7 @@ Name | Description
 ------------ | ------------
 [rest-api.md](./rest-api.md) | Detailed information on the Executium V2 Rest API (/api/v2)
 [errors.md](./errors.md) | Details and descriptions of error messages from the Rest API
-[supported-symbols.md](./supported-symbols) | Information related to the current supported symbols by executium.
+[supported-symbols.md](./supported-symbols.md) | Information related to the current supported symbols by executium.
 
 ## Supported Exchanges in Version 2
 A table of supported exchanges in executium for version 2. The following table is the status as of 10th June 2020.
