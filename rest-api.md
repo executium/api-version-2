@@ -435,14 +435,48 @@ GET /api/v2/subaccounts/edit
 None
 
 ## Close Account
-
+If you wish to close your account with executium this is the endpoint. We may require that you close your account via the website.
 
 ```
 GET /api/v2/user/close-account
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+reason | 10 | YES |  | Please provide feedback and the reasoning for closing your account.
+password | 5 | YES |  | Provide your account password.
+
+
+**Successful Response:**
+```javascript
+{
+    "data": {
+        "code": 2750,
+        "error": "Please use the website to close your account."
+    },
+    "meta": {
+        "api_version": 2,
+        "system_version": "2.0.5",
+        "status": 403,
+        "auth_success": true,
+        "rateLimits": {
+            "minute": 60
+        },
+        "subscription": {
+            "id": "0",
+            "name": "Free"
+        },
+        "endpoint": "user/close-account",
+        "auth_required": true,
+        "ms": 1591779884553,
+        "time": 1591779884,
+        "uid": 1,
+        "process_time": "0.009136"
+    }
+}
+```
+
 
 ## User Account Balance
 
