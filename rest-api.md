@@ -29,7 +29,7 @@
 	- [User Strategy List](#user-strategy-list) (strategy/data/list)
 	- [List All Trading Algorithms](#list-all-trading-algorithms) (strategy/list-algorithms)
 	- [Exchange List](#exchange-list) (strategy/list-exchanges)
-	- [Data](#data) (strategy/data/debug)
+	- [Debug Data](#debug-data) (strategy/data/debug)
 	- [Save Template](#save-template) (strategy/save-template)
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
@@ -394,8 +394,8 @@ GET /api/v2/strategy/list-exchanges
 **Parameters:**
 None
 
-## Data
-
+## Debug Data
+This is reserved for accounts based on subscription. It allows you to monitor the progress of your running strategy and monitor the performance of the strategy as it runs.
 
 ```
 GET /api/v2/strategy/data/debug
@@ -405,14 +405,18 @@ GET /api/v2/strategy/data/debug
 None
 
 ## Save Template
-
+You can save strategies which you like as templates to use again in the future.
 
 ```
 GET /api/v2/strategy/save-template
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+copy_strategy_id | 0 | YES |  | Provide the strategy ID you would like to save as a template.
+label | 0 | NO |  | Optional field. If left blank or not provided the strategy template will be saved as the strategy name.
+
 
 ## Spreads
 
