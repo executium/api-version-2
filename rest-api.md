@@ -88,11 +88,11 @@
 	- [Black Scholes Calculator](#black-scholes-calculator) (tests/black-scholes-calculator)
 	- [Black Scholes Implied Volatility Calculator](#black-scholes-implied-volatility-calculator) (tests/black-scholes-implied-volatility-calculator)
 	- [Test Server Location Speed To Exchange](#test-server-location-speed-to-exchange) (tests/server-location-speed-to-exchange)
-- Exchangeindex
-	- [Exchangeindex Announcements](#exchangeindex-announcements) (exchangeindex/announcements)
-	- [Exchangeindex Exchanges](#exchangeindex-exchanges) (exchangeindex/exchanges)
-	- [Exchangeindex Relevant News](#exchangeindex-relevant-news) (exchangeindex/relevant-news)
-	- [Exchangeindex Symbols](#exchangeindex-symbols) (exchangeindex/symbols)
+- Exchange Index
+	- [Exchange Index Announcements](#exchange-index-announcements) (exchangeindex/announcements)
+	- [Monitored Exchanges](#monitored-exchanges) (exchangeindex/exchanges)
+	- [Relevant News](#relevant-news) (exchangeindex/relevant-news)
+	- [Monitored Symbols](#monitored-symbols) (exchangeindex/symbols)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -1181,7 +1181,7 @@ exchange1 |  | YES |  | The first exchange to ping.
 exchange1 |  | YES |  | The second exchange to ping.
 
 
-## Exchangeindex Announcements
+## Exchange Index Announcements
 
 
 ```
@@ -1191,7 +1191,7 @@ GET /api/v2/exchangeindex/announcements
 **Parameters:**
 None
 
-## Exchangeindex Exchanges
+## Monitored Exchanges
 
 
 ```
@@ -1201,7 +1201,7 @@ GET /api/v2/exchangeindex/exchanges
 **Parameters:**
 None
 
-## Exchangeindex Relevant News
+## Relevant News
 
 
 ```
@@ -1211,7 +1211,7 @@ GET /api/v2/exchangeindex/relevant-news
 **Parameters:**
 None
 
-## Exchangeindex Symbols
+## Monitored Symbols
 
 
 ```
