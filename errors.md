@@ -113,6 +113,26 @@ Codes within the range of 2000-2999 relate to user input errors, these can range
 #### 2001 - Missing API Key
 - The API key parameter named `key` was not present. This must be sent as part of the header.
 
+#### 2010 - Nonce Missing from Payload
+- The payload was missing the parameter `nonce`. This must be sent as part of the header.
+
+```javascript
+"data": {
+        "code": 2010,
+        "error": "Nonce missing"
+    },
+```
+
+#### 2011 - Nonce too small
+- The parameter `nonce` was present in the header, but it was a lower value than the previous sent. You must send a `nonce` value which is higher than the previous. Nonces are treated sequentially. 
+
+```javascript
+"data": {
+        "code": 2011,
+        "error": "Nonce too small"
+    },
+```
+
 #### 2100 - Missing Authorization String
 - The `authorization` parameter was not present, you are required to send this as a header.
 
