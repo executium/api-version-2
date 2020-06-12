@@ -1169,7 +1169,7 @@ None
 ## Test Server Location Speed To Exchange
 As part of a sound strategy configuration, selecting the right location to run the strategy is essential. The speed test allows you to select an executium server location to ping an exchange to figure the speed between the two points. Previous speed tests are also provided in the `previous` array.
 	
-	![Executium Server Location Speed to Exchange Test](https://i.imgur.com/G7IwvSp.png)
+![Executium Server Location Speed to Exchange Test](https://i.imgur.com/G7IwvSp.png)
 	
 When selecting a server to run your speed test from utilize `/api/v2/subscriptions/list-private-servers` or `/api/v2/subscriptions/list-shared-servers` as endpoints. Note that subscription restrictions may apply.
 	
@@ -1183,7 +1183,7 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 server_id |  | YES |  | Executium server location.
 exchange1 |  | YES |  | The first exchange to ping.
-exchange1 |  | YES |  | The second exchange to ping.
+exchange2 |  | YES |  | The second exchange to ping.
 
 
 ## Exchange Index Announcements
