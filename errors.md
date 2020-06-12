@@ -69,16 +69,37 @@ All codes in the 1000 to 1999 range relate to network issues.
 #### 1500 - IP banned due to ignoring ratelimit
 - IP banned due to repeated requests following information that the sender has been violating the ratelimits of their account.  The IP ban will stay in effect at the discretion of the system.
 
-#### 1510 - Rate Limited
+#### 1507 - Rate Limited By Authorization
 - You are sending to many requests. You can increase your allowance by consulting your executium subscription and upgrading to a higher tier.
 
 ```javascript
     "data": {
-        "code": 1810,
+        "code": 1507,
         "error": "Ratelimit. Next access allowable at 1591765010484. Limit set to 1 request per 1000ms"
     },
 ```   
 
+#### 1508 - Rate Limited Firewall
+- You are sending to many requests and being blocked at a firewall level
+
+```javascript
+
+    "data": {
+        "code": 1508,
+        "error": "Ratelimited. Please allow 0 second(s) before your next request."
+    },
+
+```   
+
+#### 1509 - Rate Limited and IP Ban by at Firewall Level 
+- Due to repeated requests to slow down your rate of request you have been automcatically banned for a specified period. Repeated violations can result in a permanent account or IP ban and will be reviewed on a case by case basis.
+
+```javascript
+    "data": {
+        "code": 1509,
+        "error": "Ratelimited. Extended ban applied. Please allow 59 second(s) before your next request."
+    },
+```   
 
 #### 1820 - Unprocessable Entity
 The `authorization` parameters sent as part of the header has malformed. This means it cannot be read so we cannot determine your API `secret` and the attached payload.
