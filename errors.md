@@ -91,7 +91,7 @@ All codes in the 1000 to 1999 range relate to network issues.
 
 ```   
 
-#### 1509 - Rate Limited and IP Ban by at Firewall Level 
+#### 1509 - Rate Limited and Temporary IP Ban at the Firewall Level 
 - Due to repeated requests to slow down your rate of request you have been automcatically banned for a specified period. Repeated violations can result in a permanent account or IP ban and will be reviewed on a case by case basis.
 
 ```javascript
