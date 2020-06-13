@@ -110,9 +110,9 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 ## General Information
 
 * Version 2 is currently in private beta.
-* The base endpoint is: **[CLOSED-BETA-VERSION]**
+* The base endpoint is:  **`[CLOSED-BETA-VERSION]`**
 * All endpoints return either a JSON object or array.
-* There are currently 83 endpoints as part of version 2.
+* There are currently **`83 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
