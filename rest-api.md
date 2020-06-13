@@ -1,5 +1,3 @@
-
-
 **Table of Contents**
 
 - [Accessibility](#accessibility)
@@ -40,7 +38,7 @@
 	- [Exchange Api Keys Test](#exchange-api-keys-test) (exchange-api-keys/test)
 - Strategy
 	- [Create New Strategy](#create-new-strategy) (strategy/create)
-	- [User Strategy Overview](#user-strategy-overview) (strategy/data/all)
+	- [Strategy High Level Overview](#strategy-high-level-overview) (strategy/high-level-overview)
 	- [User Strategy List](#user-strategy-list) (strategy/data/list)
 	- [List All Trading Algorithms](#list-all-trading-algorithms) (strategy/list-algorithms)
 	- [Exchange List](#exchange-list) (strategy/list-exchanges)
@@ -63,10 +61,14 @@
 	- [Public Exchange Information](#public-exchange-information) (public/exchange-information)
 	- [Public Tradingview Charts](#public-tradingview-charts) (public/tradingview-charts)
 - Subaccounts
-	- [Create Subaccount](#create-subaccount) (subaccounts/create)
-	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/list)
-	- [Delete Subaccount](#delete-subaccount) (subaccounts/delete)
-	- [Edit Subaccount](#edit-subaccount) (subaccounts/edit)
+	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
+	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
+	- [Delete Subaccount](#delete-subaccount) (subaccounts/subaccount-delete)
+	- [Edit Subaccount](#edit-subaccount) (subaccounts/subaccount-edit)
+	- [Send Broadcast](#send-broadcast) (subaccounts/broadcast-create)
+	- [Delete Broadcast](#delete-broadcast) (subaccounts/broadcast-delete)
+	- [Edit Broadcast](#edit-broadcast) (subaccounts/broadcast-edit)
+	- [List Broadcast](#list-broadcast) (subaccounts/broadcast-list)
 - User
 	- [Close Account](#close-account) (user/close-account)
 	- [User Account Balance](#user-account-balance) (user/account-balance)
@@ -110,7 +112,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **[CLOSED-BETA-VERSION]**
 * All endpoints return either a JSON object or array.
-* There are currently 79 endpoints as part of version 2.
+* There are currently 83 endpoints as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -673,15 +675,19 @@ algo |  | YES |  |
 ```
 
 
-## User Strategy Overview
-A compiled list of the users strategies. This data includes what is currently active, inactive and all totals related.
+## Strategy High Level Overview
+A compiled list of the account specified strategy at a high level overview. Most often used in the event you want to keep a stream of latest data on a particular strategy id This data includes what is currently active, inactive and all totals related.
 
 ```
-GET /api/v2/strategy/data/all
+POST /api/v2/strategy/high-level-overview
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Specify the strategy ID
+leg |  | NO |  | Specify the Leg ID (if exists). If empty it will provide all within the algo.
+
 
 ## User Strategy List
 A complete list of user created strategies
@@ -909,11 +915,11 @@ GET /api/v2/public/tradingview-charts
 **Parameters:**
 None
 
-## Create Subaccount
+## Create Sub Account
 The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
 
 ```
-POST /api/v2/subaccounts/create
+POST /api/v2/subaccounts/subaccount-create
 ```
 
 **Parameters:**
@@ -936,7 +942,7 @@ allow_api_access |  | YES |  | Allow or deny the subaccount access to the accoun
 
 
 ```
-GET /api/v2/subaccounts/list
+GET /api/v2/subaccounts/subaccount-list
 ```
 
 **Parameters:**
@@ -946,7 +952,7 @@ None
 
 
 ```
-GET /api/v2/subaccounts/delete
+GET /api/v2/subaccounts/subaccount-delete
 ```
 
 **Parameters:**
@@ -956,7 +962,47 @@ None
 
 
 ```
-GET /api/v2/subaccounts/edit
+GET /api/v2/subaccounts/subaccount-edit
+```
+
+**Parameters:**
+None
+
+## Send Broadcast
+
+
+```
+GET /api/v2/subaccounts/broadcast-create
+```
+
+**Parameters:**
+None
+
+## Delete Broadcast
+
+
+```
+GET /api/v2/subaccounts/broadcast-delete
+```
+
+**Parameters:**
+None
+
+## Edit Broadcast
+
+
+```
+GET /api/v2/subaccounts/broadcast-edit
+```
+
+**Parameters:**
+None
+
+## List Broadcast
+
+
+```
+GET /api/v2/subaccounts/broadcast-list
 ```
 
 **Parameters:**
