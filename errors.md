@@ -1,4 +1,4 @@
-o# Executium Error Codes for Version 2
+# Executium Error Codes for Version 2
 Errors with executium will consist of two parts within the `data` object where you can determine if the data has been returned successfully or not.
 
 ```javascript
