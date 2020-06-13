@@ -1,4 +1,4 @@
-# Executium Error Codes for Version 2
+o# Executium Error Codes for Version 2
 Errors with executium will consist of two parts within the `data` object where you can determine if the data has been returned successfully or not.
 
 ```javascript
@@ -130,6 +130,16 @@ Codes within the range of 2000-2999 relate to user input errors, these can range
 "data": {
         "code": 2011,
         "error": "Nonce too small"
+    },
+```
+
+#### 2012 - Nonce incorrectly formatted
+- The parameter `nonce` was present in the header, but it was not the expected length. The nonce must be between 17 to 20 numbers in length. 
+
+```javascript
+"data": {
+        "code": 2012,
+        "error": "Nonce incorrectly formatted"
     },
 ```
 
