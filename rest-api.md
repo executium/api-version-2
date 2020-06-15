@@ -110,7 +110,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 ## General Information
 
 * Version 2 is currently in private beta.
-* The base endpoint is:  **`[CLOSED-BETA-VERSION]`**
+* The base endpoint is: **`[CLOSED-BETA-VERSION]`**
 * All endpoints return either a JSON object or array.
 * There are currently **`83 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
@@ -310,116 +310,138 @@ None
 
 **Successful Response:**
 ```javascript
-{
+
     "data": {
-        "subscription": {
-            "enabled": true,
-            "name": "Free Basic",
-            "price": 0
-        },
-        "user_settings": {
-            "enabled": true,
-            "twofactor": true,
-            "private_hosting": false,
-            "private_hive": false,
-            "api_access": true,
-            "ratelimit": {
-                "ms": 1000
-            }
-        },
-        "strategies": {
-            "enabled": true,
-            "commissions": 0.002,
-            "orderbook_refresh": 500,
-            "liquidity_check_maximum": 100,
-            "algos_excluded": [
-                "maker_taker",
-                "market_maker_taker",
-                "twap",
-                "matrix_price_movement"
-            ],
-            "maximum": {
-                "strategies": 10,
-                "templates": 3,
-                "concurrent_exchange_api_key": 2,
-                "duration": 21600
-            },
-            "ratelimit": {
-                "orders_per_second": 1
-            },
-            "spread": {
-                "maximum": 30,
-                "minimum": -30
-            },
-            "price_offset": {
-                "maximum": 10,
-                "minimum": -10
-            },
-            "qty_parent": {
-                "maximum": 0.01,
-                "minimum": 0
-            },
-            "qty_child": {
-                "maximum": 0.01,
-                "minimum": 0
-            },
-            "sleep_interval": {
-                "maximum": 30,
-                "minimum": 2
-            },
-            "export": {
-                "transactions_rows": 10000
-            },
-            "servers": {
-                "shared_resource": true,
-                "private_resource": false,
-                "locations": {
-                    "private": {
-                        "active": [],
-                        "inactive": []
-                    },
-                    "shared": {
-                        "active": [
-                            "Singapore"
-                        ],
-                        "inactive": [
-                            "Frankfurt",
-                            "London",
-                            "Bangalore",
-                            "Toronto",
-                            "Amsterdam"
-                        ]
-                    }
-                }
-            }
-        },
-        "subaccounts": {
-            "enabled": true,
-            "maximum_accounts": 0,
-            "qty_parent": {
-                "maximum": 1
-            },
-            "qty_child": {
-                "minimum": 0.5
-            },
-            "exchanges": [
-                "binance",
-                "bitfinex"
-            ],
-            "see_all_strategies": false,
-            "export": false,
-            "exchange_api_keys": {
-                "share_master": false,
-                "add_own": false
-            },
-            "api_access": false,
-            "force_twofactor": true
-        },
-        "exchange_api_keys": {
-            "enabled": true,
-            "maximum_stored": 3
+      "subscription": {
+        "pro_version": true,
+        "enabled": true,
+        "name": "Free Basic",
+        "price": 0
+      },
+      "user_settings": {
+        "enabled": true,
+        "twofactor": true,
+        "private_hosting": false,
+        "private_hive": false,
+        "api_access": true,
+        "ratelimit": {
+          "ms": 1000
         }
+      },
+      "strategies": {
+        "enabled": true,
+        "commissions": 0.002,
+        "orderbook_refresh": 500,
+        "liquidity_check_maximum": 100,
+        "algos_excluded": [
+          "maker_taker",
+          "market_maker_taker",
+          "twap",
+          "matrix_price_movement"
+        ],
+        "maximum": {
+          "strategies": 10,
+          "templates": 3,
+          "concurrent_exchange_api_key": 2,
+          "duration": 21600
+        },
+        "ratelimit": {
+          "orders_per_second": 1
+        },
+        "spread": {
+          "maximum": 30,
+          "minimum": -30
+        },
+        "price_offset": {
+          "maximum": 10,
+          "minimum": -10
+        },
+        "qty_parent": {
+          "maximum": 0.01,
+          "minimum": 0
+        },
+        "qty_child": {
+          "maximum": 0.01,
+          "minimum": 0
+        },
+        "sleep_interval": {
+          "maximum": 30,
+          "minimum": 2
+        },
+        "export": {
+          "transactions_rows": 10000,
+          "maximum_storage_time": 86400
+        },
+        "servers": {
+          "speed_testing": false,
+          "shared_resource": true,
+          "private_resource": false,
+          "locations": {
+            "private": {
+              "active": [],
+              "inactive": []
+            },
+            "shared": {
+              "active": [
+                "Singapore"
+              ],
+              "inactive": [
+                "Frankfurt",
+                "London",
+                "Bangalore",
+                "Toronto",
+                "Amsterdam"
+              ]
+            }
+          }
+        }
+      },
+      "subaccounts": {
+        "enabled": true,
+        "maximum_accounts": 0,
+        "qty_parent": {
+          "maximum": 1
+        },
+        "qty_child": {
+          "minimum": 0.5
+        },
+        "exchanges": [
+          "binance",
+          "bitfinex"
+        ],
+        "see_all_strategies": false,
+        "export": false,
+        "exchange_api_keys": {
+          "share_master": false,
+          "add_own": false
+        },
+        "api_access": false,
+        "force_twofactor": true
+      },
+      "exchange_api_keys": {
+        "enabled": true,
+        "maximum_stored": 3
+      }
     },
+    "meta": {
+      "id": "",
+      "api_version": 2,
+      "system_version": "2.0.5",
+      "status": 200,
+      "auth_success": true,
+      "rateLimits": {
+        "minute": 60
+      },
+      "subscription": {
+        "id": "0",
+        "name": "Free"
+      },
+      "endpoint": "subscriptions/details",
+      "auth_required": true,
+      "ms": 1592207324028,
+      "time": 1592207324,
+      "process_time": "0.014913"
+    }
 }
 ```
 
