@@ -50,7 +50,7 @@ Poloniex|poloniex|Yes|149
 Upbit|upbit|Yes|259
 
 ## Supported Symbols in Version 2
-We have increased our symbols and exchange support with version 2, as of the 10th June 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
+We have increased our symbols and exchange support with version 2, as of the 22nd June 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
 
 Version | Exchanges Supported | Symbols Supported | Market Spreads
 ------------ | ------------ | ------------  | ------------
