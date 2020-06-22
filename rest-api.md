@@ -100,6 +100,9 @@
 	- [Export Fetch](#export-fetch) (export/fetch)
 	- [Export List](#export-list) (export/list)
 	- [Request Export](#request-export) (export/request)
+- Calendar
+	- [Calendar Add Reminder](#calendar-add-reminder) (calendar/add-reminder)
+	- [Calendar List Schedule](#calendar-list-schedule) (calendar/list-schedule)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -112,7 +115,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **`[CLOSED-BETA-VERSION]`**
 * All endpoints return either a JSON object or array.
-* There are currently **`83 endpoints`** as part of version 2.
+* There are currently **`85 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -1328,3 +1331,23 @@ system |  | YES |  |
 label | 5 | YES |  | Label for the export
 type |  | YES |  | Export Type .xls or .csv
 
+
+## Calendar Add Reminder
+
+
+```
+GET /api/v2/calendar/add-reminder
+```
+
+**Parameters:**
+None
+
+## Calendar List Schedule
+
+
+```
+GET /api/v2/calendar/list-schedule
+```
+
+**Parameters:**
+None
