@@ -19,9 +19,6 @@ Name | Description
 ## Supported Exchanges in Version 2
 A table of supported exchanges in executium for version 2. The following table is the status as of 10th June 2020.
 
-
-The following table is the status as of 10th June 2020.
-
 The following table is the status as of 23rd June 2020.
 
 Exchange | Executium Code |Active | Symbols Count
