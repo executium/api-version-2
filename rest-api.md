@@ -158,7 +158,7 @@ GET /api/v2/system/timestamp
 **Parameters:**
 None
 
-**Successful Response:**
+**Successful Response Payload:**
 ```javascript
 {
     "data": {
@@ -179,7 +179,7 @@ GET /api/v2/system/endpoints
 **Parameters:**
 None
 
-**Successful Response:**
+**Successful Response Payload:**
 ```javascript
 {
     "data": [
@@ -211,7 +211,18 @@ Name | MinLength | Required | Default | Description
 milliseconds |  | NO | 0 | Provide a milliseconds timestamp and then the server will provide a subtracted return value from your input. For more information about millisecond functions visit https://github.com/executium/millisecond-functions
 
 
-**Successful Response:**
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+our_server_ms | 1591777804071
+your_sent_ms | 1591777804158
+difference | -87
+equation | our_server_ms - your_sent_ms
+note | Always make sure your devices time is synchronized for best results.
+
+
+**Successful Response Payload:**
 ```javascript
 {
   "data": {
@@ -256,7 +267,19 @@ GET /api/v2/system/list-validation-functions
 **Parameters:**
 None
 
-**Successful Response:**
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+0 | js_millisecond_update
+1 | is_email
+2 | password_auth
+3 | is_valid_symbol
+4 | is_valid_side
+5 | is_valid_level
+
+
+**Successful Response Payload:**
 ```javascript
 {
     "data": [
@@ -311,9 +334,209 @@ GET /api/v2/subscriptions/details
 **Parameters:**
 None
 
-**Successful Response:**
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+subscription | See table 'Subscription'
+user_settings | See table 'User Settings'
+strategies | See table 'Strategies'
+subaccounts | See table 'Subaccounts'
+exchange_api_keys | See table 'Exchange Api Keys'
+
+
+### Subscription
+
+Name | Example Value
+------------ | ------------
+pro_version | 1
+enabled | 1
+name | Free Basic
+price | 0
+
+
+### User Settings
+
+Name | Example Value
+------------ | ------------
+enabled | 1
+twofactor | 1
+private_hosting | 
+private_hive | 
+api_access | 1
+ratelimit | See table 'User Settings => Ratelimit'
+
+
+### Strategies
+
+Name | Example Value
+------------ | ------------
+enabled | 1
+commissions | 0.002
+orderbook_refresh | 500
+liquidity_check_maximum | 100
+algos_excluded | See table 'Strategies => Algos Excluded'
+maximum | See table 'Strategies => Maximum'
+ratelimit | See table 'Strategies => Ratelimit'
+spread | See table 'Strategies => Spread'
+price_offset | See table 'Strategies => Price Offset'
+qty_parent | See table 'Strategies => Qty Parent'
+qty_child | See table 'Strategies => Qty Child'
+sleep_interval | See table 'Strategies => Sleep Interval'
+export | See table 'Strategies => Export'
+servers | See table 'Strategies => Servers'
+
+
+### Subaccounts
+
+Name | Example Value
+------------ | ------------
+enabled | 1
+maximum_accounts | 0
+qty_parent | See table 'Subaccounts => Qty Parent'
+qty_child | See table 'Subaccounts => Qty Child'
+exchanges | See table 'Subaccounts => Exchanges'
+see_all_strategies | 
+export | 
+exchange_api_keys | See table 'Subaccounts => Exchange Api Keys'
+api_access | 
+force_twofactor | 1
+
+
+### Exchange Api Keys
+
+Name | Example Value
+------------ | ------------
+enabled | 1
+maximum_stored | 3
+
+
+### User Settings => Ratelimit
+
+Name | Example Value
+------------ | ------------
+ms | 1000
+
+
+### Strategies => Algos Excluded
+
+Name | Example Value
+------------ | ------------
+0 | maker_taker
+1 | market_maker_taker
+2 | twap
+3 | matrix_price_movement
+
+
+### Strategies => Maximum
+
+Name | Example Value
+------------ | ------------
+strategies | 10
+templates | 3
+concurrent_exchange_api_key | 2
+duration | 21600
+
+
+### Strategies => Ratelimit
+
+Name | Example Value
+------------ | ------------
+orders_per_second | 1
+
+
+### Strategies => Spread
+
+Name | Example Value
+------------ | ------------
+maximum | 30
+minimum | -30
+
+
+### Strategies => Price Offset
+
+Name | Example Value
+------------ | ------------
+maximum | 10
+minimum | -10
+
+
+### Strategies => Qty Parent
+
+Name | Example Value
+------------ | ------------
+maximum | 0.01
+minimum | 0
+
+
+### Strategies => Qty Child
+
+Name | Example Value
+------------ | ------------
+maximum | 0.01
+minimum | 0
+
+
+### Strategies => Sleep Interval
+
+Name | Example Value
+------------ | ------------
+maximum | 30
+minimum | 2
+
+
+### Strategies => Export
+
+Name | Example Value
+------------ | ------------
+transactions_rows | 10000
+maximum_storage_time | 86400
+
+
+### Strategies => Servers
+
+Name | Example Value
+------------ | ------------
+speed_testing | 
+shared_resource | 1
+private_resource | 
+locations | Array
+
+
+### Subaccounts => Qty Parent
+
+Name | Example Value
+------------ | ------------
+maximum | 1
+
+
+### Subaccounts => Qty Child
+
+Name | Example Value
+------------ | ------------
+minimum | 0.5
+
+
+### Subaccounts => Exchanges
+
+Name | Example Value
+------------ | ------------
+0 | binance
+1 | bitfinex
+
+
+### Subaccounts => Exchange Api Keys
+
+Name | Example Value
+------------ | ------------
+share_master | 
+add_own | 
+
+
+**Successful Response Payload:**
 ```javascript
 
+{
     "data": {
       "subscription": {
         "pro_version": true,
@@ -667,7 +890,24 @@ label | 6 | YES |  |
 algo |  | YES |  | 
 
 
-**Successful Response:**
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+status | 1
+id | See table 'Id'
+uid | 1
+label | Example of a strategy label
+message | New - Testing Credentials
+
+
+### Id
+
+Name | Example Value
+------------ | ------------
+
+
+**Successful Response Payload:**
 ```javascript
 {
     "data": {
@@ -738,7 +978,7 @@ GET /api/v2/strategy/list-algorithms
 **Parameters:**
 None
 
-**Successful Response:**
+**Successful Response Payload:**
 ```javascript
 {
     "data": [
@@ -1047,7 +1287,15 @@ reason | 10 | YES |  | Please provide feedback and the reasoning for closing you
 password | 5 | YES |  | Provide your account password.
 
 
-**Successful Response:**
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+code | 2750
+error | Please use the website to close your account.
+
+
+**Successful Response Payload:**
 ```javascript
 {
     "data": {
