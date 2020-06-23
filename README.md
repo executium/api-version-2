@@ -50,7 +50,7 @@ Upbit|upbit|Yes|259
 ## Supported Symbols in Version 2
 We have increased our symbols and exchange support with version 2, as of the 22nd June 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
 
-Version | Exchanges | Markets | Combinations Supported | Permutation 
+Version | Exchanges | Markets | Market Spreads | Permutation 
 ------------ | ------------ | ------------  | ------------   | ------------
 Version 2|24|4,924|12,120,426 | 24,240,852
 Version 1|12|140|869 | 869
