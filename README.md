@@ -50,9 +50,9 @@ Upbit|upbit|Yes|259
 ## Supported Symbols in Version 2
 We have increased our symbols and exchange support with version 2, as of the 22nd June 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
 
-Version | Exchanges Supported | Symbols Supported | Market Spreads
------------- | ------------ | ------------  | ------------
-Version 2|24|4,924|12,120,426
-Version 1|12|140|869
+Version | Exchanges Supported | Symbols Supported | Market Spreads | Permutation 
+------------ | ------------ | ------------  | ------------   | ------------
+Version 2|24|4,924|12,120,426 | 24,240,852
+Version 1|12|140|869 | 869
 
 We are adding and updating symbols supported by executium daily, the list for [Symbols Supported](./symbols-supported.md) can be monitored. We intend to update this support list weekly with version 2, and for a real-time look at support you can access via the api endpoint `system/symbols` for a full list of support symbols, or keep up to date in real-time via the executium website.
