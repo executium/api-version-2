@@ -22,32 +22,35 @@ A table of supported exchanges in executium for version 2. The following table i
 
 The following table is the status as of 10th June 2020.
 
+The following table is the status as of 23rd June 2020.
+
 Exchange | Executium Code |Active | Symbols Count
 ------------ | ------------ | ------------ | ------------
 Binance|binance|Yes|583
 Bitfinex|bitfinex|Yes|294
-Bitflyer|bitflyer|Yes|0
+Bitflyer|bitflyer|Yes|10
 Bithumb|bithumb|Yes|109
-Bitmart|bitmart|Yes|0
-Bitmax|bitmax|Yes|201
+Bitmart|bitmart|Yes|5
+Bitmax|bitmax|Yes|202
 Bitmex|bitmex|Yes|13
-Bitstamp|bitstamp|Yes|15
+Bitstamp|bitstamp|Yes|32
 Bittrex|bittrex|Yes|415
-Coinbase|coinbase|Yes|0
-Coinbasepro|coinbasepro|Yes|59
-Coincheck|coincheck|Yes|0
+Coinbase|coinbase|Yes|169
+Coinbasepro|coinbasepro|Yes|67
+Coincheck|coincheck|Yes|1
 Deribit|deribit|Yes|8
-Ftx|ftx|Yes|288
+Ftx|ftx|Yes|374
 Gateio|gateio|Yes|469
 Huobipro|huobipro|Yes|558
-Indodax|indodax|Yes|0
-Itbit|itbit|Yes|0
+Indodax|indodax|Yes|68
+Itbit|itbit|Yes|6
 Kraken|kraken|Yes|155
 Kucoin|kucoin|Yes|437
 Liquid|liquid|Yes|176
 Okex|okex|Yes|365
 Poloniex|poloniex|Yes|149
 Upbit|upbit|Yes|259
+
 
 ## Supported Symbols in Version 2
 We have increased our symbols and exchange support with version 2, as of the 22nd June 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
