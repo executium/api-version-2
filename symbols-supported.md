@@ -1,7 +1,7 @@
-# Support Symbols by Exchange on Executium - Currently: 4553
+# Support Symbols by Exchange on Executium - Currently: 4924
 The following tables list the exchanges and the symbols executium supports for algo creation.
 
-## Binance Supported Symbols in Executium (updated: 10th June 2020)
+## Binance Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -587,10 +587,10 @@ HIVEUSDT|binance-hiveusdt|HIVE|0.0001
 CHRBNB|binance-chrbnb|CHR|1.0E-6
 CHRBTC|binance-chrbtc|CHR|1.0E-8
 CHRUSDT|binance-chrusdt|CHR|1.0E-5
-BTCUPUSDT|binance-btcupusdt|BTCUP|9
+GXSUSDT|binance-gxsusdt|GXS|0.0001
 
 
-## Bitfinex Supported Symbols in Executium (updated: 10th June 2020)
+## Bitfinex Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -890,13 +890,23 @@ XAUTF0USTF0|bitfinex-xautf0ustf0|XAUTF0|1.0E-5
 BTCDOMF0USTF0|bitfinex-btcdomf0ustf0|BTCDOMF0|1.0E-5
 
 
-## Bitflyer Supported Symbols in Executium (updated: 10th June 2020)
+## Bitflyer Supported Symbols in Executium (updated: 23rd June 2020)
 
-No symbols added to executium as of yet for Bitflyer.
+Symbol | Executium Symbol Code | Base | Minimum Order
+------------ | ------------ | ------------ | ------------
+BTCJPY|bitflyer-btcjpy|BTC|N/A
+FXBTCJPY|bitflyer-fxbtcjpy|BTC|N/A
+ETHBTC|bitflyer-ethbtc|ETH|N/A
+BCHBTC|bitflyer-bchbtc|BCH|N/A
+ETHJPY|bitflyer-ethjpy|ETH|N/A
+BTCJPY26JUN2020|bitflyer-btcjpy26jun2020|BTC|N/A
+BTCJPY25SEP2020|bitflyer-btcjpy25sep2020|BTC|N/A
+BTCJPY03JUL2020|bitflyer-btcjpy03jul2020|BTC|N/A
+BTCUSD|bitflyer-btcusd|BTC|N/A
+BTCEUR|bitflyer-btceur|BTC|N/A
 
 
-
-## Bithumb Supported Symbols in Executium (updated: 10th June 2020)
+## Bithumb Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1011,13 +1021,18 @@ METAKRW|bithumb-metakrw|META|N/A
 COSMKRW|bithumb-cosmkrw|COSM|N/A
 
 
-## Bitmart Supported Symbols in Executium (updated: 10th June 2020)
+## Bitmart Supported Symbols in Executium (updated: 23rd June 2020)
 
-No symbols added to executium as of yet for Bitmart.
+Symbol | Executium Symbol Code | Base | Minimum Order
+------------ | ------------ | ------------ | ------------
+ETHBTC|bitmart-ethbtc|ETH|N/A
+BTCUSDT|bitmart-btcusdt|BTC|N/A
+ETHUSDT|bitmart-ethusdt|ETH|N/A
+BTCUSDC|bitmart-btcusdc|BTC|N/A
+BTCPAX|bitmart-btcpax|BTC|N/A
 
 
-
-## Bitmax Supported Symbols in Executium (updated: 10th June 2020)
+## Bitmax Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1168,7 +1183,6 @@ FRMBTC|bitmax-frmbtc|FRM|N/A
 MHCUSDT|bitmax-mhcusdt|MHC|N/A
 UATUSDT|bitmax-uatusdt|UAT|N/A
 UATBTC|bitmax-uatbtc|UAT|N/A
-LTOETH|bitmax-ltoeth|LTO|N/A
 ERDUSDT|bitmax-erdusdt|ERD|N/A
 ERDBTC|bitmax-erdbtc|ERD|N/A
 PROMUSDT|bitmax-promusdt|PROM|N/A
@@ -1222,9 +1236,11 @@ BVOLUSDT|bitmax-bvolusdt|BVOL|N/A
 IBVOLUSDT|bitmax-ibvolusdt|IBVOL|N/A
 STAKEUSDT|bitmax-stakeusdt|STAKE|N/A
 RVXUSDT|bitmax-rvxusdt|RVX|N/A
+BANDUSDT|bitmax-bandusdt|BAND|N/A
+BEPROUSDT|bitmax-beprousdt|BEPRO|N/A
 
 
-## Bitmex Supported Symbols in Executium (updated: 10th June 2020)
+## Bitmex Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1243,28 +1259,45 @@ ETHUSDM20|bitmex-ethusdm20|ETH|0.05
 LTCM20|bitmex-ltcm20|LTC|5.0E-6
 
 
-## Bitstamp Supported Symbols in Executium (updated: 10th June 2020)
+## Bitstamp Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
 BTCUSD|bitstamp-btcusd|btc|0.01
 BTCEUR|bitstamp-btceur|btc|0.01
+BTCGBP|bitstamp-btcgbp|btc|0.01
+BTCPAX|bitstamp-btcpax|btc|0.01
+GBPUSD|bitstamp-gbpusd|gbp|1.0E-5
+GBPEUR|bitstamp-gbpeur|gbp|1.0E-5
 EURUSD|bitstamp-eurusd|eur|1.0E-5
 XRPUSD|bitstamp-xrpusd|xrp|1.0E-5
 XRPEUR|bitstamp-xrpeur|xrp|1.0E-5
 XRPBTC|bitstamp-xrpbtc|xrp|1.0E-8
+XRPGBP|bitstamp-xrpgbp|xrp|1.0E-5
+XRPPAX|bitstamp-xrppax|xrp|1.0E-5
 LTCUSD|bitstamp-ltcusd|ltc|0.01
 LTCEUR|bitstamp-ltceur|ltc|0.01
 LTCBTC|bitstamp-ltcbtc|ltc|1.0E-8
+LTCGBP|bitstamp-ltcgbp|ltc|0.01
 ETHUSD|bitstamp-ethusd|eth|0.01
 ETHEUR|bitstamp-etheur|eth|0.01
 ETHBTC|bitstamp-ethbtc|eth|1.0E-8
+ETHGBP|bitstamp-ethgbp|eth|0.01
+ETHPAX|bitstamp-ethpax|eth|0.01
 BCHUSD|bitstamp-bchusd|bch|0.01
 BCHEUR|bitstamp-bcheur|bch|0.01
 BCHBTC|bitstamp-bchbtc|bch|1.0E-8
+BCHGBP|bitstamp-bchgbp|bch|0.01
+PAXUSD|bitstamp-paxusd|pax|1.0E-5
+PAXEUR|bitstamp-paxeur|pax|1.0E-5
+PAXGBP|bitstamp-paxgbp|pax|1.0E-5
+XLMBTC|bitstamp-xlmbtc|xlm|1.0E-8
+XLMUSD|bitstamp-xlmusd|xlm|1.0E-5
+XLMEUR|bitstamp-xlmeur|xlm|1.0E-5
+XLMGBP|bitstamp-xlmgbp|xlm|1.0E-5
 
 
-## Bittrex Supported Symbols in Executium (updated: 10th June 2020)
+## Bittrex Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1685,84 +1718,262 @@ ZRXUSD|bittrex-zrxusd|ZRX|1.0E-5
 ZRXUSDT|bittrex-zrxusdt|ZRX|1.0E-8
 
 
-## Coinbase Supported Symbols in Executium (updated: 10th June 2020)
-
-No symbols added to executium as of yet for Coinbase.
-
-
-
-## Coinbasepro Supported Symbols in Executium (updated: 10th June 2020)
+## Coinbase Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
-BTCUSDC|coinbasepro-btcusdc|BTC|0.01
-ZECBTC|coinbasepro-zecbtc|ZEC|1.0E-6
+BTCAED|coinbase-btcaed|BTC|N/A
+BTCAFN|coinbase-btcafn|BTC|N/A
+BTCALL|coinbase-btcall|BTC|N/A
+BTCAMD|coinbase-btcamd|BTC|N/A
+BTCANG|coinbase-btcang|BTC|N/A
+BTCAOA|coinbase-btcaoa|BTC|N/A
+BTCARS|coinbase-btcars|BTC|N/A
+BTCAUD|coinbase-btcaud|BTC|N/A
+BTCAWG|coinbase-btcawg|BTC|N/A
+BTCAZN|coinbase-btcazn|BTC|N/A
+BTCBAM|coinbase-btcbam|BTC|N/A
+BTCBBD|coinbase-btcbbd|BTC|N/A
+BTCBDT|coinbase-btcbdt|BTC|N/A
+BTCBGN|coinbase-btcbgn|BTC|N/A
+BTCBHD|coinbase-btcbhd|BTC|N/A
+BTCBIF|coinbase-btcbif|BTC|N/A
+BTCBMD|coinbase-btcbmd|BTC|N/A
+BTCBND|coinbase-btcbnd|BTC|N/A
+BTCBOB|coinbase-btcbob|BTC|N/A
+BTCBRL|coinbase-btcbrl|BTC|N/A
+BTCBSD|coinbase-btcbsd|BTC|N/A
+BTCBTN|coinbase-btcbtn|BTC|N/A
+BTCBWP|coinbase-btcbwp|BTC|N/A
+BTCBYN|coinbase-btcbyn|BTC|N/A
+BTCBYR|coinbase-btcbyr|BTC|N/A
+BTCBZD|coinbase-btcbzd|BTC|N/A
+BTCCAD|coinbase-btccad|BTC|N/A
+BTCCDF|coinbase-btccdf|BTC|N/A
+BTCCHF|coinbase-btcchf|BTC|N/A
+BTCCLF|coinbase-btcclf|BTC|N/A
+BTCCLP|coinbase-btcclp|BTC|N/A
+BTCCNH|coinbase-btccnh|BTC|N/A
+BTCCNY|coinbase-btccny|BTC|N/A
+BTCCOP|coinbase-btccop|BTC|N/A
+BTCCRC|coinbase-btccrc|BTC|N/A
+BTCCUC|coinbase-btccuc|BTC|N/A
+BTCCVE|coinbase-btccve|BTC|N/A
+BTCCZK|coinbase-btcczk|BTC|N/A
+BTCDJF|coinbase-btcdjf|BTC|N/A
+BTCDKK|coinbase-btcdkk|BTC|N/A
+BTCDOP|coinbase-btcdop|BTC|N/A
+BTCDZD|coinbase-btcdzd|BTC|N/A
+BTCEEK|coinbase-btceek|BTC|N/A
+BTCEGP|coinbase-btcegp|BTC|N/A
+BTCERN|coinbase-btcern|BTC|N/A
+BTCETB|coinbase-btcetb|BTC|N/A
+BTCEUR|coinbase-btceur|BTC|N/A
+BTCFJD|coinbase-btcfjd|BTC|N/A
+BTCFKP|coinbase-btcfkp|BTC|N/A
+BTCGBP|coinbase-btcgbp|BTC|N/A
+BTCGEL|coinbase-btcgel|BTC|N/A
+BTCGGP|coinbase-btcggp|BTC|N/A
+BTCGHS|coinbase-btcghs|BTC|N/A
+BTCGIP|coinbase-btcgip|BTC|N/A
+BTCGMD|coinbase-btcgmd|BTC|N/A
+BTCGNF|coinbase-btcgnf|BTC|N/A
+BTCGTQ|coinbase-btcgtq|BTC|N/A
+BTCGYD|coinbase-btcgyd|BTC|N/A
+BTCHKD|coinbase-btchkd|BTC|N/A
+BTCHNL|coinbase-btchnl|BTC|N/A
+BTCHRK|coinbase-btchrk|BTC|N/A
+BTCHTG|coinbase-btchtg|BTC|N/A
+BTCHUF|coinbase-btchuf|BTC|N/A
+BTCIDR|coinbase-btcidr|BTC|N/A
+BTCILS|coinbase-btcils|BTC|N/A
+BTCIMP|coinbase-btcimp|BTC|N/A
+BTCINR|coinbase-btcinr|BTC|N/A
+BTCIQD|coinbase-btciqd|BTC|N/A
+BTCISK|coinbase-btcisk|BTC|N/A
+BTCJEP|coinbase-btcjep|BTC|N/A
+BTCJMD|coinbase-btcjmd|BTC|N/A
+BTCJOD|coinbase-btcjod|BTC|N/A
+BTCJPY|coinbase-btcjpy|BTC|N/A
+BTCKES|coinbase-btckes|BTC|N/A
+BTCKGS|coinbase-btckgs|BTC|N/A
+BTCKHR|coinbase-btckhr|BTC|N/A
+BTCKMF|coinbase-btckmf|BTC|N/A
+BTCKRW|coinbase-btckrw|BTC|N/A
+BTCKWD|coinbase-btckwd|BTC|N/A
+BTCKYD|coinbase-btckyd|BTC|N/A
+BTCKZT|coinbase-btckzt|BTC|N/A
+BTCLAK|coinbase-btclak|BTC|N/A
+BTCLBP|coinbase-btclbp|BTC|N/A
+BTCLKR|coinbase-btclkr|BTC|N/A
+BTCLRD|coinbase-btclrd|BTC|N/A
+BTCLSL|coinbase-btclsl|BTC|N/A
+BTCLTL|coinbase-btcltl|BTC|N/A
+BTCLVL|coinbase-btclvl|BTC|N/A
+BTCLYD|coinbase-btclyd|BTC|N/A
+BTCMAD|coinbase-btcmad|BTC|N/A
+BTCMDL|coinbase-btcmdl|BTC|N/A
+BTCMGA|coinbase-btcmga|BTC|N/A
+BTCMKD|coinbase-btcmkd|BTC|N/A
+BTCMMK|coinbase-btcmmk|BTC|N/A
+BTCMNT|coinbase-btcmnt|BTC|N/A
+BTCMOP|coinbase-btcmop|BTC|N/A
+BTCMRO|coinbase-btcmro|BTC|N/A
+BTCMTL|coinbase-btcmtl|BTC|N/A
+BTCMUR|coinbase-btcmur|BTC|N/A
+BTCMVR|coinbase-btcmvr|BTC|N/A
+BTCMWK|coinbase-btcmwk|BTC|N/A
+BTCMXN|coinbase-btcmxn|BTC|N/A
+BTCMYR|coinbase-btcmyr|BTC|N/A
+BTCMZN|coinbase-btcmzn|BTC|N/A
+BTCNAD|coinbase-btcnad|BTC|N/A
+BTCNGN|coinbase-btcngn|BTC|N/A
+BTCNIO|coinbase-btcnio|BTC|N/A
+BTCNOK|coinbase-btcnok|BTC|N/A
+BTCNPR|coinbase-btcnpr|BTC|N/A
+BTCNZD|coinbase-btcnzd|BTC|N/A
+BTCOMR|coinbase-btcomr|BTC|N/A
+BTCPAB|coinbase-btcpab|BTC|N/A
+BTCPEN|coinbase-btcpen|BTC|N/A
+BTCPGK|coinbase-btcpgk|BTC|N/A
+BTCPHP|coinbase-btcphp|BTC|N/A
+BTCPKR|coinbase-btcpkr|BTC|N/A
+BTCPLN|coinbase-btcpln|BTC|N/A
+BTCPYG|coinbase-btcpyg|BTC|N/A
+BTCQAR|coinbase-btcqar|BTC|N/A
+BTCRON|coinbase-btcron|BTC|N/A
+BTCRSD|coinbase-btcrsd|BTC|N/A
+BTCRUB|coinbase-btcrub|BTC|N/A
+BTCRWF|coinbase-btcrwf|BTC|N/A
+BTCSAR|coinbase-btcsar|BTC|N/A
+BTCSBD|coinbase-btcsbd|BTC|N/A
+BTCSCR|coinbase-btcscr|BTC|N/A
+BTCSEK|coinbase-btcsek|BTC|N/A
+BTCSGD|coinbase-btcsgd|BTC|N/A
+BTCSHP|coinbase-btcshp|BTC|N/A
+BTCSLL|coinbase-btcsll|BTC|N/A
+BTCSOS|coinbase-btcsos|BTC|N/A
+BTCSRD|coinbase-btcsrd|BTC|N/A
+BTCSSP|coinbase-btcssp|BTC|N/A
+BTCSTD|coinbase-btcstd|BTC|N/A
+BTCSVC|coinbase-btcsvc|BTC|N/A
+BTCSZL|coinbase-btcszl|BTC|N/A
+BTCTHB|coinbase-btcthb|BTC|N/A
+BTCTJS|coinbase-btctjs|BTC|N/A
+BTCTMT|coinbase-btctmt|BTC|N/A
+BTCTND|coinbase-btctnd|BTC|N/A
+BTCTOP|coinbase-btctop|BTC|N/A
+BTCTRY|coinbase-btctry|BTC|N/A
+BTCTTD|coinbase-btcttd|BTC|N/A
+BTCTWD|coinbase-btctwd|BTC|N/A
+BTCTZS|coinbase-btctzs|BTC|N/A
+BTCUAH|coinbase-btcuah|BTC|N/A
+BTCUGX|coinbase-btcugx|BTC|N/A
+BTCUSD|coinbase-btcusd|BTC|N/A
+BTCUYU|coinbase-btcuyu|BTC|N/A
+BTCUZS|coinbase-btcuzs|BTC|N/A
+BTCVEF|coinbase-btcvef|BTC|N/A
+BTCVES|coinbase-btcves|BTC|N/A
+BTCVND|coinbase-btcvnd|BTC|N/A
+BTCVUV|coinbase-btcvuv|BTC|N/A
+BTCWST|coinbase-btcwst|BTC|N/A
+BTCXAF|coinbase-btcxaf|BTC|N/A
+BTCXAG|coinbase-btcxag|BTC|N/A
+BTCXAU|coinbase-btcxau|BTC|N/A
+BTCXCD|coinbase-btcxcd|BTC|N/A
+BTCXDR|coinbase-btcxdr|BTC|N/A
+BTCXOF|coinbase-btcxof|BTC|N/A
+BTCXPD|coinbase-btcxpd|BTC|N/A
+BTCXPF|coinbase-btcxpf|BTC|N/A
+BTCXPT|coinbase-btcxpt|BTC|N/A
+BTCYER|coinbase-btcyer|BTC|N/A
+BTCZAR|coinbase-btczar|BTC|N/A
+BTCZMK|coinbase-btczmk|BTC|N/A
+BTCZMW|coinbase-btczmw|BTC|N/A
+BTCZWL|coinbase-btczwl|BTC|N/A
+
+
+## Coinbasepro Supported Symbols in Executium (updated: 23rd June 2020)
+
+Symbol | Executium Symbol Code | Base | Minimum Order
+------------ | ------------ | ------------ | ------------
+REPUSD|coinbasepro-repusd|REP|0.01
+DAIUSD|coinbasepro-daiusd|DAI|1.0E-6
+EOSUSD|coinbasepro-eosusd|EOS|0.001
+ETCGBP|coinbasepro-etcgbp|ETC|0.001
+DASHUSD|coinbasepro-dashusd|DASH|0.001
+BCHUSD|coinbasepro-bchusd|BCH|0.01
+OXTUSD|coinbasepro-oxtusd|OXT|0.0001
+ETCUSD|coinbasepro-etcusd|ETC|0.001
 XRPBTC|coinbasepro-xrpbtc|XRP|1.0E-8
+LTCBTC|coinbasepro-ltcbtc|LTC|1.0E-6
+MKRBTC|coinbasepro-mkrbtc|MKR|1.0E-5
+OMGGBP|coinbasepro-omggbp|OMG|0.0001
+OMGBTC|coinbasepro-omgbtc|OMG|1.0E-8
+DASHBTC|coinbasepro-dashbtc|DASH|1.0E-8
+BCHBTC|coinbasepro-bchbtc|BCH|1.0E-5
+XRPEUR|coinbasepro-xrpeur|XRP|0.0001
+BTCEUR|coinbasepro-btceur|BTC|0.01
 XLMUSD|coinbasepro-xlmusd|XLM|1.0E-6
 BCHEUR|coinbasepro-bcheur|BCH|0.01
-ETHUSD|coinbasepro-ethusd|ETH|0.01
-EOSUSD|coinbasepro-eosusd|EOS|0.001
-XRPUSD|coinbasepro-xrpusd|XRP|0.0001
-ATOMUSD|coinbasepro-atomusd|ATOM|0.001
+ZECBTC|coinbasepro-zecbtc|ZEC|1.0E-6
+LOOMUSDC|coinbasepro-loomusdc|LOOM|1.0E-6
+BCHGBP|coinbasepro-bchgbp|BCH|0.01
+ATOMBTC|coinbasepro-atombtc|ATOM|1.0E-6
 REPBTC|coinbasepro-repbtc|REP|1.0E-6
+BTCUSD|coinbasepro-btcusd|BTC|0.01
 LTCGBP|coinbasepro-ltcgbp|LTC|0.01
 XTZBTC|coinbasepro-xtzbtc|XTZ|1.0E-8
-ALGOUSD|coinbasepro-algousd|ALGO|0.0001
-MANAUSDC|coinbasepro-manausdc|MANA|1.0E-6
-ETHEUR|coinbasepro-etheur|ETH|0.01
-XTZUSD|coinbasepro-xtzusd|XTZ|0.0001
-DASHBTC|coinbasepro-dashbtc|DASH|1.0E-8
-DAIUSDC|coinbasepro-daiusdc|DAI|1.0E-6
-LINKUSD|coinbasepro-linkusd|LINK|1.0E-5
 ETCEUR|coinbasepro-etceur|ETC|0.001
-XLMEUR|coinbasepro-xlmeur|XLM|1.0E-6
-XRPEUR|coinbasepro-xrpeur|XRP|0.0001
-LTCUSD|coinbasepro-ltcusd|LTC|0.01
-EOSBTC|coinbasepro-eosbtc|EOS|1.0E-6
-ETHBTC|coinbasepro-ethbtc|ETH|1.0E-5
-DAIUSD|coinbasepro-daiusd|DAI|1.0E-6
-CVCUSDC|coinbasepro-cvcusdc|CVC|1.0E-6
-ZRXUSD|coinbasepro-zrxusd|ZRX|1.0E-6
-LINKETH|coinbasepro-linketh|LINK|1.0E-8
-ETCGBP|coinbasepro-etcgbp|ETC|0.001
-ETHUSDC|coinbasepro-ethusdc|ETH|0.01
-KNCUSD|coinbasepro-kncusd|KNC|0.0001
-ZECUSDC|coinbasepro-zecusdc|ZEC|0.01
-BTCEUR|coinbasepro-btceur|BTC|0.01
-KNCBTC|coinbasepro-kncbtc|KNC|1.0E-8
-BCHBTC|coinbasepro-bchbtc|BCH|1.0E-5
-EOSEUR|coinbasepro-eoseur|EOS|0.001
-LTCBTC|coinbasepro-ltcbtc|LTC|1.0E-6
-LOOMUSDC|coinbasepro-loomusdc|LOOM|1.0E-6
-ETCBTC|coinbasepro-etcbtc|ETC|1.0E-6
-GNTUSDC|coinbasepro-gntusdc|GNT|1.0E-6
-LTCEUR|coinbasepro-ltceur|LTC|0.01
-ATOMBTC|coinbasepro-atombtc|ATOM|1.0E-6
-ETCUSD|coinbasepro-etcusd|ETC|0.001
-BCHUSD|coinbasepro-bchusd|BCH|0.01
-BTCUSD|coinbasepro-btcusd|BTC|0.01
-BCHGBP|coinbasepro-bchgbp|BCH|0.01
-OXTUSD|coinbasepro-oxtusd|OXT|0.0001
-REPUSD|coinbasepro-repusd|REP|0.01
-ETHGBP|coinbasepro-ethgbp|ETH|0.01
-DASHUSD|coinbasepro-dashusd|DASH|0.001
 ETHDAI|coinbasepro-ethdai|ETH|0.01
-BTCGBP|coinbasepro-btcgbp|BTC|0.01
-ZRXEUR|coinbasepro-zrxeur|ZRX|1.0E-6
-DNTUSDC|coinbasepro-dntusdc|DNT|1.0E-6
+ZECUSDC|coinbasepro-zecusdc|ZEC|0.01
+COMPUSD|coinbasepro-compusd|COMP|0.01
+OMGEUR|coinbasepro-omgeur|OMG|0.0001
 BATUSDC|coinbasepro-batusdc|BAT|1.0E-6
-BATETH|coinbasepro-bateth|BAT|1.0E-8
+MKRUSD|coinbasepro-mkrusd|MKR|0.0001
+DAIUSDC|coinbasepro-daiusdc|DAI|1.0E-6
+LINKETH|coinbasepro-linketh|LINK|1.0E-8
+OMGUSD|coinbasepro-omgusd|OMG|0.0001
 ZRXBTC|coinbasepro-zrxbtc|ZRX|1.0E-8
+LINKUSD|coinbasepro-linkusd|LINK|1.0E-5
+ZRXUSD|coinbasepro-zrxusd|ZRX|1.0E-6
+EOSEUR|coinbasepro-eoseur|EOS|0.001
+XLMEUR|coinbasepro-xlmeur|XLM|1.0E-6
+LTCUSD|coinbasepro-ltcusd|LTC|0.01
+ETHBTC|coinbasepro-ethbtc|ETH|1.0E-5
+ZRXEUR|coinbasepro-zrxeur|ZRX|1.0E-6
+ETCBTC|coinbasepro-etcbtc|ETC|1.0E-6
 XLMBTC|coinbasepro-xlmbtc|XLM|1.0E-8
+ETHGBP|coinbasepro-ethgbp|ETH|0.01
+BTCUSDC|coinbasepro-btcusdc|BTC|0.01
+GNTUSDC|coinbasepro-gntusdc|GNT|1.0E-6
+EOSBTC|coinbasepro-eosbtc|EOS|1.0E-6
+MANAUSDC|coinbasepro-manausdc|MANA|1.0E-6
+ETHUSDC|coinbasepro-ethusdc|ETH|0.01
+BTCGBP|coinbasepro-btcgbp|BTC|0.01
+DNTUSDC|coinbasepro-dntusdc|DNT|1.0E-6
+KNCBTC|coinbasepro-kncbtc|KNC|1.0E-8
+BATETH|coinbasepro-bateth|BAT|1.0E-8
+ETHUSD|coinbasepro-ethusd|ETH|0.01
+ATOMUSD|coinbasepro-atomusd|ATOM|0.001
+ALGOUSD|coinbasepro-algousd|ALGO|0.0001
+COMPBTC|coinbasepro-compbtc|COMP|1.0E-6
+XRPUSD|coinbasepro-xrpusd|XRP|0.0001
+CVCUSDC|coinbasepro-cvcusdc|CVC|1.0E-6
+LTCEUR|coinbasepro-ltceur|LTC|0.01
+XTZUSD|coinbasepro-xtzusd|XTZ|0.0001
+KNCUSD|coinbasepro-kncusd|KNC|0.0001
+ETHEUR|coinbasepro-etheur|ETH|0.01
 
 
-## Coincheck Supported Symbols in Executium (updated: 10th June 2020)
+## Coincheck Supported Symbols in Executium (updated: 23rd June 2020)
 
-No symbols added to executium as of yet for Coincheck.
+Symbol | Executium Symbol Code | Base | Minimum Order
+------------ | ------------ | ------------ | ------------
+BTCJPY|coincheck-btcjpy|btc|N/A
 
 
-
-## Deribit Supported Symbols in Executium (updated: 10th June 2020)
+## Deribit Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1776,78 +1987,122 @@ BTC26JUN20|deribit-btc26jun20|BTC|0.5
 BTCPERPETUAL|deribit-btcperpetual|BTC|0.5
 
 
-## Ftx Supported Symbols in Executium (updated: 10th June 2020)
+## Ftx Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
 ADAPERP|ftx-adaperp|ADA|5.0E-6
 ADA0626|ftx-ada0626|ADA|5.0E-6
+ADA0925|ftx-ada0925|ADA|5.0E-6
 ALGOPERP|ftx-algoperp|ALGO|0.0001
 ALGO0626|ftx-algo0626|ALGO|0.0001
+ALGO0925|ftx-algo0925|ALGO|0.0001
 ALTPERP|ftx-altperp|ALT|0.05
 ALT0626|ftx-alt0626|ALT|0.05
+ALT0925|ftx-alt0925|ALT|0.05
 ATOMPERP|ftx-atomperp|ATOM|0.0005
 ATOM0626|ftx-atom0626|ATOM|0.0005
+ATOM0925|ftx-atom0925|ATOM|0.0005
 BCHPERP|ftx-bchperp|BCH|0.05
 BCH0626|ftx-bch0626|BCH|0.05
+BCH0925|ftx-bch0925|BCH|0.05
 BCHUSD|ftx-bchusd|BCH|0.025
 BCHUSDT|ftx-bchusdt|BCH|0.025
 BNBPERP|ftx-bnbperp|BNB|0.0025
 BNB0626|ftx-bnb0626|BNB|0.0025
+BNB0925|ftx-bnb0925|BNB|0.0025
 BNBUSD|ftx-bnbusd|BNB|0.001
 BNBUSDT|ftx-bnbusdt|BNB|0.001
 BRLUSD|ftx-brlusd|BRL|1.0E-5
 BRLUSDT|ftx-brlusdt|BRL|1.0E-5
 BRZPERP|ftx-brzperp|BRZ|1.0E-5
 BRZ0626|ftx-brz0626|BRZ|1.0E-5
+BRZ0925|ftx-brz0925|BRZ|1.0E-5
 BSVPERP|ftx-bsvperp|BSV|0.01
 BSV0626|ftx-bsv0626|BSV|0.01
+BSV0925|ftx-bsv0925|BSV|0.01
 BTCPERP|ftx-btcperp|BTC|0.5
 BTC0626|ftx-btc0626|BTC|0.5
 BTC0925|ftx-btc0925|BTC|0.5
+BTC1225|ftx-btc1225|BTC|0.5
+BTCBRL|ftx-btcbrl|BTC|5
 BTCUSD|ftx-btcusd|BTC|0.5
 BTCUSDT|ftx-btcusdt|BTC|0.5
 BTMXPERP|ftx-btmxperp|BTMX|1.0E-5
 BTMX0626|ftx-btmx0626|BTMX|1.0E-5
+BTMX0925|ftx-btmx0925|BTMX|1.0E-5
 BTMXUSD|ftx-btmxusd|BTMX|1.0E-5
+COMPPERP|ftx-compperp|COMP|0.025
+COMP0626|ftx-comp0626|COMP|0.025
+COMP0925|ftx-comp0925|COMP|0.025
+COMPUSD|ftx-compusd|COMP|0.025
+COMPUSDT|ftx-compusdt|COMP|0.025
+CUSDTPERP|ftx-cusdtperp|CUSDT|2.5E-6
+CUSDT0626|ftx-cusdt0626|CUSDT|2.5E-6
+CUSDT0925|ftx-cusdt0925|CUSDT|2.5E-6
+CUSDTUSD|ftx-cusdtusd|CUSDT|2.5E-6
+CUSDTUSDT|ftx-cusdtusdt|CUSDT|2.5E-6
+DEFIPERP|ftx-defiperp|DEFI|0.1
+DEFI0626|ftx-defi0626|DEFI|0.1
+DEFI0925|ftx-defi0925|DEFI|0.1
 DOGEPERP|ftx-dogeperp|DOGE|5.0E-7
 DOGE0626|ftx-doge0626|DOGE|5.0E-7
+DOGE0925|ftx-doge0925|DOGE|5.0E-7
 DRGNPERP|ftx-drgnperp|DRGN|0.1
 DRGN0626|ftx-drgn0626|DRGN|0.1
+DRGN0925|ftx-drgn0925|DRGN|0.1
 EOSPERP|ftx-eosperp|EOS|0.00025
 EOS0626|ftx-eos0626|EOS|0.00025
+EOS0925|ftx-eos0925|EOS|0.00025
 ETCPERP|ftx-etcperp|ETC|0.0005
 ETC0626|ftx-etc0626|ETC|0.0005
+ETC0925|ftx-etc0925|ETC|0.0005
 ETHPERP|ftx-ethperp|ETH|0.01
 ETH0626|ftx-eth0626|ETH|0.01
+ETH0925|ftx-eth0925|ETH|0.01
+ETHBTC|ftx-ethbtc|ETH|2.5E-6
 ETHUSD|ftx-ethusd|ETH|0.01
 ETHUSDT|ftx-ethusdt|ETH|0.01
 EXCHPERP|ftx-exchperp|EXCH|0.1
 EXCH0626|ftx-exch0626|EXCH|0.1
+EXCH0925|ftx-exch0925|EXCH|0.1
 FTTBTC|ftx-fttbtc|FTT|1.0E-7
 FTTUSD|ftx-fttusd|FTT|0.001
 FTTUSDT|ftx-fttusdt|FTT|0.001
 HTPERP|ftx-htperp|HT|0.0005
 HT0626|ftx-ht0626|HT|0.0005
+HT0925|ftx-ht0925|HT|0.0005
+KNCPERP|ftx-kncperp|KNC|0.0001
+KNC0626|ftx-knc0626|KNC|0.0001
+KNC0925|ftx-knc0925|KNC|0.0001
+KNCUSD|ftx-kncusd|KNC|0.0001
+KNCUSDT|ftx-kncusdt|KNC|0.0001
 LEOPERP|ftx-leoperp|LEO|0.0001
 LEO0626|ftx-leo0626|LEO|0.0001
+LEO0925|ftx-leo0925|LEO|0.0001
 LINKPERP|ftx-linkperp|LINK|0.0005
 LINK0626|ftx-link0626|LINK|0.0005
+LINK0925|ftx-link0925|LINK|0.0005
 LINKUSD|ftx-linkusd|LINK|0.0005
 LINKUSDT|ftx-linkusdt|LINK|0.0005
 LTCPERP|ftx-ltcperp|LTC|0.01
 LTC0626|ftx-ltc0626|LTC|0.01
+LTC0925|ftx-ltc0925|LTC|0.01
 LTCUSD|ftx-ltcusd|LTC|0.005
 LTCUSDT|ftx-ltcusdt|LTC|0.005
 MATICPERP|ftx-maticperp|MATIC|2.5E-6
 MATIC0626|ftx-matic0626|MATIC|2.5E-6
+MATIC0925|ftx-matic0925|MATIC|2.5E-6
 MIDPERP|ftx-midperp|MID|0.1
 MID0626|ftx-mid0626|MID|0.1
-OIL1000525|ftx-oil1000525|OIL100|0.01
+MID0925|ftx-mid0925|MID|0.1
+OIL1000629|ftx-oil1000629|OIL100|0.01
 OKBPERP|ftx-okbperp|OKB|0.0005
 OKB0626|ftx-okb0626|OKB|0.0005
+OKB0925|ftx-okb0925|OKB|0.0005
 PAXGPERP|ftx-paxgperp|PAXG|0.1
 PAXG0626|ftx-paxg0626|PAXG|0.1
+PAXG0925|ftx-paxg0925|PAXG|0.1
 PAXGUSD|ftx-paxgusd|PAXG|0.1
 PAXGUSDT|ftx-paxgusdt|PAXG|0.1
 BERNIE|ftx-bernie|PRESIDENT 2020|0.001
@@ -1858,41 +2113,53 @@ TRUMP|ftx-trump|PRESIDENT 2020|0.001
 WARREN|ftx-warren|PRESIDENT 2020|0.001
 PRIVPERP|ftx-privperp|PRIV|0.1
 PRIV0626|ftx-priv0626|PRIV|0.1
+PRIV0925|ftx-priv0925|PRIV|0.1
 SHITPERP|ftx-shitperp|SHIT|0.1
 SHIT0626|ftx-shit0626|SHIT|0.1
+SHIT0925|ftx-shit0925|SHIT|0.1
+THETAPERP|ftx-thetaperp|THETA|5.0E-5
+THETA0626|ftx-theta0626|THETA|5.0E-5
+THETA0925|ftx-theta0925|THETA|5.0E-5
 TOMOPERP|ftx-tomoperp|TOMO|5.0E-5
 TOMO0626|ftx-tomo0626|TOMO|5.0E-5
+TOMO0925|ftx-tomo0925|TOMO|5.0E-5
 TRXPERP|ftx-trxperp|TRX|2.5E-6
 TRX0626|ftx-trx0626|TRX|2.5E-6
+TRX0925|ftx-trx0925|TRX|2.5E-6
 TRXUSD|ftx-trxusd|TRX|2.5E-6
 TRXUSDT|ftx-trxusdt|TRX|2.5E-6
 TRYBPERP|ftx-trybperp|TRYB|1.0E-5
 TRYB0626|ftx-tryb0626|TRYB|1.0E-5
+TRYB0925|ftx-tryb0925|TRYB|1.0E-5
 TRYBUSD|ftx-trybusd|TRYB|1.0E-5
 USDTPERP|ftx-usdtperp|USDT|0.0001
 USDT0626|ftx-usdt0626|USDT|0.0001
+USDT0925|ftx-usdt0925|USDT|0.0001
 USDTUSD|ftx-usdtusd|USDT|0.0001
 WRXUSD|ftx-wrxusd|WRX|1.0E-5
 WRXUSDT|ftx-wrxusdt|WRX|1.0E-5
 XAUTPERP|ftx-xautperp|XAUT|0.1
 XAUT0626|ftx-xaut0626|XAUT|0.1
+XAUT0925|ftx-xaut0925|XAUT|0.1
 XAUTUSD|ftx-xautusd|XAUT|0.1
 XAUTUSDT|ftx-xautusdt|XAUT|0.1
 XRPPERP|ftx-xrpperp|XRP|2.5E-5
 XRP0626|ftx-xrp0626|XRP|2.5E-5
+XRP0925|ftx-xrp0925|XRP|2.5E-5
 XTZPERP|ftx-xtzperp|XTZ|0.0001
 XTZ0626|ftx-xtz0626|XTZ|0.0001
-ADABEARUSD|ftx-adabearusd|ADABEAR|0.025
-ADABULLUSD|ftx-adabullusd|ADABULL|0.25
+XTZ0925|ftx-xtz0925|XTZ|0.0001
+ADABEARUSD|ftx-adabearusd|ADABEAR|0.0025
+ADABULLUSD|ftx-adabullusd|ADABULL|0.5
 ADAHALFUSD|ftx-adahalfusd|ADAHALF|0.5
 ADAHALFUSDT|ftx-adahalfusdt|ADAHALF|0.5
-ADAHEDGEUSD|ftx-adahedgeusd|ADAHEDGE|0.25
-ALGOBEARUSD|ftx-algobearusd|ALGOBEAR|0.005
-ALGOBULLUSD|ftx-algobullusd|ALGOBULL|1.0E-6
+ADAHEDGEUSD|ftx-adahedgeusd|ADAHEDGE|0.1
+ALGOBEARUSD|ftx-algobearusd|ALGOBEAR|0.001
+ALGOBULLUSD|ftx-algobullusd|ALGOBULL|2.5E-6
 ALGOHALFUSD|ftx-algohalfusd|ALGOHALF|0.5
 ALGOHALFUSDT|ftx-algohalfusdt|ALGOHALF|0.5
 ALGOHEDGEUSD|ftx-algohedgeusd|ALGOHEDGE|0.5
-ALTBEARUSD|ftx-altbearusd|ALTBEAR|0.25
+ALTBEARUSD|ftx-altbearusd|ALTBEAR|0.1
 ALTBULLUSD|ftx-altbullusd|ALTBULL|0.01
 ALTHALFUSD|ftx-althalfusd|ALTHALF|0.5
 ALTHALFUSDT|ftx-althalfusdt|ALTHALF|0.5
@@ -1902,18 +2169,18 @@ ATOMBULLUSD|ftx-atombullusd|ATOMBULL|0.01
 ATOMHALFUSD|ftx-atomhalfusd|ATOMHALF|0.5
 ATOMHALFUSDT|ftx-atomhalfusdt|ATOMHALF|0.5
 ATOMHEDGEUSD|ftx-atomhedgeusd|ATOMHEDGE|0.5
-BCHBEARUSD|ftx-bchbearusd|BCHBEAR|0.025
-BCHBEARUSDT|ftx-bchbearusdt|BCHBEAR|0.025
+BCHBEARUSD|ftx-bchbearusd|BCHBEAR|0.01
+BCHBEARUSDT|ftx-bchbearusdt|BCHBEAR|0.01
 BCHBULLUSD|ftx-bchbullusd|BCHBULL|0.0025
 BCHBULLUSDT|ftx-bchbullusdt|BCHBULL|0.0025
 BCHHALFUSD|ftx-bchhalfusd|BCHHALF|0.5
 BCHHALFUSDT|ftx-bchhalfusdt|BCHHALF|0.5
 BCHHEDGEUSD|ftx-bchhedgeusd|BCHHEDGE|0.5
-BEARUSD|ftx-bearusd|BEAR|0.001
-BEARUSDT|ftx-bearusdt|BEAR|0.001
-BEARSHITUSD|ftx-bearshitusd|BEARSHIT|0.05
-BNBBEARUSD|ftx-bnbbearusd|BNBBEAR|0.005
-BNBBEARUSDT|ftx-bnbbearusdt|BNBBEAR|0.005
+BEARUSD|ftx-bearusd|BEAR|0.0005
+BEARUSDT|ftx-bearusdt|BEAR|0.0005
+BEARSHITUSD|ftx-bearshitusd|BEARSHIT|0.01
+BNBBEARUSD|ftx-bnbbearusd|BNBBEAR|0.0025
+BNBBEARUSDT|ftx-bnbbearusdt|BNBBEAR|0.0025
 BNBBULLUSD|ftx-bnbbullusd|BNBBULL|0.025
 BNBBULLUSDT|ftx-bnbbullusdt|BNBBULL|0.025
 BNBHALFUSD|ftx-bnbhalfusd|BNBHALF|0.5
@@ -1926,49 +2193,68 @@ BSVBULLUSDT|ftx-bsvbullusdt|BSVBULL|0.0005
 BSVHALFUSD|ftx-bsvhalfusd|BSVHALF|0.25
 BSVHALFUSDT|ftx-bsvhalfusdt|BSVHALF|0.25
 BSVHEDGEUSD|ftx-bsvhedgeusd|BSVHEDGE|0.1
-BTMXBEARUSD|ftx-btmxbearusd|BTMXBEAR|0.05
-BTMXBEARUSDT|ftx-btmxbearusdt|BTMXBEAR|0.05
+BTMXBEARUSD|ftx-btmxbearusd|BTMXBEAR|0.025
+BTMXBEARUSDT|ftx-btmxbearusdt|BTMXBEAR|0.025
 BTMXBULLUSD|ftx-btmxbullusd|BTMXBULL|0.005
 BTMXBULLUSDT|ftx-btmxbullusdt|BTMXBULL|0.005
-BTMXHALFUSD|ftx-btmxhalfusd|BTMXHALF|0.25
-BTMXHALFUSDT|ftx-btmxhalfusdt|BTMXHALF|0.25
+BTMXHALFUSD|ftx-btmxhalfusd|BTMXHALF|0.5
+BTMXHALFUSDT|ftx-btmxhalfusdt|BTMXHALF|0.5
 BTMXHEDGEUSD|ftx-btmxhedgeusd|BTMXHEDGE|0.5
 BULLUSD|ftx-bullusd|BULL|1
 BULLUSDT|ftx-bullusdt|BULL|1
-BULLSHITUSD|ftx-bullshitusd|BULLSHIT|0.05
-BVOLUSD|ftx-bvolusd|BVOL|1
-BVOLUSDT|ftx-bvolusdt|BVOL|1
+BULLSHITUSD|ftx-bullshitusd|BULLSHIT|0.1
+BVOLUSD|ftx-bvolusd|BVOL|0.5
+BVOLUSDT|ftx-bvolusdt|BVOL|0.5
+COMPBEARUSD|ftx-compbearusd|COMPBEAR|0.1
+COMPBEARUSDT|ftx-compbearusdt|COMPBEAR|0.1
+COMPBULLUSD|ftx-compbullusd|COMPBULL|5
+COMPBULLUSDT|ftx-compbullusdt|COMPBULL|5
+COMPHALFUSD|ftx-comphalfusd|COMPHALF|0.5
+COMPHEDGEUSD|ftx-comphedgeusd|COMPHEDGE|0.25
+CUSDTBEARUSD|ftx-cusdtbearusd|CUSDTBEAR|2.5
+CUSDTBEARUSDT|ftx-cusdtbearusdt|CUSDTBEAR|2.5
+CUSDTBULLUSD|ftx-cusdtbullusd|CUSDTBULL|2.5
+CUSDTBULLUSDT|ftx-cusdtbullusdt|CUSDTBULL|2.5
+CUSDTHALFUSD|ftx-cusdthalfusd|CUSDTHALF|0.25
+CUSDTHEDGEUSD|ftx-cusdthedgeusd|CUSDTHEDGE|0.5
+DEFIBEARUSD|ftx-defibearusd|DEFIBEAR|1
+DEFIBEARUSDT|ftx-defibearusdt|DEFIBEAR|1
+DEFIBULLUSD|ftx-defibullusd|DEFIBULL|5
+DEFIBULLUSDT|ftx-defibullusdt|DEFIBULL|5
+DEFIHALFUSD|ftx-defihalfusd|DEFIHALF|0.5
+DEFIHALFUSDT|ftx-defihalfusdt|DEFIHALF|0.5
+DEFIHEDGEUSD|ftx-defihedgeusd|DEFIHEDGE|0.5
 DOGEBEARUSD|ftx-dogebearusd|DOGEBEAR|0.25
 DOGEBULLUSD|ftx-dogebullusd|DOGEBULL|0.25
 DOGEHALFUSD|ftx-dogehalfusd|DOGEHALF|0.5
 DOGEHALFUSDT|ftx-dogehalfusdt|DOGEHALF|0.5
 DOGEHEDGEUSD|ftx-dogehedgeusd|DOGEHEDGE|0.5
-DRGNBEARUSD|ftx-drgnbearusd|DRGNBEAR|0.1
-DRGNBULLUSD|ftx-drgnbullusd|DRGNBULL|0.05
+DRGNBEARUSD|ftx-drgnbearusd|DRGNBEAR|0.025
+DRGNBULLUSD|ftx-drgnbullusd|DRGNBULL|0.25
 DRGNHALFUSD|ftx-drgnhalfusd|DRGNHALF|0.5
 DRGNHALFUSDT|ftx-drgnhalfusdt|DRGNHALF|0.5
-DRGNHEDGEUSD|ftx-drgnhedgeusd|DRGNHEDGE|0.5
-EOSBEARUSD|ftx-eosbearusd|EOSBEAR|0.005
-EOSBEARUSDT|ftx-eosbearusdt|EOSBEAR|0.005
+DRGNHEDGEUSD|ftx-drgnhedgeusd|DRGNHEDGE|0.25
+EOSBEARUSD|ftx-eosbearusd|EOSBEAR|0.0025
+EOSBEARUSDT|ftx-eosbearusdt|EOSBEAR|0.0025
 EOSBULLUSD|ftx-eosbullusd|EOSBULL|0.001
 EOSBULLUSDT|ftx-eosbullusdt|EOSBULL|0.001
-EOSHALFUSD|ftx-eoshalfusd|EOSHALF|0.25
-EOSHALFUSDT|ftx-eoshalfusdt|EOSHALF|0.25
+EOSHALFUSD|ftx-eoshalfusd|EOSHALF|0.5
+EOSHALFUSDT|ftx-eoshalfusdt|EOSHALF|0.5
 EOSHEDGEUSD|ftx-eoshedgeusd|EOSHEDGE|0.25
-ETCBEARUSD|ftx-etcbearusd|ETCBEAR|0.01
+ETCBEARUSD|ftx-etcbearusd|ETCBEAR|0.005
 ETCBULLUSD|ftx-etcbullusd|ETCBULL|0.05
 ETCHALFUSD|ftx-etchalfusd|ETCHALF|0.5
 ETCHALFUSDT|ftx-etchalfusdt|ETCHALF|0.5
 ETCHEDGEUSD|ftx-etchedgeusd|ETCHEDGE|0.25
-ETHBEARUSD|ftx-ethbearusd|ETHBEAR|0.001
-ETHBEARUSDT|ftx-ethbearusdt|ETHBEAR|0.001
-ETHBULLUSD|ftx-ethbullusd|ETHBULL|0.05
-ETHBULLUSDT|ftx-ethbullusdt|ETHBULL|0.05
+ETHBEARUSD|ftx-ethbearusd|ETHBEAR|0.00025
+ETHBEARUSDT|ftx-ethbearusdt|ETHBEAR|0.00025
+ETHBULLUSD|ftx-ethbullusd|ETHBULL|0.1
+ETHBULLUSDT|ftx-ethbullusdt|ETHBULL|0.1
 ETHHALFUSD|ftx-ethhalfusd|ETHHALF|0.5
 ETHHALFUSDT|ftx-ethhalfusdt|ETHHALF|0.5
 ETHHEDGEUSD|ftx-ethhedgeusd|ETHHEDGE|0.1
-EXCHBEARUSD|ftx-exchbearusd|EXCHBEAR|0.25
-EXCHBULLUSD|ftx-exchbullusd|EXCHBULL|0.5
+EXCHBEARUSD|ftx-exchbearusd|EXCHBEAR|0.1
+EXCHBULLUSD|ftx-exchbullusd|EXCHBULL|1
 EXCHHALFUSD|ftx-exchhalfusd|EXCHHALF|0.5
 EXCHHALFUSDT|ftx-exchhalfusdt|EXCHHALF|0.5
 EXCHHEDGEUSD|ftx-exchhedgeusd|EXCHHEDGE|0.5
@@ -1977,21 +2263,27 @@ HALFUSDT|ftx-halfusdt|HALF|0.5
 HALFSHITUSD|ftx-halfshitusd|HALFSHIT|0.5
 HALFSHITUSDT|ftx-halfshitusdt|HALFSHIT|0.5
 HEDGEUSD|ftx-hedgeusd|HEDGE|0.1
-HEDGESHITUSD|ftx-hedgeshitusd|HEDGESHIT|0.5
-HTBEARUSD|ftx-htbearusd|HTBEAR|0.1
+HEDGESHITUSD|ftx-hedgeshitusd|HEDGESHIT|0.25
+HTBEARUSD|ftx-htbearusd|HTBEAR|0.05
 HTBULLUSD|ftx-htbullusd|HTBULL|0.1
-HTHALFUSD|ftx-hthalfusd|HTHALF|0.25
-HTHALFUSDT|ftx-hthalfusdt|HTHALF|0.25
+HTHALFUSD|ftx-hthalfusd|HTHALF|0.5
+HTHALFUSDT|ftx-hthalfusdt|HTHALF|0.5
 HTHEDGEUSD|ftx-hthedgeusd|HTHEDGE|0.5
-IBVOLUSD|ftx-ibvolusd|IBVOL|0.25
-IBVOLUSDT|ftx-ibvolusdt|IBVOL|0.25
+IBVOLUSD|ftx-ibvolusd|IBVOL|0.5
+IBVOLUSDT|ftx-ibvolusdt|IBVOL|0.5
+KNCBEARUSD|ftx-kncbearusd|KNCBEAR|1
+KNCBEARUSDT|ftx-kncbearusdt|KNCBEAR|1
+KNCBULLUSD|ftx-kncbullusd|KNCBULL|2.5
+KNCBULLUSDT|ftx-kncbullusdt|KNCBULL|2.5
+KNCHALFUSD|ftx-knchalfusd|KNCHALF|0.5
+KNCHEDGEUSD|ftx-knchedgeusd|KNCHEDGE|0.5
 LEOBEARUSD|ftx-leobearusd|LEOBEAR|5
 LEOBULLUSD|ftx-leobullusd|LEOBULL|0.1
-LEOHALFUSD|ftx-leohalfusd|LEOHALF|0.25
-LEOHALFUSDT|ftx-leohalfusdt|LEOHALF|0.25
+LEOHALFUSD|ftx-leohalfusd|LEOHALF|0.5
+LEOHALFUSDT|ftx-leohalfusdt|LEOHALF|0.5
 LEOHEDGEUSD|ftx-leohedgeusd|LEOHEDGE|1
-LINKBEARUSD|ftx-linkbearusd|LINKBEAR|0.0025
-LINKBEARUSDT|ftx-linkbearusdt|LINKBEAR|0.0025
+LINKBEARUSD|ftx-linkbearusd|LINKBEAR|0.001
+LINKBEARUSDT|ftx-linkbearusdt|LINKBEAR|0.001
 LINKBULLUSD|ftx-linkbullusd|LINKBULL|0.25
 LINKBULLUSDT|ftx-linkbullusdt|LINKBULL|0.25
 LINKHALFUSD|ftx-linkhalfusd|LINKHALF|0.5
@@ -2001,19 +2293,19 @@ LTCBEARUSD|ftx-ltcbearusd|LTCBEAR|0.5
 LTCBEARUSDT|ftx-ltcbearusdt|LTCBEAR|0.5
 LTCBULLUSD|ftx-ltcbullusd|LTCBULL|0.001
 LTCBULLUSDT|ftx-ltcbullusdt|LTCBULL|0.001
-LTCHALFUSD|ftx-ltchalfusd|LTCHALF|0.25
-LTCHALFUSDT|ftx-ltchalfusdt|LTCHALF|0.25
+LTCHALFUSD|ftx-ltchalfusd|LTCHALF|0.5
+LTCHALFUSDT|ftx-ltchalfusdt|LTCHALF|0.5
 LTCHEDGEUSD|ftx-ltchedgeusd|LTCHEDGE|1
-MATICBEARUSD|ftx-maticbearusd|MATICBEAR|0.0005
-MATICBULLUSD|ftx-maticbullusd|MATICBULL|0.0025
+MATICBEARUSD|ftx-maticbearusd|MATICBEAR|5.0E-5
+MATICBULLUSD|ftx-maticbullusd|MATICBULL|0.005
 MATICHALFUSD|ftx-matichalfusd|MATICHALF|0.5
 MATICHALFUSDT|ftx-matichalfusdt|MATICHALF|0.5
-MATICHEDGEUSD|ftx-matichedgeusd|MATICHEDGE|0.1
-MIDBEARUSD|ftx-midbearusd|MIDBEAR|0.05
+MATICHEDGEUSD|ftx-matichedgeusd|MATICHEDGE|0.05
+MIDBEARUSD|ftx-midbearusd|MIDBEAR|0.025
 MIDBULLUSD|ftx-midbullusd|MIDBULL|0.1
 MIDHALFUSD|ftx-midhalfusd|MIDHALF|0.5
 MIDHALFUSDT|ftx-midhalfusdt|MIDHALF|0.5
-MIDHEDGEUSD|ftx-midhedgeusd|MIDHEDGE|0.5
+MIDHEDGEUSD|ftx-midhedgeusd|MIDHEDGE|0.25
 OKBBEARUSD|ftx-okbbearusd|OKBBEAR|0.0025
 OKBBULLUSD|ftx-okbbullusd|OKBBULL|0.5
 OKBHALFUSD|ftx-okbhalfusd|OKBHALF|0.5
@@ -2024,23 +2316,28 @@ PAXGBULLUSD|ftx-paxgbullusd|PAXGBULL|2.5
 PAXGHALFUSD|ftx-paxghalfusd|PAXGHALF|0.25
 PAXGHALFUSDT|ftx-paxghalfusdt|PAXGHALF|0.25
 PAXGHEDGEUSD|ftx-paxghedgeusd|PAXGHEDGE|0.5
-PRIVBEARUSD|ftx-privbearusd|PRIVBEAR|1
-PRIVBULLUSD|ftx-privbullusd|PRIVBULL|0.05
+PRIVBEARUSD|ftx-privbearusd|PRIVBEAR|0.5
+PRIVBULLUSD|ftx-privbullusd|PRIVBULL|0.1
 PRIVHALFUSD|ftx-privhalfusd|PRIVHALF|0.5
 PRIVHALFUSDT|ftx-privhalfusdt|PRIVHALF|0.5
 PRIVHEDGEUSD|ftx-privhedgeusd|PRIVHEDGE|0.5
-TOMOBEARUSD|ftx-tomobearusd|TOMOBEAR|0.0001
-TOMOBULLUSD|ftx-tomobullusd|TOMOBULL|0.0025
+THETABEARUSD|ftx-thetabearusd|THETABEAR|2.5
+THETABULLUSD|ftx-thetabullusd|THETABULL|0.25
+THETAHALFUSD|ftx-thetahalfusd|THETAHALF|0.25
+THETAHALFUSDT|ftx-thetahalfusdt|THETAHALF|0.25
+THETAHEDGEUSD|ftx-thetahedgeusd|THETAHEDGE|1
+TOMOBEARUSD|ftx-tomobearusd|TOMOBEAR|5.0E-5
+TOMOBULLUSD|ftx-tomobullusd|TOMOBULL|0.001
 TOMOHALFUSD|ftx-tomohalfusd|TOMOHALF|0.5
 TOMOHALFUSDT|ftx-tomohalfusdt|TOMOHALF|0.5
 TOMOHEDGEUSD|ftx-tomohedgeusd|TOMOHEDGE|0.1
-TRXBEARUSD|ftx-trxbearusd|TRXBEAR|0.005
+TRXBEARUSD|ftx-trxbearusd|TRXBEAR|0.001
 TRXBULLUSD|ftx-trxbullusd|TRXBULL|0.0005
 TRXHALFUSD|ftx-trxhalfusd|TRXHALF|0.5
 TRXHALFUSDT|ftx-trxhalfusdt|TRXHALF|0.5
-TRXHEDGEUSD|ftx-trxhedgeusd|TRXHEDGE|0.5
+TRXHEDGEUSD|ftx-trxhedgeusd|TRXHEDGE|0.25
 TRYBBEARUSD|ftx-trybbearusd|TRYBBEAR|5
-TRYBBULLUSD|ftx-trybbullusd|TRYBBULL|0.5
+TRYBBULLUSD|ftx-trybbullusd|TRYBBULL|1
 TRYBHALFUSD|ftx-trybhalfusd|TRYBHALF|0.25
 TRYBHALFUSDT|ftx-trybhalfusdt|TRYBHALF|0.25
 TRYBHEDGEUSD|ftx-trybhedgeusd|TRYBHEDGE|1
@@ -2051,18 +2348,18 @@ USDTHALFUSDT|ftx-usdthalfusdt|USDTHALF|0.25
 USDTHEDGEUSD|ftx-usdthedgeusd|USDTHEDGE|0.5
 XAUTBEARUSD|ftx-xautbearusd|XAUTBEAR|1
 XAUTBULLUSD|ftx-xautbullusd|XAUTBULL|2.5
-XAUTHALFUSD|ftx-xauthalfusd|XAUTHALF|0.25
-XAUTHALFUSDT|ftx-xauthalfusdt|XAUTHALF|0.25
+XAUTHALFUSD|ftx-xauthalfusd|XAUTHALF|0.5
+XAUTHALFUSDT|ftx-xauthalfusdt|XAUTHALF|0.5
 XAUTHEDGEUSD|ftx-xauthedgeusd|XAUTHEDGE|0.5
-XRPBEARUSD|ftx-xrpbearusd|XRPBEAR|0.1
-XRPBEARUSDT|ftx-xrpbearusdt|XRPBEAR|0.1
+XRPBEARUSD|ftx-xrpbearusd|XRPBEAR|0.05
+XRPBEARUSDT|ftx-xrpbearusdt|XRPBEAR|0.05
 XRPBULLUSD|ftx-xrpbullusd|XRPBULL|0.0025
 XRPBULLUSDT|ftx-xrpbullusdt|XRPBULL|0.0025
 XRPHALFUSD|ftx-xrphalfusd|XRPHALF|0.5
 XRPHALFUSDT|ftx-xrphalfusdt|XRPHALF|0.5
 XRPHEDGEUSD|ftx-xrphedgeusd|XRPHEDGE|0.5
-XTZBEARUSD|ftx-xtzbearusd|XTZBEAR|0.0025
-XTZBEARUSDT|ftx-xtzbearusdt|XTZBEAR|0.0025
+XTZBEARUSD|ftx-xtzbearusd|XTZBEAR|0.001
+XTZBEARUSDT|ftx-xtzbearusdt|XTZBEAR|0.001
 XTZBULLUSD|ftx-xtzbullusd|XTZBULL|0.5
 XTZBULLUSDT|ftx-xtzbullusdt|XTZBULL|0.5
 XTZHALFUSD|ftx-xtzhalfusd|XTZHALF|0.5
@@ -2070,7 +2367,7 @@ XTZHALFUSDT|ftx-xtzhalfusdt|XTZHALF|0.5
 XTZHEDGEUSD|ftx-xtzhedgeusd|XTZHEDGE|0.1
 
 
-## Gateio Supported Symbols in Executium (updated: 10th June 2020)
+## Gateio Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -2545,7 +2842,7 @@ MXCBTC|gateio-mxcbtc|mxc|1.0E-9
 MXCETH|gateio-mxceth|mxc|1.0E-8
 
 
-## Huobipro Supported Symbols in Executium (updated: 10th June 2020)
+## Huobipro Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -3109,19 +3406,93 @@ MXHT|huobipro-mxht|mx|1.0E-6
 BKBTETH|huobipro-bkbteth|bkbt|1.0E-8
 
 
-## Indodax Supported Symbols in Executium (updated: 10th June 2020)
+## Indodax Supported Symbols in Executium (updated: 23rd June 2020)
 
-No symbols added to executium as of yet for Indodax.
+Symbol | Executium Symbol Code | Base | Minimum Order
+------------ | ------------ | ------------ | ------------
+BTCIDR|indodax-btcidr|btc|N/A
+TENIDR|indodax-tenidr|ten|N/A
+ABYSSIDR|indodax-abyssidr|abyss|N/A
+ACTIDR|indodax-actidr|act|N/A
+ADAIDR|indodax-adaidr|ada|N/A
+AOAIDR|indodax-aoaidr|aoa|N/A
+ATOMIDR|indodax-atomidr|atom|N/A
+BATIDR|indodax-batidr|bat|N/A
+BCDIDR|indodax-bcdidr|bcd|N/A
+BCHIDR|indodax-bchidr|bchabc|N/A
+BSVIDR|indodax-bsvidr|bchsv|N/A
+BNBIDR|indodax-bnbidr|bnb|N/A
+BTGIDR|indodax-btgidr|btg|N/A
+BTSIDR|indodax-btsidr|bts|N/A
+BTTIDR|indodax-bttidr|btt|N/A
+COALIDR|indodax-coalidr|coal|N/A
+CROIDR|indodax-croidr|cro|N/A
+DASHIDR|indodax-dashidr|drk|N/A
+DAXIDR|indodax-daxidr|dax|N/A
+DOGEIDR|indodax-dogeidr|doge|N/A
+ETHIDR|indodax-ethidr|eth|N/A
+EOSIDR|indodax-eosidr|eos|N/A
+ETCIDR|indodax-etcidr|etc|N/A
+GARDIDR|indodax-gardidr|gard|N/A
+GSCIDR|indodax-gscidr|gsc|N/A
+GXCIDR|indodax-gxcidr|gxs|N/A
+HPBIDR|indodax-hpbidr|hpb|N/A
+IGNISIDR|indodax-ignisidr|ignis|N/A
+INXIDR|indodax-inxidr|inx|N/A
+IOTAIDR|indodax-iotaidr|iota|N/A
+LINKIDR|indodax-linkidr|link|N/A
+LTCIDR|indodax-ltcidr|ltc|N/A
+MBLIDR|indodax-mblidr|mbl|N/A
+NEOIDR|indodax-neoidr|neo|N/A
+NPXSIDR|indodax-npxsidr|npxs|N/A
+NXTIDR|indodax-nxtidr|nxt|N/A
+OKBIDR|indodax-okbidr|okb|N/A
+ONTIDR|indodax-ontidr|ont|N/A
+PXGIDR|indodax-pxgidr|pxg|N/A
+QTUMIDR|indodax-qtumidr|qtum|N/A
+RVNIDR|indodax-rvnidr|rvn|N/A
+SSPIDR|indodax-sspidr|ssp|N/A
+SUMOIDR|indodax-sumoidr|sumo|N/A
+TRXIDR|indodax-trxidr|trx|N/A
+USDCIDR|indodax-usdcidr|usdc|N/A
+USDTIDR|indodax-usdtidr|usdt|N/A
+VEXIDR|indodax-vexidr|vex|N/A
+VIDYIDR|indodax-vidyidr|vidy|N/A
+WAVESIDR|indodax-wavesidr|waves|N/A
+XEMIDR|indodax-xemidr|nem|N/A
+XLMIDR|indodax-xlmidr|str|N/A
+XDCEIDR|indodax-xdceidr|xdce|N/A
+XMRIDR|indodax-xmridr|xmr|N/A
+XRPIDR|indodax-xrpidr|xrp|N/A
+XZCIDR|indodax-xzcidr|xzc|N/A
+VSYSIDR|indodax-vsysidr|vsys|N/A
+ZECIDR|indodax-zecidr|zec|N/A
+BTSBTC|indodax-btsbtc|bts|N/A
+DASHBTC|indodax-dashbtc|drk|N/A
+DOGEBTC|indodax-dogebtc|doge|N/A
+ETHBTC|indodax-ethbtc|eth|N/A
+LTCBTC|indodax-ltcbtc|ltc|N/A
+NXTBTC|indodax-nxtbtc|nxt|N/A
+SUMOBTC|indodax-sumobtc|sumo|N/A
+TENBTC|indodax-tenbtc|ten|N/A
+XEMBTC|indodax-xembtc|nem|N/A
+XLMBTC|indodax-xlmbtc|str|N/A
+XRPBTC|indodax-xrpbtc|xrp|N/A
 
 
+## Itbit Supported Symbols in Executium (updated: 23rd June 2020)
 
-## Itbit Supported Symbols in Executium (updated: 10th June 2020)
+Symbol | Executium Symbol Code | Base | Minimum Order
+------------ | ------------ | ------------ | ------------
+BTCUSD|itbit-btcusd|XBT|N/A
+BTCSGD|itbit-btcsgd|XBT|N/A
+BTCEUR|itbit-btceur|XBT|N/A
+ETHUSD|itbit-ethusd|ETH|N/A
+ETHEUR|itbit-etheur|ETH|N/A
+ETHSGD|itbit-ethsgd|ETH|N/A
 
-No symbols added to executium as of yet for Itbit.
 
-
-
-## Kraken Supported Symbols in Executium (updated: 10th June 2020)
+## Kraken Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -3282,7 +3653,7 @@ USDCAD|kraken-usdcad|ZUSD|1.0E-5
 USDJPY|kraken-usdjpy|ZUSD|0.001
 
 
-## Kucoin Supported Symbols in Executium (updated: 10th June 2020)
+## Kucoin Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -3725,7 +4096,7 @@ GRINETH|kucoin-grineth|GRIN|1.0E-7
 GRINUSDT|kucoin-grinusdt|GRIN|1.0E-6
 
 
-## Liquid Supported Symbols in Executium (updated: 10th June 2020)
+## Liquid Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -3907,7 +4278,7 @@ PBTCUSD|liquid-pbtcusd|P-BTC|1.0E-5
 PBTCJPY|liquid-pbtcjpy|P-BTC|1.0E-5
 
 
-## Okex Supported Symbols in Executium (updated: 10th June 2020)
+## Okex Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -4278,7 +4649,7 @@ TRXUSDC|okex-trxusdc|TRX|1.0E-5
 BSVUSDC|okex-bsvusdc|BSV|0.01
 
 
-## Poloniex Supported Symbols in Executium (updated: 10th June 2020)
+## Poloniex Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -4433,7 +4804,7 @@ LINKUSDT|poloniex-linkusdt|LINK|1.0E-8
 BTTUSDJ|poloniex-bttusdj|BTT|1.0E-8
 
 
-## Upbit Supported Symbols in Executium (updated: 10th June 2020)
+## Upbit Supported Symbols in Executium (updated: 23rd June 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
