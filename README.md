@@ -17,9 +17,7 @@ Name | Description
 [exchanges-supported.md](./exchanges-supported.md) | Information related to the current supported exchanges by executium.
 
 ## Supported Exchanges in Version 2
-A table of supported exchanges in executium for version 2. The following table is the status as of 10th June 2020.
-
-The following table is the status as of 23rd June 2020.
+A table of supported exchanges in executium for version 2. The following table is the status as of 23rd June 2020.
 
 Exchange | Executium Code |Active | Symbols Count
 ------------ | ------------ | ------------ | ------------
@@ -54,7 +52,7 @@ We have increased our symbols and exchange support with version 2, as of the 22n
 
 Version | Exchanges Supported | Symbols Supported | Market Spreads
 ------------ | ------------ | ------------  | ------------
-Version 2|24|4,553|10,362,628
+Version 2|24|4,924|12,120,426
 Version 1|12|140|869
 
 We are adding and updating symbols supported by executium daily, the list for [Symbols Supported](./symbols-supported.md) can be monitored. We intend to update this support list weekly with version 2, and for a real-time look at support you can access via the api endpoint `system/symbols` for a full list of support symbols, or keep up to date in real-time via the executium website.
