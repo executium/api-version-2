@@ -87,6 +87,8 @@
 	- [Finance List Top Strategy Pnl](#finance-list-top-strategy-pnl) (finance/list-top-strategy-pnl)
 	- [Finance List Depoists](#finance-list-depoists) (finance/list-depoists)
 	- [Finance List Withdraws](#finance-list-withdraws) (finance/list-withdraws)
+	- [Finance Import Orders List](#finance-import-orders-list) (finance/import-orders-list)
+	- [Finance Import Orders Settings](#finance-import-orders-settings) (finance/import-orders-settings)
 - Tests
 	- [Black Scholes Calculator](#black-scholes-calculator) (tests/black-scholes-calculator)
 	- [Black Scholes Implied Volatility Calculator](#black-scholes-implied-volatility-calculator) (tests/black-scholes-implied-volatility-calculator)
@@ -115,7 +117,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **`[CLOSED-BETA-VERSION]`**
 * All endpoints return either a JSON object or array.
-* There are currently **`85 endpoints`** as part of version 2.
+* There are currently **`87 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -944,15 +946,11 @@ Name | Example Value
 A compiled list of the account specified strategy at a high level overview. Most often used in the event you want to keep a stream of latest data on a particular strategy id This data includes what is currently active, inactive and all totals related.
 
 ```
-POST /api/v2/strategy/high-level-overview
+GET /api/v2/strategy/high-level-overview
 ```
 
 **Parameters:**
-Name | MinLength | Required | Default | Description
------------- | ------------ | ------------ | ------------ | ------------
-id |  | YES |  | Specify the strategy ID
-leg |  | NO |  | Specify the Leg ID (if exists). If empty it will provide all within the algo.
-
+None
 
 ## User Strategy List
 A complete list of user created strategies
@@ -1460,6 +1458,26 @@ None
 
 ```
 GET /api/v2/finance/list-withdraws
+```
+
+**Parameters:**
+None
+
+## Finance Import Orders List
+
+
+```
+GET /api/v2/finance/import-orders-list
+```
+
+**Parameters:**
+None
+
+## Finance Import Orders Settings
+
+
+```
+GET /api/v2/finance/import-orders-settings
 ```
 
 **Parameters:**
