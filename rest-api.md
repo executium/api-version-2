@@ -20,22 +20,24 @@
 	- [Commissions Report](#commissions-report) (subscriptions/commissions-report)
 	- [Deposit Addresses](#deposit-addresses) (subscriptions/deposit)
 	- [Invoices](#invoices) (subscriptions/invoices)
-	- [Subscriptions Change Package](#subscriptions-change-package) (subscriptions/change-package)
-	- [Subscriptions Change Setting](#subscriptions-change-setting) (subscriptions/change-setting)
-	- [Subscriptions Disable Private Server](#subscriptions-disable-private-server) (subscriptions/disable-private-server)
+	- [Change Subscription Package](#change-subscription-package) (subscriptions/change-package)
+	- [Change Setting](#change-setting) (subscriptions/change-setting-request)
+	- [Disable Private Server](#disable-private-server) (subscriptions/disable-private-server)
 	- [Subscriptions Disable Shared Server](#subscriptions-disable-shared-server) (subscriptions/disable-shared-server)
-	- [Subscriptions Enable Private Server](#subscriptions-enable-private-server) (subscriptions/enable-private-server)
-	- [Subscriptions Enable Shared Server](#subscriptions-enable-shared-server) (subscriptions/enable-shared-server)
-	- [Subscriptions List Private Servers](#subscriptions-list-private-servers) (subscriptions/list-private-servers)
-	- [Subscriptions List Shared Servers](#subscriptions-list-shared-servers) (subscriptions/list-shared-servers)
-	- [Subscriptions Package Recommendation](#subscriptions-package-recommendation) (subscriptions/package-recommendation)
+	- [Enable Private Server](#enable-private-server) (subscriptions/enable-private-server)
+	- [Enable Shared Server](#enable-shared-server) (subscriptions/enable-shared-server)
+	- [List Private Servers](#list-private-servers) (subscriptions/list-private-servers)
+	- [List Shared Servers](#list-shared-servers) (subscriptions/list-shared-servers)
+	- [Package Recommendation](#package-recommendation) (subscriptions/package-recommendation)
 	- [Commissions Rate](#commissions-rate) (subscriptions/commissions-rate)
+	- [Subscriptions List Packages](#subscriptions-list-packages) (subscriptions/list-packages)
+	- [Subscriptions Change Setting Confirm](#subscriptions-change-setting-confirm) (subscriptions/change-setting-confirm)
+	- [Subscriptions Server Types](#subscriptions-server-types) (subscriptions/server-types)
 - Exchange Api Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
 	- [Delete Exchange API Key](#delete-exchange-api-key) (exchange-api-keys/delete)
 	- [List Exchange API Keys](#list-exchange-api-keys) (exchange-api-keys/list)
-	- [Exchange Api Keys Check Balances](#exchange-api-keys-check-balances) (exchange-api-keys/check-balances)
-	- [Exchange Api Keys Test](#exchange-api-keys-test) (exchange-api-keys/test)
+	- [Check Specific Exchange Symbol Balance ](#check-specific-exchange-symbol-balance-) (exchange-api-keys/check-balances)
 - Strategy
 	- [Create New Strategy](#create-new-strategy) (strategy/create)
 	- [Strategy High Level Overview](#strategy-high-level-overview) (strategy/high-level-overview)
@@ -47,19 +49,19 @@
 	- [Strategy List Templates](#strategy-list-templates) (strategy/list-templates)
 	- [Strategy Start](#strategy-start) (strategy/start)
 	- [Strategy Stop](#strategy-stop) (strategy/stop)
-	- [Strategy List Active Strategies](#strategy-list-active-strategies) (strategy/list-active-strategies)
-	- [Strategy List Strategy Transactions](#strategy-list-strategy-transactions) (strategy/list-strategy-transactions)
-	- [Strategy Stop All Strategies](#strategy-stop-all-strategies) (strategy/stop-all-strategies)
+	- [List Active Strategies](#list-active-strategies) (strategy/list-active-strategies)
+	- [List Strategy Transactions](#list-strategy-transactions) (strategy/list-strategy-transactions)
+	- [Stop All Strategies](#stop-all-strategies) (strategy/stop-all-strategies)
 	- [Strategy Update](#strategy-update) (strategy/update)
-	- [Strategy List Strategy Options](#strategy-list-strategy-options) (strategy/list-strategy-options)
+	- [List Strategy Options](#list-strategy-options) (strategy/list-strategy-options)
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
 	- [Fetch Symbol Price](#fetch-symbol-price) (public/fetch-symbol-price)
-	- [Public Bitcoin Price Tracker](#public-bitcoin-price-tracker) (public/bitcoin-price-tracker)
-	- [Public Fetch Symbol Trades](#public-fetch-symbol-trades) (public/fetch-symbol-trades)
-	- [Public Realtime Bitcoin Profit](#public-realtime-bitcoin-profit) (public/realtime-bitcoin-profit)
-	- [Public Exchange Information](#public-exchange-information) (public/exchange-information)
-	- [Public Tradingview Charts](#public-tradingview-charts) (public/tradingview-charts)
+	- [Bitcoin Price Tracker](#bitcoin-price-tracker) (public/bitcoin-price-tracker)
+	- [Fetch Symbol Trades](#fetch-symbol-trades) (public/fetch-symbol-trades)
+	- [Realtime Bitcoin Profit](#realtime-bitcoin-profit) (public/realtime-bitcoin-profit)
+	- [Exchange Information](#exchange-information) (public/exchange-information)
+	- [Tradingview Charts](#tradingview-charts) (public/tradingview-charts)
 - Subaccounts
 	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
@@ -69,6 +71,7 @@
 	- [Delete Broadcast](#delete-broadcast) (subaccounts/broadcast-delete)
 	- [Edit Broadcast](#edit-broadcast) (subaccounts/broadcast-edit)
 	- [List Broadcast](#list-broadcast) (subaccounts/broadcast-list)
+	- [Subaccounts Subaccount Access History](#subaccounts-subaccount-access-history) (subaccounts/subaccount-access-history)
 - User
 	- [Close Account](#close-account) (user/close-account)
 	- [User Account Balance](#user-account-balance) (user/account-balance)
@@ -80,17 +83,18 @@
 - Wallets
 	- [Wallets Fetch Deposit Address](#wallets-fetch-deposit-address) (wallets/fetch-deposit-address)
 	- [Wallets List Balances](#wallets-list-balances) (wallets/list-balances)
-	- [Wallets Withdraw](#wallets-withdraw) (wallets/withdraw)
+	- [Withdraw from wallet](#withdraw-from-wallet) (wallets/withdraw)
 - Finance
-	- [Finance List Commissions Paid](#finance-list-commissions-paid) (finance/list-commissions-paid)
-	- [Finance List Recent Transactions](#finance-list-recent-transactions) (finance/list-recent-transactions)
-	- [Finance List Top Strategy Pnl](#finance-list-top-strategy-pnl) (finance/list-top-strategy-pnl)
-	- [Finance List Depoists](#finance-list-depoists) (finance/list-depoists)
-	- [Finance List Withdraws](#finance-list-withdraws) (finance/list-withdraws)
+	- [List Commissions Paid](#list-commissions-paid) (finance/list-commissions-paid)
+	- [List Recent Transactions](#list-recent-transactions) (finance/list-recent-transactions)
+	- [List Top Strategy PNL](#list-top-strategy-pnl) (finance/list-top-strategy-pnl)
+	- [List Deposits](#list-deposits) (finance/list-depoists)
+	- [List Withdraws](#list-withdraws) (finance/list-withdraws)
 	- [Finance Import Orders List](#finance-import-orders-list) (finance/import-orders-list)
 	- [Finance Import Orders Settings](#finance-import-orders-settings) (finance/import-orders-settings)
+- Exchange API Keys
+	- [Test API Key Status](#test-api-key-status) (exchange-api-keys/test)
 - Tests
-	- [Black Scholes Calculator](#black-scholes-calculator) (tests/black-scholes-calculator)
 	- [Black Scholes Implied Volatility Calculator](#black-scholes-implied-volatility-calculator) (tests/black-scholes-implied-volatility-calculator)
 	- [Test Server Location Speed To Exchange](#test-server-location-speed-to-exchange) (tests/server-location-speed-to-exchange)
 - Exchange Index
@@ -105,6 +109,10 @@
 - Calendar
 	- [Calendar Add Reminder](#calendar-add-reminder) (calendar/add-reminder)
 	- [Calendar List Schedule](#calendar-list-schedule) (calendar/list-schedule)
+- Exchange Query
+	- [Exchange Query List Balances](#exchange-query-list-balances) (exchange-query/list-balances)
+	- [Exchange Query List Closed Orders](#exchange-query-list-closed-orders) (exchange-query/list-closed-orders)
+	- [Exchange Query List Open Orders](#exchange-query-list-open-orders) (exchange-query/list-open-orders)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -117,7 +125,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **`[CLOSED-BETA-VERSION]`**
 * All endpoints return either a JSON object or array.
-* There are currently **`87 endpoints`** as part of version 2.
+* There are currently **`94 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -250,7 +258,7 @@ note | Always make sure your devices time is synchronized for best results.
 
 
 ## Information
-
+Authentication is required as the results will be tailored to your actual subscription criteria. System information concentrates on what is supported in executium from an exchange and symbol perspective.
 
 ```
 GET /api/v2/system/information
@@ -259,8 +267,20 @@ GET /api/v2/system/information
 **Parameters:**
 None
 
-## List Validation Functions
+**Successful Response Payload:**
+```javascript
+"data": {
+      "time": 1593065740890,
+      "supported": {
+        "exchanges": [],
+        "symbols": []
+      }
+    },
+```
 
+
+## List Validation Functions
+Every paramter is subjected to a validation method. We provide information on any unsuccessful validation about any validation method which may have failed. For speed of process you can obtain the functions we use for validation. For example, by visiting https://github.com/executium/millisecond-functions you can see the function in `PHP` and `Javascript` which we use for `js_millisecond_update`.
 
 ```
 GET /api/v2/system/list-validation-functions
@@ -297,7 +317,7 @@ Name | Example Value
 
 
 ## Symbols
-
+All symbols listed and supported on executium. 
 
 ```
 GET /api/v2/system/symbols
@@ -307,7 +327,7 @@ GET /api/v2/system/symbols
 None
 
 ## System Status
-
+This provides information related to the current setup of the network and how it is performing. Any issues will be first reported here. We recommend checking this endpoint if you have any issues with any component of the system to check if it is a local issue or an issue with executium.
 
 ```
 GET /api/v2/system/status
@@ -316,15 +336,82 @@ GET /api/v2/system/status
 **Parameters:**
 None
 
-## List Announcements
+**Successful Response Payload:**
+```javascript
+{
+    "data": [
+      {
+        "name": "Connectivity",
+        "status": "running",
+        "last_checked": 1593068763898,
+        "issues": "None"
+      },
+      {
+        "name": "Strategies",
+        "status": "running",
+        "last_checked": 1593068686695,
+        "issues": "None"
+      },
+      {
+        "name": "Sockets",
+        "status": "running",
+        "last_checked": 1593068683087,
+        "issues": "None"
+      },
+      {
+        "name": "Exchanges",
+        "status": "running",
+        "last_checked": 1593068687005,
+        "issues": "None"
+      },
+      {
+        "name": "Executium.com",
+        "status": "running",
+        "last_checked": 1593068685179,
+        "issues": "None"
+      },
+      {
+        "name": "Executium.pro",
+        "status": "running",
+        "last_checked": 1593068682645,
+        "issues": "None"
+      },
+      {
+        "name": "OrderBooks",
+        "status": "running",
+        "last_checked": 1593068687762,
+        "issues": "None"
+      },
+      {
+        "name": "Trades",
+        "status": "running",
+        "last_checked": 1593068688303,
+        "issues": "None"
+      },
+      {
+        "name": "Support",
+        "status": "running",
+        "last_checked": 1593068682195,
+        "issues": "None"
+      }
+    ],
+}
+```
 
+
+## List Announcements
+All company announcements are listed in full detail via this endpoint.
 
 ```
-GET /api/v2/system/list-announcements
+POST /api/v2/system/list-announcements
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
 
 ## Subscriptions Details
 A breakdown on your current subscription with executium. The subscription details provide a full insight into all components of your subscription plan.
@@ -537,7 +624,6 @@ add_own |
 
 **Successful Response Payload:**
 ```javascript
-
 {
     "data": {
       "subscription": {
@@ -675,7 +761,7 @@ add_own |
 
 
 ## Cancel Subscription
-
+Ability to cancel your subscription is restricted to the website only currently. Please visit the website to cancel or change your subscription.
 
 ```
 GET /api/v2/subscriptions/cancel
@@ -685,7 +771,7 @@ GET /api/v2/subscriptions/cancel
 None
 
 ## Commissions Report
-
+A full list based on date range of your recent commissions due to executium for services rendered. This commission report does not include those which you are paying to the exchanges.
 
 ```
 GET /api/v2/subscriptions/commissions-report
@@ -705,7 +791,7 @@ GET /api/v2/subscriptions/deposit
 None
 
 ## Invoices
-
+All of your subscription invoices for your period as an executium user. This includes invoices which have been generated where no fee is due. To exclude these please review the filter options.
 
 ```
 GET /api/v2/subscriptions/invoices
@@ -714,88 +800,112 @@ GET /api/v2/subscriptions/invoices
 **Parameters:**
 None
 
-## Subscriptions Change Package
-
+## Change Subscription Package
+Provide the ID of the package you wish to change your current subscription too. You can find the packages `id` via the `subscription/list-packages` endpoint.
 
 ```
-GET /api/v2/subscriptions/change-package
+POST /api/v2/subscriptions/change-package
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID of package you wish to change too.
+
+
+## Change Setting
+You can change individual settings of a subscription to have more or less of something. Once you make a change your package will become `custom`. When you request a change you will be provided with a subscription price adjustment `id`.  Use this provided ID with the endpoint `subscriptions/change-setting-confirm`
+
+```
+GET /api/v2/subscriptions/change-setting-request
 ```
 
 **Parameters:**
 None
 
-## Subscriptions Change Setting
-
-
-```
-GET /api/v2/subscriptions/change-setting
-```
-
-**Parameters:**
-None
-
-## Subscriptions Disable Private Server
-
+## Disable Private Server
+Use the provided `id` from the endpoint `subscriptions/list-private-servers` and confirm the disabling of the server. If you have active strategies currently running on the server it will fail.
 
 ```
-GET /api/v2/subscriptions/disable-private-server
+POST /api/v2/subscriptions/disable-private-server
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | 
+
 
 ## Subscriptions Disable Shared Server
-
-
-```
-GET /api/v2/subscriptions/disable-shared-server
-```
-
-**Parameters:**
-None
-
-## Subscriptions Enable Private Server
-
+Use the provided `id` from the endpoint `subscriptions/list-shared-servers` and confirm the disabling of the server. If you have active strategies currently running on the server it will fail.
 
 ```
-GET /api/v2/subscriptions/enable-private-server
+POST /api/v2/subscriptions/disable-shared-server
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | 
 
-## Subscriptions Enable Shared Server
 
-
-```
-GET /api/v2/subscriptions/enable-shared-server
-```
-
-**Parameters:**
-None
-
-## Subscriptions List Private Servers
-
+## Enable Private Server
+To enable a private server provide the `region` you would like to have it exist and the `server_package`. There are additional optional criteras for your server configuration. You can consult `subscriptions/server-types` for a full list of options. Please note that when you enable a server it will incur charges as listed in the `subscriptions/server-types` endpoint,
 
 ```
-GET /api/v2/subscriptions/list-private-servers
+POST /api/v2/subscriptions/enable-private-server
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+region |  | YES |  | 
+server_package |  | YES |  | Consult `subscriptions/server-types` for a full list of server packages and provide the ID as this parameter
 
-## Subscriptions List Shared Servers
 
+## Enable Shared Server
+To enable a shared server provide the `region` you would like to have it exist and the `server_package`. There are additional optional criteras for your server configuration. You can consult `subscriptions/server-types` for a full list of options. Please note that when you enable a server it will incur charges as listed in the `subscriptions/server-types` endpoint,
 
 ```
-GET /api/v2/subscriptions/list-shared-servers
+POST /api/v2/subscriptions/enable-shared-server
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+region |  | YES |  | 
 
-## Subscriptions Package Recommendation
 
+## List Private Servers
+List all the private servers your currently have on your package.
+
+```
+POST /api/v2/subscriptions/list-private-servers
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## List Shared Servers
+List all shared servers currently available to you. These will also include those as defaulted to you by your subscription package. When you join any subscription, even the free tier of executium, you are nominated servers for your strategies to run on. These provided servers are inclusive of your subscription cost and subject to change by the hour. They will not change if you have an existing strategy running on them.
+
+```
+POST /api/v2/subscriptions/list-shared-servers
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Package Recommendation
+Based on an array of inputs we will provide a recommended package for you.
 
 ```
 GET /api/v2/subscriptions/package-recommendation
@@ -814,6 +924,40 @@ GET /api/v2/subscriptions/commissions-rate
 **Parameters:**
 None
 
+## Subscriptions List Packages
+
+
+```
+GET /api/v2/subscriptions/list-packages
+```
+
+**Parameters:**
+None
+
+## Subscriptions Change Setting Confirm
+
+
+```
+GET /api/v2/subscriptions/change-setting-confirm
+```
+
+**Parameters:**
+None
+
+## Subscriptions Server Types
+A full list of available server types are provided. Each with CPU, Memory and other hardware information for your strategy server requirements. You must select if you are wanting to filter `private` or `shared` servers. All prices are included in the list.
+
+```
+POST /api/v2/subscriptions/server-types
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+type |  | YES |  | Private or Shared
+duration |  | YES |  | Provided in seconds, no less than 7200 seconds. The duration you enter will determine the price.
+
+
 ## Add Exchange API Credentials
 Provide Exchange API credentials for usage with your executium strategies. Once added they will be confirmed and then be made available to strategies.
 
@@ -828,7 +972,7 @@ exchange |  | YES |  | See the supported exchanges via the `strategy/list-exchan
 label | 6 | YES |  | The label will appear when selecting your API keys for strategies. 
 token | 5 | YES |  | API key/token
 secret | 4 | YES |  | API secret
-password |  | NO |  | Some exchanges, such as OKEx require a password to be provided.
+password |  | YES |  | Some exchanges, such as OKEx require a password to be provided.
 
 
 ## Delete Exchange API Key
@@ -858,21 +1002,11 @@ limit |  | NO | 10 |
 page |  | NO | 1 | 
 
 
-## Exchange Api Keys Check Balances
-
+## Check Specific Exchange Symbol Balance 
+Functions in a similar fashion to `list-balances`.
 
 ```
 GET /api/v2/exchange-api-keys/check-balances
-```
-
-**Parameters:**
-None
-
-## Exchange Api Keys Test
-
-
-```
-GET /api/v2/exchange-api-keys/test
 ```
 
 **Parameters:**
@@ -1020,11 +1154,11 @@ POST /api/v2/strategy/save-template
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 copy_strategy_id |  | YES |  | Provide the strategy ID you would like to save as a template.
-label |  | NO |  | Optional field. If left blank or not provided the strategy template will be saved as the strategy name.
+label |  | YES |  | Optional field. If left blank or not provided the strategy template will be saved as the strategy name.
 
 
 ## Strategy List Templates
-
+List all of your saved strategy templates.
 
 ```
 GET /api/v2/strategy/list-templates
@@ -1034,7 +1168,7 @@ GET /api/v2/strategy/list-templates
 None
 
 ## Strategy Start
-
+You must specifically call a strategy start event using this endpoint. If you execute this endpoint while a strategy is running nothing will happen.
 
 ```
 GET /api/v2/strategy/start
@@ -1044,17 +1178,20 @@ GET /api/v2/strategy/start
 None
 
 ## Strategy Stop
-
+This endpoint is to specifically tell the strategy to stop. When it has been executed it will attempt to clean up and cancel any pending orders before it fully stops. This can take an unspecified period of time to complete as the system works to confirm that anything pending is completed. You can consult the `force` parameter for a hard stop.
 
 ```
-GET /api/v2/strategy/stop
+POST /api/v2/strategy/stop
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+force |  | NO |  | If you select to force the stop it will stop immediately and not check to see if the orders are still active at the exchanges. In the event this parameter is used you must cancel the orders yourself via the exchange(s). In the event you start the strategy after a forced stop, the strategy format will reconvene and check any pending orders.
 
-## Strategy List Active Strategies
 
+## List Active Strategies
+A complete list of strategies that are actively running on executium.
 
 ```
 GET /api/v2/strategy/list-active-strategies
@@ -1063,25 +1200,85 @@ GET /api/v2/strategy/list-active-strategies
 **Parameters:**
 None
 
-## Strategy List Strategy Transactions
-
-
-```
-GET /api/v2/strategy/list-strategy-transactions
-```
-
-**Parameters:**
-None
-
-## Strategy Stop All Strategies
-
+## List Strategy Transactions
+Show all strategy transactions related to the `main_id` and `leg_id`. Additional filters can be added such as the current `status`.
 
 ```
-GET /api/v2/strategy/stop-all-strategies
+POST /api/v2/strategy/list-strategy-transactions
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+main_id |  | YES |  | 
+leg_id |  | YES |  | 
+
+
+**Successful Response Payload:**
+```javascript
+ "data": {
+      "transactions": [
+        {
+          "id": "2002650",
+          "time_created": "1593071056",
+          "last_updated": "1593071056467",
+          "c_active": "1",
+          "c_order": "0",
+          "c_lookup_status": "0",
+          "c_lookup_count": "0",
+          "c_row": "0",
+          "c_symbol_code": "binance-btcusdc",
+          "c_exchange": "binance",
+          "c_symbol": "BTC/USDC",
+          "c_symbolid": "btcusdc",
+          "c_type": "limit",
+          "c_type_orig": "maker",
+          "c_side": "sell",
+          "c_amount": "0.00200000",
+          "c_price": "0.00000000",
+          "c_price_entry": "9227.11000000",
+          "c_price_offset": "60.00000000",
+          "c_payload": "{"info":{"symbol":"BTCUSDC","orderId":196785600,"orderListId":-1,"clientOrderId":"execute2000130","transactTime":1593071056427,"price":"9227.11000000","origQty":"0.00200000","executedQty":"0.00000000","cummulativeQuoteQty":"0.00000000","status":"NEW","timeInForce":"GTC","type":"LIMIT","side":"SELL"},"id":"196785600","clientOrderId":"execute2000130","timestamp":1593071056427,"datetime":"2020-06-25T07:44:16.427Z","lastTradeTimestamp":null,"symbol":"BTC/USDC","type":"limit","side":"sell","price":9227.11,"amount":0.002,"cost":0,"average":null,"filled":0,"remaining":0.002,"status":"open","fee":null,"trades":null}",
+          "c_time_requested": "1593071056297",
+          "c_time_orderplaced": "170",
+          "c_time_completed": "1593071056467",
+          "c_time_journey": "170",
+          "c_order_id": "196785600",
+          "c_order_slice": "0",
+          "c_order_success": "0",
+          "c_order_failed": "0",
+          "c_order_status": "open",
+          "c_order_remaining": "0.00200000",
+          "c_order_filled": "0.00000000",
+          "c_com": "0.00000000",
+          "c_child_id": "0",
+          "c_cancel": "0",
+          "c_cancel_time": "0",
+          "c_spread_entry": "-7.04000000",
+          "c_trace_order": "0",
+          "c_conditions": "["spread_greater_than_input_number"]",
+          "custom_id": "2000130",
+          "c_max_time": "1593071056307",
+        },]
+}
+
+```
+
+
+## Stop All Strategies
+You can stop all strategies running by execute this endpoint. If you want them to stop at once, look at the `force` paramter for more information.
+
+```
+POST /api/v2/strategy/stop-all-strategies
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+force |  | NO |  | If you select to force the stop it will stop all strategies running immediately and not check to see if the orders are still active at the exchanges.
+
 
 ## Strategy Update
 Strategies can only be updated when they are stopped. If the strategy is active the update attempt will not be processed.
@@ -1093,8 +1290,8 @@ GET /api/v2/strategy/update
 **Parameters:**
 None
 
-## Strategy List Strategy Options
-
+## List Strategy Options
+List all variables to a strategy. This is a complete set of options available to the executium strategy system,
 
 ```
 GET /api/v2/strategy/list-strategy-options
@@ -1104,7 +1301,7 @@ GET /api/v2/strategy/list-strategy-options
 None
 
 ## Spreads
-
+Data which is served in a public manner and is obtainable via a public call. Additional restrictions may apply and tighter rate limiting. To upgrade your account for faster access please visit executium.
 
 ```
 GET /api/v2/public/spreads/data
@@ -1114,7 +1311,7 @@ GET /api/v2/public/spreads/data
 None
 
 ## Fetch Symbol Price
-
+Public API but restrictions apply based on your subscription level. You must provide the exact `symbol` code which executium provides. You can review symbols in the `system/symbols` endpoint.
 
 ```
 POST /api/v2/public/fetch-symbol-price
@@ -1125,41 +1322,58 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 symbol |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
 side |  | YES |  | Choice: 'asks' or 'bids'; If you input 'buy' it will show 'asks'; If you input 'sell' it will show 'bids'; No other inputs will be accepted.
-level |  | NO | 1 | The orderbook level, from 1 to 10
+level |  | YES | 1 | The orderbook level, from 1 to 10
 
 
-## Public Bitcoin Price Tracker
-
-
-```
-GET /api/v2/public/bitcoin-price-tracker
-```
-
-**Parameters:**
-None
-
-## Public Fetch Symbol Trades
-
+## Bitcoin Price Tracker
+Data related to the current price of Bitcoin in realtime. This endpoint only provides the data streams. You should use your own graph product to map the data. A minimum of 1 exchange is required to run and a maximum of 6 is possible.
 
 ```
-GET /api/v2/public/fetch-symbol-trades
+POST /api/v2/public/bitcoin-price-tracker
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+exchange1 |  | YES |  | 
+exchange2 |  | NO |  | 
+exchange3 |  | NO |  | 
+exchange4 |  | NO |  | 
+exchange5 |  | NO |  | 
+exchange6 |  | NO |  | 
 
-## Public Realtime Bitcoin Profit
 
+## Fetch Symbol Trades
+Fetch the latest trades for a `symbol`. The default is both sides but this can be filtered to `asks` or `bids`
 
 ```
-GET /api/v2/public/realtime-bitcoin-profit
+POST /api/v2/public/fetch-symbol-trades
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+symbol |  | NO |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
+side |  | NO | both | Defaults to both sides. Choices: 'both', 'asks' or 'bids'; No other inputs will be accepted.
 
-## Public Exchange Information
 
+## Realtime Bitcoin Profit
+Showing all of the arbitrage opportunities that show a return - You can use this executium tool to look at the best profit availability on all spreads we monitor. 
+
+
+```
+POST /api/v2/public/realtime-bitcoin-profit
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Exchange Information
+Current running and grade information for exchanges that executium supports. The grading is based on a range of factors which can be reviewed here [exchange-grading.md](./exchanges-supported.md)
 
 ```
 GET /api/v2/public/exchange-information
@@ -1168,15 +1382,52 @@ GET /api/v2/public/exchange-information
 **Parameters:**
 None
 
-## Public Tradingview Charts
+**Successful Response Payload:**
+```javascript
+{
+    "data": [
+      {
+        "exchange": "Bitfinex",
+        "status": "running",
+        "rating": "A"
+      },
+      {
+        "exchange": "Binance",
+        "status": "running",
+        "rating": "A"
+      },
+      {
+        "exchange": "OKEx",
+        "status": "running",
+        "rating": "B"
+      },
+      {
+        "exchange": "Binance Futures",
+        "status": "running",
+        "rating": "C"
+      },
+      {
+        "exchange": "Bitmex",
+        "status": "running",
+        "rating": "D"
+      }
+    ],
+}
+```
 
+
+## Tradingview Charts
+Retrieve the Javascript code for the tradingview chart input. The returned value is the javascript include which can then be included in a page to embed a tradingview chart.
 
 ```
-GET /api/v2/public/tradingview-charts
+POST /api/v2/public/tradingview-charts
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+symbol |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
+
 
 ## Create Sub Account
 The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
@@ -1194,15 +1445,15 @@ parent_maximum |  | YES | 0.1 | Maximum parent in BTC that the subaccount can pl
 child_maximum |  | YES | 0.01 | Maximum child in BTC that the subaccount can place per strategy
 exchanges_enabled |  | YES | All | Select which exchanges the subaccount has access too for strategy management.
 concurrent_strategies_maximum |  | YES |  | The amount of strategies that the subaccount can run concurrently.
-export_enabled |  | YES |  | The subaccount ability to export data (true/false)
-share_accounts_apikeys |  | YES |  | Allow or deny the subaccount to have access to all of the keys in the account (true/false).
-manage_own_apikeys |  | YES |  | Provide the subaccount the ability to manage their own api keys (true/false).
-force_twofactor |  | YES |  | Force the subaccount to setup two factor on their account (true/false)
-allow_api_access |  | YES |  | Allow or deny the subaccount access to the account API, in the event the account is given access new API keys for the subaccount will need to be generated (true/false).
+export_enabled |  | YES |  | The subaccount ability to export data (true/true)
+share_accounts_apikeys |  | YES |  | Allow or deny the subaccount to have access to all of the keys in the account (true/true).
+manage_own_apikeys |  | YES |  | Provide the subaccount the ability to manage their own api keys (true/true).
+force_twofactor |  | YES |  | Force the subaccount to setup two factor on their account (true/true)
+allow_api_access |  | YES |  | Allow or deny the subaccount access to the account API, in the event the account is given access new API keys for the subaccount will need to be generated (true/true).
 
 
 ## List All Subaccounts
-
+Available in subscrition packages. View ID and subaccount information.
 
 ```
 GET /api/v2/subaccounts/subaccount-list
@@ -1212,7 +1463,7 @@ GET /api/v2/subaccounts/subaccount-list
 None
 
 ## Delete Subaccount
-
+You can delete any subaccount by providing the ID, which can be obtain by `list-subaccount`. When you delete a subaccount it will not remove any other related information such as `strategy` or `history`. All information will still eist with the primary account holder.
 
 ```
 GET /api/v2/subaccounts/subaccount-delete
@@ -1222,7 +1473,7 @@ GET /api/v2/subaccounts/subaccount-delete
 None
 
 ## Edit Subaccount
-
+You can edit all basic features about a subaccount but not the `password` or `active status` through the API. To change a subaccount password you must login to the website. If you wish to disable an account use the `subaccounts/subaccount-delete` endpoint,
 
 ```
 GET /api/v2/subaccounts/subaccount-edit
@@ -1232,24 +1483,31 @@ GET /api/v2/subaccounts/subaccount-edit
 None
 
 ## Send Broadcast
-
+Send a broadcast to all subaccounts.
 
 ```
-GET /api/v2/subaccounts/broadcast-create
+POST /api/v2/subaccounts/broadcast-create
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+title | 5 | YES |  | The title of the broadcast
+body | 5 | YES |  | Provide the body of text to broadcast
+
 
 ## Delete Broadcast
-
+Delete a broadcast you want to remove. Use the `subaccounts/broadcast-list` to locate the `id`.
 
 ```
-GET /api/v2/subaccounts/broadcast-delete
+POST /api/v2/subaccounts/broadcast-delete
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID of the key you wish to remove.
+
 
 ## Edit Broadcast
 
@@ -1262,10 +1520,24 @@ GET /api/v2/subaccounts/broadcast-edit
 None
 
 ## List Broadcast
+List all broadcasts
+
+```
+POST /api/v2/subaccounts/broadcast-list
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Subaccounts Subaccount Access History
 
 
 ```
-GET /api/v2/subaccounts/broadcast-list
+GET /api/v2/subaccounts/subaccount-access-history
 ```
 
 **Parameters:**
@@ -1324,7 +1596,7 @@ error | Please use the website to close your account.
 
 
 ## User Account Balance
-
+Show all account balances you have available with executium. This is just for executium wallets which are used to pay your subscriptions and commissions with. If you are looking to check exchanges balances please consult the endpoint `exchange-query/list-balances`
 
 ```
 GET /api/v2/user/account-balance
@@ -1334,17 +1606,21 @@ GET /api/v2/user/account-balance
 None
 
 ## User Access History
-
+A full list of your main accont access activity to the main webite.
 
 ```
-GET /api/v2/user/access-history
+POST /api/v2/user/access-history
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
 
 ## User Account Details
-
+Your account information related to properties such as `email` and `name`.
 
 ```
 GET /api/v2/user/account-details
@@ -1354,17 +1630,21 @@ GET /api/v2/user/account-details
 None
 
 ## User List Referrals
-
+A full list of your recent referrals to the website and the `status` of those referrals and earnings.
 
 ```
-GET /api/v2/user/list-referrals
+POST /api/v2/user/list-referrals
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
 
 ## User Active Sessions
-
+Show all of your current active sessions which are logged into the web system.
 
 ```
 GET /api/v2/user/active-sessions
@@ -1374,7 +1654,7 @@ GET /api/v2/user/active-sessions
 None
 
 ## User Security Settings
-
+List all of your security settings and current configuration. These settings apply to your subaccounts also.
 
 ```
 GET /api/v2/user/security-settings
@@ -1384,17 +1664,20 @@ GET /api/v2/user/security-settings
 None
 
 ## Wallets Fetch Deposit Address
-
+Select the wallet `type`  you would like to depsoit too. By default it is set to Bitcoin (`BTC`).
 
 ```
-GET /api/v2/wallets/fetch-deposit-address
+POST /api/v2/wallets/fetch-deposit-address
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+type |  | YES | BTC | 
+
 
 ## Wallets List Balances
-
+List all wallets related to your account for direct purpose of depositing subscription and commission fees too.
 
 ```
 GET /api/v2/wallets/list-balances
@@ -1403,58 +1686,81 @@ GET /api/v2/wallets/list-balances
 **Parameters:**
 None
 
-## Wallets Withdraw
-
-
-```
-GET /api/v2/wallets/withdraw
-```
-
-**Parameters:**
-None
-
-## Finance List Commissions Paid
-
+## Withdraw from wallet
+Request to withdraw from your executium wallet. You will need to provide the ID and address of the wallet you wish to withdraw from. Please note that only certain subscription levels may have access to this function. Fees apply to process transactions and they can take up to 24 hours as each withdraw request is manually reviewed.
 
 ```
-GET /api/v2/finance/list-commissions-paid
+POST /api/v2/wallets/withdraw
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+wallet_id |  | YES |  | Find the wallet `id` from the list wallet endpoint
+wallet_address |  | YES |  | Find the wallet `address` from the list wallet endpoint
+address_to |  | YES |  | Provide the wallet address you wish to transfer too
+amount |  | YES |  | Specify the amount to transfer
 
-## Finance List Recent Transactions
 
-
-```
-GET /api/v2/finance/list-recent-transactions
-```
-
-**Parameters:**
-None
-
-## Finance List Top Strategy Pnl
-
+## List Commissions Paid
+This is inclusive of your subaccounts in your account if you have them. All commissions relate directly to executium and not the exchanges commissions taken.
 
 ```
-GET /api/v2/finance/list-top-strategy-pnl
+POST /api/v2/finance/list-commissions-paid
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+subaccount_id |  | YES |  | Provide a valid subaccount ID from the endpoint `subaccounts/subaccount-list`
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
 
-## Finance List Depoists
 
+## List Recent Transactions
+List all of your most recent transactions related to your executium. This includes your subscription and commissions costs.
 
 ```
-GET /api/v2/finance/list-depoists
+POST /api/v2/finance/list-recent-transactions
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
 
-## Finance List Withdraws
 
+## List Top Strategy PNL
+List all of your most recent strategies and their related profit and loss .
+
+```
+POST /api/v2/finance/list-top-strategy-pnl
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## List Deposits
+List deposits which have come into executium. This is the deposits which have been made to pay for subscription and commission fees.
+
+```
+POST /api/v2/finance/list-depoists
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## List Withdraws
+See `wallets/withdraw`
 
 ```
 GET /api/v2/finance/list-withdraws
@@ -1483,18 +1789,21 @@ GET /api/v2/finance/import-orders-settings
 **Parameters:**
 None
 
-## Black Scholes Calculator
-
+## Test API Key Status
+You must use the returned `id` for the keys you wish to test. From this we will run a test to determine if the keys are valid. If they are tested to be invalid then they will also be disabled for selection system-wide.
 
 ```
-GET /api/v2/tests/black-scholes-calculator
+POST /api/v2/exchange-api-keys/test
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide ID of the API key from `exchange-api-keys/list`
+
 
 ## Black Scholes Implied Volatility Calculator
-
+Black Scholes Implied Volatility Calculator
 
 ```
 GET /api/v2/tests/black-scholes-implied-volatility-calculator
@@ -1524,7 +1833,7 @@ exchange2 |  | YES |  | The second exchange to ping.
 
 
 ## Exchange Index Announcements
-
+The exchange index service announcements.
 
 ```
 GET /api/v2/exchangeindex/announcements
@@ -1534,7 +1843,7 @@ GET /api/v2/exchangeindex/announcements
 None
 
 ## Monitored Exchanges
-
+A comprehensive list of all the exchanges which the executium exchange index monitors.
 
 ```
 GET /api/v2/exchangeindex/exchanges
@@ -1544,47 +1853,62 @@ GET /api/v2/exchangeindex/exchanges
 None
 
 ## Relevant News
-
+Relevant news to a a `symbol`.  Our exchange checks news every minute of the day and matches to symbols where it is most relevant.
 
 ```
-GET /api/v2/exchangeindex/relevant-news
+POST /api/v2/exchangeindex/relevant-news
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+symbol |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
+
 
 ## Monitored Symbols
-
+A comprehensive list of all the symbols which executiums exchange index monitors. This can be filtered down to exchanges.
 
 ```
-GET /api/v2/exchangeindex/symbols
+POST /api/v2/exchangeindex/symbols
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+exchange |  | YES |  | 
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
 
 ## Export Fetch
-
+Use the `id` provide from `export/fetch` to pull down your export request. Please note htese can take a period of time to generate. Please be patient.
 
 ```
-GET /api/v2/export/fetch
+POST /api/v2/export/fetch
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+ |  | YES | transactions | Provide the export ID you was provided from the `export/request`
+
 
 ## Export List
-
+List all export requests, these are not stored indefinitely and have a limitation. Review your expiration date of any expot request to be sure.
 
 ```
-GET /api/v2/export/list
+POST /api/v2/export/list
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
 
 ## Request Export
-
+Request an export of data to a file. Once requested you will be provided n ID where you must go to the `export/fetch` endpoint to retrieve the file. If the file is not ready it will provide a message prompting you to wait.
 
 ```
 POST /api/v2/export/request
@@ -1593,9 +1917,10 @@ POST /api/v2/export/request
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-system |  | YES |  | 
-label | 5 | YES |  | Label for the export
+system |  | YES | strategy_transactions | Options: strategy_transactions, all_strategies, 
 type |  | YES |  | Export Type .xls or .csv
+symbol |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
+limit |  | YES | 100 | 
 
 
 ## Calendar Add Reminder
@@ -1613,6 +1938,36 @@ None
 
 ```
 GET /api/v2/calendar/list-schedule
+```
+
+**Parameters:**
+None
+
+## Exchange Query List Balances
+
+
+```
+GET /api/v2/exchange-query/list-balances
+```
+
+**Parameters:**
+None
+
+## Exchange Query List Closed Orders
+
+
+```
+GET /api/v2/exchange-query/list-closed-orders
+```
+
+**Parameters:**
+None
+
+## Exchange Query List Open Orders
+
+
+```
+GET /api/v2/exchange-query/list-open-orders
 ```
 
 **Parameters:**
