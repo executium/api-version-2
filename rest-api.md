@@ -30,8 +30,8 @@
 	- [List Shared Servers](#list-shared-servers) (subscriptions/list-shared-servers)
 	- [Package Recommendation](#package-recommendation) (subscriptions/package-recommendation)
 	- [Commissions Rate](#commissions-rate) (subscriptions/commissions-rate)
-	- [Subscriptions List Packages](#subscriptions-list-packages) (subscriptions/list-packages)
-	- [Subscriptions Change Setting Confirm](#subscriptions-change-setting-confirm) (subscriptions/change-setting-confirm)
+	- [List Packages](#list-packages) (subscriptions/list-packages)
+	- [Change Setting Confirm](#change-setting-confirm) (subscriptions/change-setting-confirm)
 	- [Subscriptions Server Types](#subscriptions-server-types) (subscriptions/server-types)
 - Exchange Api Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
@@ -62,6 +62,10 @@
 	- [Realtime Bitcoin Profit](#realtime-bitcoin-profit) (public/realtime-bitcoin-profit)
 	- [Exchange Information](#exchange-information) (public/exchange-information)
 	- [Tradingview Charts](#tradingview-charts) (public/tradingview-charts)
+	- [Trending News Data](#trending-news-data) (public/trending-news-data)
+	- [Trending News Watchlist](#trending-news-watchlist) (public/trending-news-watchlist)
+	- [Trending News Sources](#trending-news-sources) (public/trending-news-sources)
+	- [Trending News Statistics](#trending-news-statistics) (public/trending-news-statistics)
 - Subaccounts
 	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
@@ -71,7 +75,7 @@
 	- [Delete Broadcast](#delete-broadcast) (subaccounts/broadcast-delete)
 	- [Edit Broadcast](#edit-broadcast) (subaccounts/broadcast-edit)
 	- [List Broadcast](#list-broadcast) (subaccounts/broadcast-list)
-	- [Subaccounts Subaccount Access History](#subaccounts-subaccount-access-history) (subaccounts/subaccount-access-history)
+	- [Access History](#access-history) (subaccounts/subaccount-access-history)
 - User
 	- [Close Account](#close-account) (user/close-account)
 	- [User Account Balance](#user-account-balance) (user/account-balance)
@@ -90,8 +94,8 @@
 	- [List Top Strategy PNL](#list-top-strategy-pnl) (finance/list-top-strategy-pnl)
 	- [List Deposits](#list-deposits) (finance/list-depoists)
 	- [List Withdraws](#list-withdraws) (finance/list-withdraws)
-	- [Finance Import Orders List](#finance-import-orders-list) (finance/import-orders-list)
-	- [Finance Import Orders Settings](#finance-import-orders-settings) (finance/import-orders-settings)
+	- [Import Orders List](#import-orders-list) (finance/import-orders-list)
+	- [Import Orders Settings](#import-orders-settings) (finance/import-orders-settings)
 - Exchange API Keys
 	- [Test API Key Status](#test-api-key-status) (exchange-api-keys/test)
 - Tests
@@ -107,11 +111,11 @@
 	- [Export List](#export-list) (export/list)
 	- [Request Export](#request-export) (export/request)
 - Calendar
-	- [Calendar Add Reminder](#calendar-add-reminder) (calendar/add-reminder)
-	- [Calendar List Schedule](#calendar-list-schedule) (calendar/list-schedule)
+	- [Add Reminder](#add-reminder) (calendar/add-reminder)
+	- [List Schedule](#list-schedule) (calendar/list-schedule)
 - Exchange Query
-	- [Exchange Query List Balances](#exchange-query-list-balances) (exchange-query/list-balances)
-	- [Exchange Query List Closed Orders](#exchange-query-list-closed-orders) (exchange-query/list-closed-orders)
+	- [List Balances](#list-balances) (exchange-query/list-balances)
+	- [List Closed Orders](#list-closed-orders) (exchange-query/list-closed-orders)
 	- [Exchange Query List Open Orders](#exchange-query-list-open-orders) (exchange-query/list-open-orders)
 
 
@@ -125,7 +129,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **`[CLOSED-BETA-VERSION]`**
 * All endpoints return either a JSON object or array.
-* There are currently **`94 endpoints`** as part of version 2.
+* There are currently **`98 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -924,7 +928,7 @@ GET /api/v2/subscriptions/commissions-rate
 **Parameters:**
 None
 
-## Subscriptions List Packages
+## List Packages
 
 
 ```
@@ -934,7 +938,7 @@ GET /api/v2/subscriptions/list-packages
 **Parameters:**
 None
 
-## Subscriptions Change Setting Confirm
+## Change Setting Confirm
 
 
 ```
@@ -1210,10 +1214,11 @@ POST /api/v2/strategy/list-strategy-transactions
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-limit |  | NO | 10 | 
-page |  | NO | 1 | 
+limit |  | YES | 10 | 
+page |  | YES | 1 | 
 main_id |  | YES |  | 
 leg_id |  | YES |  | 
+remove_unfilled |  | NO |  | true of false
 
 
 **Successful Response Payload:**
@@ -1429,6 +1434,125 @@ Name | MinLength | Required | Default | Description
 symbol |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
 
 
+## Trending News Data
+Trending news data is display on a day per day basis. The date format must be YYYY-MM-DD. You have the additional option to utilize `keyword_contains` which will enable you to pull back all data on keywords which contain your string. This ability is also extended with `title_contains` and `brief_contains`. For multiple keywords to search add a coma (,) onto the string and the system will search for multiple, up to a maximum of 10 per contains.
+
+```
+POST /api/v2/public/trending-news-data
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+date | 9 | YES |  | Format YYYY-MM-DD
+keyword_contains |  | NO |  | Search for a particular keyword in the `keyword`
+title_contains |  | NO |  | Search for a particular keyword in the `title`
+brief_contains |  | NO |  | Search for a particular keyword in the `brief`
+
+
+## Trending News Watchlist
+This endpoint provides you will the full list of keywords which our trending news topic tracker looks against. 
+
+```
+POST /api/v2/public/trending-news-watchlist
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+keyword_contains |  | NO |  | Search for a particular keyword in the keyword
+
+
+**Successful Response Payload:**
+```javascript
+ {
+    "data": [
+      {
+        "id": "1",
+        "keywords": "btc/usdt",
+        "recategory": "btcusdt",
+        "article_count": "0"
+      },
+      {
+        "id": "2",
+        "keywords": "btcusdt",
+        "recategory": "btcusdt",
+        "article_count": "0"
+      },
+      {
+        "id": "3",
+        "keywords": "bitcoin",
+        "recategory": "btcusdt",
+        "article_count": "0"
+      },
+      {
+        "id": "4",
+        "keywords": "true coin",
+        "recategory": "btcusdt",
+        "article_count": "0"
+      },
+      {
+        "id": "5",
+        "keywords": "ETH/BTC",
+        "recategory": "ethbtc",
+        "article_count": "0"
+      },
+}
+]
+```
+
+
+## Trending News Sources
+A list of all the news sources which have featured in the trending news catalog. Review `public/trending-news-statistics` for more statistics and whole number counts.
+
+```
+GET /api/v2/public/trending-news-sources
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+ {
+    "data": [
+      "3rd Watch News",
+      "9to5Mac",
+      "About Manchester",
+      "Actu Crypto.info",
+      "AiThority",
+      "allnews.ch",
+      "alloaadvertiser.com",
+      "Altcoin Buzz",
+      "AMBCrypto",
+      "AMBCrypto English",
+      "AMEinfo",
+}
+```
+
+
+## Trending News Statistics
+Statistics relating to the trending news catalog. The parameter `total_keywords_matched` can be much higher than total_articles_found as 100s of keywords can be matched to a single article.
+
+```
+GET /api/v2/public/trending-news-statistics
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+ "data": {
+      "keywords_monitored": 5231,
+      "total_articles_found": 534,
+      "total_keywords_matched": "386",
+      "sources": 148,
+      "last_update": 1593344310
+    },
+```
+
+
 ## Create Sub Account
 The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
 
@@ -1533,7 +1657,7 @@ limit |  | NO | 10 |
 page |  | NO | 1 | 
 
 
-## Subaccounts Subaccount Access History
+## Access History
 
 
 ```
@@ -1769,7 +1893,7 @@ GET /api/v2/finance/list-withdraws
 **Parameters:**
 None
 
-## Finance Import Orders List
+## Import Orders List
 
 
 ```
@@ -1779,7 +1903,7 @@ GET /api/v2/finance/import-orders-list
 **Parameters:**
 None
 
-## Finance Import Orders Settings
+## Import Orders Settings
 
 
 ```
@@ -1923,7 +2047,7 @@ symbol |  | YES |  | The executium code, which can be found at [exchanges-suppor
 limit |  | YES | 100 | 
 
 
-## Calendar Add Reminder
+## Add Reminder
 
 
 ```
@@ -1933,7 +2057,7 @@ GET /api/v2/calendar/add-reminder
 **Parameters:**
 None
 
-## Calendar List Schedule
+## List Schedule
 
 
 ```
@@ -1943,7 +2067,7 @@ GET /api/v2/calendar/list-schedule
 **Parameters:**
 None
 
-## Exchange Query List Balances
+## List Balances
 
 
 ```
@@ -1953,7 +2077,7 @@ GET /api/v2/exchange-query/list-balances
 **Parameters:**
 None
 
-## Exchange Query List Closed Orders
+## List Closed Orders
 
 
 ```
