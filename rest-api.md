@@ -66,6 +66,10 @@
 	- [Trending News Watchlist](#trending-news-watchlist) (public/trending-news-watchlist)
 	- [Trending News Sources](#trending-news-sources) (public/trending-news-sources)
 	- [Trending News Statistics](#trending-news-statistics) (public/trending-news-statistics)
+	- [Trending News Source Impact](#trending-news-source-impact) (public/trending-news-source-impact)
+	- [Trending News Add Keyword](#trending-news-add-keyword) (public/trending-news-add-keyword)
+	- [List your own keywords](#list-your-own-keywords) (public/trending-news-list-my-keywords)
+	- [Trending News Remove Keyword](#trending-news-remove-keyword) (public/trending-news-remove-keyword)
 - Subaccounts
 	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
@@ -129,7 +133,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * Version 2 is currently in private beta.
 * The base endpoint is: **`[CLOSED-BETA-VERSION]`**
 * All endpoints return either a JSON object or array.
-* There are currently **`98 endpoints`** as part of version 2.
+* There are currently **`102 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -1450,6 +1454,117 @@ title_contains |  | NO |  | Search for a particular keyword in the `title`
 brief_contains |  | NO |  | Search for a particular keyword in the `brief`
 
 
+**Successful Response Payload:**
+```javascript
+
+
+
+    "data": [
+        {
+            "id": "292442",
+            "date": {
+                "time_published": "1593561844",
+                "day": "Wednesday",
+                "format1": "2020-07-01",
+                "format2": "1st July 2020 00:04"
+            },
+            "title": "Oil Jumps After API Reports Largest Crude Draw This Year",
+            "brief": "Oil prices jumped on Tuesday afternoon after the API reported a large draw in crude oil stocks.",
+            "keywords": "oil,crude oil",
+            "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Jumps-After-API-Reports-Largest-Crude-Draw-This-Year.html",
+            "source": "OilPrice.com",
+            "image": "",
+            "domain": "oilprice.com",
+            "author": "Julianne Geiger",
+            "price_impact_120s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_300s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_600s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_900s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_1200s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_1800s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_3600s": {
+                "status": "completed",
+                "data": {
+                    "btcusdt": {
+                        "status": "compiled",
+                        "pair": "BTCUSDT",
+                        "before": "9137.30000000",
+                        "after": "9126.57000000",
+                        "difference": "-10.73000000"
+                    },
+                    "ethusdt": {
+                        "status": "compiled",
+                        "pair": "ETHUSDT",
+                        "before": "225.59000000",
+                        "after": "225.11000000",
+                        "difference": "-0.48000000"
+                    },
+                    "adausdt": {
+                        "status": "compiled",
+                        "pair": "ADAUSDT",
+                        "before": "0.08300000",
+                        "after": "0.08295000",
+                        "difference": "-0.00005000"
+                    },
+                    "xrpusdt": {
+                        "status": "compiled",
+                        "pair": "XRPUSDT",
+                        "before": "0.17533000",
+                        "after": "0.17484000",
+                        "difference": "-0.00049000"
+                    },
+                    "ethbtc": {
+                        "status": "compiled",
+                        "pair": "ETHBTC",
+                        "before": "0.02468900",
+                        "after": "0.02466400",
+                        "difference": "-0.00002500"
+                    },
+                    "adabtc": {
+                        "status": "compiled",
+                        "pair": "ADABTC",
+                        "before": "0.00000909",
+                        "after": "0.00000909",
+                        "difference": "0.00000000"
+                    },
+                    "xrpbtc": {
+                        "status": "compiled",
+                        "pair": "XRPBTC",
+                        "before": "0.00001918",
+                        "after": "0.00001916",
+                        "difference": "-0.00000002"
+                    }
+                }
+            },
+            "tone": {
+                "status": "Subscription required.",
+                "data": []
+            }
+        },
+    ]
+      	
+	
+```
+
+
 ## Trending News Watchlist
 This endpoint provides you will the full list of keywords which our trending news topic tracker looks against. 
 
@@ -1470,32 +1585,22 @@ keyword_contains |  | NO |  | Search for a particular keyword in the keyword
       {
         "id": "1",
         "keywords": "btc/usdt",
-        "recategory": "btcusdt",
-        "article_count": "0"
       },
       {
         "id": "2",
         "keywords": "btcusdt",
-        "recategory": "btcusdt",
-        "article_count": "0"
       },
       {
         "id": "3",
         "keywords": "bitcoin",
-        "recategory": "btcusdt",
-        "article_count": "0"
       },
       {
         "id": "4",
         "keywords": "true coin",
-        "recategory": "btcusdt",
-        "article_count": "0"
       },
       {
         "id": "5",
         "keywords": "ETH/BTC",
-        "recategory": "ethbtc",
-        "article_count": "0"
       },
 }
 ]
@@ -1543,12 +1648,228 @@ None
 
 **Successful Response Payload:**
 ```javascript
- "data": {
-      "keywords_monitored": 5231,
-      "total_articles_found": 534,
-      "total_keywords_matched": "386",
-      "sources": 148,
-      "last_update": 1593344310
+
+"data": 
+{
+	"keywords_monitored": 5235,
+	"total_articles_found": 13100,
+	"total_keywords_matched": 11372,
+	"history": 
+	[
+		{
+		  "added_in_last_hour": 570
+		},
+		{
+		  "last_24_hours": 454
+		},
+		{
+		  "last_48_hours": 725
+		},
+		{
+		  "last_7_days": 2265
+		},
+		{
+		  "last_30_days": 4927
+		}
+	],
+	"sources": 1406,
+	"last_update": 1593408099
+}	
+	
+```
+
+
+## Trending News Source Impact
+A complete compiled list to provide insight into news sources impact on prices. You can filter the `source` by using `source_contains`, which will allow you to concentrate on specific sources you want. The `top_ranking_*` array contains the all time list of articles that we have stored and their individual impact.  The `most_recent_*` array provides the most reason `bull` and `bear` articles from the publication.
+	
+It is important to note, that while some publications seem to have a big impact on price, we are not indicating that they we`re the sole reason for the movement. The intention of this endpoint is to provide additional context to whether the press directly impacts prices or if it is just a fluke.
+
+
+```
+POST /api/v2/public/trending-news-source-impact
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+source_contains |  | NO |  | Search for a particular keyword in the `source`
+
+
+**Successful Response Payload:**
+```javascript
+
+
+"data":
+{
+	"btcusdt":
+	{
+		"Cryptonaute":
+		{
+            "total_articles":410,
+            "sum_impact":"590.12000000",
+            "top_ranking_bull":[
+               {
+                  "id":"3836",
+                  "keywords":"bitcoin,Ethereum,eth",
+                  "time_published":"1587020400",
+                  "diff_btcusdt":"233.50000000",
+                  "ago":"11 weeks ago"
+               },
+               {
+                  "id":"4011",
+                  "keywords":"bitcoin",
+                  "time_published":"1592204400",
+                  "diff_btcusdt":"90.70000000",
+                  "ago":"2 weeks ago"
+               },
+               {
+                  "id":"3831",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1589439600",
+                  "diff_btcusdt":"63.54000000",
+                  "ago":"7 weeks ago"
+               },
+               {
+                  "id":"3777",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1592377200",
+                  "diff_btcusdt":"37.10000000",
+                  "ago":"2 weeks ago"
+               },
+               {
+                  "id":"3839",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1589204706",
+                  "diff_btcusdt":"34.54000000",
+                  "ago":"7 weeks ago"
+               }
+            ],
+            "top_ranking_bear":[
+               {
+                  "id":"3810",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1589918155",
+                  "impact":"-16.50000000",
+                  "ago":"6 weeks ago"
+               }
+            ],
+            "most_recent_bull":[
+               {
+                  "id":"4001",
+                  "keywords":"bitcoin",
+                  "time_published":"1593172260",
+                  "diff_btcusdt":"26.14000000",
+                  "ago":"3 days ago"
+               },
+               {
+                  "id":"3768",
+                  "keywords":"bitcoin,Ethereum,eth",
+                  "time_published":"1592910300",
+                  "diff_btcusdt":"31.23000000",
+                  "ago":"6 days ago"
+               },
+               {
+                  "id":"3773",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1592812980",
+                  "diff_btcusdt":"10.43000000",
+                  "ago":"1 weeks ago"
+               },
+               {
+                  "id":"3792",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1592496660",
+                  "diff_btcusdt":"2.76000000",
+                  "ago":"2 weeks ago"
+               },
+               {
+                  "id":"3777",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1592377200",
+                  "diff_btcusdt":"37.10000000",
+                  "ago":"2 weeks ago"
+               }
+            ],
+            "most_recent_bear":[
+               {
+                  "id":"3810",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1589918155",
+                  "impact":"-16.50000000",
+                  "ago":"6 weeks ago"
+               }
+            ]
+         },
+     },
+ }
+         	
+	
+```
+
+
+## Trending News Add Keyword
+
+
+```
+POST /api/v2/public/trending-news-add-keyword
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+name | 1 | YES |  | The `keyword` you want to track.
+
+
+**Successful Response Payload:**
+```javascript
+"data": {
+      "code": 2001,
+      "error": "Missing Key"
+    },
+```
+
+
+## List your own keywords
+
+
+```
+POST /api/v2/public/trending-news-list-my-keywords
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+**Successful Response Payload:**
+```javascript
+"data": {
+      "code": 2001,
+      "error": "Missing Key"
+    },
+```
+
+
+## Trending News Remove Keyword
+
+
+```
+POST /api/v2/public/trending-news-remove-keyword
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+keywordid |  | YES |  | The `keyword_id` you wish to remove. You can get this information from the `public/trending-news-list-my-keywords` endpoint.
+
+
+**Successful Response Payload:**
+```javascript
+"data": {
+      "code": 2001,
+      "error": "Missing Key"
     },
 ```
 
