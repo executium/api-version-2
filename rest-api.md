@@ -122,24 +122,24 @@
 	- [List Closed Orders](#list-closed-orders) (exchange-query/list-closed-orders)
 	- [Exchange Query List Open Orders](#exchange-query-list-open-orders) (exchange-query/list-open-orders)
 - Algorithm Creator
-	- [Algorithm Creator Algorithm Add](#algorithm-creator-algorithm-add) (algorithm-creator/algorithm-add)
-	- [Algorithm Creator Algorithm Remove](#algorithm-creator-algorithm-remove) (algorithm-creator/algorithm-remove)
-	- [Algorithm Creator Algorithm Statistics](#algorithm-creator-algorithm-statistics) (algorithm-creator/algorithm-statistics)
-	- [Algorithm Creator Algorithm Update](#algorithm-creator-algorithm-update) (algorithm-creator/algorithm-update)
-	- [Algorithm Creator Condition Add](#algorithm-creator-condition-add) (algorithm-creator/condition-add)
-	- [Algorithm Creator Condition Remove](#algorithm-creator-condition-remove) (algorithm-creator/condition-remove)
-	- [Algorithm Creator Condition Update](#algorithm-creator-condition-update) (algorithm-creator/condition-update)
-	- [Algorithm Creator Execution Add](#algorithm-creator-execution-add) (algorithm-creator/execution-add)
-	- [Algorithm Creator Execution Remove](#algorithm-creator-execution-remove) (algorithm-creator/execution-remove)
-	- [Algorithm Creator Execution Update](#algorithm-creator-execution-update) (algorithm-creator/execution-update)
-	- [Algorithm Creator List Algorithms](#algorithm-creator-list-algorithms) (algorithm-creator/list-algorithms)
-	- [Algorithm Creator List Condition Operators](#algorithm-creator-list-condition-operators) (algorithm-creator/list-condition-operators)
-	- [Algorithm Creator List Conditions](#algorithm-creator-list-conditions) (algorithm-creator/list-conditions)
-	- [Algorithm Creator List Executions](#algorithm-creator-list-executions) (algorithm-creator/list-executions)
-	- [Algorithm Creator List Order Types](#algorithm-creator-list-order-types) (algorithm-creator/list-order-types)
-	- [Algorithm Creator Publish Algorithm](#algorithm-creator-publish-algorithm) (algorithm-creator/publish-algorithm)
-	- [Algorithm Creator Unpublish Algorithm](#algorithm-creator-unpublish-algorithm) (algorithm-creator/unpublish-algorithm)
-	- [Algorithm Creator Validate Algorithm](#algorithm-creator-validate-algorithm) (algorithm-creator/validate-algorithm)
+	- [Algorithm Add](#algorithm-add) (algorithm-creator/algorithm-add)
+	- [Algorithm Remove](#algorithm-remove) (algorithm-creator/algorithm-remove)
+	- [Algorithm Statistics](#algorithm-statistics) (algorithm-creator/algorithm-statistics)
+	- [Algorithm Update](#algorithm-update) (algorithm-creator/algorithm-update)
+	- [Condition Add](#condition-add) (algorithm-creator/condition-add)
+	- [Condition Remove](#condition-remove) (algorithm-creator/condition-remove)
+	- [Condition Update](#condition-update) (algorithm-creator/condition-update)
+	- [Execution Add](#execution-add) (algorithm-creator/execution-add)
+	- [Execution Remove](#execution-remove) (algorithm-creator/execution-remove)
+	- [Execution Update](#execution-update) (algorithm-creator/execution-update)
+	- [List Algorithms](#list-algorithms) (algorithm-creator/list-algorithms)
+	- [List Condition Operators](#list-condition-operators) (algorithm-creator/list-condition-operators)
+	- [List Conditions](#list-conditions) (algorithm-creator/list-conditions)
+	- [List Executions](#list-executions) (algorithm-creator/list-executions)
+	- [List Order Types](#list-order-types) (algorithm-creator/list-order-types)
+	- [Publish Algorithm](#publish-algorithm) (algorithm-creator/publish-algorithm)
+	- [Unpublish Algorithm](#unpublish-algorithm) (algorithm-creator/unpublish-algorithm)
+	- [Validate Algorithm](#validate-algorithm) (algorithm-creator/validate-algorithm)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -1366,7 +1366,7 @@ POST /api/v2/public/bitcoin-price-tracker
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 interval |  | NO | 1000 | Defaults to `1000` milliseconds. Interval options are available at `900`, `750`, `500`, `400`, `250`, `100`, `50` and `25` milliseconds
-symbol_filter |  | NO |  | Partial match
+symbol_filter |  | NO |  | Partial match against symbol
 
 
 **Successful Response Payload:**
@@ -2503,7 +2503,7 @@ GET /api/v2/exchange-query/list-open-orders
 **Parameters:**
 None
 
-## Algorithm Creator Algorithm Add
+## Algorithm Add
 
 
 ```
@@ -2513,7 +2513,7 @@ GET /api/v2/algorithm-creator/algorithm-add
 **Parameters:**
 None
 
-## Algorithm Creator Algorithm Remove
+## Algorithm Remove
 
 
 ```
@@ -2523,7 +2523,7 @@ GET /api/v2/algorithm-creator/algorithm-remove
 **Parameters:**
 None
 
-## Algorithm Creator Algorithm Statistics
+## Algorithm Statistics
 
 
 ```
@@ -2533,7 +2533,7 @@ GET /api/v2/algorithm-creator/algorithm-statistics
 **Parameters:**
 None
 
-## Algorithm Creator Algorithm Update
+## Algorithm Update
 
 
 ```
@@ -2543,7 +2543,7 @@ GET /api/v2/algorithm-creator/algorithm-update
 **Parameters:**
 None
 
-## Algorithm Creator Condition Add
+## Condition Add
 
 
 ```
@@ -2553,7 +2553,7 @@ GET /api/v2/algorithm-creator/condition-add
 **Parameters:**
 None
 
-## Algorithm Creator Condition Remove
+## Condition Remove
 
 
 ```
@@ -2563,7 +2563,7 @@ GET /api/v2/algorithm-creator/condition-remove
 **Parameters:**
 None
 
-## Algorithm Creator Condition Update
+## Condition Update
 
 
 ```
@@ -2573,7 +2573,7 @@ GET /api/v2/algorithm-creator/condition-update
 **Parameters:**
 None
 
-## Algorithm Creator Execution Add
+## Execution Add
 
 
 ```
@@ -2583,7 +2583,7 @@ GET /api/v2/algorithm-creator/execution-add
 **Parameters:**
 None
 
-## Algorithm Creator Execution Remove
+## Execution Remove
 
 
 ```
@@ -2593,7 +2593,7 @@ GET /api/v2/algorithm-creator/execution-remove
 **Parameters:**
 None
 
-## Algorithm Creator Execution Update
+## Execution Update
 
 
 ```
@@ -2603,7 +2603,7 @@ GET /api/v2/algorithm-creator/execution-update
 **Parameters:**
 None
 
-## Algorithm Creator List Algorithms
+## List Algorithms
 
 
 ```
@@ -2613,7 +2613,7 @@ GET /api/v2/algorithm-creator/list-algorithms
 **Parameters:**
 None
 
-## Algorithm Creator List Condition Operators
+## List Condition Operators
 
 
 ```
@@ -2623,7 +2623,7 @@ GET /api/v2/algorithm-creator/list-condition-operators
 **Parameters:**
 None
 
-## Algorithm Creator List Conditions
+## List Conditions
 
 
 ```
@@ -2633,7 +2633,7 @@ GET /api/v2/algorithm-creator/list-conditions
 **Parameters:**
 None
 
-## Algorithm Creator List Executions
+## List Executions
 
 
 ```
@@ -2643,7 +2643,7 @@ GET /api/v2/algorithm-creator/list-executions
 **Parameters:**
 None
 
-## Algorithm Creator List Order Types
+## List Order Types
 
 
 ```
@@ -2653,7 +2653,7 @@ GET /api/v2/algorithm-creator/list-order-types
 **Parameters:**
 None
 
-## Algorithm Creator Publish Algorithm
+## Publish Algorithm
 
 
 ```
@@ -2663,7 +2663,7 @@ GET /api/v2/algorithm-creator/publish-algorithm
 **Parameters:**
 None
 
-## Algorithm Creator Unpublish Algorithm
+## Unpublish Algorithm
 
 
 ```
@@ -2673,7 +2673,7 @@ GET /api/v2/algorithm-creator/unpublish-algorithm
 **Parameters:**
 None
 
-## Algorithm Creator Validate Algorithm
+## Validate Algorithm
 
 
 ```
