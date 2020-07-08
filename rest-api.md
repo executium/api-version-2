@@ -121,6 +121,25 @@
 	- [List Balances](#list-balances) (exchange-query/list-balances)
 	- [List Closed Orders](#list-closed-orders) (exchange-query/list-closed-orders)
 	- [Exchange Query List Open Orders](#exchange-query-list-open-orders) (exchange-query/list-open-orders)
+- Algorithm Creator
+	- [Algorithm Creator Algorithm Add](#algorithm-creator-algorithm-add) (algorithm-creator/algorithm-add)
+	- [Algorithm Creator Algorithm Remove](#algorithm-creator-algorithm-remove) (algorithm-creator/algorithm-remove)
+	- [Algorithm Creator Algorithm Statistics](#algorithm-creator-algorithm-statistics) (algorithm-creator/algorithm-statistics)
+	- [Algorithm Creator Algorithm Update](#algorithm-creator-algorithm-update) (algorithm-creator/algorithm-update)
+	- [Algorithm Creator Condition Add](#algorithm-creator-condition-add) (algorithm-creator/condition-add)
+	- [Algorithm Creator Condition Remove](#algorithm-creator-condition-remove) (algorithm-creator/condition-remove)
+	- [Algorithm Creator Condition Update](#algorithm-creator-condition-update) (algorithm-creator/condition-update)
+	- [Algorithm Creator Execution Add](#algorithm-creator-execution-add) (algorithm-creator/execution-add)
+	- [Algorithm Creator Execution Remove](#algorithm-creator-execution-remove) (algorithm-creator/execution-remove)
+	- [Algorithm Creator Execution Update](#algorithm-creator-execution-update) (algorithm-creator/execution-update)
+	- [Algorithm Creator List Algorithms](#algorithm-creator-list-algorithms) (algorithm-creator/list-algorithms)
+	- [Algorithm Creator List Condition Operators](#algorithm-creator-list-condition-operators) (algorithm-creator/list-condition-operators)
+	- [Algorithm Creator List Conditions](#algorithm-creator-list-conditions) (algorithm-creator/list-conditions)
+	- [Algorithm Creator List Executions](#algorithm-creator-list-executions) (algorithm-creator/list-executions)
+	- [Algorithm Creator List Order Types](#algorithm-creator-list-order-types) (algorithm-creator/list-order-types)
+	- [Algorithm Creator Publish Algorithm](#algorithm-creator-publish-algorithm) (algorithm-creator/publish-algorithm)
+	- [Algorithm Creator Unpublish Algorithm](#algorithm-creator-unpublish-algorithm) (algorithm-creator/unpublish-algorithm)
+	- [Algorithm Creator Validate Algorithm](#algorithm-creator-validate-algorithm) (algorithm-creator/validate-algorithm)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -131,9 +150,11 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 ## General Information
 
 * Version 2 is currently in private beta.
-* The base endpoint is: **`[CLOSED-BETA-VERSION]`**
+* The primary base endpoint is: **`[BETA-MODE]`**
+* The `trending-news` base is : **`trendingnews.executium.com`**
+* The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`102 endpoints`** as part of version 2.
+* There are currently **`139 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -1335,7 +1356,7 @@ level |  | YES | 1 | The orderbook level, from 1 to 10
 
 
 ## Bitcoin Price Tracker
-Data related to the current price of Bitcoin in realtime. This endpoint only provides the data streams. You should use your own graph product to map the data. A minimum of 1 exchange is required to run and a maximum of 6 is possible.
+Data related to the current price of Bitcoin in realtime. This endpoint only provides the data streams. You should use your own graph product to map the data. The base endpoint for this should be `marketdata.executium.com`.
 
 ```
 POST /api/v2/public/bitcoin-price-tracker
@@ -1344,12 +1365,72 @@ POST /api/v2/public/bitcoin-price-tracker
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-exchange1 |  | YES |  | 
-exchange2 |  | NO |  | 
-exchange3 |  | NO |  | 
-exchange4 |  | NO |  | 
-exchange5 |  | NO |  | 
-exchange6 |  | NO |  | 
+interval |  | NO | 1000 | Defaults to `1000` milliseconds. Interval options are available at `900`, `750`, `500`, `400`, `250`, `100`, `50` and `25` milliseconds
+symbol_filter |  | NO |  | Partial match
+
+
+**Successful Response Payload:**
+```javascript
+
+	
+   "data":{
+      "lastupdated":1594186334102,
+      "data":{
+         "bitfinex-btcusdt":[
+            9256.2,
+            0.9743332
+         ],
+         "ftx-btcusdt":[
+            9256,
+            0.3224
+         ],
+         "bittrex-btcusdt":[
+            9317.6357,
+            0.5753
+         ],
+         "bitmart-btcusdt":[
+            9310.09,
+            0.11275
+         ],
+         "gateio-btcusdt":[
+            9256.73,
+            0.107
+         ],
+         "binance-btcusdt":[
+            9256,
+            0.015084
+         ],
+         "bitmart-btcusdc":[
+            9319.61,
+            0.020239
+         ],
+         "bitmax-btcusdc":[
+            9279.2,
+            0.04708
+         ],
+         "bitmax-btcusdt":[
+            9311.52,
+            0.001
+         ],
+         "coinbasepro-btcusdc":[
+            9255.54,
+            0.30469841
+         ],
+         "huobipro-btcusdt":[
+            9333.74,
+            0.02265
+         ],
+         "gateio-btcusdc":[
+            9228.93,
+            0.12
+         ],
+         "binance-btcusdc":[
+            9253.39,
+            0.160526
+         ]
+      }
+   
+```
 
 
 ## Fetch Symbol Trades
@@ -1452,6 +1533,7 @@ date | 9 | YES |  | Format YYYY-MM-DD
 keyword_contains |  | NO |  | Search for a particular keyword in the `keyword`
 title_contains |  | NO |  | Search for a particular keyword in the `title`
 brief_contains |  | NO |  | Search for a particular keyword in the `brief`
+exclude_keywords |  | NO |  | Coma seperated list of keywords to exclude
 
 
 **Successful Response Payload:**
@@ -1692,7 +1774,7 @@ POST /api/v2/public/trending-news-source-impact
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-source_contains |  | NO |  | Search for a particular keyword in the `source`
+source_contains | 1 | YES |  | Provide the exact publication you are looking for, for example, if you was looking for the coin telegraph, you would enter the coin telegraph. Consult the source list for more information.
 
 
 **Successful Response Payload:**
@@ -2092,11 +2174,14 @@ page |  | NO | 1 |
 Show all of your current active sessions which are logged into the web system.
 
 ```
-GET /api/v2/user/active-sessions
+POST /api/v2/user/active-sessions
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+request | 1 | YES |  | 
+
 
 ## User Security Settings
 List all of your security settings and current configuration. These settings apply to your subaccounts also.
@@ -2413,6 +2498,186 @@ None
 
 ```
 GET /api/v2/exchange-query/list-open-orders
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Algorithm Add
+
+
+```
+GET /api/v2/algorithm-creator/algorithm-add
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Algorithm Remove
+
+
+```
+GET /api/v2/algorithm-creator/algorithm-remove
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Algorithm Statistics
+
+
+```
+GET /api/v2/algorithm-creator/algorithm-statistics
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Algorithm Update
+
+
+```
+GET /api/v2/algorithm-creator/algorithm-update
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Condition Add
+
+
+```
+GET /api/v2/algorithm-creator/condition-add
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Condition Remove
+
+
+```
+GET /api/v2/algorithm-creator/condition-remove
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Condition Update
+
+
+```
+GET /api/v2/algorithm-creator/condition-update
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Execution Add
+
+
+```
+GET /api/v2/algorithm-creator/execution-add
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Execution Remove
+
+
+```
+GET /api/v2/algorithm-creator/execution-remove
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Execution Update
+
+
+```
+GET /api/v2/algorithm-creator/execution-update
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator List Algorithms
+
+
+```
+GET /api/v2/algorithm-creator/list-algorithms
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator List Condition Operators
+
+
+```
+GET /api/v2/algorithm-creator/list-condition-operators
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator List Conditions
+
+
+```
+GET /api/v2/algorithm-creator/list-conditions
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator List Executions
+
+
+```
+GET /api/v2/algorithm-creator/list-executions
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator List Order Types
+
+
+```
+GET /api/v2/algorithm-creator/list-order-types
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Publish Algorithm
+
+
+```
+GET /api/v2/algorithm-creator/publish-algorithm
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Unpublish Algorithm
+
+
+```
+GET /api/v2/algorithm-creator/unpublish-algorithm
+```
+
+**Parameters:**
+None
+
+## Algorithm Creator Validate Algorithm
+
+
+```
+GET /api/v2/algorithm-creator/validate-algorithm
 ```
 
 **Parameters:**
