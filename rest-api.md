@@ -150,7 +150,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 ## General Information
 
 * Version 2 is currently in private beta.
-* The primary base endpoint is: **`[BETA-MODE]`**
+* The primary base endpoint is: **`[PRIVATE-MODE]`**
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
