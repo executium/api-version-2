@@ -1397,7 +1397,7 @@ GET /api/v2/public/spreads/data
 None
 
 ## Fetch Symbol Price
-Public API but restrictions apply based on your subscription level. You must provide the exact `symbol` code which executium provides. You can review symbols in the `system/symbols` endpoint. For this endpoint we accept both `POST` and `GET`. An example of `GET` would be `https://marketdata.executium.com/api/v2/public/fetch-symbol-price?code=binance-btcusdt&side=asks&level=1`.
+Public API but restrictions apply based on your subscription level. You must provide the exact `symbol` code which executium provides. You can review symbols in the `system/symbols` endpoint. For this endpoint we accept both `POST` and `GET`. An example of `GET` would be `https://marketdata.executium.com/api/v2/public/fetch-symbol-price?code=binance-btcusdt`. 
 
 ```
 POST /api/v2/public/fetch-symbol-price
@@ -1406,9 +1406,42 @@ POST /api/v2/public/fetch-symbol-price
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-code |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
-side |  | YES |  | Choice: 'asks' or 'bids'; If you input 'buy' it will show 'asks'; If you input 'sell' it will show 'bids'; No other inputs will be accepted.
-level |  | YES | 1 | The orderbook level, from 1 to 10
+code |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`. This endpoint can taken multiple inputs and is comma delimited. For example you could input `binance-btcusdt,bitfinex-tnbbtc,bitfinex-btcusd`. To a maximum of 10 inputs.
+
+
+**Successful Response Payload:**
+```javascript
+
+
+  "data": {
+    "binance-btcusdt": {
+      "bids": {
+        "price": 9411.89,
+        "qty": 1.756403,
+        "time": 1594277450595
+      },
+      "asks": {
+        "price": 9411.9,
+        "qty": 0.755546,
+        "time": 1594277450595
+      }
+    },
+    "bitfinex-btcusdt": {
+      "bids": {
+        "price": 9408.5,
+        "qty": 0.1,
+        "time": 1594277445745
+      },
+      "asks": {
+        "price": 9411.7,
+        "qty": 0.1,
+        "time": 1594277447627
+      }
+    },
+    "notes": "Refresh rate 1000-1500ms; To adjust please review your subscription."
+  },   
+
+```
 
 
 ## Bitcoin Price Tracker
@@ -2014,7 +2047,7 @@ keywordid |  | YES |  | The `keyword_id` you wish to remove. You can get this in
 
 
 ## Match Pair
-This system is provided to give insight into a `pairing` and where you can also trade it. For this endpoint we accept both `POST` and `GET`. An example of `GET` would be `https://marketdata.executium.com/api/v2/public/match-pair?code=binance-btcusdt`. Please consult the [exchanges-supported.md](./exchanges-supported.md) to understand the scope of where we match.
+This system is provided to give insight into a `pairing` and where you can also trade it. For this endpoint we accept both `POST` and `GET`. An example of `GET` would be `https://marketdata.executium.com/api/v2/public/match-pair?code=btcusdt,btcusd`. Please consult the [exchanges-supported.md](./exchanges-supported.md) to understand the scope of where we match.
 
 ```
 POST /api/v2/public/match-pair
@@ -2023,7 +2056,95 @@ POST /api/v2/public/match-pair
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-code | 1 | YES |  | Provide a pair such as `binance-btcusdt` to discover where else you can trade the pairing `btcusdt`. We require you to indicate the excutium `code` for best results.
+code | 1 | YES |  | Provide a pair such as `btcusdt` to discover where else you can trade the pairing `btcusdt`. Comma delimited list acceptable upto 10. Exclude the exchange code from your query and request just the pair like shown.
+
+
+**Successful Response Payload:**
+```javascript
+
+
+{
+  "data": {
+  
+      "BTCUSDT": {
+      "pair": "btcusdt",
+      "count": 14,
+      "active": [
+        "Binance",
+        "Bitfinex",
+        "Bitmart",
+        "Bitmax",
+        "Bittrex",
+        "Ftx",
+        "Gateio",
+        "Huobipro",
+        "Kraken",
+        "Kucoin",
+        "Liquid",
+        "Okex",
+        "Poloniex",
+        "Upbit"
+      ],
+      "detail": {
+        "binance": {
+          "id": "btcusdt",
+          "symbol": "BTC/USDT",
+          "quote": "USDT",
+          "base": "BTC",
+          "min": 0.01,
+          "pp": 2,
+          "pa": 6
+        },
+        "bitfinex": {
+          "id": "btcusdt",
+          "symbol": "BTC/USDT",
+          "quote": "UST",
+          "base": "BTC",
+          "min": 0.000009999999999999999,
+          "pp": 5,
+          "pa": -1
+        },
+        ...
+        ...
+        ...
+
+      },
+      "possible_combinations": 196
+    },
+    "BTCUSD": {
+      "pair": "btcusd",
+      "count": 11,
+      "active": [
+        "Bitfinex",
+        "Bitflyer",
+        "Bitmex",
+        "Bitstamp",
+        "Bittrex",
+        "Coinbase",
+        "Coinbasepro",
+        "Ftx",
+        "Itbit",
+        "Kraken",
+        "Liquid"
+      ],
+      "detail": {
+        "bitfinex": {
+          "id": "btcusd",
+          "symbol": "BTC/USD",
+          "quote": "USD",
+          "base": "BTC",
+          "min": 0.000009999999999999999,
+          "pp": 5,
+          "pa": -1
+        },
+        ...
+        ...
+        ...
+		}
+	}
+	
+
+```
 
 
 ## Create Sub Account
