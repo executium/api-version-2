@@ -1,925 +1,2875 @@
-![Executium API Version 2](https://i.imgur.com/nn0w8Eo.jpg)
+**Table of Contents**
 
-# Executium API Version 2 Documentation
-Executium version 2 is currently in private beta mode as we look to launch our new version of executium which has hundreds of new options and an extensive API which can connect with your business. 
+- [Accessibility](#accessibility)
+- [General Information](#general-information)
+- [HTTP Return Codes](#http-return-codes)
+- [Error Codes](#error-codes)
+- [General Information on Endpoints](#general-information-on-endpoints)
+- System
+	- [Check Server Time](#check-server-time) (system/timestamp)
+	- [Endpoints](#endpoints) (system/endpoints)
+	- [Ping REST API](#ping-rest-api) (system/ping)
+	- [Information](#information) (system/information)
+	- [List Validation Functions](#list-validation-functions) (system/list-validation-functions)
+	- [Symbols](#symbols) (system/symbols)
+	- [System Status](#system-status) (system/status)
+	- [List Announcements](#list-announcements) (system/list-announcements)
+- Subscriptions
+	- [Subscriptions Details](#subscriptions-details) (subscriptions/details)
+	- [Cancel Subscription](#cancel-subscription) (subscriptions/cancel)
+	- [Commissions Report](#commissions-report) (subscriptions/commissions-report)
+	- [Deposit Addresses](#deposit-addresses) (subscriptions/deposit)
+	- [Invoices](#invoices) (subscriptions/invoices)
+	- [Change Subscription Package](#change-subscription-package) (subscriptions/change-package)
+	- [Change Setting](#change-setting) (subscriptions/change-setting-request)
+	- [Disable Private Server](#disable-private-server) (subscriptions/disable-private-server)
+	- [Subscriptions Disable Shared Server](#subscriptions-disable-shared-server) (subscriptions/disable-shared-server)
+	- [Enable Private Server](#enable-private-server) (subscriptions/enable-private-server)
+	- [Enable Shared Server](#enable-shared-server) (subscriptions/enable-shared-server)
+	- [List Private Servers](#list-private-servers) (subscriptions/list-private-servers)
+	- [List Shared Servers](#list-shared-servers) (subscriptions/list-shared-servers)
+	- [Package Recommendation](#package-recommendation) (subscriptions/package-recommendation)
+	- [Commissions Rate](#commissions-rate) (subscriptions/commissions-rate)
+	- [List Packages](#list-packages) (subscriptions/list-packages)
+	- [Change Setting Confirm](#change-setting-confirm) (subscriptions/change-setting-confirm)
+	- [Subscriptions Server Types](#subscriptions-server-types) (subscriptions/server-types)
+- Exchange Api Keys
+	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
+	- [Delete Exchange API Key](#delete-exchange-api-key) (exchange-api-keys/delete)
+	- [List Exchange API Keys](#list-exchange-api-keys) (exchange-api-keys/list)
+	- [Check Specific Exchange Symbol Balance ](#check-specific-exchange-symbol-balance-) (exchange-api-keys/check-balances)
+- Strategy
+	- [Create New Strategy](#create-new-strategy) (strategy/create)
+	- [Strategy High Level Overview](#strategy-high-level-overview) (strategy/high-level-overview)
+	- [User Strategy List](#user-strategy-list) (strategy/data/list)
+	- [List All Trading Algorithms](#list-all-trading-algorithms) (strategy/list-algorithms)
+	- [Exchange List](#exchange-list) (strategy/list-exchanges)
+	- [Debug Data](#debug-data) (strategy/data/debug)
+	- [Save Template](#save-template) (strategy/save-template)
+	- [Strategy List Templates](#strategy-list-templates) (strategy/list-templates)
+	- [Strategy Start](#strategy-start) (strategy/start)
+	- [Strategy Stop](#strategy-stop) (strategy/stop)
+	- [List Active Strategies](#list-active-strategies) (strategy/list-active-strategies)
+	- [List Strategy Transactions](#list-strategy-transactions) (strategy/list-strategy-transactions)
+	- [Stop All Strategies](#stop-all-strategies) (strategy/stop-all-strategies)
+	- [Strategy Update](#strategy-update) (strategy/update)
+	- [List Strategy Options](#list-strategy-options) (strategy/list-strategy-options)
+- Public
+	- [Spreads](#spreads) (public/spreads/data)
+	- [Fetch Symbol Price](#fetch-symbol-price) (public/fetch-symbol-price)
+	- [Bitcoin Price Tracker](#bitcoin-price-tracker) (public/bitcoin-price-tracker)
+	- [Fetch Symbol Trades](#fetch-symbol-trades) (public/fetch-symbol-trades)
+	- [Realtime Bitcoin Profit](#realtime-bitcoin-profit) (public/realtime-bitcoin-profit)
+	- [Exchange Information](#exchange-information) (public/exchange-information)
+	- [Tradingview Charts](#tradingview-charts) (public/tradingview-charts)
+	- [Trending News Data](#trending-news-data) (public/trending-news-data)
+	- [Trending News Watchlist](#trending-news-watchlist) (public/trending-news-watchlist)
+	- [Trending News Sources](#trending-news-sources) (public/trending-news-sources)
+	- [Trending News Statistics](#trending-news-statistics) (public/trending-news-statistics)
+	- [Trending News Source Impact](#trending-news-source-impact) (public/trending-news-source-impact)
+	- [Trending News Add Keyword](#trending-news-add-keyword) (public/trending-news-add-keyword)
+	- [List your own keywords](#list-your-own-keywords) (public/trending-news-list-my-keywords)
+	- [Trending News Remove Keyword](#trending-news-remove-keyword) (public/trending-news-remove-keyword)
+	- [Match Pair](#match-pair) (public/match-pair)
+- Subaccounts
+	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
+	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
+	- [Delete Subaccount](#delete-subaccount) (subaccounts/subaccount-delete)
+	- [Edit Subaccount](#edit-subaccount) (subaccounts/subaccount-edit)
+	- [Send Broadcast](#send-broadcast) (subaccounts/broadcast-create)
+	- [Delete Broadcast](#delete-broadcast) (subaccounts/broadcast-delete)
+	- [Edit Broadcast](#edit-broadcast) (subaccounts/broadcast-edit)
+	- [List Broadcast](#list-broadcast) (subaccounts/broadcast-list)
+	- [Access History](#access-history) (subaccounts/subaccount-access-history)
+- User
+	- [Close Account](#close-account) (user/close-account)
+	- [User Account Balance](#user-account-balance) (user/account-balance)
+	- [User Access History](#user-access-history) (user/access-history)
+	- [User Account Details](#user-account-details) (user/account-details)
+	- [User List Referrals](#user-list-referrals) (user/list-referrals)
+	- [User Active Sessions](#user-active-sessions) (user/active-sessions)
+	- [User Security Settings](#user-security-settings) (user/security-settings)
+- Wallets
+	- [Wallets Fetch Deposit Address](#wallets-fetch-deposit-address) (wallets/fetch-deposit-address)
+	- [Wallets List Balances](#wallets-list-balances) (wallets/list-balances)
+	- [Withdraw from wallet](#withdraw-from-wallet) (wallets/withdraw)
+- Finance
+	- [List Commissions Paid](#list-commissions-paid) (finance/list-commissions-paid)
+	- [List Recent Transactions](#list-recent-transactions) (finance/list-recent-transactions)
+	- [List Top Strategy PNL](#list-top-strategy-pnl) (finance/list-top-strategy-pnl)
+	- [List Deposits](#list-deposits) (finance/list-depoists)
+	- [List Withdraws](#list-withdraws) (finance/list-withdraws)
+	- [Import Orders List](#import-orders-list) (finance/import-orders-list)
+	- [Import Orders Settings](#import-orders-settings) (finance/import-orders-settings)
+- Exchange API Keys
+	- [Test API Key Status](#test-api-key-status) (exchange-api-keys/test)
+- Tests
+	- [Black Scholes Implied Volatility Calculator](#black-scholes-implied-volatility-calculator) (tests/black-scholes-implied-volatility-calculator)
+	- [Test Server Location Speed To Exchange](#test-server-location-speed-to-exchange) (tests/server-location-speed-to-exchange)
+- Exchange Index
+	- [Exchange Index Announcements](#exchange-index-announcements) (exchangeindex/announcements)
+	- [Monitored Exchanges](#monitored-exchanges) (exchangeindex/exchanges)
+	- [Relevant News](#relevant-news) (exchangeindex/relevant-news)
+	- [Monitored Symbols](#monitored-symbols) (exchangeindex/symbols)
+- Export
+	- [Export Fetch](#export-fetch) (export/fetch)
+	- [Export List](#export-list) (export/list)
+	- [Request Export](#request-export) (export/request)
+- Calendar
+	- [Add Reminder](#add-reminder) (calendar/add-reminder)
+	- [List Schedule](#list-schedule) (calendar/list-schedule)
+- Exchange Query
+	- [List Balances](#list-balances) (exchange-query/list-balances)
+	- [List Closed Orders](#list-closed-orders) (exchange-query/list-closed-orders)
+	- [Exchange Query List Open Orders](#exchange-query-list-open-orders) (exchange-query/list-open-orders)
+- Algorithm Creator
+	- [Algorithm Add](#algorithm-add) (algorithm-creator/algorithm-add)
+	- [Algorithm Remove](#algorithm-remove) (algorithm-creator/algorithm-remove)
+	- [Algorithm Statistics](#algorithm-statistics) (algorithm-creator/algorithm-statistics)
+	- [Algorithm Update](#algorithm-update) (algorithm-creator/algorithm-update)
+	- [Condition Add](#condition-add) (algorithm-creator/condition-add)
+	- [Condition Remove](#condition-remove) (algorithm-creator/condition-remove)
+	- [Condition Update](#condition-update) (algorithm-creator/condition-update)
+	- [Execution Add](#execution-add) (algorithm-creator/execution-add)
+	- [Execution Remove](#execution-remove) (algorithm-creator/execution-remove)
+	- [Execution Update](#execution-update) (algorithm-creator/execution-update)
+	- [List Algorithms](#list-algorithms) (algorithm-creator/list-algorithms)
+	- [List Condition Operators](#list-condition-operators) (algorithm-creator/list-condition-operators)
+	- [List Conditions](#list-conditions) (algorithm-creator/list-conditions)
+	- [List Executions](#list-executions) (algorithm-creator/list-executions)
+	- [List Order Types](#list-order-types) (algorithm-creator/list-order-types)
+	- [Publish Algorithm](#publish-algorithm) (algorithm-creator/publish-algorithm)
+	- [Unpublish Algorithm](#unpublish-algorithm) (algorithm-creator/unpublish-algorithm)
+	- [Validate Algorithm](#validate-algorithm) (algorithm-creator/validate-algorithm)
 
-## All Official Documentation for Executium
-* Announcements regarding changes, upgrades, important exchange information, fixes, etc. to the API and Trading System will be reported here: **UPDATING-URL**
-* Endpoints, parameters, payloads, etc. outlined in the documents in this repo are considered **official releases** and **supported by executium**.
-* The use of any other endpoints, parameters, or payloads, etc. not outlined in this repo and the documents within are **not supported** and you **use them at your own risk and with no guarantees of functionality**.
+
+# Public REST API Version 2 for Executium (private beta)
+
+## Accessibility
+Currently executium version 2 is in private beta mode as of 10th June 2020. We will update the status of the public release date in this file when decided upon.
+
+## General Information
+
+* Version 2 is currently in private beta.
+* The primary base endpoint is: **`[PRIVATE-MODE]`**
+* The `trending-news` base is : **`trendingnews.executium.com`**
+* The base for public `marketdata` is : **`marketdata.executium.com`**
+* All endpoints return either a JSON object or array.
+* There are currently **`140 endpoints`** as part of version 2.
+* Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
+* Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
+
+## HTTP Return Codes
+
+* HTTP `4XX` return codes are used for malformed requests where the issue exists with the sender.
+* HTTP `422` return code is applied when a user input is unexpected.
+* HTTP `429` return code is used when breaking a request rate limit.
+* HTTP `418` return code is used when an IP has been banned automatically for continuing to send requests after receiving `429` codes.
+* HTTP `5XX` return codes are used for internal errors where the issue is with the executium side.
+
+## Error Codes
+* Any endpoint has the ability to return an ERROR
+
+Sample Payload below:
+```javascript
+
+"data": {
+  "code": 1440,
+  "error": "Missing POST parameter(s) required to proceed, review 'missing_parameters' for more information."
+},
+   
+```
+
+* We provide a comprehensive run down on codes in [Errors Codes](./errors.md).
+
+## General Information on Endpoints
+* For `POST` endpoints, the parameters must be sent as a `query string` or in the `request body`.
+* For `GET` endpoints, parameters must be sent as a `query string`.
+* Parameters may be sent in any order.
+* If a parameter sent in both the `query string` and `request body`, the `query string` parameter will take priority.
+
+## Check Server Time
+Test connectivity to our REST API and get the current server time with a timestamp and millisecond timing.
+
+```
+GET /api/v2/system/timestamp
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+{
+    "data": {
+        "seconds": 1591780920,
+        "milliseconds ": 1591780920709
+    },
+}
+```
 
 
-Name | Description
+## Endpoints
+A list of all the available endpoints.
+
+```
+GET /api/v2/system/endpoints
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+{
+    "data": [
+        {
+            "path": "system/timestamp",
+            "parent": "System",
+            "name": "Check Server Time",
+            "description": "Test connectivity to our REST API and get the current server time with a timestamp and millisecond timing.",
+            "auth_required": false,
+            "parameters": []
+        },
+		...
+		...
+	]
+}
+```
+
+
+## Ping REST API
+Text the connectivity to the REST API
+
+```
+POST /api/v2/system/ping
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+milliseconds |  | NO | 0 | Provide a milliseconds timestamp and then the server will provide a subtracted return value from your input. For more information about millisecond functions visit https://github.com/executium/millisecond-functions
+
+
+**Successful Response Formatted:**
+
+Name | Example Value
 ------------ | ------------
-[rest-api.md](./rest-api.md) | Detailed information on the Executium V2 Rest API (/api/v2)
-[errors.md](./errors.md) | Details and descriptions of error messages from the Rest API
-[symbols-supported.md](./symbols-supported.md) | Information related to the current supported symbols by executium.
-[exchanges-supported.md](./exchanges-supported.md) | Information related to the current supported exchanges by executium.
-
-## Supported Exchanges in Version 2
-A table of supported exchanges in executium for version 2. The following table is the status as of 23rd June 2020.
-
-Exchange | Executium Code |Active | Symbols Count
------------- | ------------ | ------------ | ------------
-Binance|binance|Yes|583
-Bitfinex|bitfinex|Yes|294
-Bitflyer|bitflyer|Yes|10
-Bithumb|bithumb|Yes|109
-Bitmart|bitmart|Yes|5
-Bitmax|bitmax|Yes|202
-Bitmex|bitmex|Yes|13
-Bitstamp|bitstamp|Yes|32
-Bittrex|bittrex|Yes|415
-Coinbase|coinbase|Yes|169
-Coinbasepro|coinbasepro|Yes|67
-Coincheck|coincheck|Yes|1
-Deribit|deribit|Yes|8
-Ftx|ftx|Yes|374
-Gateio|gateio|Yes|469
-Huobipro|huobipro|Yes|558
-Indodax|indodax|Yes|68
-Itbit|itbit|Yes|6
-Kraken|kraken|Yes|155
-Kucoin|kucoin|Yes|437
-Liquid|liquid|Yes|176
-Okex|okex|Yes|365
-Poloniex|poloniex|Yes|149
-Upbit|upbit|Yes|259
+our_server_ms | 1591777804071
+your_sent_ms | 1591777804158
+difference | -87
+equation | our_server_ms - your_sent_ms
+note | Always make sure your devices time is synchronized for best results.
 
 
-## Supported Symbols in Version 2
-We have increased our symbols and exchange support with version 2, as of the 22nd June 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
-
-Version | Exchanges | Markets | Market Spreads | Permutation 
------------- | ------------ | ------------  | ------------   | ------------
-Version 2|24|4,924|12,120,426 | 24,240,852
-Version 1|12|140|869 | 869
-
-### Quote to Quote Permutation
-
-Quote | Markets | Permutation | Exchanges
------------- | ------------ | ------------ | ------------
-BTC|1481|2,193,361|Binance, Bitfinex, Bitflyer, Bitmart, Bitmax, Bittrex, Coinbasepro, Ftx, Kucoin, Liquid, Okex, Poloniex, Upbit
-ETH|747|558,009|Binance, Bitfinex, Bitmax, Bittrex, Coinbasepro, Kucoin, Liquid, Okex, Poloniex
-USDT|1007|1,014,049|Binance, Bitmart, Bitmax, Bittrex, Ftx, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-BNB|80|6,400|Binance, Kucoin
-TUSD|22|484|Binance, Kucoin
-PAX|25|625|Binance, Bitmart, Bitmax, Kucoin, Poloniex
-USDC|69|4,761|Binance, Bitmart, Bitmax, Coinbasepro, Kraken, Kucoin, Liquid, Okex, Poloniex
-TRX|19|361|Binance, Kucoin, Poloniex
-BUSD|38|1,444|Binance
-NGN|4|16|Binance, Coinbase
-RUB|7|49|Binance, Coinbase
-TRY|7|49|Binance, Coinbase
-EUR|47|2,209|Binance, Bitfinex, Bitflyer, Bittrex, Coinbase, Coinbasepro, Itbit, Liquid
-ZAR|6|36|Binance, Coinbase
-BKRW|3|9|Binance
-IDRT|5|25|Binance, Liquid
-USD|529|279,841|Bitfinex, Bitflyer, Bittrex, Coinbase, Coinbasepro, Deribit, Ftx, Itbit, Liquid
-JPY|20|400|Bitfinex, Bitflyer, Coinbase, Liquid
-GBP|21|441|Bitfinex, Coinbase, Coinbasepro
-EOS|3|9|Bitfinex
-DAI|14|196|Bitfinex, Coinbasepro, Kraken, Kucoin, Liquid, Okex, Poloniex
-UST|19|361|Bitfinex
-CNHT|3|9|Bitfinex
-USTF0|4|16|Bitfinex
-KRW|199|39,601|Bithumb, Coinbase, Upbit
-XBT|7|49|Bitmex
-CUSTOM1|6|36|Bitmex
-AUD|4|16|Coinbase, Liquid
-BRL|2|4|Coinbase, Ftx
-CHF|6|36|Coinbase, Kraken
-HKD|3|9|Coinbase, Liquid
-IDR|58|3,364|Coinbase
-PHP|2|4|Coinbase, Liquid
-SGD|8|64|Coinbase, Itbit, Liquid
-XETH|23|529|Kraken
-ZEUR|33|1,089|Kraken
-ZUSD|35|1,225|Kraken
-XXBT|29|841|Kraken
-ZGBP|7|49|Kraken
-ZCAD|6|36|Kraken
-ZJPY|6|36|Kraken
-NEO|7|49|Kucoin
-KCS|7|49|Kucoin
-QASH|18|324|Liquid
-USDK|30|900|Okex
-OKB|13|169|Okex
-USDJ|3|9|Poloniex
-
-We are adding and updating symbols supported by executium daily, the list for [Symbols Supported](./symbols-supported.md) can be monitored. We intend to update this support list weekly with version 2, and for a real-time look at support you can access via the api endpoint `system/symbols` for a full list of support symbols, or keep up to date in real-time via the executium website.
+**Successful Response Payload:**
+```javascript
+{
+  "data": {
+    "our_server_ms": 1591777804071,
+    "your_sent_ms": "1591777804158",
+    "difference": -87,
+    "equation": "our_server_ms - your_sent_ms",
+    "note": "Always make sure your devices time is synchronized for best results."
+  },
+  "meta": {
+    "api_version": 2,
+    "system_version": "2.0.5",
+    "status": 200,
+    "endpoint": "system/ping",
+    "auth_required": false,
+    "ms": 1591777804071,
+    "time": 1591777804,
+    "uid": -1,
+    "process_time": "0.000204"
+  }
+}
+```
 
 
-### Pairing Permutation (Exact symbol match)
+## Information
+Authentication is required as the results will be tailored to your actual subscription criteria. System information concentrates on what is supported in executium from an exchange and symbol perspective.
 
-Base | Markets | Permutation | Exchanges
------------- | ------------ | ------------ | ------------
-ETHBTC|18|324|Binance, Bitfinex, Bitflyer, Bitmart, Bitmax, Bitstamp, Bittrex, Coinbasepro, Ftx, Gateio, Huobipro, Indodax, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-LTCBTC|15|225|Binance, Bitfinex, Bitmax, Bitstamp, Bittrex, Coinbasepro, Gateio, Huobipro, Indodax, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-BNBBTC|3|9|Binance, Bitmax, Kucoin
-NEOBTC|10|100|Binance, Bitfinex, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Liquid, Okex, Poloniex
-QTUMETH|6|36|Binance, Bittrex, Gateio, Huobipro, Kraken, Okex
-EOSETH|10|100|Binance, Bitfinex, Bitmax, Bittrex, Gateio, Huobipro, Kraken, Kucoin, Okex, Poloniex
-SNTETH|5|25|Binance, Bitfinex, Bittrex, Gateio, Kucoin
-BNTETH|3|9|Binance, Bittrex, Gateio
-GASBTC|6|36|Binance, Gateio, Huobipro, Kucoin, Okex, Poloniex
-BNBETH|2|4|Binance, Bitmax
-BTCUSDT|14|196|Binance, Bitfinex, Bitmart, Bitmax, Bittrex, Ftx, Gateio, Huobipro, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-ETHUSDT|14|196|Binance, Bitfinex, Bitmart, Bitmax, Bittrex, Ftx, Gateio, Huobipro, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-MCOETH|5|25|Binance, Bittrex, Gateio, Huobipro, Okex
-MCOBTC|5|25|Binance, Bittrex, Huobipro, Okex, Upbit
-WTCBTC|4|16|Binance, Huobipro, Kucoin, Okex
-WTCETH|3|9|Binance, Huobipro, Okex
-LRCBTC|6|36|Binance, Bitfinex, Bittrex, Gateio, Okex, Upbit
-LRCETH|3|9|Binance, Gateio, Okex
-QTUMBTC|12|144|Binance, Bitfinex, Bitmax, Bittrex, Gateio, Huobipro, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-YOYOWBTC|2|4|Binance, Okex
-OMGBTC|12|144|Binance, Bitfinex, Bittrex, Coinbasepro, Gateio, Huobipro, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-OMGETH|8|64|Binance, Bitfinex, Bittrex, Gateio, Huobipro, Kraken, Kucoin, Okex
-ZRXBTC|11|121|Binance, Bitfinex, Bitmax, Bittrex, Coinbasepro, Gateio, Huobipro, Kucoin, Okex, Poloniex, Upbit
-ZRXETH|8|64|Binance, Bitfinex, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-STRATBTC|4|16|Binance, Bittrex, Poloniex, Upbit
-STRATETH|2|4|Binance, Bittrex
-KNCBTC|7|49|Binance, Bitfinex, Coinbasepro, Huobipro, Kucoin, Okex, Poloniex
-KNCETH|4|16|Binance, Gateio, Huobipro, Kucoin
-FUNBTC|2|4|Binance, Okex
-FUNETH|3|9|Binance, Bitfinex, Gateio
-NEOETH|6|36|Binance, Bitfinex, Bitmax, Bittrex, Kucoin, Okex
-IOTABTC|6|36|Binance, Bitfinex, Bittrex, Gateio, Huobipro, Okex
-IOTAETH|4|16|Binance, Bitfinex, Huobipro, Okex
-LINKBTC|7|49|Binance, Bitmax, Bittrex, Huobipro, Kraken, Okex, Poloniex
-LINKETH|8|64|Binance, Bitmax, Bittrex, Coinbasepro, Gateio, Huobipro, Kraken, Okex
-XVGBTC|5|25|Binance, Bitfinex, Bittrex, Gateio, Huobipro
-XVGETH|2|4|Binance, Huobipro
-MDAETH|2|4|Binance, Gateio
-MTLBTC|4|16|Binance, Bittrex, Huobipro, Upbit
-EOSBTC|12|144|Binance, Bitfinex, Bitmax, Bittrex, Coinbasepro, Gateio, Huobipro, Kraken, Kucoin, Okex, Poloniex, Upbit
-SNTBTC|9|81|Binance, Bitfinex, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex, Upbit
-ETCETH|7|49|Binance, Bittrex, Gateio, Kraken, Kucoin, Okex, Poloniex
-ETCBTC|12|144|Binance, Bitfinex, Bitmax, Bittrex, Coinbasepro, Gateio, Huobipro, Kraken, Kucoin, Okex, Poloniex, Upbit
-ENGBTC|4|16|Binance, Bittrex, Huobipro, Upbit
-ENGETH|3|9|Binance, Bittrex, Huobipro
-DNTBTC|3|9|Binance, Bittrex, Upbit
-ZECBTC|12|144|Binance, Bitfinex, Bitmax, Bittrex, Coinbasepro, Gateio, Huobipro, Kraken, Kucoin, Liquid, Okex, Poloniex
-ZECETH|4|16|Binance, Bittrex, Okex, Poloniex
-BNTBTC|5|25|Binance, Bittrex, Okex, Poloniex, Upbit
-ASTBTC|2|4|Binance, Huobipro
-DASHBTC|13|169|Binance, Bitfinex, Bitmax, Bittrex, Coinbasepro, Gateio, Huobipro, Indodax, Kraken, Kucoin, Liquid, Okex, Poloniex
-DASHETH|4|16|Binance, Bittrex, Kucoin, Okex
-OAXBTC|3|9|Binance, Gateio, Liquid
-BTGBTC|5|25|Binance, Bitfinex, Gateio, Huobipro, Okex
-EVXBTC|2|4|Binance, Huobipro
-EVXETH|2|4|Binance, Huobipro
-REQBTC|3|9|Binance, Huobipro, Kucoin
-VIBBTC|4|16|Binance, Bittrex, Okex, Upbit
-VIBETH|2|4|Binance, Bittrex
-TRXBTC|11|121|Binance, Bitfinex, Bitmax, Bittrex, Huobipro, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-TRXETH|9|81|Binance, Bitfinex, Bitmax, Bittrex, Gateio, Huobipro, Kraken, Kucoin, Okex
-POWRBTC|6|36|Binance, Bittrex, Gateio, Huobipro, Kucoin, Upbit
-POWRETH|5|25|Binance, Bittrex, Gateio, Huobipro, Kucoin
-ARKBTC|4|16|Binance, Bittrex, Okex, Upbit
-XRPBTC|15|225|Binance, Bitfinex, Bitmax, Bitstamp, Bittrex, Coinbasepro, Gateio, Huobipro, Indodax, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-XRPETH|6|36|Binance, Bitmax, Bittrex, Kraken, Kucoin, Okex
-ENJBTC|5|25|Binance, Bittrex, Kucoin, Liquid, Upbit
-ENJETH|3|9|Binance, Bittrex, Kucoin
-STORJBTC|7|49|Binance, Bittrex, Gateio, Huobipro, Liquid, Poloniex, Upbit
-STORJETH|3|9|Binance, Gateio, Okex
-BNBUSDT|5|25|Binance, Bitmax, Ftx, Gateio, Kucoin
-KMDBTC|5|25|Binance, Bittrex, Huobipro, Liquid, Upbit
-KMDETH|2|4|Binance, Huobipro
-RCNBTC|4|16|Binance, Bittrex, Huobipro, Upbit
-NULSBTC|4|16|Binance, Huobipro, Kucoin, Okex
-NULSETH|4|16|Binance, Huobipro, Kucoin, Okex
-RDNBTC|2|4|Binance, Huobipro
-RDNETH|2|4|Binance, Gateio
-XMRBTC|10|100|Binance, Bitfinex, Bittrex, Gateio, Huobipro, Kraken, Kucoin, Liquid, Okex, Poloniex
-XMRETH|5|25|Binance, Bittrex, Huobipro, Kucoin, Okex
-AMBBTC|2|4|Binance, Kucoin
-BATBTC|10|100|Binance, Bitfinex, Bitmax, Bittrex, Gateio, Huobipro, Kraken, Okex, Poloniex, Upbit
-BATETH|8|64|Binance, Bitfinex, Bittrex, Coinbasepro, Gateio, Huobipro, Kraken, Poloniex
-BCPTBTC|2|4|Binance, Upbit
-ARNETH|2|4|Binance, Gateio
-GVTBTC|2|4|Binance, Kucoin
-GVTETH|2|4|Binance, Kucoin
-CDTETH|2|4|Binance, Gateio
-GXSBTC|2|4|Binance, Gateio
-NEOUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-QSPBTC|2|4|Binance, Huobipro
-QSPETH|2|4|Binance, Gateio
-BTSBTC|7|49|Binance, Bittrex, Gateio, Huobipro, Indodax, Poloniex, Upbit
-XZCBTC|3|9|Binance, Bittrex, Huobipro
-XZCETH|2|4|Binance, Huobipro
-LSKBTC|9|81|Binance, Bittrex, Gateio, Huobipro, Kraken, Kucoin, Okex, Poloniex, Upbit
-LSKETH|4|16|Binance, Huobipro, Kraken, Kucoin
-TNTBTC|2|4|Binance, Huobipro
-TNTETH|2|4|Binance, Gateio
-MANABTC|8|64|Binance, Bitfinex, Bittrex, Huobipro, Kucoin, Okex, Poloniex, Upbit
-MANAETH|6|36|Binance, Bittrex, Gateio, Huobipro, Kucoin, Okex
-BCDBTC|5|25|Binance, Gateio, Huobipro, Kucoin, Okex
-BCDETH|2|4|Binance, Kucoin
-ADXBTC|4|16|Binance, Bittrex, Huobipro, Upbit
-ADXETH|2|4|Binance, Bittrex
-ADABTC|9|81|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kraken, Kucoin, Okex, Upbit
-ADAETH|6|36|Binance, Bitmax, Bittrex, Huobipro, Kraken, Okex
-PPTBTC|2|4|Binance, Kucoin
-PPTETH|2|4|Binance, Kucoin
-CMTBTC|3|9|Binance, Huobipro, Okex
-CMTETH|3|9|Binance, Huobipro, Okex
-XLMBTC|15|225|Binance, Bitfinex, Bitmax, Bitstamp, Bittrex, Coinbasepro, Gateio, Huobipro, Indodax, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-XLMETH|8|64|Binance, Bitfinex, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex
-CNDBTC|2|4|Binance, Bittrex
-LENDETH|2|4|Binance, Gateio
-WABIBTC|2|4|Binance, Liquid
-LTCETH|6|36|Binance, Bitmax, Bittrex, Kraken, Kucoin, Okex
-LTCUSDT|12|144|Binance, Bitfinex, Bitmax, Bittrex, Ftx, Gateio, Huobipro, Kraken, Kucoin, Okex, Poloniex, Upbit
-TNBBTC|3|9|Binance, Bitfinex, Huobipro
-WAVESBTC|7|49|Binance, Bittrex, Gateio, Huobipro, Kraken, Okex, Upbit
-WAVESETH|5|25|Binance, Bittrex, Huobipro, Kraken, Okex
-GTOBTC|4|16|Binance, Bittrex, Okex, Upbit
-GTOETH|2|4|Binance, Okex
-ICXBTC|5|25|Binance, Bittrex, Huobipro, Kraken, Okex
-ICXETH|4|16|Binance, Gateio, Huobipro, Kraken
-OSTBTC|4|16|Binance, Bittrex, Huobipro, Upbit
-OSTETH|2|4|Binance, Gateio
-ELFBTC|7|49|Binance, Bitmax, Bittrex, Huobipro, Kucoin, Okex, Upbit
-ELFETH|6|36|Binance, Bitmax, Gateio, Huobipro, Kucoin, Okex
-AIONBTC|3|9|Binance, Bitfinex, Kucoin
-AIONETH|2|4|Binance, Kucoin
-NEBLBTC|2|4|Binance, Kucoin
-EDOBTC|3|9|Binance, Bitfinex, Okex
-EDOETH|2|4|Binance, Bitfinex
-NAVBTC|2|4|Binance, Bittrex
-LUNBTC|2|4|Binance, Huobipro
-APPCBTC|2|4|Binance, Huobipro
-RLCBTC|4|16|Binance, Bitfinex, Bittrex, Upbit
-RLCETH|2|4|Binance, Gateio
-PIVXBTC|3|9|Binance, Bittrex, Kucoin
-PIVXETH|2|4|Binance, Kucoin
-IOSTBTC|8|64|Binance, Bitfinex, Bitmax, Bittrex, Huobipro, Kucoin, Okex, Upbit
-IOSTETH|6|36|Binance, Bitfinex, Bitmax, Huobipro, Kucoin, Okex
-STEEMBTC|5|25|Binance, Bittrex, Huobipro, Poloniex, Upbit
-STEEMETH|2|4|Binance, Huobipro
-NANOBTC|6|36|Binance, Gateio, Huobipro, Kraken, Kucoin, Okex
-NANOETH|5|25|Binance, Huobipro, Kraken, Kucoin, Okex
-VIABTC|2|4|Binance, Bittrex
-BLZBTC|2|4|Binance, Huobipro
-BLZETH|3|9|Binance, Gateio, Huobipro
-AEBTC|3|9|Binance, Gateio, Huobipro
-AEETH|3|9|Binance, Gateio, Huobipro
-NCASHETH|2|4|Binance, Huobipro
-ZILBTC|7|49|Binance, Bitmax, Bittrex, Huobipro, Kucoin, Okex, Upbit
-ZILETH|5|25|Binance, Gateio, Huobipro, Kucoin, Okex
-ONTBTC|6|36|Binance, Bitmax, Bittrex, Huobipro, Kucoin, Okex
-ONTETH|6|36|Binance, Bitmax, Gateio, Huobipro, Kucoin, Okex
-STORMBTC|3|9|Binance, Bittrex, Upbit
-STORMETH|2|4|Binance, Bittrex
-QTUMUSDT|6|36|Binance, Bitmax, Gateio, Huobipro, Okex, Poloniex
-XEMBTC|11|121|Binance, Bitmax, Bittrex, Gateio, Huobipro, Indodax, Kucoin, Liquid, Okex, Poloniex, Upbit
-XEMETH|4|16|Binance, Bittrex, Gateio, Okex
-WANBTC|4|16|Binance, Bitmax, Huobipro, Kucoin
-WANETH|3|9|Binance, Huobipro, Kucoin
-WPRBTC|2|4|Binance, Huobipro
-QLCBTC|2|4|Binance, Gateio
-QLCETH|2|4|Binance, Gateio
-SYSBTC|3|9|Binance, Bittrex, Upbit
-GRSBTC|4|16|Binance, Bittrex, Huobipro, Upbit
-GRSETH|2|4|Binance, Huobipro
-ADAUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Upbit
-GNTBTC|7|49|Binance, Bitfinex, Bittrex, Huobipro, Okex, Poloniex, Upbit
-GNTETH|5|25|Binance, Bitfinex, Bittrex, Gateio, Huobipro
-LOOMBTC|6|36|Binance, Bittrex, Huobipro, Kucoin, Poloniex, Upbit
-LOOMETH|3|9|Binance, Huobipro, Kucoin
-XRPUSDT|10|100|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kraken, Kucoin, Okex, Poloniex, Upbit
-REPBTC|7|49|Binance, Bitfinex, Bittrex, Coinbasepro, Kraken, Poloniex, Upbit
-REPETH|6|36|Binance, Bitfinex, Bittrex, Gateio, Kraken, Poloniex
-BTCTUSD|2|4|Binance, Kucoin
-ETHTUSD|2|4|Binance, Kucoin
-ZENBTC|4|16|Binance, Bittrex, Huobipro, Okex
-ZENETH|3|9|Binance, Huobipro, Okex
-EOSUSDT|9|81|Binance, Bitfinex, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-CVCBTC|7|49|Binance, Bittrex, Huobipro, Kucoin, Okex, Poloniex, Upbit
-CVCETH|5|25|Binance, Bittrex, Gateio, Huobipro, Okex
-THETABTC|3|9|Binance, Huobipro, Okex
-THETAETH|3|9|Binance, Gateio, Huobipro
-TUSDUSDT|6|36|Binance, Bitfinex, Bittrex, Gateio, Okex, Upbit
-IOTAUSDT|4|16|Binance, Gateio, Huobipro, Okex
-XLMUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-IOTXBTC|4|16|Binance, Bittrex, Kucoin, Upbit
-IOTXETH|3|9|Binance, Gateio, Kucoin
-QKCBTC|3|9|Binance, Gateio, Kucoin
-QKCETH|3|9|Binance, Gateio, Kucoin
-AGIBTC|2|4|Binance, Kucoin
-AGIETH|2|4|Binance, Kucoin
-NXSBTC|3|9|Binance, Bittrex, Upbit
-DATABTC|2|4|Binance, Bitfinex
-DATAETH|3|9|Binance, Bitfinex, Gateio
-ONTUSDT|7|49|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex
-TRXUSDT|10|100|Binance, Bitmax, Bittrex, Ftx, Gateio, Huobipro, Kucoin, Okex, Poloniex, Upbit
-ETCUSDT|9|81|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex, Upbit
-ICXUSDT|3|9|Binance, Gateio, Okex
-SCBTC|7|49|Binance, Bittrex, Huobipro, Kraken, Okex, Poloniex, Upbit
-SCETH|5|25|Binance, Bittrex, Huobipro, Kraken, Okex
-NPXSETH|4|16|Binance, Bittrex, Huobipro, Kucoin
-KEYETH|2|4|Binance, Kucoin
-NASBTC|4|16|Binance, Gateio, Huobipro, Okex
-NASETH|4|16|Binance, Gateio, Huobipro, Okex
-DENTETH|2|4|Binance, Kucoin
-ARDRBTC|6|36|Binance, Bittrex, Huobipro, Okex, Poloniex, Upbit
-NULSUSDT|3|9|Binance, Huobipro, Okex
-VETBTC|7|49|Binance, Bitfinex, Bitmax, Bittrex, Huobipro, Kucoin, Upbit
-VETETH|4|16|Binance, Gateio, Huobipro, Kucoin
-VETUSDT|6|36|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin
-DOCKBTC|3|9|Binance, Huobipro, Kucoin
-DOCKETH|4|16|Binance, Gateio, Huobipro, Kucoin
-POLYBTC|4|16|Binance, Huobipro, Poloniex, Upbit
-HCBTC|5|25|Binance, Gateio, Huobipro, Kucoin, Okex
-HCETH|5|25|Binance, Gateio, Huobipro, Kucoin, Okex
-GOBTC|4|16|Binance, Bittrex, Kucoin, Upbit
-PAXUSDT|6|36|Binance, Bitfinex, Bitmax, Gateio, Okex, Poloniex
-RVNBTC|5|25|Binance, Bitmax, Bittrex, Okex, Upbit
-DCRBTC|8|64|Binance, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex, Upbit
-MITHBTC|3|9|Binance, Liquid, Okex
-BCHBTC|15|225|Binance, Bitfinex, Bitflyer, Bitmax, Bitstamp, Bittrex, Coinbasepro, Gateio, Huobipro, Kraken, Kucoin, Liquid, Okex, Poloniex, Upbit
-BCHUSDT|12|144|Binance, Bitfinex, Bitmax, Bittrex, Ftx, Gateio, Huobipro, Kraken, Kucoin, Okex, Poloniex, Upbit
-BTCPAX|7|49|Binance, Bitmart, Bitmax, Bitstamp, Gateio, Kucoin, Poloniex
-ETHPAX|4|16|Binance, Bitstamp, Kucoin, Poloniex
-XRPPAX|3|9|Binance, Bitstamp, Kucoin
-RENBTC|2|4|Binance, Huobipro
-XRPTUSD|2|4|Binance, Kucoin
-BTCUSDC|10|100|Binance, Bitmart, Bitmax, Coinbasepro, Gateio, Kraken, Kucoin, Liquid, Okex, Poloniex
-ETHUSDC|6|36|Binance, Coinbasepro, Kraken, Kucoin, Okex, Poloniex
-XRPUSDC|3|9|Binance, Okex, Poloniex
-EOSUSDC|3|9|Binance, Okex, Poloniex
-USDCUSDT|7|49|Binance, Bitfinex, Bitmax, Bittrex, Gateio, Kraken, Okex
-LINKUSDT|8|64|Binance, Bitmax, Bittrex, Ftx, Gateio, Huobipro, Okex, Poloniex
-WAVESUSDT|4|16|Binance, Gateio, Huobipro, Okex
-BCHUSDC|4|16|Binance, Liquid, Okex, Poloniex
-LTCUSDC|3|9|Binance, Okex, Poloniex
-TRXUSDC|3|9|Binance, Okex, Poloniex
-BTTUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-ONGBTC|2|4|Binance, Bittrex
-ONGUSDT|3|9|Binance, Bitmax, Gateio
-ZILUSDT|5|25|Binance, Bitmax, Gateio, Huobipro, Okex
-ZRXUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Okex, Poloniex, Upbit
-FETBTC|3|9|Binance, Bitmax, Kucoin
-FETUSDT|2|4|Binance, Bitmax
-BATUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Okex, Poloniex, Upbit
-XMRUSDT|6|36|Binance, Bittrex, Gateio, Huobipro, Okex, Poloniex
-ZECUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-ZECUSDC|3|9|Binance, Coinbasepro, Poloniex
-IOSTUSDT|4|16|Binance, Bitmax, Huobipro, Okex
-CELRBTC|2|4|Binance, Bitmax
-CELRUSDT|3|9|Binance, Bitmax, Gateio
-DASHUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-NANOUSDT|5|25|Binance, Gateio, Huobipro, Kucoin, Okex
-OMGUSDT|6|36|Binance, Bittrex, Gateio, Huobipro, Okex, Upbit
-THETAUSDT|4|16|Binance, Gateio, Huobipro, Okex
-ENJUSDT|2|4|Binance, Bittrex
-MITHUSDT|3|9|Binance, Gateio, Okex
-MATICBTC|3|9|Binance, Bitmax, Poloniex
-MATICUSDT|3|9|Binance, Bitmax, Poloniex
-ATOMBTC|12|144|Binance, Bitfinex, Bitmax, Bittrex, Coinbasepro, Gateio, Huobipro, Kraken, Kucoin, Okex, Poloniex, Upbit
-ATOMUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-ATOMUSDC|2|4|Binance, Poloniex
-BATUSDC|2|4|Binance, Coinbasepro
-TFUELUSDT|2|4|Binance, Gateio
-ONEBTC|4|16|Binance, Bitmax, Huobipro, Kucoin
-ONEUSDT|5|25|Binance, Bitmax, Gateio, Huobipro, Kucoin
-FTMBTC|3|9|Binance, Bitmax, Kucoin
-FTMUSDT|4|16|Binance, Bitmax, Gateio, Okex
-ALGOBTC|8|64|Binance, Bitfinex, Bitmax, Bittrex, Huobipro, Kraken, Kucoin, Okex
-ALGOUSDT|7|49|Binance, Bitfinex, Bitmax, Gateio, Huobipro, Kucoin, Okex
-GTOUSDT|2|4|Binance, Okex
-ERDBTC|2|4|Binance, Bitmax
-ERDUSDT|2|4|Binance, Bitmax
-DOGEBTC|9|81|Binance, Bitmax, Bittrex, Gateio, Huobipro, Indodax, Kraken, Poloniex, Upbit
-DOGEUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Okex, Poloniex, Upbit
-DUSKBTC|3|9|Binance, Bitfinex, Bittrex
-ANKRBTC|5|25|Binance, Bitmax, Bittrex, Kucoin, Upbit
-ANKRUSDT|3|9|Binance, Bitmax, Gateio
-WINUSDT|4|16|Binance, Gateio, Kucoin, Poloniex
-COSUSDT|2|4|Binance, Gateio
-NPXSUSDT|2|4|Binance, Bittrex
-TOMOBTC|2|4|Binance, Kucoin
-TOMOUSDT|3|9|Binance, Gateio, Kucoin
-DOCKUSDT|3|9|Binance, Gateio, Huobipro
-WANUSDT|2|4|Binance, Bitmax
-FUNUSDT|2|4|Binance, Gateio
-CVCUSDT|4|16|Binance, Gateio, Huobipro, Okex
-BTTTRX|5|25|Binance, Gateio, Huobipro, Kucoin, Poloniex
-WINTRX|3|9|Binance, Kucoin, Poloniex
-CHZBTC|4|16|Binance, Bitmax, Kucoin, Upbit
-CHZUSDT|3|9|Binance, Bitfinex, Bitmax
-BANDUSDT|2|4|Binance, Bitmax
-BEAMBTC|2|4|Binance, Gateio
-BEAMUSDT|2|4|Binance, Gateio
-XTZBTC|12|144|Binance, Bitfinex, Bitmax, Bittrex, Coinbasepro, Gateio, Huobipro, Kraken, Kucoin, Okex, Poloniex, Upbit
-XTZUSDT|8|64|Binance, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-RENUSDT|2|4|Binance, Huobipro
-RVNUSDT|6|36|Binance, Bitmax, Bittrex, Gateio, Okex, Upbit
-HCUSDT|4|16|Binance, Gateio, Huobipro, Okex
-HBARBTC|4|16|Binance, Bittrex, Liquid, Okex
-HBARUSDT|4|16|Binance, Bittrex, Gateio, Okex
-NKNBTC|4|16|Binance, Bittrex, Huobipro, Upbit
-NKNUSDT|3|9|Binance, Gateio, Huobipro
-STXUSDT|2|4|Binance, Gateio
-KAVABTC|2|4|Binance, Bitmax
-KAVAUSDT|3|9|Binance, Bitmax, Gateio
-BTCNGN|2|4|Binance, Coinbase
-ARPABTC|2|4|Binance, Huobipro
-ARPAUSDT|4|16|Binance, Gateio, Huobipro, Kucoin
-IOTXUSDT|2|4|Binance, Gateio
-RLCUSDT|2|4|Binance, Gateio
-MCOUSDT|3|9|Binance, Gateio, Okex
-CTXCBTC|5|25|Binance, Bittrex, Huobipro, Okex, Upbit
-CTXCUSDT|3|9|Binance, Huobipro, Okex
-BTCRUB|2|4|Binance, Coinbase
-VITEBTC|4|16|Binance, Bittrex, Okex, Upbit
-FTTBTC|4|16|Binance, Bitmax, Ftx, Huobipro
-FTTUSDT|5|25|Binance, Bitfinex, Bitmax, Ftx, Huobipro
-BTCTRY|2|4|Binance, Coinbase
-BTCEUR|10|100|Binance, Bitfinex, Bitflyer, Bitstamp, Bittrex, Coinbase, Coinbasepro, Itbit, Kraken, Liquid
-ETHEUR|8|64|Binance, Bitfinex, Bitstamp, Bittrex, Coinbasepro, Itbit, Kraken, Liquid
-XRPEUR|5|25|Binance, Bitstamp, Coinbasepro, Kraken, Liquid
-OGNBTC|3|9|Binance, Bittrex, Upbit
-DREPUSDT|3|9|Binance, Bitmax, Gateio
-TCTBTC|2|4|Binance, Okex
-TCTUSDT|3|9|Binance, Gateio, Okex
-WRXUSDT|2|4|Binance, Ftx
-BTSUSDT|3|9|Binance, Gateio, Huobipro
-LSKUSDT|4|16|Binance, Gateio, Okex, Poloniex
-BNTUSDT|2|4|Binance, Okex
-LTOBTC|2|4|Binance, Bitmax
-LTOUSDT|2|4|Binance, Bitmax
-MBLUSDT|2|4|Binance, Gateio
-COTIBTC|3|9|Binance, Bitmax, Kucoin
-COTIUSDT|3|9|Binance, Bitmax, Kucoin
-STPTBTC|4|16|Binance, Bitmax, Bittrex, Upbit
-STPTUSDT|2|4|Binance, Bitmax
-BTCZAR|2|4|Binance, Coinbase
-WTCUSDT|3|9|Binance, Huobipro, Okex
-DATAUSDT|2|4|Binance, Gateio
-XZCUSDT|2|4|Binance, Huobipro
-BTCIDRT|2|4|Binance, Liquid
-HIVEBTC|3|9|Binance, Bittrex, Huobipro
-HIVEUSDT|4|16|Binance, Bittrex, Gateio, Huobipro
-CHRBTC|4|16|Binance, Bitmax, Bittrex, Kucoin
-CHRUSDT|3|9|Binance, Bitmax, Kucoin
-GXSUSDT|2|4|Binance, Gateio
-BTCUSD|11|121|Bitfinex, Bitflyer, Bitmex, Bitstamp, Bittrex, Coinbase, Coinbasepro, Ftx, Itbit, Kraken, Liquid
-LTCUSD|6|36|Bitfinex, Bitstamp, Bittrex, Coinbasepro, Ftx, Kraken
-ETHUSD|9|81|Bitfinex, Bitmex, Bitstamp, Bittrex, Coinbasepro, Ftx, Itbit, Kraken, Liquid
-ETCUSD|4|16|Bitfinex, Bittrex, Coinbasepro, Kraken
-ZECUSD|3|9|Bitfinex, Bittrex, Kraken
-XMRUSD|2|4|Bitfinex, Kraken
-DASHUSD|4|16|Bitfinex, Bittrex, Coinbasepro, Kraken
-BTCJPY|6|36|Bitfinex, Bitflyer, Coinbase, Coincheck, Kraken, Liquid
-XRPUSD|7|49|Bitfinex, Bitmex, Bitstamp, Bittrex, Coinbasepro, Kraken, Liquid
-EOSUSD|4|16|Bitfinex, Bittrex, Coinbasepro, Kraken
-OMGUSD|3|9|Bitfinex, Coinbasepro, Kraken
-QTUMUSD|2|4|Bitfinex, Kraken
-QASHUSD|2|4|Bitfinex, Liquid
-BATUSD|3|9|Bitfinex, Bittrex, Kraken
-ZRXUSD|3|9|Bitfinex, Bittrex, Coinbasepro
-TNBETH|2|4|Bitfinex, Huobipro
-TRXUSD|4|16|Bitfinex, Bittrex, Ftx, Kraken
-REPUSD|3|9|Bitfinex, Coinbasepro, Kraken
-BTCGBP|5|25|Bitfinex, Bitstamp, Coinbase, Coinbasepro, Kraken
-ETHJPY|4|16|Bitfinex, Bitflyer, Kraken, Liquid
-ETHGBP|4|16|Bitfinex, Bitstamp, Coinbasepro, Kraken
-EOSEUR|3|9|Bitfinex, Coinbasepro, Kraken
-WAXPUSD|2|4|Bitfinex, Bittrex
-WAXPBTC|5|25|Bitfinex, Bittrex, Huobipro, Kucoin, Upbit
-DAIUSD|4|16|Bitfinex, Bittrex, Coinbasepro, Kraken
-DAIBTC|3|9|Bitfinex, Bittrex, Upbit
-DAIETH|2|4|Bitfinex, Bittrex
-BFTBTC|4|16|Bitfinex, Bittrex, Huobipro, Upbit
-ODEETH|2|4|Bitfinex, Kucoin
-ANTBTC|3|9|Bitfinex, Bittrex, Upbit
-ANTETH|2|4|Bitfinex, Bittrex
-XLMUSD|4|16|Bitfinex, Bitstamp, Coinbasepro, Kraken
-XLMEUR|4|16|Bitfinex, Bitstamp, Coinbasepro, Kraken
-XLMGBP|2|4|Bitfinex, Bitstamp
-MKRUSD|2|4|Bitfinex, Coinbasepro
-MKRBTC|6|36|Bitfinex, Coinbasepro, Kucoin, Okex, Poloniex, Upbit
-MKRETH|4|16|Bitfinex, Gateio, Kucoin, Okex
-KNCUSD|3|9|Bitfinex, Coinbasepro, Ftx
-XTZUSD|4|16|Bitfinex, Bittrex, Coinbasepro, Kraken
-TRXEUR|3|9|Bitfinex, Bittrex, Kraken
-MLNUSD|2|4|Bitfinex, Kraken
-DGBUSD|2|4|Bitfinex, Bittrex
-DGBBTC|6|36|Bitfinex, Bittrex, Huobipro, Kucoin, Okex, Upbit
-BSVUSD|2|4|Bitfinex, Bittrex
-BSVBTC|9|81|Bitfinex, Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex, Upbit
-BCHUSD|7|49|Bitfinex, Bitstamp, Bittrex, Coinbasepro, Ftx, Kraken, Liquid
-ENJUSD|2|4|Bitfinex, Bittrex
-USDTUSD|4|16|Bitfinex, Bittrex, Ftx, Kraken
-USDCUSD|3|9|Bitfinex, Bittrex, Kraken
-TUSDUSD|2|4|Bitfinex, Bittrex
-PAXUSD|3|9|Bitfinex, Bitstamp, Bittrex
-RIFUSD|2|4|Bitfinex, Liquid
-RIFBTC|3|9|Bitfinex, Kucoin, Liquid
-VSYSBTC|4|16|Bitfinex, Huobipro, Kucoin, Okex
-MKRDAI|2|4|Bitfinex, Kucoin
-BTTBTC|8|64|Bitfinex, Bitmax, Bittrex, Huobipro, Kucoin, Okex, Poloniex, Upbit
-GNOUSD|2|4|Bitfinex, Kraken
-ATOMUSD|4|16|Bitfinex, Bittrex, Coinbasepro, Kraken
-ATOMETH|7|49|Bitfinex, Bitmax, Bittrex, Huobipro, Kraken, Kucoin, Okex
-LEOBTC|3|9|Bitfinex, Gateio, Okex
-LEOUSDT|3|9|Bitfinex, Gateio, Okex
-LEOETH|2|4|Bitfinex, Okex
-OKBUSDT|4|16|Bitfinex, Bitmax, Gateio, Okex
-OKBBTC|3|9|Bitfinex, Bitmax, Okex
-KANUSDT|3|9|Bitfinex, Huobipro, Okex
-ALGOUSD|3|9|Bitfinex, Coinbasepro, Kraken
-AMPLUSDT|2|4|Bitfinex, Kucoin
-AMPLBTC|2|4|Bitfinex, Kucoin
-FTTUSD|2|4|Bitfinex, Ftx
-XAUTUSD|2|4|Bitfinex, Ftx
-XAUTUSDT|2|4|Bitfinex, Ftx
-BTCKRW|3|9|Bithumb, Coinbase, Upbit
-ETHKRW|2|4|Bithumb, Upbit
-LTCKRW|2|4|Bithumb, Upbit
-ETCKRW|2|4|Bithumb, Upbit
-XRPKRW|2|4|Bithumb, Upbit
-BCHKRW|2|4|Bithumb, Upbit
-QTUMKRW|2|4|Bithumb, Upbit
-BTGKRW|2|4|Bithumb, Upbit
-EOSKRW|2|4|Bithumb, Upbit
-ICXKRW|2|4|Bithumb, Upbit
-TRXKRW|2|4|Bithumb, Upbit
-ELFKRW|2|4|Bithumb, Upbit
-MCOKRW|2|4|Bithumb, Upbit
-OMGKRW|2|4|Bithumb, Upbit
-KNCKRW|2|4|Bithumb, Upbit
-GNTKRW|2|4|Bithumb, Upbit
-ZILKRW|2|4|Bithumb, Upbit
-WAXPKRW|2|4|Bithumb, Upbit
-POWRKRW|2|4|Bithumb, Upbit
-STEEMKRW|2|4|Bithumb, Upbit
-STRATKRW|2|4|Bithumb, Upbit
-ZRXKRW|2|4|Bithumb, Upbit
-REPKRW|2|4|Bithumb, Upbit
-XEMKRW|2|4|Bithumb, Upbit
-SNTKRW|2|4|Bithumb, Upbit
-ADAKRW|2|4|Bithumb, Upbit
-BATKRW|2|4|Bithumb, Upbit
-THETAKRW|2|4|Bithumb, Upbit
-LOOMKRW|2|4|Bithumb, Upbit
-WAVESKRW|2|4|Bithumb, Upbit
-ENJKRW|2|4|Bithumb, Upbit
-VETKRW|2|4|Bithumb, Upbit
-MTLKRW|2|4|Bithumb, Upbit
-IOSTKRW|2|4|Bithumb, Upbit
-QKCKRW|2|4|Bithumb, Upbit
-NPXSKRW|2|4|Bithumb, Upbit
-BSVKRW|2|4|Bithumb, Upbit
-ORBSKRW|2|4|Bithumb, Upbit
-ANKRKRW|2|4|Bithumb, Upbit
-MBLKRW|2|4|Bithumb, Upbit
-XLMKRW|2|4|Bithumb, Upbit
-BTTKRW|2|4|Bithumb, Upbit
-COSMKRW|2|4|Bithumb, Upbit
-LBABTC|5|25|Bitmax, Bittrex, Huobipro, Okex, Upbit
-BTMXUSDT|2|4|Bitmax, Gateio
-BSVUSDT|7|49|Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex
-COVABTC|2|4|Bitmax, Huobipro
-LAMBBTC|4|16|Bitmax, Bittrex, Huobipro, Upbit
-LAMBUSDT|4|16|Bitmax, Gateio, Huobipro, Okex
-CVNTBTC|2|4|Bitmax, Huobipro
-RNTUSDT|2|4|Bitmax, Okex
-AERGOETH|2|4|Bitmax, Kucoin
-AERGOBTC|3|9|Bitmax, Kucoin, Upbit
-HTETH|2|4|Bitmax, Huobipro
-HTUSDT|3|9|Bitmax, Gateio, Huobipro
-HTBTC|2|4|Bitmax, Huobipro
-BOLTUSDT|2|4|Bitmax, Kucoin
-BOLTBTC|2|4|Bitmax, Kucoin
-LBAUSDT|4|16|Bitmax, Gateio, Huobipro, Okex
-KCSUSDT|2|4|Bitmax, Kucoin
-KCSBTC|2|4|Bitmax, Kucoin
-MIXUSDT|2|4|Bitmax, Gateio
-BHDUSDT|2|4|Bitmax, Huobipro
-FSNUSDT|3|9|Bitmax, Huobipro, Okex
-ABBCBTC|2|4|Bitmax, Bittrex
-ELFUSDT|4|16|Bitmax, Gateio, Huobipro, Okex
-GTUSDT|3|9|Bitmax, Gateio, Huobipro
-GTBTC|3|9|Bitmax, Gateio, Huobipro
-XEMUSDT|5|25|Bitmax, Gateio, Huobipro, Kucoin, Okex
-OKBETH|2|4|Bitmax, Okex
-HPBBTC|2|4|Bitmax, Kucoin
-MHCUSDT|2|4|Bitmax, Kucoin
-PROMBTC|2|4|Bitmax, Bittrex
-XRPBEARUSDT|3|9|Bitmax, Ftx, Gateio
-XRPBULLUSDT|3|9|Bitmax, Ftx, Gateio
-BEARUSDT|4|16|Bitmax, Ftx, Gateio, Poloniex
-BULLUSDT|4|16|Bitmax, Ftx, Gateio, Poloniex
-BTMUSDT|4|16|Bitmax, Gateio, Huobipro, Okex
-BTMBTC|7|49|Bitmax, Bittrex, Gateio, Huobipro, Kucoin, Okex, Upbit
-CKBUSDT|4|16|Bitmax, Bittrex, Gateio, Huobipro
-TOKOUSDT|2|4|Bitmax, Kucoin
-XNSUSDT|2|4|Bitmax, Kucoin
-XNSBTC|2|4|Bitmax, Kucoin
-FLEXBTC|2|4|Bitmax, Liquid
-ETHBULLUSDT|4|16|Bitmax, Ftx, Gateio, Poloniex
-ETHBEARUSDT|4|16|Bitmax, Ftx, Gateio, Poloniex
-LTCBULLUSDT|2|4|Bitmax, Ftx
-LTCBEARUSDT|2|4|Bitmax, Ftx
-EOSBULLUSDT|3|9|Bitmax, Ftx, Gateio
-BNBBEARUSDT|2|4|Bitmax, Ftx
-EOSBEARUSDT|3|9|Bitmax, Ftx, Gateio
-BNBBULLUSDT|2|4|Bitmax, Ftx
-VRAUSDT|2|4|Bitmax, Kucoin
-BVOLUSDT|3|9|Bitmax, Ftx, Poloniex
-IBVOLUSDT|3|9|Bitmax, Ftx, Poloniex
-BEPROUSDT|2|4|Bitmax, Kucoin
-GBPUSD|2|4|Bitstamp, Kraken
-EURUSD|2|4|Bitstamp, Kraken
-XRPGBP|2|4|Bitstamp, Kraken
-LTCEUR|3|9|Bitstamp, Coinbasepro, Kraken
-LTCGBP|3|9|Bitstamp, Coinbasepro, Kraken
-BCHEUR|4|16|Bitstamp, Bittrex, Coinbasepro, Kraken
-BCHGBP|3|9|Bitstamp, Coinbasepro, Kraken
-ADAUSD|2|4|Bittrex, Kraken
-AIDBTC|2|4|Bittrex, Upbit
-AKROBTC|3|9|Bittrex, Huobipro, Kucoin
-APMBTC|2|4|Bittrex, Okex
-APMUSDT|2|4|Bittrex, Okex
-BCHETH|3|9|Bittrex, Kraken, Kucoin
-BLKBTC|2|4|Bittrex, Upbit
-BLOCKBTC|2|4|Bittrex, Upbit
-BORABTC|2|4|Bittrex, Upbit
-BSVETH|2|4|Bittrex, Kucoin
-BTUBTC|2|4|Bittrex, Upbit
-BURSTBTC|2|4|Bittrex, Upbit
-CKBBTC|3|9|Bittrex, Gateio, Huobipro
-CMCTBTC|2|4|Bittrex, Upbit
-COSMBTC|2|4|Bittrex, Upbit
-CPCBTC|2|4|Bittrex, Kucoin
-CROBTC|5|25|Bittrex, Huobipro, Kucoin, Okex, Upbit
-CROUSDT|4|16|Bittrex, Gateio, Huobipro, Okex
-CRWBTC|2|4|Bittrex, Upbit
-CTCBTC|2|4|Bittrex, Okex
-CVTBTC|2|4|Bittrex, Okex
-DAIUSDT|5|25|Bittrex, Gateio, Kraken, Okex, Poloniex
-DCRUSDT|5|25|Bittrex, Gateio, Huobipro, Okex, Upbit
-DCTBTC|2|4|Bittrex, Upbit
-DENTBTC|4|16|Bittrex, Kucoin, Liquid, Upbit
-DGBETH|3|9|Bittrex, Huobipro, Kucoin
-DGBUSDT|4|16|Bittrex, Kucoin, Okex, Upbit
-DMTBTC|2|4|Bittrex, Upbit
-DRGNBTC|2|4|Bittrex, Kucoin
-DTABTC|3|9|Bittrex, Huobipro, Upbit
-EDRBTC|2|4|Bittrex, Upbit
-EMC2BTC|2|4|Bittrex, Upbit
-EXPBTC|2|4|Bittrex, Upbit
-FCTBTC|3|9|Bittrex, Liquid, Upbit
-FSNBTC|4|16|Bittrex, Huobipro, Liquid, Upbit
-FXBTC|3|9|Bittrex, Kucoin, Upbit
-FXCBTC|2|4|Bittrex, Poloniex
-FXETH|2|4|Bittrex, Kucoin
-GBYTEBTC|2|4|Bittrex, Upbit
-GNOBTC|2|4|Bittrex, Kraken
-GNOETH|2|4|Bittrex, Kraken
-GRINBTC|4|16|Bittrex, Gateio, Kucoin, Poloniex
-GRINUSDT|4|16|Bittrex, Gateio, Kucoin, Poloniex
-HBARETH|2|4|Bittrex, Liquid
-HBARUSD|2|4|Bittrex, Liquid
-HDAOUSDT|2|4|Bittrex, Okex
-HYCBTC|2|4|Bittrex, Okex
-HYDROBTC|3|9|Bittrex, Liquid, Upbit
-IGNISBTC|2|4|Bittrex, Upbit
-IONBTC|2|4|Bittrex, Upbit
-IRISBTC|2|4|Bittrex, Huobipro
-IRISUSDT|2|4|Bittrex, Huobipro
-JNTBTC|3|9|Bittrex, Gateio, Upbit
-LBCBTC|2|4|Bittrex, Upbit
-LINKUSD|4|16|Bittrex, Coinbasepro, Ftx, Kraken
-LUNABTC|3|9|Bittrex, Kucoin, Upbit
-MDTBTC|3|9|Bittrex, Gateio, Okex
-MDTUSDT|3|9|Bittrex, Gateio, Okex
-MEDBTC|2|4|Bittrex, Upbit
-METABTC|3|9|Bittrex, Kucoin, Upbit
-METBTC|2|4|Bittrex, Upbit
-MFTBTC|2|4|Bittrex, Upbit
-MOCBTC|2|4|Bittrex, Upbit
-MOFBTC|2|4|Bittrex, Okex
-MOFUSDT|2|4|Bittrex, Okex
-NMRBTC|3|9|Bittrex, Poloniex, Upbit
-NPXSBTC|4|16|Bittrex, Huobipro, Kucoin, Upbit
-NXTBTC|4|16|Bittrex, Indodax, Poloniex, Upbit
-OCEANBTC|2|4|Bittrex, Kucoin
-ORBSBTC|2|4|Bittrex, Upbit
-OXTBTC|2|4|Bittrex, Okex
-OXTUSDT|2|4|Bittrex, Okex
-PALBTC|2|4|Bittrex, Upbit
-PARTBTC|2|4|Bittrex, Upbit
-PAXBTC|3|9|Bittrex, Okex, Upbit
-PAYBTC|5|25|Bittrex, Gateio, Huobipro, Okex, Upbit
-PAYETH|3|9|Bittrex, Gateio, Huobipro
-PIBTC|2|4|Bittrex, Upbit
-PMABTC|4|16|Bittrex, Liquid, Okex, Upbit
-PXLBTC|2|4|Bittrex, Upbit
-QNTBTC|2|4|Bittrex, Upbit
-QRLBTC|2|4|Bittrex, Upbit
-RADSBTC|2|4|Bittrex, Upbit
-RDDBTC|2|4|Bittrex, Upbit
-RFRBTC|2|4|Bittrex, Upbit
-SBDBTC|2|4|Bittrex, Upbit
-SCUSD|2|4|Bittrex, Kraken
-SCUSDT|4|16|Bittrex, Okex, Poloniex, Upbit
-SIXBTC|2|4|Bittrex, Liquid
-SOLVEBTC|3|9|Bittrex, Kucoin, Upbit
-SPCBTC|2|4|Bittrex, Upbit
-SPNDBTC|4|16|Bittrex, Kucoin, Okex, Upbit
-SRNBTC|3|9|Bittrex, Huobipro, Upbit
-SRNETH|2|4|Bittrex, Huobipro
-SXPBTC|2|4|Bittrex, Kucoin
-TRACBTC|2|4|Bittrex, Kucoin
-TSHPBTC|2|4|Bittrex, Upbit
-TTCBTC|2|4|Bittrex, Upbit
-TUSDBTC|3|9|Bittrex, Okex, Upbit
-UBQBTC|2|4|Bittrex, Upbit
-UKGBTC|2|4|Bittrex, Upbit
-UPPBTC|2|4|Bittrex, Upbit
-USDCBTC|2|4|Bittrex, Okex
-USDTEUR|2|4|Bittrex, Kraken
-UTKBTC|3|9|Bittrex, Huobipro, Kucoin
-VBKBTC|2|4|Bittrex, Upbit
-VDXBTC|2|4|Bittrex, Upbit
-VEEBTC|2|4|Bittrex, Upbit
-VRABTC|2|4|Bittrex, Kucoin
-VTCBTC|2|4|Bittrex, Upbit
-WAXPETH|3|9|Bittrex, Huobipro, Kucoin
-WICCBTC|2|4|Bittrex, Huobipro
-WICCUSDT|3|9|Bittrex, Gateio, Huobipro
-XDNBTC|2|4|Bittrex, Upbit
-XELBTC|2|4|Bittrex, Upbit
-XTZETH|4|16|Bittrex, Gateio, Huobipro, Kraken
-XUCUSDT|2|4|Bittrex, Okex
-XVGUSDT|2|4|Bittrex, Gateio
-YOUBTC|2|4|Bittrex, Okex
-BTCAUD|2|4|Coinbase, Liquid
-BTCBRL|2|4|Coinbase, Ftx
-BTCCAD|2|4|Coinbase, Kraken
-BTCCHF|2|4|Coinbase, Kraken
-BTCHKD|2|4|Coinbase, Liquid
-BTCIDR|2|4|Coinbase, Indodax
-BTCSGD|3|9|Coinbase, Itbit, Liquid
-ETCEUR|2|4|Coinbasepro, Kraken
-ETHDAI|6|36|Coinbasepro, Kraken, Kucoin, Liquid, Okex, Poloniex
-COMPUSD|2|4|Coinbasepro, Ftx
-OMGEUR|2|4|Coinbasepro, Kraken
-KNCUSDT|3|9|Ftx, Gateio, Okex
-PAXGUSD|2|4|Ftx, Kraken
-BCHBEARUSDT|2|4|Ftx, Poloniex
-BCHBULLUSDT|2|4|Ftx, Poloniex
-BSVBEARUSDT|2|4|Ftx, Poloniex
-BSVBULLUSDT|2|4|Ftx, Poloniex
-SNTUSDT|3|9|Gateio, Huobipro, Okex
-PAYUSDT|2|4|Gateio, Okex
-PSTUSDT|2|4|Gateio, Okex
-BTGUSDT|2|4|Gateio, Okex
-LRCUSDT|2|4|Gateio, Okex
-STORJUSDT|3|9|Gateio, Huobipro, Okex
-AEUSDT|2|4|Gateio, Huobipro
-REQETH|3|9|Gateio, Huobipro, Kucoin
-MDAUSDT|2|4|Gateio, Okex
-GNTUSDT|4|16|Gateio, Huobipro, Okex, Poloniex
-ABTUSDT|2|4|Gateio, Okex
-ABTETH|3|9|Gateio, Huobipro, Okex
-OCNUSDT|2|4|Gateio, Huobipro
-OCNETH|2|4|Gateio, Huobipro
-OCNBTC|2|4|Gateio, Huobipro
-COFIETH|2|4|Gateio, Kucoin
-MTNETH|3|9|Gateio, Huobipro, Kucoin
-RUFFUSDT|2|4|Gateio, Huobipro
-RUFFETH|2|4|Gateio, Huobipro
-RUFFBTC|2|4|Gateio, Huobipro
-MKRUSDT|3|9|Gateio, Okex, Poloniex
-SMTUSDT|2|4|Gateio, Huobipro
-SMTETH|2|4|Gateio, Huobipro
-MDTETH|2|4|Gateio, Okex
-MANAUSDT|4|16|Gateio, Huobipro, Okex, Poloniex
-LUNETH|2|4|Gateio, Huobipro
-DRGNETH|2|4|Gateio, Kucoin
-GTCETH|2|4|Gateio, Huobipro
-GTCBTC|2|4|Gateio, Huobipro
-DBCBTC|3|9|Gateio, Huobipro, Kucoin
-DBCETH|3|9|Gateio, Huobipro, Kucoin
-BIFIBTC|2|4|Gateio, Huobipro
-MDSETH|2|4|Gateio, Huobipro
-MDSUSDT|2|4|Gateio, Huobipro
-DGDETH|2|4|Gateio, Huobipro
-QASHETH|3|9|Gateio, Huobipro, Liquid
-QASHBTC|3|9|Gateio, Huobipro, Liquid
-BCDUSDT|2|4|Gateio, Okex
-SBTCBTC|3|9|Gateio, Huobipro, Okex
-BCXBTC|3|9|Gateio, Huobipro, Okex
-GNXETH|3|9|Gateio, Huobipro, Okex
-GASUSDT|2|4|Gateio, Okex
-NASUSDT|3|9|Gateio, Huobipro, Okex
-BTMETH|4|16|Gateio, Huobipro, Kucoin, Okex
-RSRUSDT|2|4|Gateio, Huobipro
-BUETH|2|4|Gateio, Kucoin
-BUBTC|2|4|Gateio, Kucoin
-BCNUSDT|2|4|Gateio, Poloniex
-BCNBTC|2|4|Gateio, Poloniex
-STEEMUSDT|3|9|Gateio, Huobipro, Poloniex
-ATPUSDT|2|4|Gateio, Huobipro
-KLAYUSDT|2|4|Gateio, Liquid
-GRINETH|2|4|Gateio, Kucoin
-BTTETH|4|16|Gateio, Huobipro, Kucoin, Okex
-CSETH|2|4|Gateio, Kucoin
-MANETH|3|9|Gateio, Huobipro, Kucoin
-LYMETH|3|9|Gateio, Huobipro, Kucoin
-LYMBTC|3|9|Gateio, Huobipro, Kucoin
-LYMUSDT|2|4|Gateio, Kucoin
-BFTETH|2|4|Gateio, Huobipro
-TOMOETH|2|4|Gateio, Kucoin
-SOULETH|2|4|Gateio, Kucoin
-HITUSDT|2|4|Gateio, Huobipro
-HITETH|2|4|Gateio, Huobipro
-DXETH|2|4|Gateio, Kucoin
-CNNSUSDT|2|4|Gateio, Huobipro
-LAMBETH|2|4|Gateio, Huobipro
-WICCETH|2|4|Gateio, Huobipro
-VIDYUSDT|2|4|Gateio, Huobipro
-FTMETH|2|4|Gateio, Kucoin
-MTVUSDT|2|4|Gateio, Kucoin
-FTIETH|2|4|Gateio, Huobipro
-LBAETH|2|4|Gateio, Huobipro
-OPENETH|2|4|Gateio, Kucoin
-MITHETH|2|4|Gateio, Okex
-SKMUSDT|2|4|Gateio, Huobipro
-MXCBTC|2|4|Gateio, Huobipro
-AKROUSDT|2|4|Huobipro, Kucoin
-KANBTC|2|4|Huobipro, Okex
-AACBTC|2|4|Huobipro, Okex
-KCASHBTC|2|4|Huobipro, Okex
-GNXBTC|2|4|Huobipro, Okex
-WXTUSDT|3|9|Huobipro, Kucoin, Okex
-AACETH|2|4|Huobipro, Okex
-DATXBTC|2|4|Huobipro, Kucoin
-UTKETH|2|4|Huobipro, Kucoin
-TRIOBTC|2|4|Huobipro, Okex
-DATXETH|2|4|Huobipro, Kucoin
-KANETH|2|4|Huobipro, Okex
-WXTBTC|3|9|Huobipro, Kucoin, Okex
-EMUSDT|2|4|Huobipro, Okex
-TRIOETH|2|4|Huobipro, Okex
-LETUSDT|2|4|Huobipro, Okex
-OGOUSDT|2|4|Huobipro, Kucoin
-ELAETH|2|4|Huobipro, Kucoin
-ABTBTC|2|4|Huobipro, Okex
-SNCBTC|2|4|Huobipro, Okex
-FAIRETH|2|4|Huobipro, Okex
-OGOBTC|2|4|Huobipro, Kucoin
-SWFTCETH|2|4|Huobipro, Okex
-CMTUSDT|2|4|Huobipro, Okex
-CTXCETH|2|4|Huobipro, Okex
-ETNBTC|3|9|Huobipro, Kucoin, Liquid
-TOPCETH|2|4|Huobipro, Okex
-VSYSUSDT|3|9|Huobipro, Kucoin, Okex
-NCASHBTC|2|4|Huobipro, Upbit
-ETNETH|3|9|Huobipro, Kucoin, Liquid
-ACTBTC|3|9|Huobipro, Kucoin, Okex
-ACTETH|2|4|Huobipro, Kucoin
-ITCETH|2|4|Huobipro, Kucoin
-ACTUSDT|2|4|Huobipro, Okex
-DCRETH|3|9|Huobipro, Kucoin, Okex
-ALGOETH|4|16|Huobipro, Kraken, Kucoin, Okex
-ITCBTC|3|9|Huobipro, Kucoin, Okex
-EGTUSDT|2|4|Huobipro, Okex
-QUNBTC|2|4|Huobipro, Okex
-MANBTC|2|4|Huobipro, Kucoin
-CHATBTC|2|4|Huobipro, Okex
-ITCUSDT|3|9|Huobipro, Kucoin, Okex
-SOCUSDT|2|4|Huobipro, Okex
-GASETH|2|4|Huobipro, Okex
-ELABTC|2|4|Huobipro, Kucoin
-MTNBTC|2|4|Huobipro, Kucoin
-SOCBTC|2|4|Huobipro, Okex
-SWFTCBTC|3|9|Huobipro, Okex, Poloniex
-LETBTC|2|4|Huobipro, Okex
-EGTBTC|3|9|Huobipro, Kucoin, Okex
-KCASHETH|2|4|Huobipro, Okex
-ETHSGD|2|4|Itbit, Liquid
-BTCDAI|5|25|Kraken, Kucoin, Liquid, Okex, Poloniex
-XRPJPY|2|4|Kraken, Liquid
-SNXUSDT|2|4|Kucoin, Poloniex
-SNXBTC|3|9|Kucoin, Liquid, Poloniex
-EGTETH|2|4|Kucoin, Okex
-CRPTETH|2|4|Kucoin, Liquid
-MTCBTC|2|4|Kucoin, Liquid
-CRPTBTC|2|4|Kucoin, Liquid
-USDTUSDC|2|4|Kucoin, Poloniex
-BLOCUSDT|2|4|Kucoin, Okex
-ROOBEEBTC|2|4|Kucoin, Liquid
-ROADUSDT|2|4|Kucoin, Okex
-XNKBTC|2|4|Liquid, Upbit
-SWFTCUSDT|2|4|Okex, Poloniex
-ETCUSDC|2|4|Okex, Poloniex
-BSVUSDC|2|4|Okex, Poloniex
+```
+GET /api/v2/system/information
+```
 
-This brings a total possible exact matching permutation count of `14,328`.
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+"data": {
+      "time": 1593065740890,
+      "supported": {
+        "exchanges": [],
+        "symbols": []
+      }
+    },
+```
+
+
+## List Validation Functions
+Every paramter is subjected to a validation method. We provide information on any unsuccessful validation about any validation method which may have failed. For speed of process you can obtain the functions we use for validation. For example, by visiting https://github.com/executium/millisecond-functions you can see the function in `PHP` and `Javascript` which we use for `js_millisecond_update`.
+
+```
+GET /api/v2/system/list-validation-functions
+```
+
+**Parameters:**
+None
+
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+0 | js_millisecond_update
+1 | is_email
+2 | password_auth
+3 | is_valid_symbol
+4 | is_valid_side
+5 | is_valid_level
+
+
+**Successful Response Payload:**
+```javascript
+{
+    "data": [
+        "js_millisecond_update",
+        "is_email",
+        "password_auth",
+        "is_valid_symbol",
+        "is_valid_side",
+        "is_valid_level"
+    ]
+}
+```
+
+
+## Symbols
+All symbols listed and supported on executium. This `endpoint` also accepts `GET`, you can filter the data using the `exchange` parameter, for example `GET /api/v2/system/symbols?exchange=bifinex`.
+
+```
+POST /api/v2/system/symbols
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+exchange |  | NO |  | Filter the data by exchange.
+
+
+**Successful Response Payload:**
+```javascript
+{
+  "data": {
+    "binance": [
+      {
+        "id": "ethbtc",
+        "symbol": "ETH/BTC",
+        "quote": "BTC",
+        "base": "ETH",
+        "min": 0.000001,
+        "pp": 6,
+        "pa": 3
+      },
+      {
+        "id": "ltcbtc",
+        "symbol": "LTC/BTC",
+        "quote": "BTC",
+        "base": "LTC",
+        "min": 0.000001,
+        "pp": 6,
+        "pa": 2
+      },
+      ...
+      ...
+      ...
+    "bitfinex": [
+      {
+        "id": "btcusd",
+        "symbol": "BTC/USD",
+        "quote": "USD",
+        "base": "BTC",
+        "min": 0.000009999999999999999,
+        "pp": 5,
+        "pa": -1
+      },
+      {
+        "id": "ltcusd",
+        "symbol": "LTC/USD",
+        "quote": "USD",
+        "base": "LTC",
+        "min": 0.000009999999999999999,
+        "pp": 5,
+        "pa": -1
+      },
+      ...
+      ...
+
+      
+```
+
+
+## System Status
+This provides information related to the current setup of the network and how it is performing. Any issues will be first reported here. We recommend checking this endpoint if you have any issues with any component of the system to check if it is a local issue or an issue with executium.
+
+```
+GET /api/v2/system/status
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+{
+    "data": [
+      {
+        "name": "Connectivity",
+        "status": "running",
+        "last_checked": 1593068763898,
+        "issues": "None"
+      },
+      {
+        "name": "Strategies",
+        "status": "running",
+        "last_checked": 1593068686695,
+        "issues": "None"
+      },
+      {
+        "name": "Sockets",
+        "status": "running",
+        "last_checked": 1593068683087,
+        "issues": "None"
+      },
+      {
+        "name": "Exchanges",
+        "status": "running",
+        "last_checked": 1593068687005,
+        "issues": "None"
+      },
+      {
+        "name": "Executium.com",
+        "status": "running",
+        "last_checked": 1593068685179,
+        "issues": "None"
+      },
+      {
+        "name": "Executium.pro",
+        "status": "running",
+        "last_checked": 1593068682645,
+        "issues": "None"
+      },
+      {
+        "name": "OrderBooks",
+        "status": "running",
+        "last_checked": 1593068687762,
+        "issues": "None"
+      },
+      {
+        "name": "Trades",
+        "status": "running",
+        "last_checked": 1593068688303,
+        "issues": "None"
+      },
+      {
+        "name": "Support",
+        "status": "running",
+        "last_checked": 1593068682195,
+        "issues": "None"
+      }
+    ],
+}
+```
+
+
+## List Announcements
+All company announcements are listed in full detail via this endpoint.
+
+```
+POST /api/v2/system/list-announcements
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Subscriptions Details
+A breakdown on your current subscription with executium. The subscription details provide a full insight into all components of your subscription plan.
+
+```
+GET /api/v2/subscriptions/details
+```
+
+**Parameters:**
+None
+
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+subscription | See table 'Subscription'
+user_settings | See table 'User Settings'
+strategies | See table 'Strategies'
+subaccounts | See table 'Subaccounts'
+exchange_api_keys | See table 'Exchange Api Keys'
+
+
+### Subscription
+
+Name | Example Value
+------------ | ------------
+pro_version | 1
+enabled | 1
+name | Free Basic
+price | 0
+
+
+### User Settings
+
+Name | Example Value
+------------ | ------------
+enabled | 1
+twofactor | 1
+private_hosting | 
+private_hive | 
+api_access | 1
+ratelimit | See table 'User Settings => Ratelimit'
+
+
+### Strategies
+
+Name | Example Value
+------------ | ------------
+enabled | 1
+commissions | 0.002
+orderbook_refresh | 500
+liquidity_check_maximum | 100
+algos_excluded | See table 'Strategies => Algos Excluded'
+maximum | See table 'Strategies => Maximum'
+ratelimit | See table 'Strategies => Ratelimit'
+spread | See table 'Strategies => Spread'
+price_offset | See table 'Strategies => Price Offset'
+qty_parent | See table 'Strategies => Qty Parent'
+qty_child | See table 'Strategies => Qty Child'
+sleep_interval | See table 'Strategies => Sleep Interval'
+export | See table 'Strategies => Export'
+servers | See table 'Strategies => Servers'
+
+
+### Subaccounts
+
+Name | Example Value
+------------ | ------------
+enabled | 1
+maximum_accounts | 0
+qty_parent | See table 'Subaccounts => Qty Parent'
+qty_child | See table 'Subaccounts => Qty Child'
+exchanges | See table 'Subaccounts => Exchanges'
+see_all_strategies | 
+export | 
+exchange_api_keys | See table 'Subaccounts => Exchange Api Keys'
+api_access | 
+force_twofactor | 1
+
+
+### Exchange Api Keys
+
+Name | Example Value
+------------ | ------------
+enabled | 1
+maximum_stored | 3
+
+
+### User Settings => Ratelimit
+
+Name | Example Value
+------------ | ------------
+ms | 1000
+
+
+### Strategies => Algos Excluded
+
+Name | Example Value
+------------ | ------------
+0 | maker_taker
+1 | market_maker_taker
+2 | twap
+3 | matrix_price_movement
+
+
+### Strategies => Maximum
+
+Name | Example Value
+------------ | ------------
+strategies | 10
+templates | 3
+concurrent_exchange_api_key | 2
+duration | 21600
+
+
+### Strategies => Ratelimit
+
+Name | Example Value
+------------ | ------------
+orders_per_second | 1
+
+
+### Strategies => Spread
+
+Name | Example Value
+------------ | ------------
+maximum | 30
+minimum | -30
+
+
+### Strategies => Price Offset
+
+Name | Example Value
+------------ | ------------
+maximum | 10
+minimum | -10
+
+
+### Strategies => Qty Parent
+
+Name | Example Value
+------------ | ------------
+maximum | 0.01
+minimum | 0
+
+
+### Strategies => Qty Child
+
+Name | Example Value
+------------ | ------------
+maximum | 0.01
+minimum | 0
+
+
+### Strategies => Sleep Interval
+
+Name | Example Value
+------------ | ------------
+maximum | 30
+minimum | 2
+
+
+### Strategies => Export
+
+Name | Example Value
+------------ | ------------
+transactions_rows | 10000
+maximum_storage_time | 86400
+
+
+### Strategies => Servers
+
+Name | Example Value
+------------ | ------------
+speed_testing | 
+shared_resource | 1
+private_resource | 
+locations | Array
+
+
+### Subaccounts => Qty Parent
+
+Name | Example Value
+------------ | ------------
+maximum | 1
+
+
+### Subaccounts => Qty Child
+
+Name | Example Value
+------------ | ------------
+minimum | 0.5
+
+
+### Subaccounts => Exchanges
+
+Name | Example Value
+------------ | ------------
+0 | binance
+1 | bitfinex
+
+
+### Subaccounts => Exchange Api Keys
+
+Name | Example Value
+------------ | ------------
+share_master | 
+add_own | 
+
+
+**Successful Response Payload:**
+```javascript
+{
+    "data": {
+      "subscription": {
+        "pro_version": true,
+        "enabled": true,
+        "name": "Free Basic",
+        "price": 0
+      },
+      "user_settings": {
+        "enabled": true,
+        "twofactor": true,
+        "private_hosting": false,
+        "private_hive": false,
+        "api_access": true,
+        "ratelimit": {
+          "ms": 1000
+        }
+      },
+      "strategies": {
+        "enabled": true,
+        "commissions": 0.002,
+        "orderbook_refresh": 500,
+        "liquidity_check_maximum": 100,
+        "algos_excluded": [
+          "maker_taker",
+          "market_maker_taker",
+          "twap",
+          "matrix_price_movement"
+        ],
+        "maximum": {
+          "strategies": 10,
+          "templates": 3,
+          "concurrent_exchange_api_key": 2,
+          "duration": 21600
+        },
+        "ratelimit": {
+          "orders_per_second": 1
+        },
+        "spread": {
+          "maximum": 30,
+          "minimum": -30
+        },
+        "price_offset": {
+          "maximum": 10,
+          "minimum": -10
+        },
+        "qty_parent": {
+          "maximum": 0.01,
+          "minimum": 0
+        },
+        "qty_child": {
+          "maximum": 0.01,
+          "minimum": 0
+        },
+        "sleep_interval": {
+          "maximum": 30,
+          "minimum": 2
+        },
+        "export": {
+          "transactions_rows": 10000,
+          "maximum_storage_time": 86400
+        },
+        "servers": {
+          "speed_testing": false,
+          "shared_resource": true,
+          "private_resource": false,
+          "locations": {
+            "private": {
+              "active": [],
+              "inactive": []
+            },
+            "shared": {
+              "active": [
+                "Singapore"
+              ],
+              "inactive": [
+                "Frankfurt",
+                "London",
+                "Bangalore",
+                "Toronto",
+                "Amsterdam"
+              ]
+            }
+          }
+        }
+      },
+      "subaccounts": {
+        "enabled": true,
+        "maximum_accounts": 0,
+        "qty_parent": {
+          "maximum": 1
+        },
+        "qty_child": {
+          "minimum": 0.5
+        },
+        "exchanges": [
+          "binance",
+          "bitfinex"
+        ],
+        "see_all_strategies": false,
+        "export": false,
+        "exchange_api_keys": {
+          "share_master": false,
+          "add_own": false
+        },
+        "api_access": false,
+        "force_twofactor": true
+      },
+      "exchange_api_keys": {
+        "enabled": true,
+        "maximum_stored": 3
+      }
+    },
+    "meta": {
+      "id": "",
+      "api_version": 2,
+      "system_version": "2.0.5",
+      "status": 200,
+      "auth_success": true,
+      "rateLimits": {
+        "minute": 60
+      },
+      "subscription": {
+        "id": "0",
+        "name": "Free"
+      },
+      "endpoint": "subscriptions/details",
+      "auth_required": true,
+      "ms": 1592207324028,
+      "time": 1592207324,
+      "process_time": "0.014913"
+    }
+}
+```
+
+
+## Cancel Subscription
+Ability to cancel your subscription is restricted to the website only currently. Please visit the website to cancel or change your subscription.
+
+```
+GET /api/v2/subscriptions/cancel
+```
+
+**Parameters:**
+None
+
+## Commissions Report
+A full list based on date range of your recent commissions due to executium for services rendered. This commission report does not include those which you are paying to the exchanges.
+
+```
+GET /api/v2/subscriptions/commissions-report
+```
+
+**Parameters:**
+None
+
+## Deposit Addresses
+List all of your deposit addresses in your account
+
+```
+GET /api/v2/subscriptions/deposit
+```
+
+**Parameters:**
+None
+
+## Invoices
+All of your subscription invoices for your period as an executium user. This includes invoices which have been generated where no fee is due. To exclude these please review the filter options.
+
+```
+GET /api/v2/subscriptions/invoices
+```
+
+**Parameters:**
+None
+
+## Change Subscription Package
+Provide the ID of the package you wish to change your current subscription too. You can find the packages `id` via the `subscription/list-packages` endpoint.
+
+```
+POST /api/v2/subscriptions/change-package
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID of package you wish to change too.
+
+
+## Change Setting
+You can change individual settings of a subscription to have more or less of something. Once you make a change your package will become `custom`. When you request a change you will be provided with a subscription price adjustment `id`.  Use this provided ID with the endpoint `subscriptions/change-setting-confirm`
+
+```
+GET /api/v2/subscriptions/change-setting-request
+```
+
+**Parameters:**
+None
+
+## Disable Private Server
+Use the provided `id` from the endpoint `subscriptions/list-private-servers` and confirm the disabling of the server. If you have active strategies currently running on the server it will fail.
+
+```
+POST /api/v2/subscriptions/disable-private-server
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | 
+
+
+## Subscriptions Disable Shared Server
+Use the provided `id` from the endpoint `subscriptions/list-shared-servers` and confirm the disabling of the server. If you have active strategies currently running on the server it will fail.
+
+```
+POST /api/v2/subscriptions/disable-shared-server
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | 
+
+
+## Enable Private Server
+To enable a private server provide the `region` you would like to have it exist and the `server_package`. There are additional optional criteras for your server configuration. You can consult `subscriptions/server-types` for a full list of options. Please note that when you enable a server it will incur charges as listed in the `subscriptions/server-types` endpoint,
+
+```
+POST /api/v2/subscriptions/enable-private-server
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+region |  | YES |  | 
+server_package |  | YES |  | Consult `subscriptions/server-types` for a full list of server packages and provide the ID as this parameter
+
+
+## Enable Shared Server
+To enable a shared server provide the `region` you would like to have it exist and the `server_package`. There are additional optional criteras for your server configuration. You can consult `subscriptions/server-types` for a full list of options. Please note that when you enable a server it will incur charges as listed in the `subscriptions/server-types` endpoint,
+
+```
+POST /api/v2/subscriptions/enable-shared-server
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+region |  | YES |  | 
+
+
+## List Private Servers
+List all the private servers your currently have on your package.
+
+```
+POST /api/v2/subscriptions/list-private-servers
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## List Shared Servers
+List all shared servers currently available to you. These will also include those as defaulted to you by your subscription package. When you join any subscription, even the free tier of executium, you are nominated servers for your strategies to run on. These provided servers are inclusive of your subscription cost and subject to change by the hour. They will not change if you have an existing strategy running on them.
+
+```
+POST /api/v2/subscriptions/list-shared-servers
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Package Recommendation
+Based on an array of inputs we will provide a recommended package for you.
+
+```
+GET /api/v2/subscriptions/package-recommendation
+```
+
+**Parameters:**
+None
+
+## Commissions Rate
+Outputs the current commissions rate that the user is paying per successful transactions. The rate will vary from account to account dependant on their subscription.
+
+```
+GET /api/v2/subscriptions/commissions-rate
+```
+
+**Parameters:**
+None
+
+## List Packages
+
+
+```
+GET /api/v2/subscriptions/list-packages
+```
+
+**Parameters:**
+None
+
+## Change Setting Confirm
+
+
+```
+GET /api/v2/subscriptions/change-setting-confirm
+```
+
+**Parameters:**
+None
+
+## Subscriptions Server Types
+A full list of available server types are provided. Each with CPU, Memory and other hardware information for your strategy server requirements. You must select if you are wanting to filter `private` or `shared` servers. All prices are included in the list.
+
+```
+POST /api/v2/subscriptions/server-types
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+type |  | YES |  | Private or Shared
+duration |  | YES |  | Provided in seconds, no less than 7200 seconds. The duration you enter will determine the price.
+
+
+## Add Exchange API Credentials
+Provide Exchange API credentials for usage with your executium strategies. Once added they will be confirmed and then be made available to strategies.
+
+```
+POST /api/v2/exchange-api-keys/add
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+exchange |  | YES |  | See the supported exchanges via the `strategy/list-exchanges` endpoint
+label | 6 | YES |  | The label will appear when selecting your API keys for strategies. 
+token | 5 | YES |  | API key/token
+secret | 4 | YES |  | API secret
+password |  | YES |  | Some exchanges, such as OKEx require a password to be provided.
+
+
+## Delete Exchange API Key
+Delete a Exchange API Key from your account. In the event that the key is being used by a running strategy you will not be able to remove the key until that has been stopped.
+
+```
+POST /api/v2/exchange-api-keys/delete
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID of the key you wish to remove.
+
+
+## List Exchange API Keys
+A full list of accessible Exchange API Keys in your account. This will not show the API keys secrets. If a subaccount user is accessing the API key list they will only see according to their permissions.
+
+```
+POST /api/v2/exchange-api-keys/list
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Check Specific Exchange Symbol Balance 
+Functions in a similar fashion to `list-balances`.
+
+```
+GET /api/v2/exchange-api-keys/check-balances
+```
+
+**Parameters:**
+None
+
+## Create New Strategy
+Create a new strategy, you will be required to make additional modifications using other endpoints such as the algo selector and updating the information within.
+
+```
+POST /api/v2/strategy/create
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+label | 6 | YES |  | 
+algo |  | YES |  | 
+
+
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+status | 1
+id | See table 'Id'
+uid | 1
+label | Example of a strategy label
+message | New - Testing Credentials
+
+
+### Id
+
+Name | Example Value
+------------ | ------------
+
+
+**Successful Response Payload:**
+```javascript
+{
+    "data": {
+        "status": true,
+        "id": [],
+        "uid": "1",
+        "label": "Example of a strategy label",
+        "message": "New - Testing Credentials"
+    },
+    "meta": {
+        "api_version": 2,
+        "system_version": "2.0.5",
+        "status": 200,
+        "auth_success": true,
+        "rateLimits": {
+            "minute": 60
+        },
+        "subscription": {
+            "id": "0",
+            "name": "Free"
+        },
+        "endpoint": "strategy/create",
+        "auth_required": true,
+        "ms": 1591778250176,
+        "time": 1591778250,
+        "uid": 1,
+        "process_time": "0.020210"
+    }
+}
+```
+
+
+## Strategy High Level Overview
+A compiled list of the account specified strategy at a high level overview. Most often used in the event you want to keep a stream of latest data on a particular strategy id This data includes what is currently active, inactive and all totals related.
+
+```
+GET /api/v2/strategy/high-level-overview
+```
+
+**Parameters:**
+None
+
+## User Strategy List
+A complete list of user created strategies
+
+```
+POST /api/v2/strategy/data/list
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## List All Trading Algorithms
+A full list of executium trading algorithms. You will be required to reference your subscription to understand which algorithms are available for usage for you on your current strategy.
+
+```
+GET /api/v2/strategy/list-algorithms
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+{
+    "data": [
+        {
+            "id": "25",
+            "group_name": "CANDLESTICKS",
+            "name": "BULLISH HARAMI "
+        },
+    ]
+```
+
+
+## Exchange List
+A full list of exchanges that excutium support
+
+```
+GET /api/v2/strategy/list-exchanges
+```
+
+**Parameters:**
+None
+
+## Debug Data
+This is reserved for accounts based on subscription. It allows you to monitor the progress of your running strategy and monitor the performance of the strategy as it runs.
+
+```
+GET /api/v2/strategy/data/debug
+```
+
+**Parameters:**
+None
+
+## Save Template
+You can save strategies which you like as templates to use again in the future.
+
+```
+POST /api/v2/strategy/save-template
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+copy_strategy_id |  | YES |  | Provide the strategy ID you would like to save as a template.
+label |  | YES |  | Optional field. If left blank or not provided the strategy template will be saved as the strategy name.
+
+
+## Strategy List Templates
+List all of your saved strategy templates.
+
+```
+GET /api/v2/strategy/list-templates
+```
+
+**Parameters:**
+None
+
+## Strategy Start
+You must specifically call a strategy start event using this endpoint. If you execute this endpoint while a strategy is running nothing will happen.
+
+```
+GET /api/v2/strategy/start
+```
+
+**Parameters:**
+None
+
+## Strategy Stop
+This endpoint is to specifically tell the strategy to stop. When it has been executed it will attempt to clean up and cancel any pending orders before it fully stops. This can take an unspecified period of time to complete as the system works to confirm that anything pending is completed. You can consult the `force` parameter for a hard stop.
+
+```
+POST /api/v2/strategy/stop
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+force |  | NO |  | If you select to force the stop it will stop immediately and not check to see if the orders are still active at the exchanges. In the event this parameter is used you must cancel the orders yourself via the exchange(s). In the event you start the strategy after a forced stop, the strategy format will reconvene and check any pending orders.
+
+
+## List Active Strategies
+A complete list of strategies that are actively running on executium.
+
+```
+GET /api/v2/strategy/list-active-strategies
+```
+
+**Parameters:**
+None
+
+## List Strategy Transactions
+Show all strategy transactions related to the `main_id` and `leg_id`. Additional filters can be added such as the current `status`.
+
+```
+POST /api/v2/strategy/list-strategy-transactions
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | YES | 10 | 
+page |  | YES | 1 | 
+main_id |  | YES |  | 
+leg_id |  | YES |  | 
+remove_unfilled |  | NO |  | true of false
+
+
+**Successful Response Payload:**
+```javascript
+ "data": {
+      "transactions": [
+        {
+          "id": "2002650",
+          "time_created": "1593071056",
+          "last_updated": "1593071056467",
+          "c_active": "1",
+          "c_order": "0",
+          "c_lookup_status": "0",
+          "c_lookup_count": "0",
+          "c_row": "0",
+          "c_symbol_code": "binance-btcusdc",
+          "c_exchange": "binance",
+          "c_symbol": "BTC/USDC",
+          "c_symbolid": "btcusdc",
+          "c_type": "limit",
+          "c_type_orig": "maker",
+          "c_side": "sell",
+          "c_amount": "0.00200000",
+          "c_price": "0.00000000",
+          "c_price_entry": "9227.11000000",
+          "c_price_offset": "60.00000000",
+          "c_payload": "{"info":{"symbol":"BTCUSDC","orderId":196785600,"orderListId":-1,"clientOrderId":"execute2000130","transactTime":1593071056427,"price":"9227.11000000","origQty":"0.00200000","executedQty":"0.00000000","cummulativeQuoteQty":"0.00000000","status":"NEW","timeInForce":"GTC","type":"LIMIT","side":"SELL"},"id":"196785600","clientOrderId":"execute2000130","timestamp":1593071056427,"datetime":"2020-06-25T07:44:16.427Z","lastTradeTimestamp":null,"symbol":"BTC/USDC","type":"limit","side":"sell","price":9227.11,"amount":0.002,"cost":0,"average":null,"filled":0,"remaining":0.002,"status":"open","fee":null,"trades":null}",
+          "c_time_requested": "1593071056297",
+          "c_time_orderplaced": "170",
+          "c_time_completed": "1593071056467",
+          "c_time_journey": "170",
+          "c_order_id": "196785600",
+          "c_order_slice": "0",
+          "c_order_success": "0",
+          "c_order_failed": "0",
+          "c_order_status": "open",
+          "c_order_remaining": "0.00200000",
+          "c_order_filled": "0.00000000",
+          "c_com": "0.00000000",
+          "c_child_id": "0",
+          "c_cancel": "0",
+          "c_cancel_time": "0",
+          "c_spread_entry": "-7.04000000",
+          "c_trace_order": "0",
+          "c_conditions": "["spread_greater_than_input_number"]",
+          "custom_id": "2000130",
+          "c_max_time": "1593071056307",
+        },]
+}
+
+```
+
+
+## Stop All Strategies
+You can stop all strategies running by execute this endpoint. If you want them to stop at once, look at the `force` paramter for more information.
+
+```
+POST /api/v2/strategy/stop-all-strategies
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+force |  | NO |  | If you select to force the stop it will stop all strategies running immediately and not check to see if the orders are still active at the exchanges.
+
+
+## Strategy Update
+Strategies can only be updated when they are stopped. If the strategy is active the update attempt will not be processed.
+
+```
+GET /api/v2/strategy/update
+```
+
+**Parameters:**
+None
+
+## List Strategy Options
+List all variables to a strategy. This is a complete set of options available to the executium strategy system,
+
+```
+GET /api/v2/strategy/list-strategy-options
+```
+
+**Parameters:**
+None
+
+## Spreads
+Data which is served in a public manner and is obtainable via a public call. Additional restrictions may apply and tighter rate limiting. To upgrade your account for faster access please visit executium.
+
+```
+GET /api/v2/public/spreads/data
+```
+
+**Parameters:**
+None
+
+## Fetch Symbol Price
+Public API but restrictions apply based on your subscription level. You must provide the exact `symbol` code which executium provides. You can review symbols in the `system/symbols` endpoint. For this endpoint we accept both `POST` and `GET`. An example of `GET` would be `https://marketdata.executium.com/api/v2/public/fetch-symbol-price?code=binance-btcusdt`. 
+
+```
+POST /api/v2/public/fetch-symbol-price
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+code |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`. This endpoint can taken multiple inputs and is comma delimited. For example you could input `binance-btcusdt,bitfinex-tnbbtc,bitfinex-btcusd`. To a maximum of 10 inputs.
+
+
+**Successful Response Payload:**
+```javascript
+
+
+  "data": {
+    "binance-btcusdt": {
+      "bids": {
+        "price": 9411.89,
+        "qty": 1.756403,
+        "time": 1594277450595
+      },
+      "asks": {
+        "price": 9411.9,
+        "qty": 0.755546,
+        "time": 1594277450595
+      }
+    },
+    "bitfinex-btcusdt": {
+      "bids": {
+        "price": 9408.5,
+        "qty": 0.1,
+        "time": 1594277445745
+      },
+      "asks": {
+        "price": 9411.7,
+        "qty": 0.1,
+        "time": 1594277447627
+      }
+    },
+    "notes": "Refresh rate 1000-1500ms; To adjust please review your subscription."
+  },   
+
+```
+
+
+## Bitcoin Price Tracker
+Data related to the current price of Bitcoin in realtime. This endpoint only provides the data streams. You should use your own graph product to map the data. The base endpoint for this should be `marketdata.executium.com`.
+
+```
+POST /api/v2/public/bitcoin-price-tracker
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+interval |  | NO | 1000 | Defaults to `1000` milliseconds. Interval options are available at `900`, `750`, `500`, `400`, `250`, `100`, `50` and `25` milliseconds
+symbol_filter |  | NO |  | Partial match against symbol
+
+
+**Successful Response Payload:**
+```javascript
+
+{
+   "data":{
+      "lastupdated":1594190044395,
+      "bids":{
+         "bitfinex-btcusdt":[
+            9274.6,
+            0.08127598,
+            1594190038305
+         ],
+         "bitmax-btcusdt":[
+            9311.51,
+            1.36604,
+            1594052693191
+         ],
+         "binance-btcusdc":[
+            9275.56,
+            0.160591,
+            1594190021947
+         ],
+         "bittrex-btcusdt":[
+            9313.02700719,
+            0.09999997,
+            1594052659521
+         ],
+         "bitmart-btcusdc":[
+            9308.95,
+            0.021205,
+            1594052640361
+         ],
+         ...
+         ...
+         ...
+	"asks":{
+         "bitfinex-btcusdt":[
+            9277.6,
+            0.97142334,
+            1594190044336
+         ],
+         "bitmax-btcusdt":[
+            9311.52,
+            0.001,
+            1594052693191
+         ],
+         "binance-btcusdc":[
+            9281.29,
+            0.800595,
+            1594190037982
+         ],
+         "bittrex-btcusdt":[
+            9317.6357,
+            0.5753,
+            1594052659521
+         ],
+         "bitmart-btcusdc":[
+            9319.61,
+            0.020239,
+            1594052714913
+         ],         
+   
+```
+
+
+## Fetch Symbol Trades
+Fetch the latest trades for a `symbol`. The default is both sides but this can be filtered to `asks` or `bids`
+
+```
+POST /api/v2/public/fetch-symbol-trades
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+symbol |  | NO |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
+side |  | NO | both | Defaults to both sides. Choices: 'both', 'asks' or 'bids'; No other inputs will be accepted.
+
+
+## Realtime Bitcoin Profit
+Showing all of the arbitrage opportunities that show a return - You can use this executium tool to look at the best profit availability on all spreads we monitor. 
+
+
+```
+POST /api/v2/public/realtime-bitcoin-profit
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Exchange Information
+Current running and grade information for exchanges that executium supports. The grading is based on a range of factors which can be reviewed here [exchange-grading.md](./exchanges-supported.md)
+
+```
+GET /api/v2/public/exchange-information
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+{
+    "data": [
+      {
+        "exchange": "Bitfinex",
+        "status": "running",
+        "rating": "A"
+      },
+      {
+        "exchange": "Binance",
+        "status": "running",
+        "rating": "A"
+      },
+      {
+        "exchange": "OKEx",
+        "status": "running",
+        "rating": "B"
+      },
+      {
+        "exchange": "Binance Futures",
+        "status": "running",
+        "rating": "C"
+      },
+      {
+        "exchange": "Bitmex",
+        "status": "running",
+        "rating": "D"
+      }
+    ],
+}
+```
+
+
+## Tradingview Charts
+Retrieve the Javascript code for the tradingview chart input. The returned value is the javascript include which can then be included in a page to embed a tradingview chart.
+
+```
+POST /api/v2/public/tradingview-charts
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+symbol |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
+
+
+## Trending News Data
+Trending news data is display on a day per day basis. The date format must be YYYY-MM-DD. You have the additional option to utilize `keyword_contains` which will enable you to pull back all data on keywords which contain your string. This ability is also extended with `title_contains` and `brief_contains`. For multiple keywords to search add a coma (,) onto the string and the system will search for multiple, up to a maximum of 10 per contains.
+
+```
+POST /api/v2/public/trending-news-data
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+date | 9 | YES |  | Format YYYY-MM-DD
+keyword_contains |  | NO |  | Search for a particular keyword in the `keyword`
+title_contains |  | NO |  | Search for a particular keyword in the `title`
+brief_contains |  | NO |  | Search for a particular keyword in the `brief`
+exclude_keywords |  | NO |  | Coma seperated list of keywords to exclude
+
+
+**Successful Response Payload:**
+```javascript
+
+
+
+    "data": [
+        {
+            "id": "292442",
+            "date": {
+                "time_published": "1593561844",
+                "day": "Wednesday",
+                "format1": "2020-07-01",
+                "format2": "1st July 2020 00:04"
+            },
+            "title": "Oil Jumps After API Reports Largest Crude Draw This Year",
+            "brief": "Oil prices jumped on Tuesday afternoon after the API reported a large draw in crude oil stocks.",
+            "keywords": "oil,crude oil",
+            "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Jumps-After-API-Reports-Largest-Crude-Draw-This-Year.html",
+            "source": "OilPrice.com",
+            "image": "",
+            "domain": "oilprice.com",
+            "author": "Julianne Geiger",
+            "price_impact_120s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_300s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_600s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_900s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_1200s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_1800s": {
+                "status": "Subscription required.",
+                "data": []
+            },
+            "price_impact_3600s": {
+                "status": "completed",
+                "data": {
+                    "btcusdt": {
+                        "status": "compiled",
+                        "pair": "BTCUSDT",
+                        "before": "9137.30000000",
+                        "after": "9126.57000000",
+                        "difference": "-10.73000000"
+                    },
+                    "ethusdt": {
+                        "status": "compiled",
+                        "pair": "ETHUSDT",
+                        "before": "225.59000000",
+                        "after": "225.11000000",
+                        "difference": "-0.48000000"
+                    },
+                    "adausdt": {
+                        "status": "compiled",
+                        "pair": "ADAUSDT",
+                        "before": "0.08300000",
+                        "after": "0.08295000",
+                        "difference": "-0.00005000"
+                    },
+                    "xrpusdt": {
+                        "status": "compiled",
+                        "pair": "XRPUSDT",
+                        "before": "0.17533000",
+                        "after": "0.17484000",
+                        "difference": "-0.00049000"
+                    },
+                    "ethbtc": {
+                        "status": "compiled",
+                        "pair": "ETHBTC",
+                        "before": "0.02468900",
+                        "after": "0.02466400",
+                        "difference": "-0.00002500"
+                    },
+                    "adabtc": {
+                        "status": "compiled",
+                        "pair": "ADABTC",
+                        "before": "0.00000909",
+                        "after": "0.00000909",
+                        "difference": "0.00000000"
+                    },
+                    "xrpbtc": {
+                        "status": "compiled",
+                        "pair": "XRPBTC",
+                        "before": "0.00001918",
+                        "after": "0.00001916",
+                        "difference": "-0.00000002"
+                    }
+                }
+            },
+            "tone": {
+                "status": "Subscription required.",
+                "data": []
+            }
+        },
+    ]
+      	
+	
+```
+
+
+## Trending News Watchlist
+This endpoint provides you will the full list of keywords which our trending news topic tracker looks against. 
+
+```
+POST /api/v2/public/trending-news-watchlist
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+keyword_contains |  | NO |  | Search for a particular keyword in the keyword
+
+
+**Successful Response Payload:**
+```javascript
+ {
+    "data": [
+      {
+        "id": "1",
+        "keywords": "btc/usdt",
+      },
+      {
+        "id": "2",
+        "keywords": "btcusdt",
+      },
+      {
+        "id": "3",
+        "keywords": "bitcoin",
+      },
+      {
+        "id": "4",
+        "keywords": "true coin",
+      },
+      {
+        "id": "5",
+        "keywords": "ETH/BTC",
+      },
+}
+]
+```
+
+
+## Trending News Sources
+A list of all the news sources which have featured in the trending news catalog. Review `public/trending-news-statistics` for more statistics and whole number counts.
+
+```
+GET /api/v2/public/trending-news-sources
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+ {
+    "data": [
+      "3rd Watch News",
+      "9to5Mac",
+      "About Manchester",
+      "Actu Crypto.info",
+      "AiThority",
+      "allnews.ch",
+      "alloaadvertiser.com",
+      "Altcoin Buzz",
+      "AMBCrypto",
+      "AMBCrypto English",
+      "AMEinfo",
+}
+```
+
+
+## Trending News Statistics
+Statistics relating to the trending news catalog. The parameter `total_keywords_matched` can be much higher than total_articles_found as 100s of keywords can be matched to a single article.
+
+```
+GET /api/v2/public/trending-news-statistics
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+
+"data": 
+{
+	"keywords_monitored": 5235,
+	"total_articles_found": 13100,
+	"total_keywords_matched": 11372,
+	"history": 
+	[
+		{
+		  "added_in_last_hour": 570
+		},
+		{
+		  "last_24_hours": 454
+		},
+		{
+		  "last_48_hours": 725
+		},
+		{
+		  "last_7_days": 2265
+		},
+		{
+		  "last_30_days": 4927
+		}
+	],
+	"sources": 1406,
+	"last_update": 1593408099
+}	
+	
+```
+
+
+## Trending News Source Impact
+A complete compiled list to provide insight into news sources impact on prices. You can filter the `source` by using `source_contains`, which will allow you to concentrate on specific sources you want. The `top_ranking_*` array contains the all time list of articles that we have stored and their individual impact.  The `most_recent_*` array provides the most reason `bull` and `bear` articles from the publication.
+	
+It is important to note, that while some publications seem to have a big impact on price, we are not indicating that they we`re the sole reason for the movement. The intention of this endpoint is to provide additional context to whether the press directly impacts prices or if it is just a fluke.
+
+
+```
+POST /api/v2/public/trending-news-source-impact
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+source_contains | 1 | YES |  | Provide the exact publication you are looking for, for example, if you was looking for the coin telegraph, you would enter the coin telegraph. Consult the source list for more information.
+
+
+**Successful Response Payload:**
+```javascript
+
+
+"data":
+{
+	"btcusdt":
+	{
+		"Cryptonaute":
+		{
+            "total_articles":410,
+            "sum_impact":"590.12000000",
+            "top_ranking_bull":[
+               {
+                  "id":"3836",
+                  "keywords":"bitcoin,Ethereum,eth",
+                  "time_published":"1587020400",
+                  "diff_btcusdt":"233.50000000",
+                  "ago":"11 weeks ago"
+               },
+               {
+                  "id":"4011",
+                  "keywords":"bitcoin",
+                  "time_published":"1592204400",
+                  "diff_btcusdt":"90.70000000",
+                  "ago":"2 weeks ago"
+               },
+               {
+                  "id":"3831",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1589439600",
+                  "diff_btcusdt":"63.54000000",
+                  "ago":"7 weeks ago"
+               },
+               {
+                  "id":"3777",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1592377200",
+                  "diff_btcusdt":"37.10000000",
+                  "ago":"2 weeks ago"
+               },
+               {
+                  "id":"3839",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1589204706",
+                  "diff_btcusdt":"34.54000000",
+                  "ago":"7 weeks ago"
+               }
+            ],
+            "top_ranking_bear":[
+               {
+                  "id":"3810",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1589918155",
+                  "impact":"-16.50000000",
+                  "ago":"6 weeks ago"
+               }
+            ],
+            "most_recent_bull":[
+               {
+                  "id":"4001",
+                  "keywords":"bitcoin",
+                  "time_published":"1593172260",
+                  "diff_btcusdt":"26.14000000",
+                  "ago":"3 days ago"
+               },
+               {
+                  "id":"3768",
+                  "keywords":"bitcoin,Ethereum,eth",
+                  "time_published":"1592910300",
+                  "diff_btcusdt":"31.23000000",
+                  "ago":"6 days ago"
+               },
+               {
+                  "id":"3773",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1592812980",
+                  "diff_btcusdt":"10.43000000",
+                  "ago":"1 weeks ago"
+               },
+               {
+                  "id":"3792",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1592496660",
+                  "diff_btcusdt":"2.76000000",
+                  "ago":"2 weeks ago"
+               },
+               {
+                  "id":"3777",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1592377200",
+                  "diff_btcusdt":"37.10000000",
+                  "ago":"2 weeks ago"
+               }
+            ],
+            "most_recent_bear":[
+               {
+                  "id":"3810",
+                  "keywords":"Ethereum,eth",
+                  "time_published":"1589918155",
+                  "impact":"-16.50000000",
+                  "ago":"6 weeks ago"
+               }
+            ]
+         },
+     },
+ }
+         	
+	
+```
+
+
+## Trending News Add Keyword
+
+
+```
+POST /api/v2/public/trending-news-add-keyword
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+name | 1 | YES |  | The `keyword` you want to track.
+
+
+**Successful Response Payload:**
+```javascript
+"data": {
+      "code": 2001,
+      "error": "Missing Key"
+    },
+```
+
+
+## List your own keywords
+
+
+```
+POST /api/v2/public/trending-news-list-my-keywords
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+**Successful Response Payload:**
+```javascript
+"data": {
+      "code": 2001,
+      "error": "Missing Key"
+    },
+```
+
+
+## Trending News Remove Keyword
+
+
+```
+POST /api/v2/public/trending-news-remove-keyword
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+keywordid |  | YES |  | The `keyword_id` you wish to remove. You can get this information from the `public/trending-news-list-my-keywords` endpoint.
+
+
+**Successful Response Payload:**
+```javascript
+"data": {
+      "code": 2001,
+      "error": "Missing Key"
+    },
+```
+
+
+## Match Pair
+This system is provided to give insight into a `pairing` and where you can also trade it. For this endpoint we accept both `POST` and `GET`. An example of `GET` would be `https://marketdata.executium.com/api/v2/public/match-pair?code=btcusdt,btcusd`. Please consult the [exchanges-supported.md](./exchanges-supported.md) to understand the scope of where we match.
+
+```
+POST /api/v2/public/match-pair
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+code | 1 | YES |  | Provide a pair such as `btcusdt` to discover where else you can trade the pairing `btcusdt`. Comma delimited list acceptable upto 10. Exclude the exchange code from your query and request just the pair like shown.
+
+
+**Successful Response Payload:**
+```javascript
+
+
+{
+  "data": {
+  
+      "BTCUSDT": {
+      "pair": "btcusdt",
+      "count": 14,
+      "active": [
+        "Binance",
+        "Bitfinex",
+        "Bitmart",
+        "Bitmax",
+        "Bittrex",
+        "Ftx",
+        "Gateio",
+        "Huobipro",
+        "Kraken",
+        "Kucoin",
+        "Liquid",
+        "Okex",
+        "Poloniex",
+        "Upbit"
+      ],
+      "detail": {
+        "binance": {
+          "id": "btcusdt",
+          "symbol": "BTC/USDT",
+          "quote": "USDT",
+          "base": "BTC",
+          "min": 0.01,
+          "pp": 2,
+          "pa": 6
+        },
+        "bitfinex": {
+          "id": "btcusdt",
+          "symbol": "BTC/USDT",
+          "quote": "UST",
+          "base": "BTC",
+          "min": 0.000009999999999999999,
+          "pp": 5,
+          "pa": -1
+        },
+        ...
+        ...
+        ...
+
+      },
+      "possible_combinations": 196
+    },
+    "BTCUSD": {
+      "pair": "btcusd",
+      "count": 11,
+      "active": [
+        "Bitfinex",
+        "Bitflyer",
+        "Bitmex",
+        "Bitstamp",
+        "Bittrex",
+        "Coinbase",
+        "Coinbasepro",
+        "Ftx",
+        "Itbit",
+        "Kraken",
+        "Liquid"
+      ],
+      "detail": {
+        "bitfinex": {
+          "id": "btcusd",
+          "symbol": "BTC/USD",
+          "quote": "USD",
+          "base": "BTC",
+          "min": 0.000009999999999999999,
+          "pp": 5,
+          "pa": -1
+        },
+        ...
+        ...
+        ...
+		}
+	}
+	
+
+```
+
+
+## Create Sub Account
+The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
+
+```
+POST /api/v2/subaccounts/subaccount-create
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+name | 5 | YES |  | Provide the subaccount users name.
+email | 5 | YES |  | Provide the subaccount users e-mail address.
+parent_maximum |  | YES | 0.1 | Maximum parent in BTC that the subaccount can place per strategy
+child_maximum |  | YES | 0.01 | Maximum child in BTC that the subaccount can place per strategy
+exchanges_enabled |  | YES | All | Select which exchanges the subaccount has access too for strategy management.
+concurrent_strategies_maximum |  | YES |  | The amount of strategies that the subaccount can run concurrently.
+export_enabled |  | YES |  | The subaccount ability to export data (true/true)
+share_accounts_apikeys |  | YES |  | Allow or deny the subaccount to have access to all of the keys in the account (true/true).
+manage_own_apikeys |  | YES |  | Provide the subaccount the ability to manage their own api keys (true/true).
+force_twofactor |  | YES |  | Force the subaccount to setup two factor on their account (true/true)
+allow_api_access |  | YES |  | Allow or deny the subaccount access to the account API, in the event the account is given access new API keys for the subaccount will need to be generated (true/true).
+
+
+## List All Subaccounts
+Available in subscrition packages. View ID and subaccount information.
+
+```
+GET /api/v2/subaccounts/subaccount-list
+```
+
+**Parameters:**
+None
+
+## Delete Subaccount
+You can delete any subaccount by providing the ID, which can be obtain by `list-subaccount`. When you delete a subaccount it will not remove any other related information such as `strategy` or `history`. All information will still eist with the primary account holder.
+
+```
+GET /api/v2/subaccounts/subaccount-delete
+```
+
+**Parameters:**
+None
+
+## Edit Subaccount
+You can edit all basic features about a subaccount but not the `password` or `active status` through the API. To change a subaccount password you must login to the website. If you wish to disable an account use the `subaccounts/subaccount-delete` endpoint,
+
+```
+GET /api/v2/subaccounts/subaccount-edit
+```
+
+**Parameters:**
+None
+
+## Send Broadcast
+Send a broadcast to all subaccounts.
+
+```
+POST /api/v2/subaccounts/broadcast-create
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+title | 5 | YES |  | The title of the broadcast
+body | 5 | YES |  | Provide the body of text to broadcast
+
+
+## Delete Broadcast
+Delete a broadcast you want to remove. Use the `subaccounts/broadcast-list` to locate the `id`.
+
+```
+POST /api/v2/subaccounts/broadcast-delete
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID of the key you wish to remove.
+
+
+## Edit Broadcast
+
+
+```
+GET /api/v2/subaccounts/broadcast-edit
+```
+
+**Parameters:**
+None
+
+## List Broadcast
+List all broadcasts
+
+```
+POST /api/v2/subaccounts/broadcast-list
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Access History
+
+
+```
+GET /api/v2/subaccounts/subaccount-access-history
+```
+
+**Parameters:**
+None
+
+## Close Account
+If you wish to close your account with executium this is the endpoint. We may require that you close your account via the website.
+
+```
+POST /api/v2/user/close-account
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+reason | 10 | YES |  | Please provide feedback and the reasoning for closing your account.
+password | 5 | YES |  | Provide your account password.
+
+
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+code | 2750
+error | Please use the website to close your account.
+
+
+**Successful Response Payload:**
+```javascript
+{
+    "data": {
+        "code": 2750,
+        "error": "Please use the website to close your account."
+    },
+    "meta": {
+        "api_version": 2,
+        "system_version": "2.0.5",
+        "status": 403,
+        "auth_success": true,
+        "rateLimits": {
+            "minute": 60
+        },
+        "subscription": {
+            "id": "0",
+            "name": "Free"
+        },
+        "endpoint": "user/close-account",
+        "auth_required": true,
+        "ms": 1591779884553,
+        "time": 1591779884,
+        "uid": 1,
+        "process_time": "0.009136"
+    }
+}
+```
+
+
+## User Account Balance
+Show all account balances you have available with executium. This is just for executium wallets which are used to pay your subscriptions and commissions with. If you are looking to check exchanges balances please consult the endpoint `exchange-query/list-balances`
+
+```
+GET /api/v2/user/account-balance
+```
+
+**Parameters:**
+None
+
+## User Access History
+A full list of your main accont access activity to the main webite.
+
+```
+POST /api/v2/user/access-history
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## User Account Details
+Your account information related to properties such as `email` and `name`.
+
+```
+GET /api/v2/user/account-details
+```
+
+**Parameters:**
+None
+
+## User List Referrals
+A full list of your recent referrals to the website and the `status` of those referrals and earnings.
+
+```
+POST /api/v2/user/list-referrals
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## User Active Sessions
+Show all of your current active sessions which are logged into the web system.
+
+```
+POST /api/v2/user/active-sessions
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+request | 1 | YES |  | 
+
+
+## User Security Settings
+List all of your security settings and current configuration. These settings apply to your subaccounts also.
+
+```
+GET /api/v2/user/security-settings
+```
+
+**Parameters:**
+None
+
+## Wallets Fetch Deposit Address
+Select the wallet `type`  you would like to depsoit too. By default it is set to Bitcoin (`BTC`).
+
+```
+POST /api/v2/wallets/fetch-deposit-address
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+type |  | YES | BTC | 
+
+
+## Wallets List Balances
+List all wallets related to your account for direct purpose of depositing subscription and commission fees too.
+
+```
+GET /api/v2/wallets/list-balances
+```
+
+**Parameters:**
+None
+
+## Withdraw from wallet
+Request to withdraw from your executium wallet. You will need to provide the ID and address of the wallet you wish to withdraw from. Please note that only certain subscription levels may have access to this function. Fees apply to process transactions and they can take up to 24 hours as each withdraw request is manually reviewed.
+
+```
+POST /api/v2/wallets/withdraw
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+wallet_id |  | YES |  | Find the wallet `id` from the list wallet endpoint
+wallet_address |  | YES |  | Find the wallet `address` from the list wallet endpoint
+address_to |  | YES |  | Provide the wallet address you wish to transfer too
+amount |  | YES |  | Specify the amount to transfer
+
+
+## List Commissions Paid
+This is inclusive of your subaccounts in your account if you have them. All commissions relate directly to executium and not the exchanges commissions taken.
+
+```
+POST /api/v2/finance/list-commissions-paid
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+subaccount_id |  | YES |  | Provide a valid subaccount ID from the endpoint `subaccounts/subaccount-list`
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## List Recent Transactions
+List all of your most recent transactions related to your executium. This includes your subscription and commissions costs.
+
+```
+POST /api/v2/finance/list-recent-transactions
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## List Top Strategy PNL
+List all of your most recent strategies and their related profit and loss .
+
+```
+POST /api/v2/finance/list-top-strategy-pnl
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## List Deposits
+List deposits which have come into executium. This is the deposits which have been made to pay for subscription and commission fees.
+
+```
+POST /api/v2/finance/list-depoists
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## List Withdraws
+See `wallets/withdraw`
+
+```
+GET /api/v2/finance/list-withdraws
+```
+
+**Parameters:**
+None
+
+## Import Orders List
+
+
+```
+GET /api/v2/finance/import-orders-list
+```
+
+**Parameters:**
+None
+
+## Import Orders Settings
+
+
+```
+GET /api/v2/finance/import-orders-settings
+```
+
+**Parameters:**
+None
+
+## Test API Key Status
+You must use the returned `id` for the keys you wish to test. From this we will run a test to determine if the keys are valid. If they are tested to be invalid then they will also be disabled for selection system-wide.
+
+```
+POST /api/v2/exchange-api-keys/test
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide ID of the API key from `exchange-api-keys/list`
+
+
+## Black Scholes Implied Volatility Calculator
+Black Scholes Implied Volatility Calculator
+
+```
+GET /api/v2/tests/black-scholes-implied-volatility-calculator
+```
+
+**Parameters:**
+None
+
+## Test Server Location Speed To Exchange
+As part of a sound strategy configuration, selecting the right location to run the strategy is essential. The speed test allows you to select an executium server location to ping an exchange to figure the speed between the two points. Previous speed tests are also provided in the `previous` array.
+	
+![Executium Server Location Speed to Exchange Test](https://i.imgur.com/G7IwvSp.png)
+	
+When selecting a server to run your speed test from utilize `/api/v2/subscriptions/list-private-servers` or `/api/v2/subscriptions/list-shared-servers` as endpoints. Note that subscription restrictions may apply.
+	
+
+```
+POST /api/v2/tests/server-location-speed-to-exchange
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+server_id |  | YES |  | Executium server location.
+exchange1 |  | YES |  | The first exchange to ping.
+exchange2 |  | YES |  | The second exchange to ping.
+
+
+## Exchange Index Announcements
+The exchange index service announcements.
+
+```
+GET /api/v2/exchangeindex/announcements
+```
+
+**Parameters:**
+None
+
+## Monitored Exchanges
+A comprehensive list of all the exchanges which the executium exchange index monitors.
+
+```
+GET /api/v2/exchangeindex/exchanges
+```
+
+**Parameters:**
+None
+
+## Relevant News
+Relevant news to a a `symbol`.  Our exchange checks news every minute of the day and matches to symbols where it is most relevant.
+
+```
+POST /api/v2/exchangeindex/relevant-news
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+symbol |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
+
+
+## Monitored Symbols
+A comprehensive list of all the symbols which executiums exchange index monitors. This can be filtered down to exchanges.
+
+```
+POST /api/v2/exchangeindex/symbols
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+exchange |  | YES |  | 
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Export Fetch
+Use the `id` provide from `export/fetch` to pull down your export request. Please note htese can take a period of time to generate. Please be patient.
+
+```
+POST /api/v2/export/fetch
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+ |  | YES | transactions | Provide the export ID you was provided from the `export/request`
+
+
+## Export List
+List all export requests, these are not stored indefinitely and have a limitation. Review your expiration date of any expot request to be sure.
+
+```
+POST /api/v2/export/list
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+page |  | NO | 1 | 
+
+
+## Request Export
+Request an export of data to a file. Once requested you will be provided n ID where you must go to the `export/fetch` endpoint to retrieve the file. If the file is not ready it will provide a message prompting you to wait.
+
+```
+POST /api/v2/export/request
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+system |  | YES | strategy_transactions | Options: strategy_transactions, all_strategies, 
+type |  | YES |  | Export Type .xls or .csv
+symbol |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
+limit |  | YES | 100 | 
+
+
+## Add Reminder
+
+
+```
+GET /api/v2/calendar/add-reminder
+```
+
+**Parameters:**
+None
+
+## List Schedule
+
+
+```
+GET /api/v2/calendar/list-schedule
+```
+
+**Parameters:**
+None
+
+## List Balances
+
+
+```
+GET /api/v2/exchange-query/list-balances
+```
+
+**Parameters:**
+None
+
+## List Closed Orders
+
+
+```
+GET /api/v2/exchange-query/list-closed-orders
+```
+
+**Parameters:**
+None
+
+## Exchange Query List Open Orders
+
+
+```
+GET /api/v2/exchange-query/list-open-orders
+```
+
+**Parameters:**
+None
+
+## Algorithm Add
+
+
+```
+GET /api/v2/algorithm-creator/algorithm-add
+```
+
+**Parameters:**
+None
+
+## Algorithm Remove
+
+
+```
+GET /api/v2/algorithm-creator/algorithm-remove
+```
+
+**Parameters:**
+None
+
+## Algorithm Statistics
+
+
+```
+GET /api/v2/algorithm-creator/algorithm-statistics
+```
+
+**Parameters:**
+None
+
+## Algorithm Update
+
+
+```
+GET /api/v2/algorithm-creator/algorithm-update
+```
+
+**Parameters:**
+None
+
+## Condition Add
+
+
+```
+GET /api/v2/algorithm-creator/condition-add
+```
+
+**Parameters:**
+None
+
+## Condition Remove
+
+
+```
+GET /api/v2/algorithm-creator/condition-remove
+```
+
+**Parameters:**
+None
+
+## Condition Update
+
+
+```
+GET /api/v2/algorithm-creator/condition-update
+```
+
+**Parameters:**
+None
+
+## Execution Add
+
+
+```
+GET /api/v2/algorithm-creator/execution-add
+```
+
+**Parameters:**
+None
+
+## Execution Remove
+
+
+```
+GET /api/v2/algorithm-creator/execution-remove
+```
+
+**Parameters:**
+None
+
+## Execution Update
+
+
+```
+GET /api/v2/algorithm-creator/execution-update
+```
+
+**Parameters:**
+None
+
+## List Algorithms
+
+
+```
+GET /api/v2/algorithm-creator/list-algorithms
+```
+
+**Parameters:**
+None
+
+## List Condition Operators
+
+
+```
+GET /api/v2/algorithm-creator/list-condition-operators
+```
+
+**Parameters:**
+None
+
+## List Conditions
+
+
+```
+GET /api/v2/algorithm-creator/list-conditions
+```
+
+**Parameters:**
+None
+
+## List Executions
+
+
+```
+GET /api/v2/algorithm-creator/list-executions
+```
+
+**Parameters:**
+None
+
+## List Order Types
+
+
+```
+GET /api/v2/algorithm-creator/list-order-types
+```
+
+**Parameters:**
+None
+
+## Publish Algorithm
+
+
+```
+GET /api/v2/algorithm-creator/publish-algorithm
+```
+
+**Parameters:**
+None
+
+## Unpublish Algorithm
+
+
+```
+GET /api/v2/algorithm-creator/unpublish-algorithm
+```
+
+**Parameters:**
+None
+
+## Validate Algorithm
+
+
+```
+GET /api/v2/algorithm-creator/validate-algorithm
+```
+
+**Parameters:**
+None
