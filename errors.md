@@ -143,6 +143,16 @@ Codes within the range of 2000-2999 relate to user input errors, these can range
     },
 ```
 
+#### 2014 - Nonce too big
+- The parameter `nonce` was present in the header, but it was larger than allowable. The nonce is time dependant, you cannot send it as a value which is more than 60 seconds ahead of the current time.
+
+```javascript
+"data": {
+        "code": 2014,
+        "error": "Nonce too big at xxx"
+    },
+```
+
 #### 2100 - Missing Authorization String
 - The `authorization` parameter was not present, you are required to send this as a header.
 
