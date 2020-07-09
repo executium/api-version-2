@@ -70,6 +70,7 @@
 	- [Trending News Add Keyword](#trending-news-add-keyword) (public/trending-news-add-keyword)
 	- [List your own keywords](#list-your-own-keywords) (public/trending-news-list-my-keywords)
 	- [Trending News Remove Keyword](#trending-news-remove-keyword) (public/trending-news-remove-keyword)
+	- [Match Pair](#match-pair) (public/match-pair)
 - Subaccounts
 	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
@@ -154,7 +155,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`139 endpoints`** as part of version 2.
+* There are currently **`140 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -346,14 +347,69 @@ Name | Example Value
 
 
 ## Symbols
-All symbols listed and supported on executium. 
+All symbols listed and supported on executium. This `endpoint` also accepts `GET`, you can filter the data using the `exchange` parameter, for example `GET /api/v2/system/symbols?exchange=bifinex`.
 
 ```
-GET /api/v2/system/symbols
+POST /api/v2/system/symbols
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+exchange |  | NO |  | Filter the data by exchange.
+
+
+**Successful Response Payload:**
+```javascript
+{
+  "data": {
+    "binance": [
+      {
+        "id": "ethbtc",
+        "symbol": "ETH/BTC",
+        "quote": "BTC",
+        "base": "ETH",
+        "min": 0.000001,
+        "pp": 6,
+        "pa": 3
+      },
+      {
+        "id": "ltcbtc",
+        "symbol": "LTC/BTC",
+        "quote": "BTC",
+        "base": "LTC",
+        "min": 0.000001,
+        "pp": 6,
+        "pa": 2
+      },
+      ...
+      ...
+      ...
+    "bitfinex": [
+      {
+        "id": "btcusd",
+        "symbol": "BTC/USD",
+        "quote": "USD",
+        "base": "BTC",
+        "min": 0.000009999999999999999,
+        "pp": 5,
+        "pa": -1
+      },
+      {
+        "id": "ltcusd",
+        "symbol": "LTC/USD",
+        "quote": "USD",
+        "base": "LTC",
+        "min": 0.000009999999999999999,
+        "pp": 5,
+        "pa": -1
+      },
+      ...
+      ...
+
+      
+```
+
 
 ## System Status
 This provides information related to the current setup of the network and how it is performing. Any issues will be first reported here. We recommend checking this endpoint if you have any issues with any component of the system to check if it is a local issue or an issue with executium.
@@ -1341,7 +1397,7 @@ GET /api/v2/public/spreads/data
 None
 
 ## Fetch Symbol Price
-Public API but restrictions apply based on your subscription level. You must provide the exact `symbol` code which executium provides. You can review symbols in the `system/symbols` endpoint.
+Public API but restrictions apply based on your subscription level. You must provide the exact `symbol` code which executium provides. You can review symbols in the `system/symbols` endpoint. For this endpoint we accept both `POST` and `GET`. An example of `GET` would be `https://marketdata.executium.com/api/v2/public/fetch-symbol-price?code=binance-btcusdt&side=asks&level=1`.
 
 ```
 POST /api/v2/public/fetch-symbol-price
@@ -1350,7 +1406,7 @@ POST /api/v2/public/fetch-symbol-price
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-symbol |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
+code |  | YES |  | The executium code, which can be found at [exchanges-supported.md](./exchanges-supported.md) or by calling the endpoint `system/symbols`.
 side |  | YES |  | Choice: 'asks' or 'bids'; If you input 'buy' it will show 'asks'; If you input 'sell' it will show 'bids'; No other inputs will be accepted.
 level |  | YES | 1 | The orderbook level, from 1 to 10
 
@@ -1372,63 +1428,64 @@ symbol_filter |  | NO |  | Partial match against symbol
 **Successful Response Payload:**
 ```javascript
 
-	
+{
    "data":{
-      "lastupdated":1594186334102,
-      "data":{
+      "lastupdated":1594190044395,
+      "bids":{
          "bitfinex-btcusdt":[
-            9256.2,
-            0.9743332
+            9274.6,
+            0.08127598,
+            1594190038305
          ],
-         "ftx-btcusdt":[
-            9256,
-            0.3224
+         "bitmax-btcusdt":[
+            9311.51,
+            1.36604,
+            1594052693191
+         ],
+         "binance-btcusdc":[
+            9275.56,
+            0.160591,
+            1594190021947
          ],
          "bittrex-btcusdt":[
-            9317.6357,
-            0.5753
-         ],
-         "bitmart-btcusdt":[
-            9310.09,
-            0.11275
-         ],
-         "gateio-btcusdt":[
-            9256.73,
-            0.107
-         ],
-         "binance-btcusdt":[
-            9256,
-            0.015084
+            9313.02700719,
+            0.09999997,
+            1594052659521
          ],
          "bitmart-btcusdc":[
-            9319.61,
-            0.020239
+            9308.95,
+            0.021205,
+            1594052640361
          ],
-         "bitmax-btcusdc":[
-            9279.2,
-            0.04708
+         ...
+         ...
+         ...
+	"asks":{
+         "bitfinex-btcusdt":[
+            9277.6,
+            0.97142334,
+            1594190044336
          ],
          "bitmax-btcusdt":[
             9311.52,
-            0.001
-         ],
-         "coinbasepro-btcusdc":[
-            9255.54,
-            0.30469841
-         ],
-         "huobipro-btcusdt":[
-            9333.74,
-            0.02265
-         ],
-         "gateio-btcusdc":[
-            9228.93,
-            0.12
+            0.001,
+            1594052693191
          ],
          "binance-btcusdc":[
-            9253.39,
-            0.160526
-         ]
-      }
+            9281.29,
+            0.800595,
+            1594190037982
+         ],
+         "bittrex-btcusdt":[
+            9317.6357,
+            0.5753,
+            1594052659521
+         ],
+         "bitmart-btcusdc":[
+            9319.61,
+            0.020239,
+            1594052714913
+         ],         
    
 ```
 
@@ -1954,6 +2011,19 @@ keywordid |  | YES |  | The `keyword_id` you wish to remove. You can get this in
       "error": "Missing Key"
     },
 ```
+
+
+## Match Pair
+This system is provided to give insight into a `pairing` and where you can also trade it. For this endpoint we accept both `POST` and `GET`. An example of `GET` would be `https://marketdata.executium.com/api/v2/public/match-pair?code=binance-btcusdt`. Please consult the [exchanges-supported.md](./exchanges-supported.md) to understand the scope of where we match.
+
+```
+POST /api/v2/public/match-pair
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+code | 1 | YES |  | Provide a pair such as `binance-btcusdt` to discover where else you can trade the pairing `btcusdt`. We require you to indicate the excutium `code` for best results.
 
 
 ## Create Sub Account
