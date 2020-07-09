@@ -495,7 +495,7 @@ POST /api/v2/system/list-announcements
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## Subscriptions Details
@@ -972,7 +972,7 @@ POST /api/v2/subscriptions/list-private-servers
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## List Shared Servers
@@ -986,7 +986,7 @@ POST /api/v2/subscriptions/list-shared-servers
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## Package Recommendation
@@ -1084,7 +1084,7 @@ POST /api/v2/exchange-api-keys/list
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## Check Specific Exchange Symbol Balance 
@@ -1182,7 +1182,7 @@ POST /api/v2/strategy/data/list
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## List All Trading Algorithms
@@ -1296,7 +1296,7 @@ POST /api/v2/strategy/list-strategy-transactions
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | YES | 10 | 
-pg |  | YES | 1 | 
+pagenumber |  | YES | 1 | 
 main_id |  | YES |  | 
 leg_id |  | YES |  | 
 remove_unfilled |  | NO |  | true of false
@@ -1549,7 +1549,7 @@ POST /api/v2/public/realtime-bitcoin-profit
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## Exchange Information
@@ -2012,7 +2012,7 @@ POST /api/v2/public/trending-news-list-my-keywords
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 **Successful Response Payload:**
@@ -2058,7 +2058,7 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 code | 1 | YES |  | Provide a pair such as `btcusdt` to discover where else you can trade the pairing `btcusdt`. Comma delimited list acceptable upto 10. Exclude the exchange code from your query and request just the pair like shown.
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 **Successful Response Payload:**
@@ -2250,7 +2250,7 @@ POST /api/v2/subaccounts/broadcast-list
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## Access History
@@ -2336,7 +2336,7 @@ POST /api/v2/user/access-history
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## User Account Details
@@ -2360,7 +2360,7 @@ POST /api/v2/user/list-referrals
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## User Active Sessions
@@ -2437,7 +2437,7 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 subaccount_id |  | YES |  | Provide a valid subaccount ID from the endpoint `subaccounts/subaccount-list`
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## List Recent Transactions
@@ -2451,7 +2451,7 @@ POST /api/v2/finance/list-recent-transactions
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## List Top Strategy PNL
@@ -2465,7 +2465,7 @@ POST /api/v2/finance/list-top-strategy-pnl
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## List Deposits
@@ -2479,7 +2479,7 @@ POST /api/v2/finance/list-depoists
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## List Withdraws
@@ -2600,7 +2600,7 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 exchange |  | YES |  | 
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## Export Fetch
@@ -2627,7 +2627,7 @@ POST /api/v2/export/list
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
-pg |  | NO | 1 | 
+pagenumber |  | NO | 1 | 
 
 
 ## Request Export
