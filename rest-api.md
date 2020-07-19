@@ -49,11 +49,12 @@
 	- [Strategy List Templates](#strategy-list-templates) (strategy/list-templates)
 	- [Strategy Start](#strategy-start) (strategy/start)
 	- [Strategy Stop](#strategy-stop) (strategy/stop)
-	- [List Active Strategies](#list-active-strategies) (strategy/list-active-strategies)
+	- [List Strategies](#list-strategies) (strategy/list-strategies)
 	- [List Strategy Transactions](#list-strategy-transactions) (strategy/list-strategy-transactions)
 	- [Stop All Strategies](#stop-all-strategies) (strategy/stop-all-strategies)
 	- [Strategy Update](#strategy-update) (strategy/update)
 	- [List Strategy Options](#list-strategy-options) (strategy/list-strategy-options)
+	- [Strategy List Watchlist](#strategy-list-watchlist) (strategy/list-watchlist)
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
 	- [Fetch Symbol Price](#fetch-symbol-price) (public/fetch-symbol-price)
@@ -71,6 +72,9 @@
 	- [List your own keywords](#list-your-own-keywords) (public/trending-news-list-my-keywords)
 	- [Trending News Remove Keyword](#trending-news-remove-keyword) (public/trending-news-remove-keyword)
 	- [Match Pair](#match-pair) (public/match-pair)
+	- [Fetch Spread Data](#fetch-spread-data) (public/fetch-spread-data)
+	- [Public Fetch Articles](#public-fetch-articles) (public/fetch-articles)
+	- [Public Bitcoin Information](#public-bitcoin-information) (public/bitcoin-information)
 - Subaccounts
 	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
@@ -155,7 +159,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`140 endpoints`** as part of version 2.
+* There are currently **`146 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -1275,11 +1279,11 @@ Name | MinLength | Required | Default | Description
 force |  | NO |  | If you select to force the stop it will stop immediately and not check to see if the orders are still active at the exchanges. In the event this parameter is used you must cancel the orders yourself via the exchange(s). In the event you start the strategy after a forced stop, the strategy format will reconvene and check any pending orders.
 
 
-## List Active Strategies
+## List Strategies
 A complete list of strategies that are actively running on executium.
 
 ```
-GET /api/v2/strategy/list-active-strategies
+GET /api/v2/strategy/list-strategies
 ```
 
 **Parameters:**
@@ -1381,6 +1385,16 @@ List all variables to a strategy. This is a complete set of options available to
 
 ```
 GET /api/v2/strategy/list-strategy-options
+```
+
+**Parameters:**
+None
+
+## Strategy List Watchlist
+
+
+```
+GET /api/v2/strategy/list-watchlist
 ```
 
 **Parameters:**
@@ -2148,6 +2162,72 @@ pagenumber |  | NO | 1 |
 
 ```
 
+
+## Fetch Spread Data
+Spreads are calculated as Ask-Bid for price, and Ask/Bid for ratio.
+
+```
+POST /api/v2/public/fetch-spread-data
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+combination | 1 | YES |  | Provide a valid combination such as `binance-btcusdt+bitmax-btcusdc`. The `+` acts as a join for the combination. The order is ascending by time.
+latestonly |  | NO |  | Set as `true` to activate. Useful to pull when you are only looking to update the latest point
+
+
+**Successful Response Payload:**
+```javascript
+
+
+   "data":[
+      {
+         "price":{
+            "open":9.14,
+            "close":9.52,
+            "high":9.52,
+            "low":8.23,
+            "time":"1594294380000"
+         },
+         "ratio":{
+            "open":1.001,
+            "close":1.001,
+            "high":1.001,
+            "low":1.0009,
+            "time":"1594294380000"
+         }
+      }
+   ],
+	
+```
+
+
+## Public Fetch Articles
+
+
+```
+POST /api/v2/public/fetch-articles
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+article_id |  | NO | 0 | If `article_id` empty then it will return a list of articles
+title_contains |  | NO | 0 | When listing articles it will only return titles that contain the value of `title_contains`
+limit |  | NO | 10 | 
+pagenumber |  | NO | 1 | 
+
+
+## Public Bitcoin Information
+
+
+```
+GET /api/v2/public/bitcoin-information
+```
+
+**Parameters:**
+None
 
 ## Create Sub Account
 The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
