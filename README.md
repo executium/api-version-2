@@ -17,34 +17,34 @@ Name | Description
 [exchanges-supported.md](./exchanges-supported.md) | Information related to the current supported exchanges by executium.
 
 ## Supported Exchanges in Version 2
-A table of supported exchanges in executium for version 2. The following table is the status as of 23rd June 2020.
+A table of supported exchanges in executium for version 2. The following table is the status as of 26th July 2020.
 
 Exchange | Executium Code |Active | Symbols Count
 ------------ | ------------ | ------------ | ------------
-Binance|binance|Yes|583
-Bitfinex|bitfinex|Yes|294
+Binance|binance|Yes|628
+Bitfinex|bitfinex|Yes|304
 Bitflyer|bitflyer|Yes|10
-Bithumb|bithumb|Yes|109
+Bithumb|bithumb|Yes|103
 Bitmart|bitmart|Yes|5
-Bitmax|bitmax|Yes|202
-Bitmex|bitmex|Yes|13
+Bitmex|bitmex|Yes|14
 Bitstamp|bitstamp|Yes|32
-Bittrex|bittrex|Yes|415
+Bittrex|bittrex|Yes|479
 Coinbase|coinbase|Yes|169
-Coinbasepro|coinbasepro|Yes|67
+Coinbasepro|coinbasepro|Yes|74
 Coincheck|coincheck|Yes|1
 Deribit|deribit|Yes|8
-Ftx|ftx|Yes|374
-Gateio|gateio|Yes|469
-Huobipro|huobipro|Yes|558
+Ftx|ftx|Yes|357
+Gateio|gateio|Yes|470
+Hbdm|hbdm|Yes|40
+Huobipro|huobipro|Yes|567
 Indodax|indodax|Yes|68
 Itbit|itbit|Yes|6
 Kraken|kraken|Yes|155
-Kucoin|kucoin|Yes|437
-Liquid|liquid|Yes|176
-Okex|okex|Yes|365
-Poloniex|poloniex|Yes|149
-Upbit|upbit|Yes|259
+Kucoin|kucoin|Yes|446
+Liquid|liquid|Yes|160
+Okex|okex|Yes|384
+Poloniex|poloniex|Yes|194
+Upbit|upbit|Yes|261
 
 
 ## Supported Symbols in Version 2
