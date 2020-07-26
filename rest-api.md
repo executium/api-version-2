@@ -54,7 +54,7 @@
 	- [Stop All Strategies](#stop-all-strategies) (strategy/stop-all-strategies)
 	- [Strategy Update](#strategy-update) (strategy/update)
 	- [List Strategy Options](#list-strategy-options) (strategy/list-strategy-options)
-	- [Strategy List Watchlist](#strategy-list-watchlist) (strategy/list-watchlist)
+	- [List Watchlist](#list-watchlist) (strategy/list-watchlist)
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
 	- [Fetch Symbol Price](#fetch-symbol-price) (public/fetch-symbol-price)
@@ -73,8 +73,9 @@
 	- [Trending News Remove Keyword](#trending-news-remove-keyword) (public/trending-news-remove-keyword)
 	- [Match Pair](#match-pair) (public/match-pair)
 	- [Fetch Spread Data](#fetch-spread-data) (public/fetch-spread-data)
-	- [Public Fetch Articles](#public-fetch-articles) (public/fetch-articles)
-	- [Public Bitcoin Information](#public-bitcoin-information) (public/bitcoin-information)
+	- [Fetch Articles](#fetch-articles) (public/fetch-articles)
+	- [Bitcoin Information](#bitcoin-information) (public/bitcoin-information)
+	- [Spreads List](#spreads-list) (public/spreads-list)
 - Subaccounts
 	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
@@ -145,6 +146,9 @@
 	- [Publish Algorithm](#publish-algorithm) (algorithm-creator/publish-algorithm)
 	- [Unpublish Algorithm](#unpublish-algorithm) (algorithm-creator/unpublish-algorithm)
 	- [Validate Algorithm](#validate-algorithm) (algorithm-creator/validate-algorithm)
+- Markerplace
+	- [Signals Feed](#signals-feed) (marketplace/signals-feed)
+	- [Signals Performance](#signals-performance) (marketplace/signals-performance)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -159,7 +163,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`146 endpoints`** as part of version 2.
+* There are currently **`149 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -1390,8 +1394,8 @@ GET /api/v2/strategy/list-strategy-options
 **Parameters:**
 None
 
-## Strategy List Watchlist
-
+## List Watchlist
+List all pairs on your watchlist.
 
 ```
 GET /api/v2/strategy/list-watchlist
@@ -2203,8 +2207,8 @@ latestonly |  | NO |  | Set as `true` to activate. Useful to pull when you are o
 ```
 
 
-## Public Fetch Articles
-
+## Fetch Articles
+Fetch a list of articles published by executium.com
 
 ```
 POST /api/v2/public/fetch-articles
@@ -2219,8 +2223,8 @@ limit |  | NO | 10 |
 pagenumber |  | NO | 1 | 
 
 
-## Public Bitcoin Information
-
+## Bitcoin Information
+This endpoint includes data for the market price, market cap, total bitcoins in circulation, difficulty chart, hash rate, miners revenue, cost per transaction, transaction fees and bitcoin trade volumes. This is provided as an information resource.
 
 ```
 GET /api/v2/public/bitcoin-information
@@ -2228,6 +2232,53 @@ GET /api/v2/public/bitcoin-information
 
 **Parameters:**
 None
+
+## Spreads List
+All spread lists available which are tracked every second of the day. This list works most effectively if you apply a `spread_includes` keyword.
+
+```
+POST /api/v2/public/spreads-list
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+spread_includes |  | NO |  | Search for a particular keyword in the spread combination.
+limit |  | NO | 100 | 
+pagenumber |  | NO | 1 | 
+
+
+**Successful Response Payload:**
+```javascript
+"data": {
+    "combinations": [
+      "binance-btcusdc+bitfinex-btcusdt",
+      "binance-btcusdt+bitfinex-btcusdt",
+      "bitfinex-btcusdt+binance-btcusdc",
+      "bitfinex-btcusdt+binance-btcusdt",
+      "bitfinex-btcusdt+bitmart-btcusdc",
+      "bitfinex-btcusdt+bitmart-btcusdt",
+      "bitfinex-btcusdt+bittrex-btcusdt",
+      "bitfinex-btcusdt+coinbasepro-btcusdc",
+      "bitfinex-btcusdt+ftx-btcusdt",
+      "bitfinex-btcusdt+gateio-btcusdc",
+      "bitfinex-btcusdt+gateio-btcusdt",
+      "bitfinex-btcusdt+huobipro-btcusdt",
+      "bitmart-btcusdc+bitfinex-btcusdt",
+      "bitmart-btcusdt+bitfinex-btcusdt",
+      "bittrex-btcusdt+bitfinex-btcusdt",
+      "coinbasepro-btcusdc+bitfinex-btcusdt",
+      "ftx-btcusdt+bitfinex-btcusdt",
+      "gateio-btcusdc+bitfinex-btcusdt",
+      "gateio-btcusdt+bitfinex-btcusdt",
+      "huobipro-btcusdt+bitfinex-btcusdt"
+    ],
+    "page": 1,
+    "showing": 20,
+    "total": 20
+  },
+```
+
 
 ## Create Sub Account
 The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
@@ -2955,3 +3006,31 @@ GET /api/v2/algorithm-creator/validate-algorithm
 
 **Parameters:**
 None
+
+## Signals Feed
+The REST endpoint to receive signal instructions. We recommend using the websocket for the signal endpoint if you are intending to poll.
+
+```
+POST /api/v2/marketplace/signals-feed
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide a Signal ID
+
+
+## Signals Performance
+A list of all signals and their current and historical performance.
+
+```
+POST /api/v2/marketplace/signals-performance
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | NO |  | Provide a Signal ID if you are looking for a specific signal ID
+limit |  | NO | 100 | 
+pagenumber |  | NO | 1 | 
+
