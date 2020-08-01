@@ -53,7 +53,7 @@ We have increased our symbols and exchange support with version 2, as of the 22n
 Version | Exchanges | Markets | Market Spreads | Permutation 
 ------------ | ------------ | ------------  | ------------   | ------------
 Version 2|25|4,991|12,452,545 | 24,905,090
-Version 1|12|140|869 | 869
+Version 1|12|138|871 | 871
 
 ### Quote to Quote Permutation
 
