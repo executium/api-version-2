@@ -21,30 +21,32 @@ A table of supported exchanges in executium for version 2. The following table i
 
 Exchange | Executium Code |Active | Symbols Count
 ------------ | ------------ | ------------ | ------------
-Binance|binance|Yes|628
-Bitfinex|bitfinex|Yes|304
+Binance|binance|Yes|638
+Bitfinex|bitfinex|Yes|305
 Bitflyer|bitflyer|Yes|10
-Bithumb|bithumb|Yes|103
+Bithumb|bithumb|Yes|104
 Bitmart|bitmart|Yes|5
-Bitmex|bitmex|Yes|14
+Bitmex|bitmex|Yes|15
 Bitstamp|bitstamp|Yes|32
-Bittrex|bittrex|Yes|479
+Bittrex|bittrex|Yes|484
+Bybit|bybit|Yes|5
 Coinbase|coinbase|Yes|169
 Coinbasepro|coinbasepro|Yes|74
 Coincheck|coincheck|Yes|1
 Deribit|deribit|Yes|8
-Ftx|ftx|Yes|357
-Gateio|gateio|Yes|470
-Hbdm|hbdm|Yes|40
-Huobipro|huobipro|Yes|567
+Ftx|ftx|Yes|366
+Gateio|gateio|Yes|473
+Hbdm|hbdm|Yes|44
+Huobipro|huobipro|Yes|573
 Indodax|indodax|Yes|68
 Itbit|itbit|Yes|6
 Kraken|kraken|Yes|155
-Kucoin|kucoin|Yes|446
-Liquid|liquid|Yes|160
-Okex|okex|Yes|384
-Poloniex|poloniex|Yes|194
-Upbit|upbit|Yes|261
+Kucoin|kucoin|Yes|451
+Liquid|liquid|Yes|157
+Okex|okex|Yes|386
+Poloniex|poloniex|Yes|199
+Upbit|upbit|Yes|263
+
 
 
 ## Supported Symbols in Version 2
