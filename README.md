@@ -17,7 +17,7 @@ Name | Description
 [exchanges-supported.md](./exchanges-supported.md) | Information related to the current supported exchanges by executium.
 
 ## Supported Exchanges in Version 2
-A table of supported exchanges in executium for version 2. The following table is the status as of 26th July 2020.
+A table of supported exchanges in executium for version 2. The following table is the status as of 1st August 2020.
 
 Exchange | Executium Code |Active | Symbols Count
 ------------ | ------------ | ------------ | ------------
@@ -46,8 +46,6 @@ Liquid|liquid|Yes|157
 Okex|okex|Yes|386
 Poloniex|poloniex|Yes|199
 Upbit|upbit|Yes|263
-
-
 
 ## Supported Symbols in Version 2
 We have increased our symbols and exchange support with version 2, as of the 22nd June 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
