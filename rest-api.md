@@ -20,7 +20,7 @@
 	- [Commissions Report](#commissions-report) (subscriptions/commissions-report)
 	- [Deposit Addresses](#deposit-addresses) (subscriptions/deposit)
 	- [Invoices](#invoices) (subscriptions/invoices)
-	- [Change Subscription Package](#change-subscription-package) (subscriptions/change-package)
+	- [Change Subscription Package](#change-subscription-package) (subscriptions/change-php-sdk)
 	- [Change Setting](#change-setting) (subscriptions/change-setting-request)
 	- [Disable Private Server](#disable-private-server) (subscriptions/disable-private-server)
 	- [Subscriptions Disable Shared Server](#subscriptions-disable-shared-server) (subscriptions/disable-shared-server)
@@ -28,11 +28,13 @@
 	- [Enable Shared Server](#enable-shared-server) (subscriptions/enable-shared-server)
 	- [List Private Servers](#list-private-servers) (subscriptions/list-private-servers)
 	- [List Shared Servers](#list-shared-servers) (subscriptions/list-shared-servers)
-	- [Package Recommendation](#package-recommendation) (subscriptions/package-recommendation)
+	- [Package Recommendation](#package-recommendation) (subscriptions/php-sdk-recommendation)
 	- [Commissions Rate](#commissions-rate) (subscriptions/commissions-rate)
 	- [List Packages](#list-packages) (subscriptions/list-packages)
 	- [Change Setting Confirm](#change-setting-confirm) (subscriptions/change-setting-confirm)
 	- [Subscriptions Server Types](#subscriptions-server-types) (subscriptions/server-types)
+	- [Subscriptions Change Package](#subscriptions-change-package) (subscriptions/change-package)
+	- [Subscriptions Package Recommendation](#subscriptions-package-recommendation) (subscriptions/package-recommendation)
 - Exchange Api Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
 	- [Delete Exchange API Key](#delete-exchange-api-key) (exchange-api-keys/delete)
@@ -76,6 +78,7 @@
 	- [Fetch Articles](#fetch-articles) (public/fetch-articles)
 	- [Bitcoin Information](#bitcoin-information) (public/bitcoin-information)
 	- [Spreads List](#spreads-list) (public/spreads-list)
+	- [Supported Wallets](#supported-wallets) (public/supported-wallets)
 - Subaccounts
 	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
 	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
@@ -146,9 +149,14 @@
 	- [Publish Algorithm](#publish-algorithm) (algorithm-creator/publish-algorithm)
 	- [Unpublish Algorithm](#unpublish-algorithm) (algorithm-creator/unpublish-algorithm)
 	- [Validate Algorithm](#validate-algorithm) (algorithm-creator/validate-algorithm)
-- Markerplace
+- Marketplace
+	- [Signal Trigger](#signal-trigger) (marketplace/signals-trigger)
+	- [Edit Signal](#edit-signal) (marketplace/signals-edit)
+	- [Reset Signal Statistics](#reset-signal-statistics) (marketplace/signal-reset)
 	- [Signals Feed](#signals-feed) (marketplace/signals-feed)
-	- [Signals Performance](#signals-performance) (marketplace/signals-performance)
+	- [Create Signal Profile](#create-signal-profile) (marketplace/signals-add)
+	- [Delete Signal](#delete-signal) (marketplace/signal-delete)
+	- [Signals Iteration Price Movement](#signals-iteration-price-movement) (marketplace/signals-iteration-price-movement)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -163,7 +171,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`149 endpoints`** as part of version 2.
+* There are currently **`157 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -894,20 +902,20 @@ GET /api/v2/subscriptions/invoices
 None
 
 ## Change Subscription Package
-Provide the ID of the package you wish to change your current subscription too. You can find the packages `id` via the `subscription/list-packages` endpoint.
+Provide the ID of the php-sdk you wish to change your current subscription too. You can find the packages `id` via the `subscription/list-packages` endpoint.
 
 ```
-POST /api/v2/subscriptions/change-package
+POST /api/v2/subscriptions/change-php-sdk
 ```
 
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-id |  | YES |  | Provide the ID of package you wish to change too.
+id |  | YES |  | Provide the ID of php-sdk you wish to change too.
 
 
 ## Change Setting
-You can change individual settings of a subscription to have more or less of something. Once you make a change your package will become `custom`. When you request a change you will be provided with a subscription price adjustment `id`.  Use this provided ID with the endpoint `subscriptions/change-setting-confirm`
+You can change individual settings of a subscription to have more or less of something. Once you make a change your php-sdk will become `custom`. When you request a change you will be provided with a subscription price adjustment `id`.  Use this provided ID with the endpoint `subscriptions/change-setting-confirm`
 
 ```
 GET /api/v2/subscriptions/change-setting-request
@@ -970,7 +978,7 @@ region |  | YES |  |
 
 
 ## List Private Servers
-List all the private servers your currently have on your package.
+List all the private servers your currently have on your php-sdk.
 
 ```
 POST /api/v2/subscriptions/list-private-servers
@@ -984,7 +992,7 @@ pagenumber |  | NO | 1 |
 
 
 ## List Shared Servers
-List all shared servers currently available to you. These will also include those as defaulted to you by your subscription package. When you join any subscription, even the free tier of executium, you are nominated servers for your strategies to run on. These provided servers are inclusive of your subscription cost and subject to change by the hour. They will not change if you have an existing strategy running on them.
+List all shared servers currently available to you. These will also include those as defaulted to you by your subscription php-sdk. When you join any subscription, even the free tier of executium, you are nominated servers for your strategies to run on. These provided servers are inclusive of your subscription cost and subject to change by the hour. They will not change if you have an existing strategy running on them.
 
 ```
 POST /api/v2/subscriptions/list-shared-servers
@@ -998,10 +1006,10 @@ pagenumber |  | NO | 1 |
 
 
 ## Package Recommendation
-Based on an array of inputs we will provide a recommended package for you.
+Based on an array of inputs we will provide a recommended php-sdk for you.
 
 ```
-GET /api/v2/subscriptions/package-recommendation
+GET /api/v2/subscriptions/php-sdk-recommendation
 ```
 
 **Parameters:**
@@ -1050,6 +1058,26 @@ Name | MinLength | Required | Default | Description
 type |  | YES |  | Private or Shared
 duration |  | YES |  | Provided in seconds, no less than 7200 seconds. The duration you enter will determine the price.
 
+
+## Subscriptions Change Package
+
+
+```
+GET /api/v2/subscriptions/change-package
+```
+
+**Parameters:**
+None
+
+## Subscriptions Package Recommendation
+
+
+```
+GET /api/v2/subscriptions/package-recommendation
+```
+
+**Parameters:**
+None
 
 ## Add Exchange API Credentials
 Provide Exchange API credentials for usage with your executium strategies. Once added they will be confirmed and then be made available to strategies.
@@ -1303,10 +1331,9 @@ POST /api/v2/strategy/list-strategy-transactions
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-limit |  | YES | 10 | 
-pagenumber |  | YES | 1 | 
+limit |  | NO | 10 | 
+pagenumber |  | NO | 1 | 
 main_id |  | YES |  | 
-leg_id |  | YES |  | 
 remove_unfilled |  | NO |  | true of false
 
 
@@ -2280,6 +2307,46 @@ pagenumber |  | NO | 1 |
 ```
 
 
+## Supported Wallets
+A list of all supported wallets available within executium. These wallets can take deposits which are then used to pay your subscription and commissions due to executium. The list is subject to change.
+
+```
+GET /api/v2/public/supported-wallets
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+
+   "data":{
+      "last_updated":1597196783,
+      "supported":[
+         {
+            "symbol":"ADX",
+            "name":"AdEx",
+            "decimals":4
+         },
+         {
+            "symbol":"AE",
+            "name":"Aeternity",
+            "decimals":18
+         },
+         {
+            "symbol":"AION",
+            "name":"AION",
+            "decimals":8
+         },
+         ...
+         ...
+         ...
+     }
+ 
+         
+```
+
+
 ## Create Sub Account
 The primary account holder can manage inline with their subscription how many subaccounts can access/create/interact with strategies on their account.
 
@@ -3007,11 +3074,44 @@ GET /api/v2/algorithm-creator/validate-algorithm
 **Parameters:**
 None
 
-## Signals Feed
-The REST endpoint to receive signal instructions. We recommend using the websocket for the signal endpoint if you are intending to poll.
+## Signal Trigger
+Send your trigger conditions to this endpoint. You must send both a signal (buy or sell) and a corresponding action (open or close). This is required as a double verification prevention method.
 
 ```
-POST /api/v2/marketplace/signals-feed
+POST /api/v2/marketplace/signals-trigger
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide a Signal ID
+signal |  | YES |  | `buy` or `sell`. If this is the closing portion of the `signal` then you must do the opposite to what occured in the opening signal.
+action |  | YES |  | Indicate if you are `open` or `close` with this signal. It must correlate to the current status. Both `signal` and `action` must exist and be correct as a confirmation that you are performing the correct actions.
+execute_within |  | YES |  | Determine in milliseconds in which the window to execute the `signal`.
+maximum_amount |  | YES |  | Maximum amount to buy/sell
+
+
+## Edit Signal
+
+
+```
+POST /api/v2/marketplace/signals-edit
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide a Signal ID
+name |  | NO |  | Signal Name
+custom_1 |  | NO |  | Custom 1 Data
+custom_2 |  | NO |  | Custom 2 Data
+
+
+## Reset Signal Statistics
+You must be the owner of the signal to reset the statistics. Please note, by resetting the data you will place your entire signal back to the start. All related logging data will be destroyed. This is not recommended.
+
+```
+POST /api/v2/marketplace/signal-reset
 ```
 
 **Parameters:**
@@ -3020,17 +3120,106 @@ Name | MinLength | Required | Default | Description
 id |  | YES |  | Provide a Signal ID
 
 
-## Signals Performance
-A list of all signals and their current and historical performance.
+## Signals Feed
+The REST endpoint to receive signal instructions and information. We recommend using the websocket for the signal endpoint if you are intending polling. Please note that there is a delay in these signals in the `public` domain. The true speed for `signals` is only available by using the executium trading system. This endpoint is provided as a means to give delayed, yet accurate information on how a signal is performing. If you are looking to utilize these signals as part of your trading strategy then you should use the executium trading system strategy engine to leverage the signal data.
 
 ```
-POST /api/v2/marketplace/signals-performance
+POST /api/v2/marketplace/signals-feed
 ```
 
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-id |  | NO |  | Provide a Signal ID if you are looking for a specific signal ID
-limit |  | NO | 100 | 
-pagenumber |  | NO | 1 | 
+id |  | NO |  | Provide a Signal ID
+code |  | NO |  | Filter your results to a specific executium code
+more |  | NO |  | Set to `1` or `true` to activate more `iteration_children` options. By default you will only have returned 1 row of `iteration_children` data.
+limit |  | NO | 100 | Relevant to the `iteration_children` array only. 
+min_iterations |  | NO |  | The minimum amount of iterations to display in the results
+from_iteration |  | NO |  | Display results of signals which contain a minimum of iterations.
+pagenumber |  | NO | 1 | Relevant to the `iteration_children` only.
+
+
+**Successful Response Payload:**
+```javascript
+ "data":{
+      "signals":[
+         {
+            "id":"1",
+            "time_created":"1596609068",
+            "last_updated":"1596951846788",
+            "c_uid":0,
+            "c_name":"Volume Creator",
+            "c_status":"closed",
+            "c_iteration":"4678",
+            "c_profit":"-3185.01000000",
+            "c_order":"0.70231753",
+            "c_average":"-0.70231753",
+            "c_usdt_volume":"53017671.67",
+            "c_last_profit":"-4.05000000",
+            "c_last_runtime":"6827",
+            "c_direction":"short",
+            "c_codes":"binance-btcusdt",
+            "c_description":"",
+            "c_price":"0.00000000",
+            "c_subscribers_current":"0",
+            "c_subscribers_max":"0",
+            "c_success_rate":"0",
+            "c_current_success_streak":"0",
+            "c_action_direction_1":"sell",
+            "c_action_direction_2":"buy",
+            "c_action_maxtime_1":"1596951847419",
+            "c_action_maxtime_2":"1596951847788",
+            "c_action_maxamount_1":"0.002",
+            "c_action_maxamount_2":"0.002",
+            "iteration_children":[
+
+            ]
+         }
+      ]
+   },
+```
+
+
+## Create Signal Profile
+Creater a signal profile for your account.
+
+```
+POST /api/v2/marketplace/signals-add
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+name | 3 | YES |  | Label your strategy
+description | 10 | YES |  | Provide a description and outline of your signal. You should use this as an opportunity to upsell how your signal works. You are not required to let any user know how the strategy works but you should use this region as a means to promote your signal.
+codes | 3 | YES |  | Select the correct executium code, for example `bitfinex-btcusdt`
+maximum_qty |  | YES |  | The maximum quantity per iteration of your signal. This should align to your code focus quote base. This is the maximum quality per iteration of your signal running.
+private |  | NO |  | Is the signal public or private? Enter `true` for `private`. This cannot be changed later.
+
+
+## Delete Signal
+
+
+```
+POST /api/v2/marketplace/signal-delete
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id | 1 | YES |  | Signal ID
+
+
+## Signals Iteration Price Movement
+The data points for an iterations ID
+
+```
+POST /api/v2/marketplace/signals-iteration-price-movement
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id | 1 | YES |  | Signal ID
+iteration | 1 | YES |  | Signals Iteration ID
 
