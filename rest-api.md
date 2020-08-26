@@ -14,6 +14,7 @@
 	- [Symbols](#symbols) (system/symbols)
 	- [System Status](#system-status) (system/status)
 	- [List Announcements](#list-announcements) (system/list-announcements)
+	- [Exchanges](#exchanges) (system/exchanges)
 - Subscriptions
 	- [Subscriptions Details](#subscriptions-details) (subscriptions/details)
 	- [Cancel Subscription](#cancel-subscription) (subscriptions/cancel)
@@ -130,6 +131,9 @@
 	- [List Balances](#list-balances) (exchange-query/list-balances)
 	- [List Closed Orders](#list-closed-orders) (exchange-query/list-closed-orders)
 	- [Exchange Query List Open Orders](#exchange-query-list-open-orders) (exchange-query/list-open-orders)
+	- [Exchange Query Order Cancel](#exchange-query-order-cancel) (exchange-query/order-cancel)
+	- [Exchange Query Order Check](#exchange-query-order-check) (exchange-query/order-check)
+	- [Exchange Query Order Create](#exchange-query-order-create) (exchange-query/order-create)
 - Algorithm Creator
 	- [Algorithm Add](#algorithm-add) (algorithm-creator/algorithm-add)
 	- [Algorithm Remove](#algorithm-remove) (algorithm-creator/algorithm-remove)
@@ -171,7 +175,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`157 endpoints`** as part of version 2.
+* There are currently **`161 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -512,6 +516,35 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 limit |  | NO | 10 | 
 pagenumber |  | NO | 1 | 
+
+
+## Exchanges
+List of all supported exchanges
+
+```
+GET /api/v2/system/exchanges
+```
+
+**Parameters:**
+None
+
+**Successful Response Payload:**
+```javascript
+
+{
+   "data":[
+      {
+         "code":"bitfinex",
+         "name":"Bitfinex"
+      },
+      {
+         "code":"binance",
+         "name":"Binance"
+      },
+      ...
+      ...    
+
+```
 
 
 ## Subscriptions Details
@@ -2889,6 +2922,36 @@ None
 
 ```
 GET /api/v2/exchange-query/list-open-orders
+```
+
+**Parameters:**
+None
+
+## Exchange Query Order Cancel
+
+
+```
+GET /api/v2/exchange-query/order-cancel
+```
+
+**Parameters:**
+None
+
+## Exchange Query Order Check
+
+
+```
+GET /api/v2/exchange-query/order-check
+```
+
+**Parameters:**
+None
+
+## Exchange Query Order Create
+
+
+```
+GET /api/v2/exchange-query/order-create
 ```
 
 **Parameters:**
