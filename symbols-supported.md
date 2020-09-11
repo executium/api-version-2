@@ -1,7 +1,7 @@
-# Support Symbols by Exchange on Executium - Currently: 6269
+# Support Symbols by Exchange on Executium - Currently: 6597
 The following tables list the exchanges and the symbols executium supports for algo creation.
 
-## Binance Supported Symbols in Executium (updated: 26th August 2020)
+## Binance Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -355,9 +355,6 @@ ALGOBTC|binance-algobtc|ALGO|1.0E-8
 ALGOUSDT|binance-algousdt|ALGO|0.0001
 ALGOTUSD|binance-algotusd|ALGO|0.0001
 GTOUSDT|binance-gtousdt|GTO|1.0E-5
-ERDBNB|binance-erdbnb|ERD|1.0E-8
-ERDBTC|binance-erdbtc|ERD|1.0E-8
-ERDUSDT|binance-erdusdt|ERD|1.0E-6
 DOGEBTC|binance-dogebtc|DOGE|1.0E-8
 DOGEUSDT|binance-dogeusdt|DOGE|1.0E-7
 DUSKBTC|binance-duskbtc|DUSK|1.0E-8
@@ -545,11 +542,10 @@ HIVEUSDT|binance-hiveusdt|HIVE|0.0001
 CHRBNB|binance-chrbnb|CHR|1.0E-6
 CHRBTC|binance-chrbtc|CHR|1.0E-8
 CHRUSDT|binance-chrusdt|CHR|1.0E-5
-BTCUPUSDT|binance-btcupusdt|BTCUP|8.161
-BTCDOWNUSDT|binance-btcdownusdt|BTCDOWN|4.152
+BTCUPUSDT|binance-btcupusdt|BTCUP|0.979
+BTCDOWNUSDT|binance-btcdownusdt|BTCDOWN|0.697
 GXSUSDT|binance-gxsusdt|GXS|0.0001
 ARDRUSDT|binance-ardrusdt|ARDR|1.0E-5
-ERDBUSD|binance-erdbusd|ERD|1.0E-6
 LENDUSDT|binance-lendusdt|LEND|1.0E-5
 HBARBUSD|binance-hbarbusd|HBAR|1.0E-5
 MATICBUSD|binance-maticbusd|MATIC|1.0E-5
@@ -600,12 +596,12 @@ SNXBTC|binance-snxbtc|SNX|1.0E-7
 SNXBNB|binance-snxbnb|SNX|0.0001
 SNXBUSD|binance-snxbusd|SNX|0.001
 SNXUSDT|binance-snxusdt|SNX|0.001
-ETHUPUSDT|binance-ethupusdt|ETHUP|14.98
-ETHDOWNUSDT|binance-ethdownusdt|ETHDOWN|1.826
-ADAUPUSDT|binance-adaupusdt|ADAUP|4.429
-ADADOWNUSDT|binance-adadownusdt|ADADOWN|6.235
-LINKUPUSDT|binance-linkupusdt|LINKUP|14.247
-LINKDOWNUSDT|binance-linkdownusdt|LINKDOWN|0.306
+ETHUPUSDT|binance-ethupusdt|ETHUP|1.904
+ETHDOWNUSDT|binance-ethdownusdt|ETHDOWN|0.256
+ADAUPUSDT|binance-adaupusdt|ADAUP|0.401
+ADADOWNUSDT|binance-adadownusdt|ADADOWN|1.063
+LINKUPUSDT|binance-linkupusdt|LINKUP|1.419
+LINKDOWNUSDT|binance-linkdownusdt|LINKDOWN|0.043
 VTHOBNB|binance-vthobnb|VTHO|1.0E-8
 VTHOBUSD|binance-vthobusd|VTHO|1.0E-6
 VTHOUSDT|binance-vthousdt|VTHO|1.0E-6
@@ -638,10 +634,10 @@ AUDBUSD|binance-audbusd|AUD|1.0E-5
 FIOBNB|binance-fiobnb|FIO|1.0E-5
 FIOBTC|binance-fiobtc|FIO|1.0E-8
 FIOBUSD|binance-fiobusd|FIO|0.0001
-BNBUPUSDT|binance-bnbupusdt|BNBUP|6.234
-BNBDOWNUSDT|binance-bnbdownusdt|BNBDOWN|7.39
-XTZUPUSDT|binance-xtzupusdt|XTZUP|6.807
-XTZDOWNUSDT|binance-xtzdownusdt|XTZDOWN|3.503
+BNBUPUSDT|binance-bnbupusdt|BNBUP|1.097
+BNBDOWNUSDT|binance-bnbdownusdt|BNBDOWN|0.592
+XTZUPUSDT|binance-xtzupusdt|XTZUP|0.494
+XTZDOWNUSDT|binance-xtzdownusdt|XTZDOWN|0.753
 AVABNB|binance-avabnb|AVA|1.0E-5
 AVABTC|binance-avabtc|AVA|1.0E-7
 AVABUSD|binance-avabusd|AVA|0.0001
@@ -711,9 +707,60 @@ IDEXBUSD|binance-idexbusd|IDEX|1.0E-5
 RSRBNB|binance-rsrbnb|RSR|1.0E-6
 RSRBTC|binance-rsrbtc|RSR|1.0E-8
 RSRBUSD|binance-rsrbusd|RSR|1.0E-5
+RSRUSDT|binance-rsrusdt|RSR|1.0E-5
+PAXGBNB|binance-paxgbnb|PAXG|0.001
+PAXGBTC|binance-paxgbtc|PAXG|1.0E-5
+PAXGBUSD|binance-paxgbusd|PAXG|0.01
+PAXGUSDT|binance-paxgusdt|PAXG|0.01
+WNXMBNB|binance-wnxmbnb|WNXM|0.001
+WNXMBTC|binance-wnxmbtc|WNXM|1.0E-6
+WNXMBUSD|binance-wnxmbusd|WNXM|0.001
+WNXMUSDT|binance-wnxmusdt|WNXM|0.001
+TRBBNB|binance-trbbnb|TRB|0.001
+TRBBTC|binance-trbbtc|TRB|1.0E-6
+TRBBUSD|binance-trbbusd|TRB|0.001
+TRBUSDT|binance-trbusdt|TRB|0.001
+ETHNGN|binance-ethngn|ETH|1
+DOTBIDR|binance-dotbidr|DOT|1
+LINKAUD|binance-linkaud|LINK|0.001
+SXPAUD|binance-sxpaud|SXP|0.001
+BZRXBNB|binance-bzrxbnb|BZRX|1.0E-5
+BZRXBTC|binance-bzrxbtc|BZRX|1.0E-8
+BZRXBUSD|binance-bzrxbusd|BZRX|0.0001
+BZRXUSDT|binance-bzrxusdt|BZRX|0.0001
+WBTCBTC|binance-wbtcbtc|WBTC|1.0E-5
+WBTCETH|binance-wbtceth|WBTC|0.0001
+SUSHIBNB|binance-sushibnb|SUSHI|0.0001
+SUSHIBTC|binance-sushibtc|SUSHI|1.0E-7
+SUSHIBUSD|binance-sushibusd|SUSHI|0.001
+SUSHIUSDT|binance-sushiusdt|SUSHI|0.001
+YFIIBNB|binance-yfiibnb|YFII|0.01
+YFIIBTC|binance-yfiibtc|YFII|1.0E-5
+YFIIBUSD|binance-yfiibusd|YFII|0.01
+YFIIUSDT|binance-yfiiusdt|YFII|0.01
+KSMBNB|binance-ksmbnb|KSM|0.0001
+KSMBTC|binance-ksmbtc|KSM|1.0E-6
+KSMBUSD|binance-ksmbusd|KSM|0.001
+KSMUSDT|binance-ksmusdt|KSM|0.001
+EGLDBNB|binance-egldbnb|EGLD|0.0001
+EGLDBTC|binance-egldbtc|EGLD|1.0E-6
+EGLDBUSD|binance-egldbusd|EGLD|0.001
+EGLDUSDT|binance-egldusdt|EGLD|0.001
+DIABNB|binance-diabnb|DIA|0.0001
+DIABTC|binance-diabtc|DIA|1.0E-7
+DIABUSD|binance-diabusd|DIA|0.001
+DIAUSDT|binance-diausdt|DIA|0.001
+RUNEUSDT|binance-runeusdt|RUNE|0.0001
+FIOUSDT|binance-fiousdt|FIO|0.0001
+UMABTC|binance-umabtc|UMA|1.0E-6
+UMAUSDT|binance-umausdt|UMA|0.001
+EOSUPUSDT|binance-eosupusdt|EOSUP|0.973
+EOSDOWNUSDT|binance-eosdownusdt|EOSDOWN|1.026
+TRXUPUSDT|binance-trxupusdt|TRXUP|0.94
+TRXDOWNUSDT|binance-trxdownusdt|TRXDOWN|1.059
 
 
-## Binancefutures Supported Symbols in Executium (updated: 26th August 2020)
+## Binancefutures Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -760,7 +807,7 @@ SNXUSDT|binancefutures-snxusdt|SNX|0.001
 DOTUSDT|binancefutures-dotusdt|DOT|0.001
 
 
-## Bitfinex Supported Symbols in Executium (updated: 26th August 2020)
+## Bitfinex Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -939,7 +986,6 @@ WTCUSD|bitfinex-wtcusd|WTC|1.0E-5
 CSXUSD|bitfinex-csxusd|CSX|1.0E-5
 OMNUSD|bitfinex-omnusd|OMN|1.0E-5
 OMNBTC|bitfinex-omnbtc|OMN|1.0E-5
-INTUSD|bitfinex-intusd|INT|1.0E-5
 DRNUSD|bitfinex-drnusd|DRN|1.0E-5
 PNKUSD|bitfinex-pnkusd|PNK|1.0E-5
 PNKETH|bitfinex-pnketh|PNK|1.0E-5
@@ -1050,15 +1096,24 @@ FETUSDT|bitfinex-fetusdt|FET|1.0E-5
 DOTUSDT|bitfinex-dotusdt|DOT|1.0E-5
 LINKUSD|bitfinex-linkusd|LINK|1.0E-5
 LINKUSDT|bitfinex-linkusdt|LINK|1.0E-5
+COMPUSD|bitfinex-compusd|COMP|1.0E-5
+COMPUSDT|bitfinex-compusdt|COMP|1.0E-5
+KSMUSD|bitfinex-ksmusd|KSM|1.0E-5
+KSMUSDT|bitfinex-ksmusdt|KSM|1.0E-5
+EGLDUSD|bitfinex-egldusd|EGLD|1.0E-5
+EGLDUSDT|bitfinex-egldusdt|EGLD|1.0E-5
 BTCF0USTF0|bitfinex-btcf0ustf0|BTCF0|1.0E-5
 ETHF0USTF0|bitfinex-ethf0ustf0|ETHF0|1.0E-5
 XAUTF0USTF0|bitfinex-xautf0ustf0|XAUTF0|1.0E-5
 BTCDOMF0USTF0|bitfinex-btcdomf0ustf0|BTCDOMF0|1.0E-5
 TESTBTCF0TESTUSDTF0|bitfinex-testbtcf0testusdtf0|TESTBTCF0|1.0E-5
 AMPF0USTF0|bitfinex-ampf0ustf0|AMPF0|1.0E-5
+EURF0USTF0|bitfinex-eurf0ustf0|EURF0|1.0E-5
+GBPF0USTF0|bitfinex-gbpf0ustf0|GBPF0|1.0E-5
+JPYF0USTF0|bitfinex-jpyf0ustf0|JPYF0|1.0E-5
 
 
-## Bitflyer Supported Symbols in Executium (updated: 26th August 2020)
+## Bitflyer Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1068,13 +1123,13 @@ ETHBTC|bitflyer-ethbtc|ETH|N/A
 BCHBTC|bitflyer-bchbtc|BCH|N/A
 ETHJPY|bitflyer-ethjpy|ETH|N/A
 BTCJPY25SEP2020|bitflyer-btcjpy25sep2020|BTC|N/A
-BTCJPY28AUG2020|bitflyer-btcjpy28aug2020|BTC|N/A
-BTCJPY04SEP2020|bitflyer-btcjpy04sep2020|BTC|N/A
+BTCJPY11SEP2020|bitflyer-btcjpy11sep2020|BTC|N/A
+BTCJPY18SEP2020|bitflyer-btcjpy18sep2020|BTC|N/A
 BTCUSD|bitflyer-btcusd|BTC|N/A
 BTCEUR|bitflyer-btceur|BTC|N/A
 
 
-## Bithumb Supported Symbols in Executium (updated: 26th August 2020)
+## Bithumb Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1179,14 +1234,17 @@ HYCKRW|bithumb-hyckrw|HYC|N/A
 VSYSKRW|bithumb-vsyskrw|VSYS|N/A
 IPXKRW|bithumb-ipxkrw|IPX|N/A
 WICCKRW|bithumb-wicckrw|WICC|N/A
+ONTKRW|bithumb-ontkrw|ONT|N/A
 LUNAKRW|bithumb-lunakrw|LUNA|N/A
 AIONKRW|bithumb-aionkrw|AION|N/A
 METAKRW|bithumb-metakrw|META|N/A
+ONGKRW|bithumb-ongkrw|ONG|N/A
 ALGOKRW|bithumb-algokrw|ALGO|N/A
 XTZKRW|bithumb-xtzkrw|XTZ|N/A
+MLKKRW|bithumb-mlkkrw|MLK|N/A
 
 
-## Bitmart Supported Symbols in Executium (updated: 26th August 2020)
+## Bitmart Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1197,7 +1255,7 @@ BTCUSDC|bitmart-btcusdc|BTC|N/A
 BTCPAX|bitmart-btcpax|BTC|N/A
 
 
-## Bitmex Supported Symbols in Executium (updated: 26th August 2020)
+## Bitmex Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1218,7 +1276,7 @@ LTCUSD|bitmex-ltcusd|LTC|0.01
 LTCU20|bitmex-ltcu20|LTC|5.0E-6
 
 
-## Bitstamp Supported Symbols in Executium (updated: 26th August 2020)
+## Bitstamp Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1256,7 +1314,7 @@ XLMEUR|bitstamp-xlmeur|xlm|1.0E-5
 XLMGBP|bitstamp-xlmgbp|xlm|1.0E-5
 
 
-## Bittrex Supported Symbols in Executium (updated: 26th August 2020)
+## Bittrex Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1427,9 +1485,12 @@ ETHUSD|bittrex-ethusd|ETH|0.001
 ETHUSDT|bittrex-ethusdt|ETH|1.0E-8
 EXCLBTC|bittrex-exclbtc|EXCL|1.0E-8
 EXPBTC|bittrex-expbtc|EXP|1.0E-8
+FCT2BTC|bittrex-fct2btc|FCT2|1.0E-8
 FCTBTC|bittrex-fctbtc|FCT|1.0E-8
 FLETABTC|bittrex-fletabtc|FLETA|1.0E-8
 FLOBTC|bittrex-flobtc|FLO|1.0E-8
+FMEBTC|bittrex-fmebtc|FME|1.0E-8
+FMEUSDT|bittrex-fmeusdt|FME|1.0E-5
 FNBBTC|bittrex-fnbbtc|FNB|1.0E-8
 FORBTC|bittrex-forbtc|FOR|1.0E-8
 FRSPBTC|bittrex-frspbtc|FRSP|1.0E-8
@@ -1478,6 +1539,8 @@ IGNISBTC|bittrex-ignisbtc|IGNIS|1.0E-8
 IHTBTC|bittrex-ihtbtc|IHT|1.0E-8
 INCNTBTC|bittrex-incntbtc|INCNT|1.0E-8
 INSTARBTC|bittrex-instarbtc|INSTAR|1.0E-8
+INXBTC|bittrex-inxbtc|INX|1.0E-8
+INXUSDT|bittrex-inxusdt|INX|1.0E-5
 IOCBTC|bittrex-iocbtc|IOC|1.0E-8
 IONBTC|bittrex-ionbtc|ION|1.0E-8
 IOSTBTC|bittrex-iostbtc|IOST|1.0E-8
@@ -1490,6 +1553,10 @@ KDABTC|bittrex-kdabtc|KDA|1.0E-8
 KDAGBTC|bittrex-kdagbtc|KDAG|1.0E-8
 KDAGUSDT|bittrex-kdagusdt|KDAG|1.0E-5
 KDAUSDT|bittrex-kdausdt|KDA|1.0E-5
+KLAYBTC|bittrex-klaybtc|KLAY|1.0E-8
+KLAYUSDT|bittrex-klayusdt|KLAY|1.0E-5
+KLVBTC|bittrex-klvbtc|KLV|1.0E-8
+KLVUSDT|bittrex-klvusdt|KLV|1.0E-5
 KMDBTC|bittrex-kmdbtc|KMD|1.0E-8
 KMDUSD|bittrex-kmdusd|KMD|1.0E-5
 KSMBTC|bittrex-ksmbtc|KSM|1.0E-8
@@ -1503,6 +1570,8 @@ LINKBTC|bittrex-linkbtc|LINK|1.0E-8
 LINKETH|bittrex-linketh|LINK|1.0E-8
 LINKUSD|bittrex-linkusd|LINK|1.0E-8
 LINKUSDT|bittrex-linkusdt|LINK|1.0E-8
+LOKIBTC|bittrex-lokibtc|LOKI|1.0E-8
+LOKIUSDT|bittrex-lokiusdt|LOKI|1.0E-5
 LOOMBTC|bittrex-loombtc|LOOM|1.0E-8
 LOONBTC|bittrex-loonbtc|LOON|1.0E-8
 LOONUSDT|bittrex-loonusdt|LOON|1.0E-5
@@ -1519,6 +1588,8 @@ LUNAUSDT|bittrex-lunausdt|LUNA|1.0E-5
 MAIDBTC|bittrex-maidbtc|MAID|1.0E-8
 MANABTC|bittrex-manabtc|MANA|1.0E-8
 MANAETH|bittrex-manaeth|MANA|1.0E-8
+MATICBTC|bittrex-maticbtc|MATIC|1.0E-8
+MATICUSDT|bittrex-maticusdt|MATIC|1.0E-5
 MCOBTC|bittrex-mcobtc|MCO|1.0E-8
 MCOETH|bittrex-mcoeth|MCO|1.0E-8
 MDTBTC|bittrex-mdtbtc|MDT|1.0E-8
@@ -1533,6 +1604,9 @@ METETH|bittrex-meteth|MET|1.0E-8
 MFABTC|bittrex-mfabtc|MFA|1.0E-8
 MFAUSDT|bittrex-mfausdt|MFA|1.0E-5
 MFTBTC|bittrex-mftbtc|MFT|1.0E-8
+MKRBTC|bittrex-mkrbtc|MKR|1.0E-8
+MKRETH|bittrex-mkreth|MKR|1.0E-8
+MKRUSDT|bittrex-mkrusdt|MKR|0.001
 MOCBTC|bittrex-mocbtc|MOC|1.0E-8
 MOFBTC|bittrex-mofbtc|MOF|1.0E-8
 MOFUSDT|bittrex-mofusdt|MOF|1.0E-8
@@ -1615,6 +1689,8 @@ SCBTC|bittrex-scbtc|SC|1.0E-8
 SCETH|bittrex-sceth|SC|1.0E-8
 SCUSD|bittrex-scusd|SC|1.0E-5
 SCUSDT|bittrex-scusdt|SC|1.0E-8
+SDTBTC|bittrex-sdtbtc|SDT|1.0E-8
+SDTUSDT|bittrex-sdtusdt|SDT|0.001
 SENSOBTC|bittrex-sensobtc|SENSO|1.0E-8
 SENSOETH|bittrex-sensoeth|SENSO|1.0E-8
 SIBBTC|bittrex-sibbtc|SIB|1.0E-8
@@ -1659,6 +1735,8 @@ TRXETH|bittrex-trxeth|TRX|1.0E-8
 TRXEUR|bittrex-trxeur|TRX|1.0E-5
 TRXUSD|bittrex-trxusd|TRX|1.0E-5
 TRXUSDT|bittrex-trxusdt|TRX|1.0E-8
+TRYBBTC|bittrex-trybbtc|TRYB|1.0E-8
+TRYBUSDT|bittrex-trybusdt|TRYB|1.0E-5
 TSHPBTC|bittrex-tshpbtc|TSHP|1.0E-8
 TTCBTC|bittrex-ttcbtc|TTC|1.0E-8
 TUBEBTC|bittrex-tubebtc|TUBE|1.0E-8
@@ -1691,6 +1769,8 @@ USDSBTC|bittrex-usdsbtc|USDS|1.0E-8
 USDSUSD|bittrex-usdsusd|USDS|1.0E-5
 USDTEUR|bittrex-usdteur|USDT|0.001
 USDTUSD|bittrex-usdtusd|USDT|1.0E-5
+USTBTC|bittrex-ustbtc|UST|1.0E-8
+USTUSDT|bittrex-ustusdt|UST|0.0001
 UTIBTC|bittrex-utibtc|UTI|1.0E-8
 UTKBTC|bittrex-utkbtc|UTK|1.0E-8
 VANYBTC|bittrex-vanybtc|VANY|1.0E-8
@@ -1768,7 +1848,7 @@ ZRXUSD|bittrex-zrxusd|ZRX|1.0E-5
 ZRXUSDT|bittrex-zrxusdt|ZRX|1.0E-8
 
 
-## Bybit Supported Symbols in Executium (updated: 26th August 2020)
+## Bybit Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1779,7 +1859,7 @@ XRPUSD|bybit-xrpusd|XRP|0.0001
 BTCUSDT|bybit-btcusdt|BTC|0.5
 
 
-## Coinbase Supported Symbols in Executium (updated: 26th August 2020)
+## Coinbase Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -1954,102 +2034,110 @@ BTCZMW|coinbase-btczmw|BTC|N/A
 BTCZWL|coinbase-btczwl|BTC|N/A
 
 
-## Coinbasepro Supported Symbols in Executium (updated: 26th August 2020)
+## Coinbasepro Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
-BTCUSD|coinbasepro-btcusd|BTC|0.01
+ETHEUR|coinbasepro-etheur|ETH|0.01
+ETCBTC|coinbasepro-etcbtc|ETC|1.0E-6
 ZECBTC|coinbasepro-zecbtc|ZEC|1.0E-6
-LTCEUR|coinbasepro-ltceur|LTC|0.01
-KNCBTC|coinbasepro-kncbtc|KNC|1.0E-8
-ETHUSD|coinbasepro-ethusd|ETH|0.01
-BCHGBP|coinbasepro-bchgbp|BCH|0.01
-XTZBTC|coinbasepro-xtzbtc|XTZ|1.0E-8
-ZRXEUR|coinbasepro-zrxeur|ZRX|1.0E-6
-LTCGBP|coinbasepro-ltcgbp|LTC|0.01
-ETHBTC|coinbasepro-ethbtc|ETH|1.0E-5
-XRPUSD|coinbasepro-xrpusd|XRP|0.0001
-LINKUSD|coinbasepro-linkusd|LINK|1.0E-5
-ETCUSD|coinbasepro-etcusd|ETC|0.001
-EOSBTC|coinbasepro-eosbtc|EOS|1.0E-6
-COMPBTC|coinbasepro-compbtc|COMP|1.0E-6
-EOSUSD|coinbasepro-eosusd|EOS|0.001
-XTZUSD|coinbasepro-xtzusd|XTZ|0.0001
-XLMEUR|coinbasepro-xlmeur|XLM|1.0E-6
-BANDBTC|coinbasepro-bandbtc|BAND|1.0E-8
-ZRXUSD|coinbasepro-zrxusd|ZRX|1.0E-6
-OMGGBP|coinbasepro-omggbp|OMG|0.0001
-XLMUSD|coinbasepro-xlmusd|XLM|1.0E-6
-BATETH|coinbasepro-bateth|BAT|1.0E-8
-ETHDAI|coinbasepro-ethdai|ETH|0.01
-CVCUSDC|coinbasepro-cvcusdc|CVC|1.0E-6
-XLMBTC|coinbasepro-xlmbtc|XLM|1.0E-8
-ATOMUSD|coinbasepro-atomusd|ATOM|0.001
-NMRUSD|coinbasepro-nmrusd|NMR|0.0001
-REPBTC|coinbasepro-repbtc|REP|1.0E-6
-LINKEUR|coinbasepro-linkeur|LINK|1.0E-5
-XTZGBP|coinbasepro-xtzgbp|XTZ|1.0E-5
-ETCEUR|coinbasepro-etceur|ETC|0.001
-LTCBTC|coinbasepro-ltcbtc|LTC|1.0E-6
-BANDEUR|coinbasepro-bandeur|BAND|0.0001
-MKRBTC|coinbasepro-mkrbtc|MKR|1.0E-5
-NMRBTC|coinbasepro-nmrbtc|NMR|1.0E-8
-LINKGBP|coinbasepro-linkgbp|LINK|1.0E-5
-ATOMBTC|coinbasepro-atombtc|ATOM|1.0E-6
-EOSEUR|coinbasepro-eoseur|EOS|0.001
-ALGOGBP|coinbasepro-algogbp|ALGO|0.0001
-LINKETH|coinbasepro-linketh|LINK|1.0E-8
-ZRXBTC|coinbasepro-zrxbtc|ZRX|1.0E-8
-NMREUR|coinbasepro-nmreur|NMR|0.0001
-KNCUSD|coinbasepro-kncusd|KNC|0.0001
-XRPGBP|coinbasepro-xrpgbp|XRP|0.0001
-ALGOUSD|coinbasepro-algousd|ALGO|0.0001
-BCHUSD|coinbasepro-bchusd|BCH|0.01
 OXTUSD|coinbasepro-oxtusd|OXT|0.0001
-XRPBTC|coinbasepro-xrpbtc|XRP|1.0E-8
-BTCGBP|coinbasepro-btcgbp|BTC|0.01
-ALGOEUR|coinbasepro-algoeur|ALGO|0.0001
+CGLDGBP|coinbasepro-cgldgbp|CGLD|0.0001
+UMABTC|coinbasepro-umabtc|UMA|1.0E-8
+LTCUSD|coinbasepro-ltcusd|LTC|0.01
+BANDGBP|coinbasepro-bandgbp|BAND|0.0001
+XLMBTC|coinbasepro-xlmbtc|XLM|1.0E-8
+XTZGBP|coinbasepro-xtzgbp|XTZ|1.0E-5
+BATETH|coinbasepro-bateth|BAT|1.0E-8
+REPBTC|coinbasepro-repbtc|REP|1.0E-6
+BTCUSD|coinbasepro-btcusd|BTC|0.01
 XRPEUR|coinbasepro-xrpeur|XRP|0.0001
-OMGEUR|coinbasepro-omgeur|OMG|0.0001
-ETCGBP|coinbasepro-etcgbp|ETC|0.001
-ETHGBP|coinbasepro-ethgbp|ETH|0.01
+EOSUSD|coinbasepro-eosusd|EOS|0.001
+UMAUSD|coinbasepro-umausd|UMA|0.001
+CGLDUSD|coinbasepro-cgldusd|CGLD|0.0001
+XRPUSD|coinbasepro-xrpusd|XRP|0.0001
+ETCUSD|coinbasepro-etcusd|ETC|0.001
+BTCEUR|coinbasepro-btceur|BTC|0.01
+ETCEUR|coinbasepro-etceur|ETC|0.001
+COMPUSD|coinbasepro-compusd|COMP|0.01
+EOSEUR|coinbasepro-eoseur|EOS|0.001
+XLMUSD|coinbasepro-xlmusd|XLM|1.0E-6
+REPUSD|coinbasepro-repusd|REP|0.01
+LTCBTC|coinbasepro-ltcbtc|LTC|1.0E-6
+BCHGBP|coinbasepro-bchgbp|BCH|0.01
+CVCUSDC|coinbasepro-cvcusdc|CVC|1.0E-6
+LTCGBP|coinbasepro-ltcgbp|LTC|0.01
+XRPBTC|coinbasepro-xrpbtc|XRP|1.0E-8
+LINKEUR|coinbasepro-linkeur|LINK|1.0E-5
+ALGOEUR|coinbasepro-algoeur|ALGO|0.0001
+BANDUSD|coinbasepro-bandusd|BAND|0.0001
 ETHUSDC|coinbasepro-ethusdc|ETH|0.01
 ZECUSDC|coinbasepro-zecusdc|ZEC|0.01
-BATUSDC|coinbasepro-batusdc|BAT|1.0E-6
-BANDGBP|coinbasepro-bandgbp|BAND|0.0001
-LOOMUSDC|coinbasepro-loomusdc|LOOM|1.0E-6
-COMPUSD|coinbasepro-compusd|COMP|0.01
-OMGBTC|coinbasepro-omgbtc|OMG|1.0E-8
-DAIUSDC|coinbasepro-daiusdc|DAI|1.0E-6
-OMGUSD|coinbasepro-omgusd|OMG|0.0001
-BCHEUR|coinbasepro-bcheur|BCH|0.01
 BCHBTC|coinbasepro-bchbtc|BCH|1.0E-5
-MANAUSDC|coinbasepro-manausdc|MANA|1.0E-6
-ETCBTC|coinbasepro-etcbtc|ETC|1.0E-6
-DAIUSD|coinbasepro-daiusd|DAI|1.0E-6
-DNTUSDC|coinbasepro-dntusdc|DNT|1.0E-6
+LINKUSD|coinbasepro-linkusd|LINK|1.0E-5
+LINKGBP|coinbasepro-linkgbp|LINK|1.0E-5
+ALGOGBP|coinbasepro-algogbp|ALGO|0.0001
+ATOMUSD|coinbasepro-atomusd|ATOM|0.001
 XTZEUR|coinbasepro-xtzeur|XTZ|1.0E-5
-NMRGBP|coinbasepro-nmrgbp|NMR|0.0001
-BANDUSD|coinbasepro-bandusd|BAND|0.0001
-REPUSD|coinbasepro-repusd|REP|0.01
-DASHBTC|coinbasepro-dashbtc|DASH|1.0E-8
-ETHEUR|coinbasepro-etheur|ETH|0.01
-LTCUSD|coinbasepro-ltcusd|LTC|0.01
-MKRUSD|coinbasepro-mkrusd|MKR|0.0001
-GNTUSDC|coinbasepro-gntusdc|GNT|1.0E-6
-DASHUSD|coinbasepro-dashusd|DASH|0.001
+BCHEUR|coinbasepro-bcheur|BCH|0.01
 BTCUSDC|coinbasepro-btcusdc|BTC|0.01
-BTCEUR|coinbasepro-btceur|BTC|0.01
+BANDBTC|coinbasepro-bandbtc|BAND|1.0E-8
+BTCGBP|coinbasepro-btcgbp|BTC|0.01
+XLMEUR|coinbasepro-xlmeur|XLM|1.0E-6
+OMGGBP|coinbasepro-omggbp|OMG|0.0001
+KNCUSD|coinbasepro-kncusd|KNC|0.0001
+CGLDEUR|coinbasepro-cgldeur|CGLD|0.0001
+DASHBTC|coinbasepro-dashbtc|DASH|1.0E-8
+DAIUSD|coinbasepro-daiusd|DAI|1.0E-6
+LTCEUR|coinbasepro-ltceur|LTC|0.01
+MKRUSD|coinbasepro-mkrusd|MKR|0.0001
+UMAGBP|coinbasepro-umagbp|UMA|0.001
+KNCBTC|coinbasepro-kncbtc|KNC|1.0E-8
+XTZUSD|coinbasepro-xtzusd|XTZ|0.0001
+GNTUSDC|coinbasepro-gntusdc|GNT|1.0E-6
+XRPGBP|coinbasepro-xrpgbp|XRP|0.0001
+NMRBTC|coinbasepro-nmrbtc|NMR|1.0E-8
+ZRXBTC|coinbasepro-zrxbtc|ZRX|1.0E-8
+NMREUR|coinbasepro-nmreur|NMR|0.0001
+EOSBTC|coinbasepro-eosbtc|EOS|1.0E-6
+LINKETH|coinbasepro-linketh|LINK|1.0E-8
+ETHUSD|coinbasepro-ethusd|ETH|0.01
+MKRBTC|coinbasepro-mkrbtc|MKR|1.0E-5
+ETHBTC|coinbasepro-ethbtc|ETH|1.0E-5
+MANAUSDC|coinbasepro-manausdc|MANA|1.0E-6
+ATOMBTC|coinbasepro-atombtc|ATOM|1.0E-6
+ZRXEUR|coinbasepro-zrxeur|ZRX|1.0E-6
+BANDEUR|coinbasepro-bandeur|BAND|0.0001
+CGLDBTC|coinbasepro-cgldbtc|CGLD|1.0E-8
+OMGBTC|coinbasepro-omgbtc|OMG|1.0E-8
+BATUSDC|coinbasepro-batusdc|BAT|1.0E-6
+XTZBTC|coinbasepro-xtzbtc|XTZ|1.0E-8
+BCHUSD|coinbasepro-bchusd|BCH|0.01
+DNTUSDC|coinbasepro-dntusdc|DNT|1.0E-6
+ZRXUSD|coinbasepro-zrxusd|ZRX|1.0E-6
+DAIUSDC|coinbasepro-daiusdc|DAI|1.0E-6
+ETHDAI|coinbasepro-ethdai|ETH|0.01
+ETCGBP|coinbasepro-etcgbp|ETC|0.001
+ETHGBP|coinbasepro-ethgbp|ETH|0.01
+LOOMUSDC|coinbasepro-loomusdc|LOOM|1.0E-6
+UMAEUR|coinbasepro-umaeur|UMA|0.001
+COMPBTC|coinbasepro-compbtc|COMP|1.0E-6
+OMGEUR|coinbasepro-omgeur|OMG|0.0001
+DASHUSD|coinbasepro-dashusd|DASH|0.001
+NMRUSD|coinbasepro-nmrusd|NMR|0.0001
+ALGOUSD|coinbasepro-algousd|ALGO|0.0001
+NMRGBP|coinbasepro-nmrgbp|NMR|0.0001
+OMGUSD|coinbasepro-omgusd|OMG|0.0001
 
 
-## Coincheck Supported Symbols in Executium (updated: 26th August 2020)
+## Coincheck Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
 BTCJPY|coincheck-btcjpy|btc|N/A
 
 
-## Deribit Supported Symbols in Executium (updated: 26th August 2020)
+## Deribit Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -2063,7 +2151,7 @@ BTC26MAR21|deribit-btc26mar21|BTC|0.5
 BTCPERPETUAL|deribit-btcperpetual|BTC|0.5
 
 
-## Ftx Supported Symbols in Executium (updated: 26th August 2020)
+## Ftx Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -2109,6 +2197,10 @@ COMPPERP|ftx-compperp|COMP|0.25
 COMP0925|ftx-comp0925|COMP|0.25
 COMPUSD|ftx-compusd|COMP|0.025
 COMPUSDT|ftx-compusdt|COMP|0.025
+CREAMPERP|ftx-creamperp|CREAM|0.05
+CREAM0925|ftx-cream0925|CREAM|0.05
+CREAMUSD|ftx-creamusd|CREAM|0.05
+CREAMUSDT|ftx-creamusdt|CREAM|0.05
 CUSDTPERP|ftx-cusdtperp|CUSDT|2.5E-6
 CUSDT0925|ftx-cusdt0925|CUSDT|2.5E-6
 CUSDTUSD|ftx-cusdtusd|CUSDT|2.5E-6
@@ -2145,6 +2237,10 @@ KNCPERP|ftx-kncperp|KNC|0.0001
 KNC0925|ftx-knc0925|KNC|0.0001
 KNCUSD|ftx-kncusd|KNC|0.0001
 KNCUSDT|ftx-kncusdt|KNC|0.0001
+LENDPERP|ftx-lendperp|LEND|0.0001
+LEND0925|ftx-lend0925|LEND|0.0001
+LENDUSD|ftx-lendusd|LEND|0.0001
+LENDUSDT|ftx-lendusdt|LEND|0.0001
 LEOPERP|ftx-leoperp|LEO|0.0001
 LEO0925|ftx-leo0925|LEO|0.0001
 LINKPERP|ftx-linkperp|LINK|0.0005
@@ -2167,7 +2263,7 @@ MTAPERP|ftx-mtaperp|MTA|0.0005
 MTA0925|ftx-mta0925|MTA|0.0005
 MTAUSD|ftx-mtausd|MTA|0.0005
 MTAUSDT|ftx-mtausdt|MTA|0.0005
-OIL1000831|ftx-oil1000831|OIL100|0.01
+OIL1000928|ftx-oil1000928|OIL100|0.01
 OKBPERP|ftx-okbperp|OKB|0.0005
 OKB0925|ftx-okb0925|OKB|0.0005
 PAXGPERP|ftx-paxgperp|PAXG|0.1
@@ -2195,6 +2291,10 @@ SOLUSD|ftx-solusd|SOL|0.0025
 SOLUSDT|ftx-solusdt|SOL|0.0025
 SRMUSD|ftx-srmusd|SRM|0.001
 SRMUSDT|ftx-srmusdt|SRM|0.001
+SUSHIPERP|ftx-sushiperp|SUSHI|0.005
+SUSHI0925|ftx-sushi0925|SUSHI|0.005
+SUSHIUSD|ftx-sushiusd|SUSHI|0.005
+SUSHIUSDT|ftx-sushiusdt|SUSHI|0.005
 SXPPERP|ftx-sxpperp|SXP|0.0005
 SXP0925|ftx-sxp0925|SXP|0.0005
 SXPUSD|ftx-sxpusd|SXP|0.0005
@@ -2233,103 +2333,105 @@ XTZPERP|ftx-xtzperp|XTZ|0.0001
 XTZ0925|ftx-xtz0925|XTZ|0.0001
 YFIUSD|ftx-yfiusd|YFI|5
 YFIUSDT|ftx-yfiusdt|YFI|5
-ADABEARUSD|ftx-adabearusd|ADABEAR|0.0005
-ADABULLUSD|ftx-adabullusd|ADABULL|1
+ZECPERP|ftx-zecperp|ZEC|0.01
+ZEC0925|ftx-zec0925|ZEC|0.01
+ADABEARUSD|ftx-adabearusd|ADABEAR|0.00025
+ADABULLUSD|ftx-adabullusd|ADABULL|0.5
 ADAHALFUSD|ftx-adahalfusd|ADAHALF|0.5
 ADAHEDGEUSD|ftx-adahedgeusd|ADAHEDGE|0.1
 ALGOBEARUSD|ftx-algobearusd|ALGOBEAR|1.0E-5
-ALGOBULLUSD|ftx-algobullusd|ALGOBULL|5.0E-6
+ALGOBULLUSD|ftx-algobullusd|ALGOBULL|1.0E-6
 ALGOHALFUSD|ftx-algohalfusd|ALGOHALF|0.5
-ALGOHEDGEUSD|ftx-algohedgeusd|ALGOHEDGE|0.1
+ALGOHEDGEUSD|ftx-algohedgeusd|ALGOHEDGE|0.25
 ALTBEARUSD|ftx-altbearusd|ALTBEAR|0.05
 ALTBULLUSD|ftx-altbullusd|ALTBULL|0.01
 ALTHALFUSD|ftx-althalfusd|ALTHALF|0.5
 ALTHEDGEUSD|ftx-althedgeusd|ALTHEDGE|0.5
-ATOMBEARUSD|ftx-atombearusd|ATOMBEAR|0.0005
-ATOMBULLUSD|ftx-atombullusd|ATOMBULL|0.1
+ATOMBEARUSD|ftx-atombearusd|ATOMBEAR|0.001
+ATOMBULLUSD|ftx-atombullusd|ATOMBULL|0.025
 ATOMHALFUSD|ftx-atomhalfusd|ATOMHALF|0.5
 ATOMHEDGEUSD|ftx-atomhedgeusd|ATOMHEDGE|0.1
-BALBEARUSD|ftx-balbearusd|BALBEAR|0.01
-BALBEARUSDT|ftx-balbearusdt|BALBEAR|0.01
-BALBULLUSD|ftx-balbullusd|BALBULL|0.5
-BALBULLUSDT|ftx-balbullusdt|BALBULL|0.5
+BALBEARUSD|ftx-balbearusd|BALBEAR|0.005
+BALBEARUSDT|ftx-balbearusdt|BALBEAR|0.005
+BALBULLUSD|ftx-balbullusd|BALBULL|0.25
+BALBULLUSDT|ftx-balbullusdt|BALBULL|0.25
 BALHALFUSD|ftx-balhalfusd|BALHALF|0.5
 BALHEDGEUSD|ftx-balhedgeusd|BALHEDGE|0.1
-BCHBEARUSD|ftx-bchbearusd|BCHBEAR|0.005
-BCHBEARUSDT|ftx-bchbearusdt|BCHBEAR|0.005
-BCHBULLUSD|ftx-bchbullusd|BCHBULL|0.0025
-BCHBULLUSDT|ftx-bchbullusdt|BCHBULL|0.0025
-BCHHALFUSD|ftx-bchhalfusd|BCHHALF|0.5
-BCHHEDGEUSD|ftx-bchhedgeusd|BCHHEDGE|0.25
+BCHBEARUSD|ftx-bchbearusd|BCHBEAR|0.01
+BCHBEARUSDT|ftx-bchbearusdt|BCHBEAR|0.01
+BCHBULLUSD|ftx-bchbullusd|BCHBULL|0.001
+BCHBULLUSDT|ftx-bchbullusdt|BCHBULL|0.001
+BCHHALFUSD|ftx-bchhalfusd|BCHHALF|0.25
+BCHHEDGEUSD|ftx-bchhedgeusd|BCHHEDGE|0.5
 BEARUSD|ftx-bearusd|BEAR|0.00025
 BEARUSDT|ftx-bearusdt|BEAR|0.00025
 BEARSHITUSD|ftx-bearshitusd|BEARSHIT|0.0025
-BNBBEARUSD|ftx-bnbbearusd|BNBBEAR|0.001
-BNBBEARUSDT|ftx-bnbbearusdt|BNBBEAR|0.001
+BNBBEARUSD|ftx-bnbbearusd|BNBBEAR|0.0005
+BNBBEARUSDT|ftx-bnbbearusdt|BNBBEAR|0.0005
 BNBBULLUSD|ftx-bnbbullusd|BNBBULL|0.05
 BNBBULLUSDT|ftx-bnbbullusdt|BNBBULL|0.05
 BNBHALFUSD|ftx-bnbhalfusd|BNBHALF|0.5
 BNBHEDGEUSD|ftx-bnbhedgeusd|BNBHEDGE|0.1
 BSVBEARUSD|ftx-bsvbearusd|BSVBEAR|0.0001
 BSVBEARUSDT|ftx-bsvbearusdt|BSVBEAR|0.0001
-BSVBULLUSD|ftx-bsvbullusd|BSVBULL|0.00025
-BSVBULLUSDT|ftx-bsvbullusdt|BSVBULL|0.00025
+BSVBULLUSD|ftx-bsvbullusd|BSVBULL|0.0001
+BSVBULLUSDT|ftx-bsvbullusdt|BSVBULL|0.0001
 BSVHALFUSD|ftx-bsvhalfusd|BSVHALF|0.25
 BSVHEDGEUSD|ftx-bsvhedgeusd|BSVHEDGE|0.1
 BTMXBEARUSD|ftx-btmxbearusd|BTMXBEAR|0.001
 BTMXBEARUSDT|ftx-btmxbearusdt|BTMXBEAR|0.001
-BTMXBULLUSD|ftx-btmxbullusd|BTMXBULL|0.01
-BTMXBULLUSDT|ftx-btmxbullusdt|BTMXBULL|0.01
+BTMXBULLUSD|ftx-btmxbullusd|BTMXBULL|0.005
+BTMXBULLUSDT|ftx-btmxbullusdt|BTMXBULL|0.005
 BTMXHALFUSD|ftx-btmxhalfusd|BTMXHALF|0.5
 BTMXHEDGEUSD|ftx-btmxhedgeusd|BTMXHEDGE|0.25
 BULLUSD|ftx-bullusd|BULL|1
 BULLUSDT|ftx-bullusdt|BULL|1
-BULLSHITUSD|ftx-bullshitusd|BULLSHIT|0.5
+BULLSHITUSD|ftx-bullshitusd|BULLSHIT|0.25
 BVOLBTC|ftx-bvolbtc|BVOL|5.0E-5
 BVOLUSD|ftx-bvolusd|BVOL|0.25
 BVOLUSDT|ftx-bvolusdt|BVOL|0.25
-COMPBEARUSD|ftx-compbearusd|COMPBEAR|0.01
-COMPBEARUSDT|ftx-compbearusdt|COMPBEAR|0.01
+COMPBEARUSD|ftx-compbearusd|COMPBEAR|0.005
+COMPBEARUSDT|ftx-compbearusdt|COMPBEAR|0.005
 COMPBULLUSD|ftx-compbullusd|COMPBULL|1
 COMPBULLUSDT|ftx-compbullusdt|COMPBULL|1
 COMPHALFUSD|ftx-comphalfusd|COMPHALF|0.5
-COMPHEDGEUSD|ftx-comphedgeusd|COMPHEDGE|0.25
+COMPHEDGEUSD|ftx-comphedgeusd|COMPHEDGE|0.1
 CUSDTBEARUSD|ftx-cusdtbearusd|CUSDTBEAR|1
 CUSDTBEARUSDT|ftx-cusdtbearusdt|CUSDTBEAR|1
 CUSDTBULLUSD|ftx-cusdtbullusd|CUSDTBULL|2.5
 CUSDTBULLUSDT|ftx-cusdtbullusdt|CUSDTBULL|2.5
 CUSDTHALFUSD|ftx-cusdthalfusd|CUSDTHALF|0.25
 CUSDTHEDGEUSD|ftx-cusdthedgeusd|CUSDTHEDGE|0.5
-DEFIBEARUSD|ftx-defibearusd|DEFIBEAR|0.1
-DEFIBEARUSDT|ftx-defibearusdt|DEFIBEAR|0.1
-DEFIBULLUSD|ftx-defibullusd|DEFIBULL|10
-DEFIBULLUSDT|ftx-defibullusdt|DEFIBULL|10
+DEFIBEARUSD|ftx-defibearusd|DEFIBEAR|0.05
+DEFIBEARUSDT|ftx-defibearusdt|DEFIBEAR|0.05
+DEFIBULLUSD|ftx-defibullusd|DEFIBULL|5
+DEFIBULLUSDT|ftx-defibullusdt|DEFIBULL|5
 DEFIHALFUSD|ftx-defihalfusd|DEFIHALF|0.5
 DEFIHEDGEUSD|ftx-defihedgeusd|DEFIHEDGE|0.25
 DMGBEARUSD|ftx-dmgbearusd|DMGBEAR|1
-DMGBULLUSD|ftx-dmgbullusd|DMGBULL|0.05
+DMGBULLUSD|ftx-dmgbullusd|DMGBULL|0.005
 DOGEBEARUSD|ftx-dogebearusd|DOGEBEAR|0.05
-DOGEBULLUSD|ftx-dogebullusd|DOGEBULL|0.25
+DOGEBULLUSD|ftx-dogebullusd|DOGEBULL|0.1
 DOGEHALFUSD|ftx-dogehalfusd|DOGEHALF|0.5
 DOGEHEDGEUSD|ftx-dogehedgeusd|DOGEHEDGE|0.25
-DRGNBEARUSD|ftx-drgnbearusd|DRGNBEAR|0.005
-DRGNBULLUSD|ftx-drgnbullusd|DRGNBULL|0.5
+DRGNBEARUSD|ftx-drgnbearusd|DRGNBEAR|0.0025
+DRGNBULLUSD|ftx-drgnbullusd|DRGNBULL|0.25
 DRGNHALFUSD|ftx-drgnhalfusd|DRGNHALF|0.5
 DRGNHEDGEUSD|ftx-drgnhedgeusd|DRGNHEDGE|0.1
 EOSBEARUSD|ftx-eosbearusd|EOSBEAR|0.001
 EOSBEARUSDT|ftx-eosbearusdt|EOSBEAR|0.001
-EOSBULLUSD|ftx-eosbullusd|EOSBULL|0.001
-EOSBULLUSDT|ftx-eosbullusdt|EOSBULL|0.001
+EOSBULLUSD|ftx-eosbullusd|EOSBULL|0.0005
+EOSBULLUSDT|ftx-eosbullusdt|EOSBULL|0.0005
 EOSHALFUSD|ftx-eoshalfusd|EOSHALF|0.5
 EOSHEDGEUSD|ftx-eoshedgeusd|EOSHEDGE|0.25
 ETCBEARUSD|ftx-etcbearusd|ETCBEAR|0.005
-ETCBULLUSD|ftx-etcbullusd|ETCBULL|0.025
-ETCHALFUSD|ftx-etchalfusd|ETCHALF|0.5
+ETCBULLUSD|ftx-etcbullusd|ETCBULL|0.01
+ETCHALFUSD|ftx-etchalfusd|ETCHALF|0.25
 ETCHEDGEUSD|ftx-etchedgeusd|ETCHEDGE|0.25
-ETHBEARUSD|ftx-ethbearusd|ETHBEAR|5.0E-5
-ETHBEARUSDT|ftx-ethbearusdt|ETHBEAR|5.0E-5
-ETHBULLUSD|ftx-ethbullusd|ETHBULL|0.25
-ETHBULLUSDT|ftx-ethbullusdt|ETHBULL|0.25
+ETHBEARUSD|ftx-ethbearusd|ETHBEAR|2.5E-5
+ETHBEARUSDT|ftx-ethbearusdt|ETHBEAR|2.5E-5
+ETHBULLUSD|ftx-ethbullusd|ETHBULL|0.1
+ETHBULLUSDT|ftx-ethbullusdt|ETHBULL|0.1
 ETHHALFUSD|ftx-ethhalfusd|ETHHALF|0.5
 ETHHEDGEUSD|ftx-ethhedgeusd|ETHHEDGE|0.05
 EXCHBEARUSD|ftx-exchbearusd|EXCHBEAR|0.05
@@ -2347,38 +2449,38 @@ HTHEDGEUSD|ftx-hthedgeusd|HTHEDGE|0.25
 IBVOLBTC|ftx-ibvolbtc|IBVOL|5.0E-5
 IBVOLUSD|ftx-ibvolusd|IBVOL|1
 IBVOLUSDT|ftx-ibvolusdt|IBVOL|1
-KNCBEARUSD|ftx-kncbearusd|KNCBEAR|0.1
-KNCBEARUSDT|ftx-kncbearusdt|KNCBEAR|0.1
-KNCBULLUSD|ftx-kncbullusd|KNCBULL|2.5
-KNCBULLUSDT|ftx-kncbullusdt|KNCBULL|2.5
+KNCBEARUSD|ftx-kncbearusd|KNCBEAR|0.25
+KNCBEARUSDT|ftx-kncbearusdt|KNCBEAR|0.25
+KNCBULLUSD|ftx-kncbullusd|KNCBULL|0.5
+KNCBULLUSDT|ftx-kncbullusdt|KNCBULL|0.5
 KNCHALFUSD|ftx-knchalfusd|KNCHALF|0.5
 KNCHEDGEUSD|ftx-knchedgeusd|KNCHEDGE|0.5
 LEOBEARUSD|ftx-leobearusd|LEOBEAR|5
 LEOBULLUSD|ftx-leobullusd|LEOBULL|0.1
-LEOHALFUSD|ftx-leohalfusd|LEOHALF|0.5
+LEOHALFUSD|ftx-leohalfusd|LEOHALF|0.25
 LEOHEDGEUSD|ftx-leohedgeusd|LEOHEDGE|1
 LINKBEARUSD|ftx-linkbearusd|LINKBEAR|5.0E-6
 LINKBEARUSDT|ftx-linkbearusdt|LINKBEAR|5.0E-6
-LINKBULLUSD|ftx-linkbullusd|LINKBULL|2.5
-LINKBULLUSDT|ftx-linkbullusdt|LINKBULL|2.5
+LINKBULLUSD|ftx-linkbullusd|LINKBULL|1
+LINKBULLUSDT|ftx-linkbullusdt|LINKBULL|1
 LINKHALFUSD|ftx-linkhalfusd|LINKHALF|0.5
 LINKHEDGEUSD|ftx-linkhedgeusd|LINKHEDGE|0.025
 LTCBEARUSD|ftx-ltcbearusd|LTCBEAR|0.1
 LTCBEARUSDT|ftx-ltcbearusdt|LTCBEAR|0.1
-LTCBULLUSD|ftx-ltcbullusd|LTCBULL|0.001
-LTCBULLUSDT|ftx-ltcbullusdt|LTCBULL|0.001
+LTCBULLUSD|ftx-ltcbullusd|LTCBULL|0.0005
+LTCBULLUSDT|ftx-ltcbullusdt|LTCBULL|0.0005
 LTCHALFUSD|ftx-ltchalfusd|LTCHALF|0.5
 LTCHEDGEUSD|ftx-ltchedgeusd|LTCHEDGE|0.5
 MATICBEARUSD|ftx-maticbearusd|MATICBEAR|1.0E-5
-MATICBULLUSD|ftx-maticbullusd|MATICBULL|0.0025
+MATICBULLUSD|ftx-maticbullusd|MATICBULL|0.0005
 MATICHALFUSD|ftx-matichalfusd|MATICHALF|0.5
 MATICHEDGEUSD|ftx-matichedgeusd|MATICHEDGE|0.05
 MIDBEARUSD|ftx-midbearusd|MIDBEAR|0.005
-MIDBULLUSD|ftx-midbullusd|MIDBULL|0.5
+MIDBULLUSD|ftx-midbullusd|MIDBULL|0.25
 MIDHALFUSD|ftx-midhalfusd|MIDHALF|0.5
 MIDHEDGEUSD|ftx-midhedgeusd|MIDHEDGE|0.1
-MKRBEARUSD|ftx-mkrbearusd|MKRBEAR|0.25
-MKRBULLUSD|ftx-mkrbullusd|MKRBULL|5
+MKRBEARUSD|ftx-mkrbearusd|MKRBEAR|0.5
+MKRBULLUSD|ftx-mkrbullusd|MKRBULL|1
 OKBBEARUSD|ftx-okbbearusd|OKBBEAR|0.001
 OKBBULLUSD|ftx-okbbullusd|OKBBULL|0.5
 OKBHALFUSD|ftx-okbhalfusd|OKBHALF|0.5
@@ -2387,32 +2489,34 @@ PAXGBEARUSD|ftx-paxgbearusd|PAXGBEAR|1
 PAXGBULLUSD|ftx-paxgbullusd|PAXGBULL|2.5
 PAXGHALFUSD|ftx-paxghalfusd|PAXGHALF|0.25
 PAXGHEDGEUSD|ftx-paxghedgeusd|PAXGHEDGE|0.5
-PRIVBEARUSD|ftx-privbearusd|PRIVBEAR|0.1
-PRIVBULLUSD|ftx-privbullusd|PRIVBULL|0.25
+PRIVBEARUSD|ftx-privbearusd|PRIVBEAR|0.25
+PRIVBULLUSD|ftx-privbullusd|PRIVBULL|0.1
 PRIVHALFUSD|ftx-privhalfusd|PRIVHALF|0.5
 PRIVHEDGEUSD|ftx-privhedgeusd|PRIVHEDGE|0.5
+SUSHIBEARUSD|ftx-sushibearusd|SUSHIBEAR|0.1
+SUSHIBULLUSD|ftx-sushibullusd|SUSHIBULL|0.0025
 SXPBEARUSD|ftx-sxpbearusd|SXPBEAR|0.0005
-SXPBULLUSD|ftx-sxpbullusd|SXPBULL|10
+SXPBULLUSD|ftx-sxpbullusd|SXPBULL|1
 SXPHALFUSD|ftx-sxphalfusd|SXPHALF|0.5
 SXPHALFUSDT|ftx-sxphalfusdt|SXPHALF|0.5
 SXPHEDGEUSD|ftx-sxphedgeusd|SXPHEDGE|0.25
-THETABEARUSD|ftx-thetabearusd|THETABEAR|0.05
-THETABULLUSD|ftx-thetabullusd|THETABULL|0.5
+THETABEARUSD|ftx-thetabearusd|THETABEAR|0.025
+THETABULLUSD|ftx-thetabullusd|THETABULL|0.25
 THETAHALFUSD|ftx-thetahalfusd|THETAHALF|0.5
 THETAHEDGEUSD|ftx-thetahedgeusd|THETAHEDGE|0.25
 TOMOBEARUSD|ftx-tomobearusd|TOMOBEAR|5.0E-7
-TOMOBULLUSD|ftx-tomobullusd|TOMOBULL|0.005
+TOMOBULLUSD|ftx-tomobullusd|TOMOBULL|0.0005
 TOMOHALFUSD|ftx-tomohalfusd|TOMOHALF|0.5
-TOMOHEDGEUSD|ftx-tomohedgeusd|TOMOHEDGE|0.025
-TRXBEARUSD|ftx-trxbearusd|TRXBEAR|0.00025
-TRXBULLUSD|ftx-trxbullusd|TRXBULL|0.001
+TOMOHEDGEUSD|ftx-tomohedgeusd|TOMOHEDGE|0.05
+TRXBEARUSD|ftx-trxbearusd|TRXBEAR|5.0E-5
+TRXBULLUSD|ftx-trxbullusd|TRXBULL|0.0025
 TRXHALFUSD|ftx-trxhalfusd|TRXHALF|0.5
-TRXHEDGEUSD|ftx-trxhedgeusd|TRXHEDGE|0.25
+TRXHEDGEUSD|ftx-trxhedgeusd|TRXHEDGE|0.1
 TRYBBEARUSD|ftx-trybbearusd|TRYBBEAR|5
 TRYBBULLUSD|ftx-trybbullusd|TRYBBULL|1
 TRYBHALFUSD|ftx-trybhalfusd|TRYBHALF|0.25
 TRYBHEDGEUSD|ftx-trybhedgeusd|TRYBHEDGE|1
-UNISWAPBEARUSD|ftx-uniswapbearusd|UNISWAPBEAR|2.5
+UNISWAPBEARUSD|ftx-uniswapbearusd|UNISWAPBEAR|1
 UNISWAPBULLUSD|ftx-uniswapbullusd|UNISWAPBULL|1
 USDTBEARUSD|ftx-usdtbearusd|USDTBEAR|1
 USDTBULLUSD|ftx-usdtbullusd|USDTBULL|2.5
@@ -2420,10 +2524,10 @@ USDTHALFUSD|ftx-usdthalfusd|USDTHALF|0.25
 USDTHEDGEUSD|ftx-usdthedgeusd|USDTHEDGE|0.5
 VETBEARUSD|ftx-vetbearusd|VETBEAR|1
 VETBEARUSDT|ftx-vetbearusdt|VETBEAR|1
-VETBULLUSD|ftx-vetbullusd|VETBULL|0.5
-VETBULLUSDT|ftx-vetbullusdt|VETBULL|0.5
+VETBULLUSD|ftx-vetbullusd|VETBULL|0.25
+VETBULLUSDT|ftx-vetbullusdt|VETBULL|0.25
 VETHEDGEUSD|ftx-vethedgeusd|VETHEDGE|0.5
-XAUTBEARUSD|ftx-xautbearusd|XAUTBEAR|1
+XAUTBEARUSD|ftx-xautbearusd|XAUTBEAR|0.5
 XAUTBULLUSD|ftx-xautbullusd|XAUTBULL|5
 XAUTHALFUSD|ftx-xauthalfusd|XAUTHALF|0.5
 XAUTHEDGEUSD|ftx-xauthedgeusd|XAUTHEDGE|0.5
@@ -2432,16 +2536,16 @@ XRPBEARUSDT|ftx-xrpbearusdt|XRPBEAR|0.01
 XRPBULLUSD|ftx-xrpbullusd|XRPBULL|0.005
 XRPBULLUSDT|ftx-xrpbullusdt|XRPBULL|0.005
 XRPHALFUSD|ftx-xrphalfusd|XRPHALF|0.5
-XRPHEDGEUSD|ftx-xrphedgeusd|XRPHEDGE|0.25
-XTZBEARUSD|ftx-xtzbearusd|XTZBEAR|0.00025
-XTZBEARUSDT|ftx-xtzbearusdt|XTZBEAR|0.00025
-XTZBULLUSD|ftx-xtzbullusd|XTZBULL|0.25
-XTZBULLUSDT|ftx-xtzbullusdt|XTZBULL|0.25
+XRPHEDGEUSD|ftx-xrphedgeusd|XRPHEDGE|0.5
+XTZBEARUSD|ftx-xtzbearusd|XTZBEAR|0.0005
+XTZBEARUSDT|ftx-xtzbearusdt|XTZBEAR|0.0005
+XTZBULLUSD|ftx-xtzbullusd|XTZBULL|0.1
+XTZBULLUSDT|ftx-xtzbullusdt|XTZBULL|0.1
 XTZHALFUSD|ftx-xtzhalfusd|XTZHALF|0.5
 XTZHEDGEUSD|ftx-xtzhedgeusd|XTZHEDGE|0.1
 
 
-## Gateio Supported Symbols in Executium (updated: 26th August 2020)
+## Gateio Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -2706,6 +2810,7 @@ KAVAUSDT|gateio-kavausdt|kava|0.0001
 IRISUSDT|gateio-irisusdt|iris|0.0001
 ANTUSDT|gateio-antusdt|ant|0.001
 ANKRUSDT|gateio-ankrusdt|ankr|1.0E-7
+STPTUSDT|gateio-stptusdt|stpt|1.0E-5
 RSRUSDT|gateio-rsrusdt|rsr|0.0001
 RSVUSDT|gateio-rsvusdt|rsv|1.0E-6
 KAIUSDT|gateio-kaiusdt|kai|1.0E-6
@@ -2714,36 +2819,104 @@ COMPUSDT|gateio-compusdt|comp|0.01
 OCEANUSDT|gateio-oceanusdt|ocean|1.0E-5
 KSMUSDT|gateio-ksmusdt|ksm|0.01
 DOTUSDT|gateio-dotusdt|dot|0.001
+DOTBTC|gateio-dotbtc|dot|1.0E-7
 MTRUSDT|gateio-mtrusdt|mtr|0.001
 MTRGUSDT|gateio-mtrgusdt|mtrg|0.0001
 SOLUSDT|gateio-solusdt|sol|0.0001
 COTIUSDT|gateio-cotiusdt|coti|1.0E-6
 AMPLUSDT|gateio-amplusdt|ampl|0.001
 WNXMUSDT|gateio-wnxmusdt|wnxm|0.001
+WNXMETH|gateio-wnxmeth|wnxm|1.0E-6
+BZRXUSDT|gateio-bzrxusdt|bzrx|0.001
+PCXUSDT|gateio-pcxusdt|pcx|0.001
 YAMV2USDT|gateio-yamv2usdt|yamv2|0.001
+YAMV2ETH|gateio-yamv2eth|yamv2|1.0E-5
+BOXUSDT|gateio-boxusdt|box|0.001
 CRVUSDT|gateio-crvusdt|crv|0.001
+CRVBTC|gateio-crvbtc|crv|1.0E-7
+CRVETH|gateio-crveth|crv|1.0E-6
+SUSHIUSDT|gateio-sushiusdt|sushi|0.001
+SUSHIETH|gateio-sushieth|sushi|1.0E-7
+FARMUSDT|gateio-farmusdt|farm|0.01
+FARMETH|gateio-farmeth|farm|1.0E-7
+SWRVUSDT|gateio-swrvusdt|swrv|0.001
+SWRVETH|gateio-swrveth|swrv|1.0E-7
+BOTUSDT|gateio-botusdt|bot|0.001
+BOTETH|gateio-boteth|bot|1.0E-7
+ULUUSDT|gateio-uluusdt|ulu|0.01
+ULUETH|gateio-ulueth|ulu|1.0E-7
+OINUSDT|gateio-oinusdt|oin|0.0001
+AGSUSDT|gateio-agsusdt|ags|0.0001
+ADELUSDT|gateio-adelusdt|adel|0.001
+ADELETH|gateio-adeleth|adel|1.0E-7
+TONUSDT|gateio-tonusdt|ton|0.001
+KIMCHIUSDT|gateio-kimchiusdt|kimchi|0.001
+KIMCHIETH|gateio-kimchieth|kimchi|1.0E-7
+KTONUSDT|gateio-ktonusdt|kton|0.01
+RINGUSDT|gateio-ringusdt|ring|0.0001
+RINGETH|gateio-ringeth|ring|1.0E-6
+MINIUSDT|gateio-miniusdt|mini|0.0001
+MINIETH|gateio-minieth|mini|1.0E-6
+CREAMUSDT|gateio-creamusdt|cream|0.01
+CREAMETH|gateio-creameth|cream|1.0E-6
+DFUSDT|gateio-dfusdt|df|0.01
+DFETH|gateio-dfeth|df|1.0E-6
+CVPUSDT|gateio-cvpusdt|cvp|0.01
+CVPETH|gateio-cvpeth|cvp|1.0E-6
+YFVUSDT|gateio-yfvusdt|yfv|0.01
+YFVETH|gateio-yfveth|yfv|1.0E-6
+UMAUSDT|gateio-umausdt|uma|0.01
+YFIIUSDT|gateio-yfiiusdt|yfii|0.01
+YFIIETH|gateio-yfiieth|yfii|1.0E-6
 SWAPUSDT|gateio-swapusdt|swap|0.0001
+SWAPETH|gateio-swapeth|swap|1.0E-6
 SXPUSDT|gateio-sxpusdt|sxp|0.001
+SXPETH|gateio-sxpeth|sxp|1.0E-6
 BALUSDT|gateio-balusdt|bal|0.01
+BALETH|gateio-baleth|bal|1.0E-6
 BANDUSDT|gateio-bandusdt|band|0.01
+BANDETH|gateio-bandeth|band|1.0E-6
 ASTUSDT|gateio-astusdt|ast|0.0001
+ASTETH|gateio-asteth|ast|1.0E-6
 TROYUSDT|gateio-troyusdt|troy|1.0E-6
+TROYETH|gateio-troyeth|troy|1.0E-6
 OMUSDT|gateio-omusdt|om|0.0001
+OMETH|gateio-ometh|om|1.0E-6
 SPAUSDT|gateio-spausdt|spa|1.0E-5
+SPAETH|gateio-spaeth|spa|1.0E-6
 AKROUSDT|gateio-akrousdt|akro|1.0E-5
+AKROETH|gateio-akroeth|akro|1.0E-6
 FORUSDT|gateio-forusdt|for|1.0E-5
-CREDITUSDT|gateio-creditusdt|credit|0.001
+FORETH|gateio-foreth|for|1.0E-6
+CREDITUSDT|gateio-creditusdt|credit|0.0001
+CREDITETH|gateio-crediteth|credit|1.0E-6
 DIAUSDT|gateio-diausdt|dia|0.001
+DIAETH|gateio-diaeth|dia|1.0E-6
 AXISUSDT|gateio-axisusdt|axis|0.001
+AXISETH|gateio-axiseth|axis|1.0E-6
 TRBUSDT|gateio-trbusdt|trb|0.001
+TRBETH|gateio-trbeth|trb|1.0E-6
+LIENUSDT|gateio-lienusdt|lien|0.001
+LIENETH|gateio-lieneth|lien|1.0E-6
+PEARLUSDT|gateio-pearlusdt|pearl|0.01
+CORNUSDT|gateio-cornusdt|corn|0.01
+SALUSDT|gateio-salusdt|sal|0.01
+TAIUSDT|gateio-taiusdt|tai|0.01
+CRTUSDT|gateio-crtusdt|crt|0.001
+JFIUSDT|gateio-jfiusdt|jfi|0.01
 MTAUSDT|gateio-mtausdt|mta|0.001
+MTAETH|gateio-mtaeth|mta|1.0E-6
 YFIUSDT|gateio-yfiusdt|yfi|0.01
+YFIETH|gateio-yfieth|yfi|1.0E-6
 KINUSDT|gateio-kinusdt|kin|1.0E-9
 DKAUSDT|gateio-dkausdt|dka|1.0E-5
+DKAETH|gateio-dkaeth|dka|1.0E-6
 RENUSDT|gateio-renusdt|ren|1.0E-5
+RENETH|gateio-reneth|ren|1.0E-6
 DOSUSDT|gateio-dosusdt|dos|0.0001
 SUTERUSDT|gateio-suterusdt|suter|1.0E-5
 SRMUSDT|gateio-srmusdt|srm|0.0001
+SRMETH|gateio-srmeth|srm|1.0E-6
 JSTUSDT|gateio-jstusdt|jst|1.0E-5
 LBKUSDT|gateio-lbkusdt|lbk|1.0E-5
 BTMXUSDT|gateio-btmxusdt|btmx|0.0001
@@ -2879,6 +3052,7 @@ XRPBEARUSDT|gateio-xrpbearusdt|xrpbear|0.01
 XRPBULLUSDT|gateio-xrpbullusdt|xrpbull|0.01
 WICCUSDT|gateio-wiccusdt|wicc|1.0E-5
 WICCETH|gateio-wicceth|wicc|1.0E-7
+WGRTUSDT|gateio-wgrtusdt|wgrt|1.0E-5
 SEROUSDT|gateio-serousdt|sero|1.0E-5
 SEROETH|gateio-seroeth|sero|1.0E-8
 VIDYUSDT|gateio-vidyusdt|vidy|1.0E-6
@@ -2887,9 +3061,11 @@ KGCUSDT|gateio-kgcusdt|kgc|1.0E-6
 FTMUSDT|gateio-ftmusdt|ftm|1.0E-6
 FTMETH|gateio-ftmeth|ftm|1.0E-8
 COSUSDT|gateio-cosusdt|cos|1.0E-6
+AVAUSDT|gateio-avausdt|ava|1.0E-6
 CROUSDT|gateio-crousdt|cro|1.0E-5
 ALYUSDT|gateio-alyusdt|aly|1.0E-6
 WINUSDT|gateio-winusdt|win|1.0E-7
+SUNUSDT|gateio-sunusdt|sun|0.01
 MTVUSDT|gateio-mtvusdt|mtv|1.0E-7
 ONEUSDT|gateio-oneusdt|one|1.0E-6
 ARPAUSDT|gateio-arpausdt|arpa|1.0E-6
@@ -2897,6 +3073,7 @@ ARPAETH|gateio-arpaeth|arpa|1.0E-8
 DILIUSDT|gateio-diliusdt|dili|1.0E-6
 ALGOUSDT|gateio-algousdt|algo|0.0001
 PIUSDT|gateio-piusdt|pi|1.0E-6
+PIBTC|gateio-pibtc|pi|1.0E-8
 CKBUSDT|gateio-ckbusdt|ckb|1.0E-6
 CKBBTC|gateio-ckbbtc|ckb|1.0E-8
 CKBETH|gateio-ckbeth|ckb|1.0E-8
@@ -2909,8 +3086,9 @@ TUSDUSDT|gateio-tusdusdt|tusd|0.001
 HCUSDT|gateio-hcusdt|hc|0.001
 HCBTC|gateio-hcbtc|hc|1.0E-8
 HCETH|gateio-hceth|hc|1.0E-6
-GARDUSDT|gateio-gardusdt|gard|1.0E-8
+GARDUSDT|gateio-gardusdt|gard|1.0E-7
 GARDETH|gateio-gardeth|gard|1.0E-8
+CELOUSDT|gateio-celousdt|celo|0.001
 FTIUSDT|gateio-ftiusdt|fti|1.0E-6
 FTIETH|gateio-ftieth|fti|1.0E-8
 SOPETH|gateio-sopeth|sop|1.0E-8
@@ -2947,7 +3125,7 @@ MXCBTC|gateio-mxcbtc|mxc|1.0E-9
 MXCETH|gateio-mxceth|mxc|1.0E-8
 
 
-## Hbdm Supported Symbols in Executium (updated: 26th August 2020)
+## Hbdm Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -2997,637 +3175,701 @@ TRXCQ|hbdm-trxcq|TRX|N/A
 TRXNQ|hbdm-trxnq|TRX|N/A
 
 
-## Huobipro Supported Symbols in Executium (updated: 26th August 2020)
+## Huobipro Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
-FSNHT|huobipro-fsnht|fsn|1.0E-6
-CKBHT|huobipro-ckbht|ckb|1.0E-6
-BTTUSDT|huobipro-bttusdt|btt|1.0E-8
-ZENETH|huobipro-zeneth|zen|1.0E-6
-KCASHHT|huobipro-kcashht|kcash|1.0E-6
-DGBBTC|huobipro-dgbbtc|dgb|1.0E-10
-BCVBTC|huobipro-bcvbtc|bcv|1.0E-10
-LTCUSDT|huobipro-ltcusdt|ltc|0.01
-DCRUSDT|huobipro-dcrusdt|dcr|0.0001
-OMGUSDT|huobipro-omgusdt|omg|0.0001
-TOSETH|huobipro-toseth|tos|1.0E-8
-KNCETH|huobipro-knceth|knc|1.0E-8
-BLZETH|huobipro-blzeth|blz|1.0E-8
-PAIETH|huobipro-paieth|pai|1.0E-6
-EOSETH|huobipro-eoseth|eos|1.0E-8
-MANAUSDT|huobipro-manausdt|mana|0.0001
-YFIUSDT|huobipro-yfiusdt|yfi|0.01
-UUUETH|huobipro-uuueth|uuu|1.0E-10
-GRSBTC|huobipro-grsbtc|grs|1.0E-8
-NULSBTC|huobipro-nulsbtc|nuls|1.0E-8
-MEETBTC|huobipro-meetbtc|meet|1.0E-10
-SNCBTC|huobipro-sncbtc|snc|1.0E-8
-XLMUSDT|huobipro-xlmusdt|xlm|1.0E-6
-IOSTUSDT|huobipro-iostusdt|iost|1.0E-6
-SMTETH|huobipro-smteth|smt|1.0E-8
-KMDETH|huobipro-kmdeth|kmd|1.0E-6
-DTABTC|huobipro-dtabtc|dta|1.0E-10
-LXTUSDT|huobipro-lxtusdt|lxt|1.0E-6
-STEEMBTC|huobipro-steembtc|steem|1.0E-8
-EOSHUSD|huobipro-eoshusd|eos|0.0001
-THEMISETH|huobipro-themiseth|get|1.0E-8
-NPXSBTC|huobipro-npxsbtc|npxs|1.0E-10
-ETCHT|huobipro-etcht|etc|1.0E-6
-CRVBTC|huobipro-crvbtc|crv|1.0E-6
-RCNBTC|huobipro-rcnbtc|rcn|1.0E-10
-QUNBTC|huobipro-qunbtc|qun|1.0E-10
-ARDRETH|huobipro-ardreth|ardr|1.0E-6
-MTHT|huobipro-mtht|mt|1.0E-6
-HITBTC|huobipro-hitbtc|hit|1.0E-10
-PNTETH|huobipro-pnteth|pnt|1.0E-10
-PVTBTC|huobipro-pvtbtc|pvt|1.0E-10
-DACBTC|huobipro-dacbtc|dac|1.0E-10
-ANTBTC|huobipro-antbtc|ant|1.0E-8
-LETBTC|huobipro-letbtc|let|1.0E-10
-NKNBTC|huobipro-nknbtc|nkn|1.0E-8
-CVCUSDT|huobipro-cvcusdt|cvc|0.0001
-CNNBTC|huobipro-cnnbtc|cnn|1.0E-10
-RSRUSDT|huobipro-rsrusdt|rsr|1.0E-6
-LYMBTC|huobipro-lymbtc|lym|1.0E-10
-COMPUSDT|huobipro-compusdt|comp|0.01
-CNNSBTC|huobipro-cnnsbtc|cnns|1.0E-8
-BSVHUSD|huobipro-bsvhusd|bsv|0.0001
-OGNHT|huobipro-ognht|ogn|1.0E-6
-BIXUSDT|huobipro-bixusdt|bix|1.0E-6
-LENDBTC|huobipro-lendbtc|lend|1.0E-8
-OGOHT|huobipro-ogoht|ogo|1.0E-6
-XVGBTC|huobipro-xvgbtc|xvg|1.0E-10
-ZRXBTC|huobipro-zrxbtc|zrx|1.0E-8
-MTXBTC|huobipro-mtxbtc|mtx|1.0E-8
-KANBTC|huobipro-kanbtc|kan|1.0E-10
-SNTUSDT|huobipro-sntusdt|snt|1.0E-6
-NESTHUSD|huobipro-nesthusd|nest|0.0001
-CMTETH|huobipro-cmteth|cmt|1.0E-8
-SKMBTC|huobipro-skmbtc|skm|1.0E-10
-MKRUSDT|huobipro-mkrusdt|mkr|0.01
-JSTBTC|huobipro-jstbtc|jst|1.0E-8
-CTXCBTC|huobipro-ctxcbtc|ctxc|1.0E-8
-LBAETH|huobipro-lbaeth|lba|1.0E-6
-MXBTC|huobipro-mxbtc|mx|1.0E-8
-BUTBTC|huobipro-butbtc|but|1.0E-10
-BTSETH|huobipro-btseth|bts|1.0E-8
-PCETH|huobipro-pceth|pc|1.0E-10
-CREHT|huobipro-creht|cre|1.0E-6
-ABTBTC|huobipro-abtbtc|abt|1.0E-8
-PROPYETH|huobipro-propyeth|propy|1.0E-8
-PORTALBTC|huobipro-portalbtc|portal|1.0E-10
-BOXBTC|huobipro-boxbtc|box|1.0E-10
-TOPHT|huobipro-topht|top|1.0E-6
-RVNHT|huobipro-rvnht|rvn|1.0E-6
-ONTETH|huobipro-onteth|ont|1.0E-8
-TTUSDT|huobipro-ttusdt|tt|1.0E-6
-HIVEBTC|huobipro-hivebtc|hive|1.0E-8
-SWFTCBTC|huobipro-swftcbtc|swftc|1.0E-10
-AKROUSDT|huobipro-akrousdt|akro|1.0E-5
-WXTBTC|huobipro-wxtbtc|wxt|1.0E-10
-XEMUSDT|huobipro-xemusdt|xem|0.0001
-BANDBTC|huobipro-bandbtc|band|1.0E-8
-LSKBTC|huobipro-lskbtc|lsk|1.0E-8
-ARPABTC|huobipro-arpabtc|arpa|1.0E-8
-NODEHT|huobipro-nodeht|node|1.0E-6
-AEUSDT|huobipro-aeusdt|ae|0.0001
-UIPBTC|huobipro-uipbtc|uip|1.0E-10
-KSMHT|huobipro-ksmht|ksm|1.0E-6
-ATOMBTC|huobipro-atombtc|atom|1.0E-8
-DOTBTC|huobipro-dotbtc|dot|1.0E-8
-ZLABTC|huobipro-zlabtc|zla|1.0E-10
-NESTHT|huobipro-nestht|nest|1.0E-6
-IRISBTC|huobipro-irisbtc|iris|1.0E-10
-VSYSBTC|huobipro-vsysbtc|vsys|1.0E-8
-KCASHETH|huobipro-kcasheth|kcash|1.0E-8
-CVCOINBTC|huobipro-cvcoinbtc|cvcoin|1.0E-8
-FTTBTC|huobipro-fttbtc|ftt|1.0E-8
-RTEBTC|huobipro-rtebtc|rte|1.0E-10
-MUSKBTC|huobipro-muskbtc|musk|1.0E-10
-ZECUSDT|huobipro-zecusdt|zec|0.01
-THETAETH|huobipro-thetaeth|theta|1.0E-8
-EGCCETH|huobipro-egcceth|egcc|1.0E-10
-WAVESETH|huobipro-waveseth|waves|1.0E-6
-XZCETH|huobipro-xzceth|xzc|1.0E-6
-DASHUSDT|huobipro-dashusdt|dash|0.01
-XMRUSDT|huobipro-xmrusdt|xmr|0.01
-AKROBTC|huobipro-akrobtc|akro|1.0E-10
-TRXETH|huobipro-trxeth|trx|1.0E-8
-SSPETH|huobipro-sspeth|ssp|1.0E-10
-RVNUSDT|huobipro-rvnusdt|rvn|1.0E-6
-NANOETH|huobipro-nanoeth|nano|1.0E-6
-LUNABTC|huobipro-lunabtc|luna|1.0E-8
-TOPCETH|huobipro-topceth|topc|1.0E-8
-RSRBTC|huobipro-rsrbtc|rsr|1.0E-10
-QTUMUSDT|huobipro-qtumusdt|qtum|0.0001
-EDUETH|huobipro-edueth|edu|1.0E-10
-OGOUSDT|huobipro-ogousdt|ogo|1.0E-6
-TRIOETH|huobipro-trioeth|trio|1.0E-10
-MCOBTC|huobipro-mcobtc|mco|1.0E-6
-MANBTC|huobipro-manbtc|man|1.0E-8
-LXTBTC|huobipro-lxtbtc|lxt|1.0E-10
-PVTUSDT|huobipro-pvtusdt|pvt|1.0E-6
-IOSTHT|huobipro-iostht|iost|1.0E-8
-BTMUSDT|huobipro-btmusdt|btm|0.0001
-SHEETH|huobipro-sheeth|she|1.0E-10
-WAXPETH|huobipro-waxpeth|waxp|1.0E-6
-CROUSDT|huobipro-crousdt|cro|0.0001
-LETUSDT|huobipro-letusdt|let|1.0E-6
-RUFFUSDT|huobipro-ruffusdt|ruff|1.0E-6
-AACETH|huobipro-aaceth|aac|1.0E-8
-NEXOETH|huobipro-nexoeth|nexo|1.0E-6
-APPCETH|huobipro-appceth|appc|1.0E-6
-RSRHT|huobipro-rsrht|rsr|1.0E-6
-IOTABTC|huobipro-iotabtc|iota|1.0E-8
-CRVUSDT|huobipro-crvusdt|crv|0.0001
-FORHT|huobipro-forht|for|1.0E-6
-ADABTC|huobipro-adabtc|ada|1.0E-8
-OGNUSDT|huobipro-ognusdt|ogn|0.0001
-ETHBTC|huobipro-ethbtc|eth|1.0E-6
-DATXETH|huobipro-datxeth|datx|1.0E-8
-SRNETH|huobipro-srneth|srn|1.0E-8
-STKETH|huobipro-stketh|stk|1.0E-8
-LAMBUSDT|huobipro-lambusdt|lamb|1.0E-6
-ELFBTC|huobipro-elfbtc|elf|1.0E-8
-MTLBTC|huobipro-mtlbtc|mtl|1.0E-8
-USDCHUSD|huobipro-usdchusd|usdc|0.0001
-SNXETH|huobipro-snxeth|snx|1.0E-6
-IOSTBTC|huobipro-iostbtc|iost|1.0E-10
-NEOBTC|huobipro-neobtc|neo|1.0E-6
-LINKBTC|huobipro-linkbtc|link|1.0E-8
-WTCETH|huobipro-wtceth|wtc|1.0E-6
-HYDRO PROTOCOLBTC|huobipro-hydro protocolbtc|hot|1.0E-10
-CHRBTC|huobipro-chrbtc|chr|1.0E-8
-GNTETH|huobipro-gnteth|gnt|1.0E-8
-BTC3SUSDT|huobipro-btc3susdt|btc3s|0.0001
-AACUSDT|huobipro-aacusdt|aac|1.0E-6
-KCASHUSDT|huobipro-kcashusdt|kcash|1.0E-6
-OMGBTC|huobipro-omgbtc|omg|1.0E-6
-DOGEETH|huobipro-dogeeth|doge|1.0E-8
-NANOUSDT|huobipro-nanousdt|nano|0.0001
-BIXETH|huobipro-bixeth|bix|1.0E-6
-ICXETH|huobipro-icxeth|icx|1.0E-6
-DASHHT|huobipro-dashht|dash|1.0E-6
-DOCKUSDT|huobipro-dockusdt|dock|1.0E-6
-RENBTC|huobipro-renbtc|ren|1.0E-8
-DCRBTC|huobipro-dcrbtc|dcr|1.0E-6
-XRPBTC|huobipro-xrpbtc|xrp|1.0E-8
-FTTHT|huobipro-fttht|ftt|1.0E-6
-POWRETH|huobipro-powreth|powr|1.0E-8
-GASETH|huobipro-gaseth|gas|1.0E-6
-KSMUSDT|huobipro-ksmusdt|ksm|0.0001
-WAVESUSDT|huobipro-wavesusdt|waves|0.0001
-EMHT|huobipro-emht|em|1.0E-8
-NASUSDT|huobipro-nasusdt|nas|0.0001
-NEWUSDT|huobipro-newusdt|new|1.0E-6
-EGCCBTC|huobipro-egccbtc|egcc|1.0E-10
-ONEUSDT|huobipro-oneusdt|one|1.0E-6
-GASBTC|huobipro-gasbtc|gas|1.0E-6
-CVNTETH|huobipro-cvnteth|cvnt|1.0E-8
-LBAUSDT|huobipro-lbausdt|lba|1.0E-6
-XLMHUSD|huobipro-xlmhusd|xlm|1.0E-6
-FTIBTC|huobipro-ftibtc|fti|1.0E-10
-NODEUSDT|huobipro-nodeusdt|node|1.0E-6
-KNCUSDT|huobipro-kncusdt|knc|0.0001
-AKROHT|huobipro-akroht|akro|1.0E-6
-HITUSDT|huobipro-hitusdt|hit|1.0E-6
-ETNETH|huobipro-etneth|etn|1.0E-8
-MXUSDT|huobipro-mxusdt|mx|0.0001
-CREUSDT|huobipro-creusdt|cre|1.0E-6
-TOPUSDT|huobipro-topusdt|top|1.0E-6
-BTTBTC|huobipro-bttbtc|btt|1.0E-10
-TTBTC|huobipro-ttbtc|tt|1.0E-8
-ARPAHT|huobipro-arpaht|arpa|1.0E-6
-WXTUSDT|huobipro-wxtusdt|wxt|1.0E-6
-CHRUSDT|huobipro-chrusdt|chr|1.0E-6
-XZCBTC|huobipro-xzcbtc|xzc|1.0E-6
-ELABTC|huobipro-elabtc|ela|1.0E-8
 BKBTBTC|huobipro-bkbtbtc|bkbt|1.0E-10
-BTCHUSD|huobipro-btchusd|btc|0.01
-EKOBTC|huobipro-ekobtc|eko|1.0E-10
-GTCETH|huobipro-gtceth|gtc|1.0E-8
-BTTETH|huobipro-btteth|btt|1.0E-10
-POWRBTC|huobipro-powrbtc|powr|1.0E-8
-FORUSDT|huobipro-forusdt|for|1.0E-6
-ZRXUSDT|huobipro-zrxusdt|zrx|0.0001
-PHXBTC|huobipro-phxbtc|phx|1.0E-10
-COMPBTC|huobipro-compbtc|comp|1.0E-6
-WNXMETH|huobipro-wnxmeth|wnxm|1.0E-6
-AEETH|huobipro-aeeth|ae|1.0E-6
-OGOBTC|huobipro-ogobtc|ogo|1.0E-8
-DGDBTC|huobipro-dgdbtc|dgd|1.0E-6
-ANTUSDT|huobipro-antusdt|ant|0.0001
-MKRBTC|huobipro-mkrbtc|mkr|1.0E-6
-GSCBTC|huobipro-gscbtc|gsc|1.0E-10
-ONTUSDT|huobipro-ontusdt|ont|0.0001
-EMBTC|huobipro-embtc|em|1.0E-10
-DBCBTC|huobipro-dbcbtc|dbc|1.0E-10
-MXCBTC|huobipro-mxcbtc|mxc|1.0E-10
-SWFTCETH|huobipro-swftceth|swftc|1.0E-8
-HCUSDT|huobipro-hcusdt|hc|0.0001
-CTXCETH|huobipro-ctxceth|ctxc|1.0E-8
-OMGETH|huobipro-omgeth|omg|1.0E-6
-CNNSHT|huobipro-cnnsht|cnns|1.0E-6
-YFIETH|huobipro-yfieth|yfi|0.0001
-LOOMBTC|huobipro-loombtc|loom|1.0E-8
-BALUSDT|huobipro-balusdt|bal|0.0001
-ONEHT|huobipro-oneht|one|1.0E-6
-DASHBTC|huobipro-dashbtc|dash|1.0E-6
-BTC1SUSDT|huobipro-btc1susdt|btc1s|0.0001
-MEXBTC|huobipro-mexbtc|mex|1.0E-10
-ETCHUSD|huobipro-etchusd|etc|0.0001
-UCBTC|huobipro-ucbtc|uc|1.0E-10
-DOTUSDT|huobipro-dotusdt|dot|0.0001
-ADAHUSD|huobipro-adahusd|ada|1.0E-6
-TOPCBTC|huobipro-topcbtc|topc|1.0E-10
-18CBTC|huobipro-18cbtc|18c|1.0E-10
-UIPUSDT|huobipro-uipusdt|uip|1.0E-6
-PAYBTC|huobipro-paybtc|pay|1.0E-8
-ZECBTC|huobipro-zecbtc|zec|1.0E-6
-IOTAETH|huobipro-iotaeth|iota|1.0E-6
-ADAETH|huobipro-adaeth|ada|1.0E-6
-DGDETH|huobipro-dgdeth|dgd|1.0E-6
-NEWHT|huobipro-newht|new|1.0E-6
-BTSUSDT|huobipro-btsusdt|bts|0.0001
-XEMBTC|huobipro-xembtc|xem|1.0E-8
-HCBTC|huobipro-hcbtc|hc|1.0E-8
-BTSBTC|huobipro-btsbtc|bts|1.0E-8
-KANUSDT|huobipro-kanusdt|kan|1.0E-6
-RTEETH|huobipro-rteeth|rte|1.0E-8
-TRXBTC|huobipro-trxbtc|trx|1.0E-10
-WANETH|huobipro-waneth|wan|1.0E-6
-BIFIBTC|huobipro-bifibtc|bifi|1.0E-10
-XMXBTC|huobipro-xmxbtc|xmx|1.0E-10
-BSVBTC|huobipro-bsvbtc|bsv|1.0E-6
-SEELEETH|huobipro-seeleeth|seele|1.0E-8
-ITCUSDT|huobipro-itcusdt|itc|0.0001
-EKTBTC|huobipro-ektbtc|ekt|1.0E-10
-GXCUSDT|huobipro-gxcusdt|gxc|0.0001
-FAIRETH|huobipro-faireth|fair|1.0E-8
-IRISETH|huobipro-iriseth|iris|1.0E-6
-BATUSDT|huobipro-batusdt|bat|0.0001
-DASHHUSD|huobipro-dashhusd|dash|0.01
-DACETH|huobipro-daceth|dac|1.0E-8
-TTHT|huobipro-ttht|tt|1.0E-6
-ETHUSDT|huobipro-ethusdt|eth|0.01
-STORJBTC|huobipro-storjbtc|storj|1.0E-8
-RCCCBTC|huobipro-rcccbtc|rccc|1.0E-10
-NEXOBTC|huobipro-nexobtc|nexo|1.0E-8
-LINKUSDT|huobipro-linkusdt|link|0.0001
-SOCETH|huobipro-soceth|soc|1.0E-8
-AACBTC|huobipro-aacbtc|aac|1.0E-10
-POLYBTC|huobipro-polybtc|poly|1.0E-8
-UUUUSDT|huobipro-uuuusdt|uuu|1.0E-6
-CHATETH|huobipro-chateth|chat|1.0E-8
-TNBETH|huobipro-tnbeth|tnb|1.0E-8
-NESTETH|huobipro-nesteth|nest|1.0E-6
-CNNSUSDT|huobipro-cnnsusdt|cnns|1.0E-6
-MCOUSDT|huobipro-mcousdt|mco|0.0001
-LUNBTC|huobipro-lunbtc|lun|1.0E-6
-NULSETH|huobipro-nulseth|nuls|1.0E-6
-TRBETH|huobipro-trbeth|trb|1.0E-6
-BANDETH|huobipro-bandeth|band|1.0E-6
-BFTBTC|huobipro-bftbtc|bft|1.0E-8
-KMDBTC|huobipro-kmdbtc|kmd|1.0E-8
-HYDRO PROTOCOLETH|huobipro-hydro protocoleth|hot|1.0E-8
-TNTBTC|huobipro-tntbtc|tnt|1.0E-10
-YEEUSDT|huobipro-yeeusdt|yee|1.0E-6
-DOGEBTC|huobipro-dogebtc|doge|1.0E-10
-YCCETH|huobipro-ycceth|ycc|1.0E-8
-BTC3LUSDT|huobipro-btc3lusdt|btc3l|0.0001
-GNTBTC|huobipro-gntbtc|gnt|1.0E-8
-STKBTC|huobipro-stkbtc|stk|1.0E-10
-APPCBTC|huobipro-appcbtc|appc|1.0E-8
-REQETH|huobipro-reqeth|req|1.0E-8
-XLMETH|huobipro-xlmeth|xlm|1.0E-6
-FTTUSDT|huobipro-fttusdt|ftt|0.0001
-ZILUSDT|huobipro-zilusdt|zil|1.0E-6
-ATOMETH|huobipro-atometh|atom|1.0E-6
-USDTHUSD|huobipro-usdthusd|usdt|0.0001
-ACTUSDT|huobipro-actusdt|act|1.0E-6
-ELFETH|huobipro-elfeth|elf|1.0E-8
-VETETH|huobipro-veteth|vet|1.0E-8
-LXTETH|huobipro-lxteth|lxt|1.0E-8
-ARPAUSDT|huobipro-arpausdt|arpa|1.0E-6
-GVEBTC|huobipro-gvebtc|gve|1.0E-10
-QTUMBTC|huobipro-qtumbtc|qtum|1.0E-6
-BCDBTC|huobipro-bcdbtc|bcd|1.0E-7
-SRNBTC|huobipro-srnbtc|srn|1.0E-10
-XRPUSDT|huobipro-xrpusdt|xrp|1.0E-5
-BOXETH|huobipro-boxeth|box|1.0E-8
-VETBTC|huobipro-vetbtc|vet|1.0E-10
-XVGETH|huobipro-xvgeth|xvg|1.0E-8
-CREBTC|huobipro-crebtc|cre|1.0E-10
-KSMBTC|huobipro-ksmbtc|ksm|1.0E-8
-EDUBTC|huobipro-edubtc|edu|1.0E-10
-WNXMUSDT|huobipro-wnxmusdt|wnxm|0.0001
-VSYSHT|huobipro-vsysht|vsys|1.0E-6
-DOCKBTC|huobipro-dockbtc|dock|1.0E-8
-WAXPUSDT|huobipro-waxpusdt|waxp|1.0E-6
-NESTBTC|huobipro-nestbtc|nest|1.0E-8
-TRIOBTC|huobipro-triobtc|trio|1.0E-10
-NODEBTC|huobipro-nodebtc|node|1.0E-10
-RENUSDT|huobipro-renusdt|ren|1.0E-6
-DATETH|huobipro-dateth|dat|1.0E-8
-NANOBTC|huobipro-nanobtc|nano|1.0E-7
-STEEMETH|huobipro-steemeth|steem|1.0E-6
-LYMETH|huobipro-lymeth|lym|1.0E-8
-SKMHT|huobipro-skmht|skm|1.0E-6
-OCNUSDT|huobipro-ocnusdt|ocn|1.0E-8
-GNTUSDT|huobipro-gntusdt|gnt|0.0001
-NEWBTC|huobipro-newbtc|new|1.0E-10
-TNBBTC|huobipro-tnbbtc|tnb|1.0E-10
-LAMBETH|huobipro-lambeth|lamb|1.0E-8
-ACTBTC|huobipro-actbtc|act|1.0E-10
-AIDOCBTC|huobipro-aidocbtc|aidoc|1.0E-10
-WICCUSDT|huobipro-wiccusdt|wicc|0.0001
-PCBTC|huobipro-pcbtc|pc|1.0E-10
-DTAETH|huobipro-dtaeth|dta|1.0E-8
-ASTUSDT|huobipro-astusdt|ast|0.0001
-DGBETH|huobipro-dgbeth|dgb|1.0E-8
-CRVETH|huobipro-crveth|crv|1.0E-6
-NKNHT|huobipro-nknht|nkn|1.0E-6
-EVXETH|huobipro-evxeth|evx|1.0E-8
-OGNBTC|huobipro-ognbtc|ogn|1.0E-8
-CMTBTC|huobipro-cmtbtc|cmt|1.0E-8
-GRSETH|huobipro-grseth|grs|1.0E-6
-MANETH|huobipro-maneth|man|1.0E-6
-PNTBTC|huobipro-pntbtc|pnt|1.0E-10
-BFTETH|huobipro-bfteth|bft|1.0E-8
-LETETH|huobipro-leteth|let|1.0E-8
-PAIBTC|huobipro-paibtc|pai|1.0E-8
-SNCETH|huobipro-snceth|snc|1.0E-8
-PAYETH|huobipro-payeth|pay|1.0E-8
-BLZBTC|huobipro-blzbtc|blz|1.0E-8
-LSKETH|huobipro-lsketh|lsk|1.0E-6
-ELAUSDT|huobipro-elausdt|ela|0.0001
-BCVETH|huobipro-bcveth|bcv|1.0E-8
-EMUSDT|huobipro-emusdt|em|1.0E-6
-BCHHT|huobipro-bchht|bch|1.0E-6
-XTZETH|huobipro-xtzeth|xtz|1.0E-6
-GTBTC|huobipro-gtbtc|gt|1.0E-8
-BCHUSDT|huobipro-bchusdt|bch|0.01
-BUTETH|huobipro-buteth|but|1.0E-8
-WAVESBTC|huobipro-wavesbtc|waves|1.0E-8
-ICXUSDT|huobipro-icxusdt|icx|0.0001
-ONTBTC|huobipro-ontbtc|ont|1.0E-8
-LOLBTC|huobipro-lolbtc|lol|1.0E-10
-RVNBTC|huobipro-rvnbtc|rvn|1.0E-10
-BHTUSDT|huobipro-bhtusdt|bht|1.0E-6
-TOSBTC|huobipro-tosbtc|tos|1.0E-10
-PROPYBTC|huobipro-propybtc|propy|1.0E-8
-LBABTC|huobipro-lbabtc|lba|1.0E-8
-MUSKETH|huobipro-musketh|musk|1.0E-8
-PORTALETH|huobipro-portaleth|portal|1.0E-8
-BCXBTC|huobipro-bcxbtc|bcx|1.0E-10
-ANTETH|huobipro-anteth|ant|1.0E-6
-LENDETH|huobipro-lendeth|lend|1.0E-6
-JSTETH|huobipro-jsteth|jst|1.0E-6
-WXTHT|huobipro-wxtht|wxt|1.0E-6
-LUNAUSDT|huobipro-lunausdt|luna|0.0001
-UUUBTC|huobipro-uuubtc|uuu|1.0E-10
-ONEBTC|huobipro-onebtc|one|1.0E-10
-KANETH|huobipro-kaneth|kan|1.0E-8
-CNNETH|huobipro-cnneth|cnn|1.0E-10
-CKBBTC|huobipro-ckbbtc|ckb|1.0E-8
-TOPBTC|huobipro-topbtc|top|1.0E-10
-UGASBTC|huobipro-ugasbtc|ugas|1.0E-8
-AEBTC|huobipro-aebtc|ae|1.0E-8
-MTBTC|huobipro-mtbtc|mt|1.0E-10
-FAIRBTC|huobipro-fairbtc|fair|1.0E-10
-QTUMETH|huobipro-qtumeth|qtum|1.0E-6
-CVCETH|huobipro-cvceth|cvc|1.0E-8
-STORJUSDT|huobipro-storjusdt|storj|0.0001
-ZJLTBTC|huobipro-zjltbtc|zjlt|1.0E-10
-FSNBTC|huobipro-fsnbtc|fsn|1.0E-8
-ZRXETH|huobipro-zrxeth|zrx|1.0E-8
-GXCBTC|huobipro-gxcbtc|gxc|1.0E-8
-EKTETH|huobipro-ekteth|ekt|1.0E-8
-THETAUSDT|huobipro-thetausdt|theta|0.0001
-BSVUSDT|huobipro-bsvusdt|bsv|0.0001
-QUNETH|huobipro-quneth|qun|1.0E-8
-XRPHT|huobipro-xrpht|xrp|1.0E-6
-LOLUSDT|huobipro-lolusdt|lol|1.0E-6
-EGTUSDT|huobipro-egtusdt|egt|1.0E-6
-EGTBTC|huobipro-egtbtc|egt|1.0E-10
-TRXUSDT|huobipro-trxusdt|trx|1.0E-6
-ALGOUSDT|huobipro-algousdt|algo|0.0001
-ABTETH|huobipro-abteth|abt|1.0E-8
-EKOETH|huobipro-ekoeth|eko|1.0E-8
-COVAETH|huobipro-covaeth|cova|1.0E-8
-SCETH|huobipro-sceth|sc|1.0E-8
-HTETH|huobipro-hteth|ht|1.0E-8
-BALBTC|huobipro-balbtc|bal|1.0E-8
-ZILBTC|huobipro-zilbtc|zil|1.0E-10
-18CETH|huobipro-18ceth|18c|1.0E-8
-ETCBTC|huobipro-etcbtc|etc|1.0E-6
-POLYETH|huobipro-polyeth|poly|1.0E-6
-BKBTETH|huobipro-bkbteth|bkbt|1.0E-8
-GTCBTC|huobipro-gtcbtc|gtc|1.0E-10
-ALGOETH|huobipro-algoeth|algo|1.0E-6
-QASHBTC|huobipro-qashbtc|qash|1.0E-8
-ZECHUSD|huobipro-zechusd|zec|0.01
-UTKBTC|huobipro-utkbtc|utk|1.0E-8
-WANBTC|huobipro-wanbtc|wan|1.0E-8
-MEETETH|huobipro-meeteth|meet|1.0E-8
-EOSUSDT|huobipro-eosusdt|eos|0.0001
-SBTCBTC|huobipro-sbtcbtc|sbtc|1.0E-6
-DOGEUSDT|huobipro-dogeusdt|doge|1.0E-6
-BHDUSDT|huobipro-bhdusdt|bhd|0.0001
-XMXETH|huobipro-xmxeth|xmx|1.0E-8
-RDNBTC|huobipro-rdnbtc|rdn|1.0E-8
-SMTBTC|huobipro-smtbtc|smt|1.0E-10
-BIXBTC|huobipro-bixbtc|bix|1.0E-8
-XZCUSDT|huobipro-xzcusdt|xzc|0.0001
-LUNAHT|huobipro-lunaht|luna|1.0E-6
-XTZHUSD|huobipro-xtzhusd|xtz|0.0001
-YEEBTC|huobipro-yeebtc|yee|1.0E-10
-UCETH|huobipro-uceth|uc|1.0E-10
-FORBTC|huobipro-forbtc|for|1.0E-8
-DCRETH|huobipro-dcreth|dcr|1.0E-6
-YFIIETH|huobipro-yfiieth|yfii|1.0E-6
-ITCBTC|huobipro-itcbtc|itc|1.0E-8
-NASBTC|huobipro-nasbtc|nas|1.0E-8
-HB10USDT|huobipro-hb10usdt|hb10|0.0001
-GTUSDT|huobipro-gtusdt|gt|0.0001
-NCCBTC|huobipro-nccbtc|ncc|1.0E-10
-NPXSETH|huobipro-npxseth|npxs|1.0E-8
-WTCUSDT|huobipro-wtcusdt|wtc|0.0001
-ZENBTC|huobipro-zenbtc|zen|1.0E-8
-HTUSDT|huobipro-htusdt|ht|0.0001
-CHRHT|huobipro-chrht|chr|1.0E-6
-TRBBTC|huobipro-trbbtc|trb|1.0E-6
-KNCBTC|huobipro-kncbtc|knc|1.0E-8
-GNXETH|huobipro-gnxeth|gnx|1.0E-8
-FTIETH|huobipro-ftieth|fti|1.0E-8
-BATBTC|huobipro-batbtc|bat|1.0E-8
-BCHHUSD|huobipro-bchhusd|bch|0.01
-CHATBTC|huobipro-chatbtc|chat|1.0E-10
-REQBTC|huobipro-reqbtc|req|1.0E-8
-CVNTBTC|huobipro-cvntbtc|cvnt|1.0E-10
-YFIIUSDT|huobipro-yfiiusdt|yfii|0.0001
-IICBTC|huobipro-iicbtc|iic|1.0E-10
-XLMBTC|huobipro-xlmbtc|xlm|1.0E-8
-MDSUSDT|huobipro-mdsusdt|mds|1.0E-6
-EKTUSDT|huobipro-ektusdt|ekt|0.0001
-NKNUSDT|huobipro-nknusdt|nkn|1.0E-6
-LTCHUSD|huobipro-ltchusd|ltc|0.01
-WAXPBTC|huobipro-waxpbtc|waxp|1.0E-8
-TNBUSDT|huobipro-tnbusdt|tnb|1.0E-6
-RUFFETH|huobipro-ruffeth|ruff|1.0E-8
-LOOMETH|huobipro-loometh|loom|1.0E-6
-COMPETH|huobipro-competh|comp|0.0001
-LTCBTC|huobipro-ltcbtc|ltc|1.0E-6
-NESTUSDT|huobipro-nestusdt|nest|0.0001
-ADXBTC|huobipro-adxbtc|adx|1.0E-8
-VETUSDT|huobipro-vetusdt|vet|1.0E-6
-OSTBTC|huobipro-ostbtc|ost|1.0E-8
-JSTUSDT|huobipro-jstusdt|jst|1.0E-6
-SNXUSDT|huobipro-snxusdt|snx|0.0001
-TUSDHUSD|huobipro-tusdhusd|tusd|0.0001
-MANABTC|huobipro-manabtc|mana|1.0E-8
-YCCBTC|huobipro-yccbtc|ycc|1.0E-10
-BTMBTC|huobipro-btmbtc|btm|1.0E-8
-EGTHT|huobipro-egtht|egt|1.0E-6
-VIDYUSDT|huobipro-vidyusdt|vidy|1.0E-6
-CROBTC|huobipro-crobtc|cro|1.0E-8
-ETNBTC|huobipro-etnbtc|etn|1.0E-10
-ITCETH|huobipro-itceth|itc|1.0E-8
-RCCCETH|huobipro-rccceth|rccc|1.0E-8
-MDSETH|huobipro-mdseth|mds|1.0E-8
-QSPBTC|huobipro-qspbtc|qsp|1.0E-8
-ATPBTC|huobipro-atpbtc|atp|1.0E-10
-DBCETH|huobipro-dbceth|dbc|1.0E-8
-SEELEBTC|huobipro-seelebtc|seele|1.0E-10
-BHTBTC|huobipro-bhtbtc|bht|1.0E-8
-BTMETH|huobipro-btmeth|btm|1.0E-8
-HPTUSDT|huobipro-hptusdt|hpt|1.0E-6
-DAIUSDT|huobipro-daiusdt|dai|0.0001
-MTNBTC|huobipro-mtnbtc|mtn|1.0E-10
-HIVEHT|huobipro-hiveht|hive|1.0E-6
-GTHT|huobipro-gtht|gt|1.0E-6
-BCHBTC|huobipro-bchbtc|bch|1.0E-6
-UIPETH|huobipro-uipeth|uip|1.0E-8
-MANAETH|huobipro-manaeth|mana|1.0E-8
-STEEMUSDT|huobipro-steemusdt|steem|0.0001
-MTETH|huobipro-mteth|mt|1.0E-8
-LOLHT|huobipro-lolht|lol|1.0E-6
-LENDUSDT|huobipro-lendusdt|lend|0.0001
-SOCBTC|huobipro-socbtc|soc|1.0E-10
-ATPHT|huobipro-atpht|atp|1.0E-6
-SSPBTC|huobipro-sspbtc|ssp|1.0E-10
-XMRETH|huobipro-xmreth|xmr|1.0E-6
-OCNBTC|huobipro-ocnbtc|ocn|1.0E-10
-ETHHUSD|huobipro-ethhusd|eth|0.01
-WICCETH|huobipro-wicceth|wicc|1.0E-8
-RUFFBTC|huobipro-ruffbtc|ruff|1.0E-10
-XRPHUSD|huobipro-xrphusd|xrp|0.0001
-SKMUSDT|huobipro-skmusdt|skm|1.0E-6
-IDTBTC|huobipro-idtbtc|idt|1.0E-10
-YFIBTC|huobipro-yfibtc|yfi|0.0001
-CMTUSDT|huobipro-cmtusdt|cmt|1.0E-6
-MKRETH|huobipro-mkreth|mkr|0.0001
-OCNETH|huobipro-ocneth|ocn|1.0E-8
-DTAUSDT|huobipro-dtausdt|dta|1.0E-8
-HCETH|huobipro-hceth|hc|1.0E-6
-ASTBTC|huobipro-astbtc|ast|1.0E-8
-MXHT|huobipro-mxht|mx|1.0E-6
-BTGBTC|huobipro-btgbtc|btg|1.0E-6
-CVCBTC|huobipro-cvcbtc|cvc|1.0E-8
-PAXHUSD|huobipro-paxhusd|pax|0.0001
-WICCBTC|huobipro-wiccbtc|wicc|1.0E-8
-WNXMBTC|huobipro-wnxmbtc|wnxm|1.0E-6
-PVTHT|huobipro-pvtht|pvt|1.0E-6
-PAIUSDT|huobipro-paiusdt|pai|1.0E-6
-XTZUSDT|huobipro-xtzusdt|xtz|0.0001
-XMRBTC|huobipro-xmrbtc|xmr|1.0E-6
-QASHETH|huobipro-qasheth|qash|1.0E-6
-IDTETH|huobipro-idteth|idt|1.0E-8
-YEEETH|huobipro-yeeeth|yee|1.0E-8
-NEOUSDT|huobipro-neousdt|neo|0.01
-THETABTC|huobipro-thetabtc|theta|1.0E-8
-UTKETH|huobipro-utketh|utk|1.0E-8
-BTCUSDT|huobipro-btcusdt|btc|0.01
-ELAETH|huobipro-elaeth|ela|1.0E-8
-HITETH|huobipro-hiteth|hit|1.0E-10
-NCASHBTC|huobipro-ncashbtc|ncash|1.0E-10
-SCBTC|huobipro-scbtc|sc|1.0E-10
-MCOETH|huobipro-mcoeth|mco|1.0E-6
-HTHUSD|huobipro-hthusd|ht|0.0001
-BTTTRX|huobipro-btttrx|btt|1.0E-6
-CROHT|huobipro-croht|cro|0.0001
-ALGOBTC|huobipro-algobtc|algo|1.0E-8
-YFIIBTC|huobipro-yfiibtc|yfii|1.0E-6
-ELFUSDT|huobipro-elfusdt|elf|0.0001
-MTXETH|huobipro-mtxeth|mtx|1.0E-8
-ARDRBTC|huobipro-ardrbtc|ardr|1.0E-8
-GXCETH|huobipro-gxceth|gxc|1.0E-6
-FSNUSDT|huobipro-fsnusdt|fsn|0.0001
-LTCHT|huobipro-ltcht|ltc|1.0E-6
-BALETH|huobipro-baleth|bal|1.0E-6
-SMTUSDT|huobipro-smtusdt|smt|1.0E-6
-SALTBTC|huobipro-saltbtc|salt|1.0E-10
-TRBUSDT|huobipro-trbusdt|trb|0.0001
-CTXCUSDT|huobipro-ctxcusdt|ctxc|0.0001
-KCASHBTC|huobipro-kcashbtc|kcash|1.0E-10
-ACTETH|huobipro-acteth|act|1.0E-8
-BANDUSDT|huobipro-bandusdt|band|0.0001
-ADAUSDT|huobipro-adausdt|ada|1.0E-6
-IOTAUSDT|huobipro-iotausdt|iota|0.0001
-GSCETH|huobipro-gsceth|gsc|1.0E-8
-MDSBTC|huobipro-mdsbtc|mds|1.0E-10
-HTBTC|huobipro-htbtc|ht|1.0E-8
-CKBUSDT|huobipro-ckbusdt|ckb|1.0E-6
-HIVEUSDT|huobipro-hiveusdt|hive|0.0001
-XTZBTC|huobipro-xtzbtc|xtz|1.0E-8
-LAMBHT|huobipro-lambht|lamb|1.0E-6
-IICETH|huobipro-iiceth|iic|1.0E-10
-LAMBBTC|huobipro-lambbtc|lamb|1.0E-8
-DATBTC|huobipro-datbtc|dat|1.0E-10
-BHTHT|huobipro-bhtht|bht|1.0E-6
-VIDYHT|huobipro-vidyht|vidy|1.0E-6
-EVXBTC|huobipro-evxbtc|evx|1.0E-8
-ZJLTETH|huobipro-zjlteth|zjlt|1.0E-8
-RENETH|huobipro-reneth|ren|1.0E-6
-GNXBTC|huobipro-gnxbtc|gnx|1.0E-10
-DATXBTC|huobipro-datxbtc|datx|1.0E-10
-DACUSDT|huobipro-dacusdt|dac|1.0E-6
-UGASETH|huobipro-ugaseth|ugas|1.0E-6
-COVABTC|huobipro-covabtc|cova|1.0E-10
-IRISUSDT|huobipro-irisusdt|iris|1.0E-6
-SOCUSDT|huobipro-socusdt|soc|1.0E-6
-SNTBTC|huobipro-sntbtc|snt|1.0E-8
-WTCBTC|huobipro-wtcbtc|wtc|1.0E-8
-ICXBTC|huobipro-icxbtc|icx|1.0E-8
-LINKETH|huobipro-linketh|link|1.0E-8
-VIDYBTC|huobipro-vidybtc|vidy|1.0E-10
-THEMISBTC|huobipro-themisbtc|get|1.0E-10
-VSYSUSDT|huobipro-vsysusdt|vsys|0.0001
-SNXBTC|huobipro-snxbtc|snx|1.0E-8
-ATOMUSDT|huobipro-atomusdt|atom|0.0001
-BHDHT|huobipro-bhdht|bhd|0.0001
-IOSTETH|huobipro-iosteth|iost|1.0E-8
-ZILETH|huobipro-zileth|zil|1.0E-8
-ATPUSDT|huobipro-atpusdt|atp|1.0E-5
-WPRBTC|huobipro-wprbtc|wpr|1.0E-10
+TTBTC|huobipro-ttbtc|tt|1.0E-10
 BATETH|huobipro-bateth|bat|1.0E-8
-SEELEUSDT|huobipro-seeleusdt|seele|1.0E-6
-ETCUSDT|huobipro-etcusdt|etc|0.0001
-NULSUSDT|huobipro-nulsusdt|nuls|0.0001
-BHDBTC|huobipro-bhdbtc|bhd|1.0E-6
-HPTHT|huobipro-hptht|hpt|1.0E-6
-EOSHT|huobipro-eosht|eos|1.0E-6
-AIDOCETH|huobipro-aidoceth|aidoc|1.0E-8
+DACBTC|huobipro-dacbtc|dac|1.0E-10
+DGBBTC|huobipro-dgbbtc|dgb|1.0E-10
+NULSETH|huobipro-nulseth|nuls|1.0E-6
+RENBTC|huobipro-renbtc|ren|1.0E-8
+CKBBTC|huobipro-ckbbtc|ckb|1.0E-10
+BOTETH|huobipro-boteth|bot|0.0001
+RINGETH|huobipro-ringeth|ring|1.0E-6
+NEOUSDT|huobipro-neousdt|neo|0.01
+OGOHT|huobipro-ogoht|ogo|1.0E-6
+BNTUSDT|huobipro-bntusdt|bnt|0.0001
+WICCETH|huobipro-wicceth|wicc|1.0E-8
+BOXETH|huobipro-boxeth|box|1.0E-8
+ARDRETH|huobipro-ardreth|ardr|1.0E-6
+GRSBTC|huobipro-grsbtc|grs|1.0E-8
+BANDUSDT|huobipro-bandusdt|band|0.0001
+TOPHT|huobipro-topht|top|1.0E-6
 HPTBTC|huobipro-hptbtc|hpt|1.0E-10
-DOCKETH|huobipro-docketh|dock|1.0E-8
+NEXOUSDT|huobipro-nexousdt|nexo|0.0001
+STORJUSDT|huobipro-storjusdt|storj|0.0001
+RVNUSDT|huobipro-rvnusdt|rvn|1.0E-6
+SKMBTC|huobipro-skmbtc|skm|1.0E-10
+YFVUSDT|huobipro-yfvusdt|yfv|0.0001
+GASBTC|huobipro-gasbtc|gas|1.0E-6
+QASHETH|huobipro-qasheth|qash|1.0E-6
+SNXETH|huobipro-snxeth|snx|1.0E-6
+SNCETH|huobipro-snceth|snc|1.0E-8
+WNXMETH|huobipro-wnxmeth|wnxm|1.0E-6
+HITBTC|huobipro-hitbtc|hit|1.0E-10
+BALBTC|huobipro-balbtc|bal|1.0E-8
+NESTBTC|huobipro-nestbtc|nest|1.0E-8
+POWRBTC|huobipro-powrbtc|powr|1.0E-8
+MTNBTC|huobipro-mtnbtc|mtn|1.0E-10
+BCVETH|huobipro-bcveth|bcv|1.0E-8
+GNXBTC|huobipro-gnxbtc|gnx|1.0E-10
+MXCUSDT|huobipro-mxcusdt|mxc|1.0E-6
+CNNSBTC|huobipro-cnnsbtc|cnns|1.0E-10
+SWRVETH|huobipro-swrveth|swrv|1.0E-6
+BTCUSDT|huobipro-btcusdt|btc|0.01
+EMUSDT|huobipro-emusdt|em|1.0E-6
+MEETBTC|huobipro-meetbtc|meet|1.0E-10
+DATXBTC|huobipro-datxbtc|datx|1.0E-10
+BTC3SUSDT|huobipro-btc3susdt|btc3s|0.0001
+EOSUSDT|huobipro-eosusdt|eos|0.0001
+UTKBTC|huobipro-utkbtc|utk|1.0E-8
+VSYSBTC|huobipro-vsysbtc|vsys|1.0E-8
+BUTBTC|huobipro-butbtc|but|1.0E-10
+KANETH|huobipro-kaneth|kan|1.0E-8
+SUSHIBTC|huobipro-sushibtc|sushi|1.0E-8
+GXCBTC|huobipro-gxcbtc|gxc|1.0E-8
+DOCKBTC|huobipro-dockbtc|dock|1.0E-8
+FTTBTC|huobipro-fttbtc|ftt|1.0E-8
+MLNUSDT|huobipro-mlnusdt|mln|0.0001
+KCASHHT|huobipro-kcashht|kcash|1.0E-6
+BTSBTC|huobipro-btsbtc|bts|1.0E-8
+ASTBTC|huobipro-astbtc|ast|1.0E-8
+FTIUSDT|huobipro-ftiusdt|fti|1.0E-6
+MANAETH|huobipro-manaeth|mana|1.0E-8
+DTAUSDT|huobipro-dtausdt|dta|1.0E-8
+18CETH|huobipro-18ceth|18c|1.0E-8
+IRISETH|huobipro-iriseth|iris|1.0E-6
+THETABTC|huobipro-thetabtc|theta|1.0E-8
+XMRBTC|huobipro-xmrbtc|xmr|1.0E-6
+GNTETH|huobipro-gnteth|gnt|1.0E-8
+UCETH|huobipro-uceth|uc|1.0E-10
+BSVUSDT|huobipro-bsvusdt|bsv|0.0001
+HTUSDT|huobipro-htusdt|ht|0.0001
+HCETH|huobipro-hceth|hc|1.0E-6
+YAMV2ETH|huobipro-yamv2eth|yamv2|1.0E-6
 NASETH|huobipro-naseth|nas|1.0E-6
+FAIRBTC|huobipro-fairbtc|fair|1.0E-10
+OGOUSDT|huobipro-ogousdt|ogo|1.0E-6
+RSRBTC|huobipro-rsrbtc|rsr|1.0E-10
+DKAETH|huobipro-dkaeth|dka|1.0E-8
+FSNBTC|huobipro-fsnbtc|fsn|1.0E-8
+TNBBTC|huobipro-tnbbtc|tnb|1.0E-10
+ZILUSDT|huobipro-zilusdt|zil|1.0E-6
+AACUSDT|huobipro-aacusdt|aac|1.0E-6
+KSMBTC|huobipro-ksmbtc|ksm|1.0E-8
+BIXETH|huobipro-bixeth|bix|1.0E-6
+YFIETH|huobipro-yfieth|yfi|0.0001
+LSKETH|huobipro-lsketh|lsk|1.0E-6
+FTIETH|huobipro-ftieth|fti|1.0E-8
+CHRBTC|huobipro-chrbtc|chr|1.0E-8
+ATOMBTC|huobipro-atombtc|atom|1.0E-8
+ALGOUSDT|huobipro-algousdt|algo|0.0001
+LBAETH|huobipro-lbaeth|lba|1.0E-6
+ONTUSDT|huobipro-ontusdt|ont|0.0001
+PHXBTC|huobipro-phxbtc|phx|1.0E-10
+YAMV2USDT|huobipro-yamv2usdt|yamv2|0.0001
+WANBTC|huobipro-wanbtc|wan|1.0E-8
+LUNABTC|huobipro-lunabtc|luna|1.0E-8
+EKOETH|huobipro-ekoeth|eko|1.0E-8
+CREBTC|huobipro-crebtc|cre|1.0E-10
+IOSTUSDT|huobipro-iostusdt|iost|1.0E-6
+ETCBTC|huobipro-etcbtc|etc|1.0E-6
+IOSTHT|huobipro-iostht|iost|1.0E-8
+ZJLTETH|huobipro-zjlteth|zjlt|1.0E-8
+ZECBTC|huobipro-zecbtc|zec|1.0E-6
+PROPYETH|huobipro-propyeth|propy|1.0E-8
+BHDHT|huobipro-bhdht|bhd|0.0001
+XRPBTC|huobipro-xrpbtc|xrp|1.0E-8
+WAVESETH|huobipro-waveseth|waves|1.0E-6
+YFIIBTC|huobipro-yfiibtc|yfii|1.0E-6
+HYDRO PROTOCOLUSDT|huobipro-hydro protocolusdt|hot|1.0E-6
+XMXBTC|huobipro-xmxbtc|xmx|1.0E-10
+WPRBTC|huobipro-wprbtc|wpr|1.0E-10
+CHATETH|huobipro-chateth|chat|1.0E-8
+LYMETH|huobipro-lymeth|lym|1.0E-8
+MXUSDT|huobipro-mxusdt|mx|0.0001
+EMHT|huobipro-emht|em|1.0E-8
+ZLABTC|huobipro-zlabtc|zla|1.0E-10
+CVCBTC|huobipro-cvcbtc|cvc|1.0E-8
+AIDOCETH|huobipro-aidoceth|aidoc|1.0E-8
+LETETH|huobipro-leteth|let|1.0E-8
+XEMBTC|huobipro-xembtc|xem|1.0E-8
+ABTUSDT|huobipro-abtusdt|abt|0.0001
+PAIETH|huobipro-paieth|pai|1.0E-6
+ETHBTC|huobipro-ethbtc|eth|1.0E-6
+LINKBTC|huobipro-linkbtc|link|1.0E-8
+ICXUSDT|huobipro-icxusdt|icx|0.0001
+TRXETH|huobipro-trxeth|trx|1.0E-8
+KANUSDT|huobipro-kanusdt|kan|1.0E-6
+IOTAETH|huobipro-iotaeth|iota|1.0E-6
+BTMUSDT|huobipro-btmusdt|btm|0.0001
+KMDETH|huobipro-kmdeth|kmd|1.0E-6
+RVNHT|huobipro-rvnht|rvn|1.0E-6
+STPTUSDT|huobipro-stptusdt|stpt|1.0E-6
+COMPETH|huobipro-competh|comp|0.0001
+DASHUSDT|huobipro-dashusdt|dash|0.01
+YCCBTC|huobipro-yccbtc|ycc|1.0E-10
+OMGUSDT|huobipro-omgusdt|omg|0.0001
+SCETH|huobipro-sceth|sc|1.0E-8
+LENDUSDT|huobipro-lendusdt|lend|0.0001
+SNTUSDT|huobipro-sntusdt|snt|1.0E-6
+DATETH|huobipro-dateth|dat|1.0E-8
+SBTCBTC|huobipro-sbtcbtc|sbtc|1.0E-6
+AEUSDT|huobipro-aeusdt|ae|0.0001
+RCNBTC|huobipro-rcnbtc|rcn|1.0E-10
+XTZBTC|huobipro-xtzbtc|xtz|1.0E-8
+ELFETH|huobipro-elfeth|elf|1.0E-8
+BHDUSDT|huobipro-bhdusdt|bhd|0.0001
+WXTUSDT|huobipro-wxtusdt|wxt|1.0E-6
+SNXUSDT|huobipro-snxusdt|snx|0.0001
+LBABTC|huobipro-lbabtc|lba|1.0E-8
+CRVUSDT|huobipro-crvusdt|crv|0.0001
+WXTHT|huobipro-wxtht|wxt|1.0E-6
+ANTUSDT|huobipro-antusdt|ant|0.0001
+STKETH|huobipro-stketh|stk|1.0E-8
+BCHHT|huobipro-bchht|bch|1.0E-6
+LSKBTC|huobipro-lskbtc|lsk|1.0E-8
+SWFTCETH|huobipro-swftceth|swftc|1.0E-8
+BIXBTC|huobipro-bixbtc|bix|1.0E-8
+DCRETH|huobipro-dcreth|dcr|1.0E-6
+YFIBTC|huobipro-yfibtc|yfi|0.0001
+XLMUSDT|huobipro-xlmusdt|xlm|1.0E-6
+MEXBTC|huobipro-mexbtc|mex|1.0E-10
+TOPUSDT|huobipro-topusdt|top|1.0E-6
+XVGBTC|huobipro-xvgbtc|xvg|1.0E-10
+LETBTC|huobipro-letbtc|let|1.0E-10
+EKTETH|huobipro-ekteth|ekt|1.0E-8
+DOGEUSDT|huobipro-dogeusdt|doge|1.0E-6
+LXTETH|huobipro-lxteth|lxt|1.0E-8
+QUNBTC|huobipro-qunbtc|qun|1.0E-10
+TOPCETH|huobipro-topceth|topc|1.0E-8
+TRBUSDT|huobipro-trbusdt|trb|0.0001
+KCASHETH|huobipro-kcasheth|kcash|1.0E-8
+LOOMUSDT|huobipro-loomusdt|loom|1.0E-6
+BLZETH|huobipro-blzeth|blz|1.0E-8
+FORUSDT|huobipro-forusdt|for|1.0E-6
+BCXBTC|huobipro-bcxbtc|bcx|1.0E-10
+JSTBTC|huobipro-jstbtc|jst|1.0E-8
+UIPBTC|huobipro-uipbtc|uip|1.0E-10
+OMGBTC|huobipro-omgbtc|omg|1.0E-6
+CRVBTC|huobipro-crvbtc|crv|1.0E-6
+HTETH|huobipro-hteth|ht|1.0E-8
+LOLUSDT|huobipro-lolusdt|lol|1.0E-6
+BANDETH|huobipro-bandeth|band|1.0E-6
+FORBTC|huobipro-forbtc|for|1.0E-8
+ETCHUSD|huobipro-etchusd|etc|0.0001
+PNTETH|huobipro-pnteth|pnt|1.0E-10
+PEARLBTC|huobipro-pearlbtc|pearl|0.0001
+SALTBTC|huobipro-saltbtc|salt|1.0E-10
+NASBTC|huobipro-nasbtc|nas|1.0E-8
+PCBTC|huobipro-pcbtc|pc|1.0E-10
+ONEHT|huobipro-oneht|one|1.0E-6
+ONEUSDT|huobipro-oneusdt|one|1.0E-6
+GSCBTC|huobipro-gscbtc|gsc|1.0E-10
+NEXOETH|huobipro-nexoeth|nexo|1.0E-6
+GNTUSDT|huobipro-gntusdt|gnt|0.0001
+DKABTC|huobipro-dkabtc|dka|1.0E-8
+ADAUSDT|huobipro-adausdt|ada|1.0E-6
+DASHBTC|huobipro-dashbtc|dash|1.0E-6
+MTAUSDT|huobipro-mtausdt|mta|0.0001
+BFTETH|huobipro-bfteth|bft|1.0E-8
+HIVEUSDT|huobipro-hiveusdt|hive|0.0001
+LOOMBTC|huobipro-loombtc|loom|1.0E-8
+HYDRO PROTOCOLBTC|huobipro-hydro protocolbtc|hot|1.0E-10
+LXTBTC|huobipro-lxtbtc|lxt|1.0E-10
+BTGBTC|huobipro-btgbtc|btg|1.0E-6
+CROHT|huobipro-croht|cro|0.0001
+DTAETH|huobipro-dtaeth|dta|1.0E-8
+LAMBBTC|huobipro-lambbtc|lamb|1.0E-8
+CROUSDT|huobipro-crousdt|cro|0.0001
+COMPBTC|huobipro-compbtc|comp|1.0E-6
+SOCUSDT|huobipro-socusdt|soc|1.0E-6
 SHEBTC|huobipro-shebtc|she|1.0E-10
+HIVEHT|huobipro-hiveht|hive|1.0E-6
+LOLHT|huobipro-lolht|lol|1.0E-6
+ACTETH|huobipro-acteth|act|1.0E-8
+UGASETH|huobipro-ugaseth|ugas|1.0E-6
+STPTHT|huobipro-stptht|stpt|1.0E-6
+UCBTC|huobipro-ucbtc|uc|1.0E-10
+ZJLTBTC|huobipro-zjltbtc|zjlt|1.0E-10
+XVGETH|huobipro-xvgeth|xvg|1.0E-8
+BCHBTC|huobipro-bchbtc|bch|1.0E-6
+CMTETH|huobipro-cmteth|cmt|1.0E-8
+OGNBTC|huobipro-ognbtc|ogn|1.0E-8
+ONEBTC|huobipro-onebtc|one|1.0E-10
+RCCCETH|huobipro-rccceth|rccc|1.0E-8
+SWFTCBTC|huobipro-swftcbtc|swftc|1.0E-10
+XMXETH|huobipro-xmxeth|xmx|1.0E-8
+TOSBTC|huobipro-tosbtc|tos|1.0E-10
+ETCUSDT|huobipro-etcusdt|etc|0.0001
+BIFIBTC|huobipro-bifibtc|bifi|1.0E-10
+NPXSETH|huobipro-npxseth|npxs|1.0E-8
+CHRUSDT|huobipro-chrusdt|chr|1.0E-6
+NKNUSDT|huobipro-nknusdt|nkn|1.0E-6
+PAYETH|huobipro-payeth|pay|1.0E-8
+NCCBTC|huobipro-nccbtc|ncc|1.0E-10
+DFUSDT|huobipro-dfusdt|df|0.0001
+ACHUSDT|huobipro-achusdt|ach|1.0E-6
+IOTABTC|huobipro-iotabtc|iota|1.0E-8
+STKBTC|huobipro-stkbtc|stk|1.0E-10
+DFHT|huobipro-dfht|df|0.0001
+NASUSDT|huobipro-nasusdt|nas|0.0001
+YEEETH|huobipro-yeeeth|yee|1.0E-8
+MTABTC|huobipro-mtabtc|mta|1.0E-8
+ADABTC|huobipro-adabtc|ada|1.0E-8
+EOSETH|huobipro-eoseth|eos|1.0E-8
+WTCUSDT|huobipro-wtcusdt|wtc|0.0001
+ANKRUSDT|huobipro-ankrusdt|ankr|1.0E-6
+LTCBTC|huobipro-ltcbtc|ltc|1.0E-6
+TRXBTC|huobipro-trxbtc|trx|1.0E-10
+BCHUSDT|huobipro-bchusdt|bch|0.01
+BCVBTC|huobipro-bcvbtc|bcv|1.0E-10
+PVTUSDT|huobipro-pvtusdt|pvt|1.0E-6
+BHDBTC|huobipro-bhdbtc|bhd|1.0E-6
+ANKRHT|huobipro-ankrht|ankr|1.0E-6
+MLNETH|huobipro-mlneth|mln|1.0E-6
+SOCBTC|huobipro-socbtc|soc|1.0E-10
+ATPBTC|huobipro-atpbtc|atp|1.0E-10
+BATUSDT|huobipro-batusdt|bat|0.0001
+RUFFBTC|huobipro-ruffbtc|ruff|1.0E-10
+RINGBTC|huobipro-ringbtc|ring|1.0E-8
+NANOBTC|huobipro-nanobtc|nano|1.0E-7
+XLMHUSD|huobipro-xlmhusd|xlm|1.0E-6
+CHRHT|huobipro-chrht|chr|1.0E-6
+EVXETH|huobipro-evxeth|evx|1.0E-8
+LYMBTC|huobipro-lymbtc|lym|1.0E-10
+ABTBTC|huobipro-abtbtc|abt|1.0E-8
+SNCBTC|huobipro-sncbtc|snc|1.0E-8
+ACTBTC|huobipro-actbtc|act|1.0E-10
+UGASBTC|huobipro-ugasbtc|ugas|1.0E-8
+MXCBTC|huobipro-mxcbtc|mxc|1.0E-10
+HYDRO PROTOCOLETH|huobipro-hydro protocoleth|hot|1.0E-8
+MXHT|huobipro-mxht|mx|1.0E-6
+ZILETH|huobipro-zileth|zil|1.0E-8
+GNXUSDT|huobipro-gnxusdt|gnx|1.0E-6
+RUFFETH|huobipro-ruffeth|ruff|1.0E-8
+COVABTC|huobipro-covabtc|cova|1.0E-10
+SHEETH|huobipro-sheeth|she|1.0E-10
+ANTBTC|huobipro-antbtc|ant|1.0E-8
+HCUSDT|huobipro-hcusdt|hc|0.0001
+MTLBTC|huobipro-mtlbtc|mtl|1.0E-8
+CNNBTC|huobipro-cnnbtc|cnn|1.0E-10
+NULSBTC|huobipro-nulsbtc|nuls|1.0E-8
+CVCOINBTC|huobipro-cvcoinbtc|cvcoin|1.0E-8
+DGDBTC|huobipro-dgdbtc|dgd|1.0E-6
+ABTETH|huobipro-abteth|abt|1.0E-8
+PEARLETH|huobipro-pearleth|pearl|0.0001
+TRBBTC|huobipro-trbbtc|trb|1.0E-6
+CMTBTC|huobipro-cmtbtc|cmt|1.0E-8
+PAYBTC|huobipro-paybtc|pay|1.0E-8
+CVPBTC|huobipro-cvpbtc|cvp|1.0E-8
+CRVETH|huobipro-crveth|crv|1.0E-6
+BTMETH|huobipro-btmeth|btm|1.0E-8
+UIPETH|huobipro-uipeth|uip|1.0E-8
+YFIUSDT|huobipro-yfiusdt|yfi|0.01
+NODEUSDT|huobipro-nodeusdt|node|1.0E-6
+ALGOETH|huobipro-algoeth|algo|1.0E-6
+DTABTC|huobipro-dtabtc|dta|1.0E-10
+NKNHT|huobipro-nknht|nkn|1.0E-6
+ARPABTC|huobipro-arpabtc|arpa|1.0E-8
+GTHT|huobipro-gtht|gt|1.0E-6
+GXCETH|huobipro-gxceth|gxc|1.0E-6
+MANETH|huobipro-maneth|man|1.0E-6
 EOSBTC|huobipro-eosbtc|eos|1.0E-8
+THETAETH|huobipro-thetaeth|theta|1.0E-8
+SSPBTC|huobipro-sspbtc|ssp|1.0E-10
+XRTBTC|huobipro-xrtbtc|xrt|1.0E-6
+PNTBTC|huobipro-pntbtc|pnt|1.0E-12
+TNTBTC|huobipro-tntbtc|tnt|1.0E-10
+DOTUSDT|huobipro-dotusdt|dot|0.0001
+BTTETH|huobipro-btteth|btt|1.0E-10
+LUNAHT|huobipro-lunaht|luna|1.0E-6
+WICCBTC|huobipro-wiccbtc|wicc|1.0E-8
+ITCBTC|huobipro-itcbtc|itc|1.0E-8
+MUSKBTC|huobipro-muskbtc|musk|1.0E-10
+WAVESUSDT|huobipro-wavesusdt|waves|0.0001
+SKMHT|huobipro-skmht|skm|1.0E-6
+DCRUSDT|huobipro-dcrusdt|dcr|0.0001
+SSPETH|huobipro-sspeth|ssp|1.0E-10
+BTC1SUSDT|huobipro-btc1susdt|btc1s|0.0001
+LOOMETH|huobipro-loometh|loom|1.0E-6
+NEOBTC|huobipro-neobtc|neo|1.0E-6
+DGDETH|huobipro-dgdeth|dgd|1.0E-6
+ZRXETH|huobipro-zrxeth|zrx|1.0E-8
+XRTETH|huobipro-xrteth|xrt|1.0E-6
+CNNETH|huobipro-cnneth|cnn|1.0E-10
+WNXMUSDT|huobipro-wnxmusdt|wnxm|0.0001
+ICXETH|huobipro-icxeth|icx|1.0E-6
+LUNAUSDT|huobipro-lunausdt|luna|0.0001
+TRBETH|huobipro-trbeth|trb|1.0E-6
+BFTBTC|huobipro-bftbtc|bft|1.0E-8
+NEXOBTC|huobipro-nexobtc|nexo|1.0E-8
+XZCUSDT|huobipro-xzcusdt|xzc|0.0001
+TRIOETH|huobipro-trioeth|trio|1.0E-10
+DACUSDT|huobipro-dacusdt|dac|1.0E-6
+BLZUSDT|huobipro-blzusdt|blz|0.0001
+YEEBTC|huobipro-yeebtc|yee|1.0E-10
+PVTHT|huobipro-pvtht|pvt|1.0E-6
+USDCHUSD|huobipro-usdchusd|usdc|0.0001
+HTBTC|huobipro-htbtc|ht|1.0E-8
+NESTETH|huobipro-nesteth|nest|1.0E-6
+ITCETH|huobipro-itceth|itc|1.0E-8
+BTTBTC|huobipro-bttbtc|btt|1.0E-10
+POWRETH|huobipro-powreth|powr|1.0E-8
+BANDBTC|huobipro-bandbtc|band|1.0E-8
+MUSKETH|huobipro-musketh|musk|1.0E-8
+HITUSDT|huobipro-hitusdt|hit|1.0E-8
+OSTBTC|huobipro-ostbtc|ost|1.0E-8
+OMGETH|huobipro-omgeth|omg|1.0E-6
+FSNHT|huobipro-fsnht|fsn|1.0E-6
+MANBTC|huobipro-manbtc|man|1.0E-8
+BALETH|huobipro-baleth|bal|1.0E-6
+RSRHT|huobipro-rsrht|rsr|1.0E-6
+ICXBTC|huobipro-icxbtc|icx|1.0E-8
+ATOMUSDT|huobipro-atomusdt|atom|0.0001
+WAXPUSDT|huobipro-waxpusdt|waxp|1.0E-6
+ZRXBTC|huobipro-zrxbtc|zrx|1.0E-8
+VIDYBTC|huobipro-vidybtc|vidy|1.0E-10
+EGTBTC|huobipro-egtbtc|egt|1.0E-10
+ALGOBTC|huobipro-algobtc|algo|1.0E-8
+NODEHT|huobipro-nodeht|node|1.0E-6
+VETUSDT|huobipro-vetusdt|vet|1.0E-6
+ANTETH|huobipro-anteth|ant|1.0E-6
+LENDBTC|huobipro-lendbtc|lend|1.0E-8
+WAVESBTC|huobipro-wavesbtc|waves|1.0E-8
+BTMBTC|huobipro-btmbtc|btm|1.0E-8
+DOCKUSDT|huobipro-dockusdt|dock|1.0E-6
+DOTHUSD|huobipro-dothusd|dot|0.0001
+LINKETH|huobipro-linketh|link|1.0E-8
+SUSHIUSDT|huobipro-sushiusdt|sushi|0.0001
+PROPYBTC|huobipro-propybtc|propy|1.0E-8
+FTTUSDT|huobipro-fttusdt|ftt|0.0001
+CVPETH|huobipro-cvpeth|cvp|1.0E-6
+JSTUSDT|huobipro-jstusdt|jst|1.0E-6
+WAXPETH|huobipro-waxpeth|waxp|1.0E-6
+DAIUSDT|huobipro-daiusdt|dai|0.0001
+QUNETH|huobipro-quneth|qun|1.0E-8
+BCDBTC|huobipro-bcdbtc|bcd|1.0E-7
+BSVHUSD|huobipro-bsvhusd|bsv|0.0001
+ATOMETH|huobipro-atometh|atom|1.0E-6
+THEMISBTC|huobipro-themisbtc|get|1.0E-10
+ZILBTC|huobipro-zilbtc|zil|1.0E-10
+NPXSBTC|huobipro-npxsbtc|npxs|1.0E-10
+TOSETH|huobipro-toseth|tos|1.0E-8
+FTIBTC|huobipro-ftibtc|fti|1.0E-10
+BTSUSDT|huobipro-btsusdt|bts|0.0001
+KSMUSDT|huobipro-ksmusdt|ksm|0.0001
+BLZBTC|huobipro-blzbtc|blz|1.0E-8
+KCASHBTC|huobipro-kcashbtc|kcash|1.0E-10
+NANOETH|huobipro-nanoeth|nano|1.0E-6
+RSRUSDT|huobipro-rsrusdt|rsr|1.0E-6
+FSNUSDT|huobipro-fsnusdt|fsn|0.0001
+EVXBTC|huobipro-evxbtc|evx|1.0E-8
+MTAETH|huobipro-mtaeth|mta|1.0E-6
+REQBTC|huobipro-reqbtc|req|1.0E-8
+WANETH|huobipro-waneth|wan|1.0E-6
+BTCHUSD|huobipro-btchusd|btc|0.01
+ZRXUSDT|huobipro-zrxusdt|zrx|0.0001
+XLMBTC|huobipro-xlmbtc|xlm|1.0E-8
+MTXBTC|huobipro-mtxbtc|mtx|1.0E-8
+HPTHT|huobipro-hptht|hpt|1.0E-6
+TOPBTC|huobipro-topbtc|top|1.0E-10
+BANDHUSD|huobipro-bandhusd|band|0.0001
+YAMV2BTC|huobipro-yamv2btc|yamv2|1.0E-6
+GTUSDT|huobipro-gtusdt|gt|0.0001
+PORTALETH|huobipro-portaleth|portal|1.0E-8
+HB10USDT|huobipro-hb10usdt|hb10|0.0001
+TTUSDT|huobipro-ttusdt|tt|1.0E-6
+SOCETH|huobipro-soceth|soc|1.0E-8
+GTCETH|huobipro-gtceth|gtc|1.0E-8
+RTEETH|huobipro-rteeth|rte|1.0E-8
+TRIOBTC|huobipro-triobtc|trio|1.0E-10
+BTTTRX|huobipro-btttrx|btt|1.0E-6
+KNCETH|huobipro-knceth|knc|1.0E-8
+CMTUSDT|huobipro-cmtusdt|cmt|1.0E-6
+TTHT|huobipro-ttht|tt|1.0E-6
+AIDOCBTC|huobipro-aidocbtc|aidoc|1.0E-10
 ENGBTC|huobipro-engbtc|eng|1.0E-8
+DOGEBTC|huobipro-dogebtc|doge|1.0E-10
+ONTBTC|huobipro-ontbtc|ont|1.0E-8
+XMXUSDT|huobipro-xmxusdt|xmx|1.0E-6
+COVAETH|huobipro-covaeth|cova|1.0E-8
+YFIIUSDT|huobipro-yfiiusdt|yfii|0.0001
+BNTBTC|huobipro-bntbtc|bnt|1.0E-8
+ADAETH|huobipro-adaeth|ada|1.0E-6
+YEEUSDT|huobipro-yeeusdt|yee|1.0E-6
+GASETH|huobipro-gaseth|gas|1.0E-6
+MEETETH|huobipro-meeteth|meet|1.0E-8
+PAIBTC|huobipro-paibtc|pai|1.0E-8
+RVNBTC|huobipro-rvnbtc|rvn|1.0E-10
+SKMUSDT|huobipro-skmusdt|skm|1.0E-6
+WNXMBTC|huobipro-wnxmbtc|wnxm|1.0E-6
+CVCETH|huobipro-cvceth|cvc|1.0E-8
+EGCCBTC|huobipro-egccbtc|egcc|1.0E-10
+HPTUSDT|huobipro-hptusdt|hpt|1.0E-6
+LAMBETH|huobipro-lambeth|lamb|1.0E-8
+BALUSDT|huobipro-balusdt|bal|0.0001
+BHTBTC|huobipro-bhtbtc|bht|1.0E-8
+NESTUSDT|huobipro-nestusdt|nest|0.0001
+TNBUSDT|huobipro-tnbusdt|tnb|1.0E-6
+MLNBTC|huobipro-mlnbtc|mln|1.0E-6
+CNNSUSDT|huobipro-cnnsusdt|cnns|1.0E-6
+18CBTC|huobipro-18cbtc|18c|1.0E-10
+STORJBTC|huobipro-storjbtc|storj|1.0E-8
+DASHHUSD|huobipro-dashhusd|dash|0.01
+BCHHUSD|huobipro-bchhusd|bch|0.01
+HITETH|huobipro-hiteth|hit|1.0E-10
+DOTBTC|huobipro-dotbtc|dot|1.0E-8
+NESTHT|huobipro-nestht|nest|1.0E-6
+POLYETH|huobipro-polyeth|poly|1.0E-6
+BSVBTC|huobipro-bsvbtc|bsv|1.0E-6
+ADXBTC|huobipro-adxbtc|adx|1.0E-8
+GXCUSDT|huobipro-gxcusdt|gxc|0.0001
+KANBTC|huobipro-kanbtc|kan|1.0E-10
+CVNTETH|huobipro-cvnteth|cvnt|1.0E-8
+SEELEUSDT|huobipro-seeleusdt|seele|1.0E-6
+EGTUSDT|huobipro-egtusdt|egt|1.0E-6
+YFVBTC|huobipro-yfvbtc|yfv|1.0E-6
+IRISBTC|huobipro-irisbtc|iris|1.0E-10
+BKBTETH|huobipro-bkbteth|bkbt|1.0E-8
+BATBTC|huobipro-batbtc|bat|1.0E-8
+XMRUSDT|huobipro-xmrusdt|xmr|0.01
+IDTETH|huobipro-idteth|idt|1.0E-8
+EMBTC|huobipro-embtc|em|1.0E-10
+GSCETH|huobipro-gsceth|gsc|1.0E-8
+OCNETH|huobipro-ocneth|ocn|1.0E-8
+VIDYUSDT|huobipro-vidyusdt|vidy|1.0E-6
+GNXETH|huobipro-gnxeth|gnx|1.0E-8
+RUFFUSDT|huobipro-ruffusdt|ruff|1.0E-6
+ELFBTC|huobipro-elfbtc|elf|1.0E-8
+CNNSHT|huobipro-cnnsht|cnns|1.0E-6
+QTUMUSDT|huobipro-qtumusdt|qtum|0.0001
+VETBTC|huobipro-vetbtc|vet|1.0E-10
+EKTBTC|huobipro-ektbtc|ekt|1.0E-10
+ZENBTC|huobipro-zenbtc|zen|1.0E-8
+OGOBTC|huobipro-ogobtc|ogo|1.0E-8
+MKRUSDT|huobipro-mkrusdt|mkr|0.01
+VSYSHT|huobipro-vsysht|vsys|1.0E-6
+PEARLUSDT|huobipro-pearlusdt|pearl|0.01
+DGBETH|huobipro-dgbeth|dgb|1.0E-8
+BOTBTC|huobipro-botbtc|bot|1.0E-6
+ETCHT|huobipro-etcht|etc|1.0E-6
+CREUSDT|huobipro-creusdt|cre|1.0E-6
+NEWBTC|huobipro-newbtc|new|1.0E-10
+CKBHT|huobipro-ckbht|ckb|1.0E-6
+GVEBTC|huobipro-gvebtc|gve|1.0E-10
+BTTUSDT|huobipro-bttusdt|btt|1.0E-8
+AKROHT|huobipro-akroht|akro|1.0E-6
+CHATBTC|huobipro-chatbtc|chat|1.0E-10
+TOPCBTC|huobipro-topcbtc|topc|1.0E-10
+MTETH|huobipro-mteth|mt|1.0E-8
+SMTUSDT|huobipro-smtusdt|smt|1.0E-6
+BUTETH|huobipro-buteth|but|1.0E-8
+RCCCBTC|huobipro-rcccbtc|rccc|1.0E-10
+STEEMUSDT|huobipro-steemusdt|steem|0.0001
+DATXETH|huobipro-datxeth|datx|1.0E-8
+MTBTC|huobipro-mtbtc|mt|1.0E-10
+MDSUSDT|huobipro-mdsusdt|mds|1.0E-6
+IICBTC|huobipro-iicbtc|iic|1.0E-10
+POLYBTC|huobipro-polybtc|poly|1.0E-8
+ADAHUSD|huobipro-adahusd|ada|1.0E-6
+YCCETH|huobipro-ycceth|ycc|1.0E-8
+UUUUSDT|huobipro-uuuusdt|uuu|1.0E-6
+MCOUSDT|huobipro-mcousdt|mco|0.0001
+PCETH|huobipro-pceth|pc|1.0E-10
+THETAUSDT|huobipro-thetausdt|theta|0.0001
+ELAUSDT|huobipro-elausdt|ela|0.0001
+XRPHUSD|huobipro-xrphusd|xrp|0.0001
+FTTHT|huobipro-fttht|ftt|1.0E-6
+ASTUSDT|huobipro-astusdt|ast|0.0001
+XRTUSDT|huobipro-xrtusdt|xrt|0.0001
+QASHBTC|huobipro-qashbtc|qash|1.0E-8
+XTZETH|huobipro-xtzeth|xtz|1.0E-6
+XZCETH|huobipro-xzceth|xzc|1.0E-6
+NCASHBTC|huobipro-ncashbtc|ncash|1.0E-10
+RENUSDT|huobipro-renusdt|ren|1.0E-6
+CREHT|huobipro-creht|cre|1.0E-6
+CKBUSDT|huobipro-ckbusdt|ckb|1.0E-6
+VSYSUSDT|huobipro-vsysusdt|vsys|0.0001
+CTXCUSDT|huobipro-ctxcusdt|ctxc|0.0001
+DACETH|huobipro-daceth|dac|1.0E-8
+UTKUSDT|huobipro-utkusdt|utk|0.0001
+DCRBTC|huobipro-dcrbtc|dcr|1.0E-6
+VETETH|huobipro-veteth|vet|1.0E-8
+DFBTC|huobipro-dfbtc|df|1.0E-8
+OCNBTC|huobipro-ocnbtc|ocn|1.0E-10
+BTSETH|huobipro-btseth|bts|1.0E-8
+OGNHT|huobipro-ognht|ogn|1.0E-6
+YFIIETH|huobipro-yfiieth|yfii|1.0E-6
+ITCUSDT|huobipro-itcusdt|itc|0.0001
+LTCUSDT|huobipro-ltcusdt|ltc|0.01
+AKROBTC|huobipro-akrobtc|akro|1.0E-10
+ETHHUSD|huobipro-ethhusd|eth|0.01
+MANAUSDT|huobipro-manausdt|mana|0.0001
+XTZUSDT|huobipro-xtzusdt|xtz|0.0001
+OGNUSDT|huobipro-ognusdt|ogn|0.0001
+AEBTC|huobipro-aebtc|ae|1.0E-8
+ZECHUSD|huobipro-zechusd|zec|0.01
+NANOUSDT|huobipro-nanousdt|nano|0.0001
+DOGEETH|huobipro-dogeeth|doge|1.0E-8
+AACETH|huobipro-aaceth|aac|1.0E-8
+NODEBTC|huobipro-nodebtc|node|1.0E-10
+TUSDHUSD|huobipro-tusdhusd|tusd|0.0001
+WICCUSDT|huobipro-wiccusdt|wicc|0.0001
+EKTUSDT|huobipro-ektusdt|ekt|1.0E-6
+STPTBTC|huobipro-stptbtc|stpt|1.0E-8
+KNCBTC|huobipro-kncbtc|knc|1.0E-8
+KMDBTC|huobipro-kmdbtc|kmd|1.0E-8
+ATPUSDT|huobipro-atpusdt|atp|1.0E-5
+GTCBTC|huobipro-gtcbtc|gtc|1.0E-10
+DASHHT|huobipro-dashht|dash|1.0E-6
+SWRVUSDT|huobipro-swrvusdt|swrv|0.0001
+EGCCETH|huobipro-egcceth|egcc|1.0E-10
+KNCUSDT|huobipro-kncusdt|knc|0.0001
+LTCHT|huobipro-ltcht|ltc|1.0E-6
+IICETH|huobipro-iiceth|iic|1.0E-10
+JSTETH|huobipro-jsteth|jst|1.0E-6
+CVPUSDT|huobipro-cvpusdt|cvp|0.0001
+LUNBTC|huobipro-lunbtc|lun|1.0E-8
+MDSBTC|huobipro-mdsbtc|mds|1.0E-10
+SUSHIETH|huobipro-sushieth|sushi|1.0E-6
+XZCBTC|huobipro-xzcbtc|xzc|1.0E-6
+RINGUSDT|huobipro-ringusdt|ring|0.0001
+SCBTC|huobipro-scbtc|sc|1.0E-10
+FORHT|huobipro-forht|for|1.0E-6
+BOXBTC|huobipro-boxbtc|box|1.0E-10
+IRISUSDT|huobipro-irisusdt|iris|1.0E-6
+BNTETH|huobipro-bnteth|bnt|1.0E-6
+OCNUSDT|huobipro-ocnusdt|ocn|1.0E-8
+XRPHT|huobipro-xrpht|xrp|1.0E-6
+NESTHUSD|huobipro-nesthusd|nest|0.0001
+GRSETH|huobipro-grseth|grs|1.0E-6
+SRNBTC|huobipro-srnbtc|srn|1.0E-10
+CROBTC|huobipro-crobtc|cro|1.0E-8
+EKOBTC|huobipro-ekobtc|eko|1.0E-10
+IDTBTC|huobipro-idtbtc|idt|1.0E-10
+UIPUSDT|huobipro-uipusdt|uip|1.0E-6
+BHTHT|huobipro-bhtht|bht|1.0E-6
+RDNBTC|huobipro-rdnbtc|rdn|1.0E-8
+XTZHUSD|huobipro-xtzhusd|xtz|0.0001
+WAXPBTC|huobipro-waxpbtc|waxp|1.0E-8
+DKAUSDT|huobipro-dkausdt|dka|1.0E-6
+AKROUSDT|huobipro-akrousdt|akro|1.0E-5
+CVCUSDT|huobipro-cvcusdt|cvc|0.0001
+EGTHT|huobipro-egtht|egt|1.0E-6
+LETUSDT|huobipro-letusdt|let|1.0E-6
+MANABTC|huobipro-manabtc|mana|1.0E-8
+DATBTC|huobipro-datbtc|dat|1.0E-10
+BHTUSDT|huobipro-bhtusdt|bht|1.0E-6
+LTCHUSD|huobipro-ltchusd|ltc|0.01
+PORTALBTC|huobipro-portalbtc|portal|1.0E-10
+ELABTC|huobipro-elabtc|ela|1.0E-8
+SWRVBTC|huobipro-swrvbtc|swrv|1.0E-8
+BOTUSDT|huobipro-botusdt|bot|0.01
+DOCKETH|huobipro-docketh|dock|1.0E-8
+BTC3LUSDT|huobipro-btc3lusdt|btc3l|0.0001
+XRPUSDT|huobipro-xrpusdt|xrp|1.0E-5
+LINKUSDT|huobipro-linkusdt|link|0.0001
+YFVETH|huobipro-yfveth|yfv|1.0E-6
+LAMBHT|huobipro-lambht|lamb|1.0E-6
+STEEMBTC|huobipro-steembtc|steem|1.0E-8
+CVNTBTC|huobipro-cvntbtc|cvnt|1.0E-10
+SNXBTC|huobipro-snxbtc|snx|1.0E-8
+PAXHUSD|huobipro-paxhusd|pax|0.0001
+ARPAUSDT|huobipro-arpausdt|arpa|1.0E-6
+ZENETH|huobipro-zeneth|zen|1.0E-6
+APPCETH|huobipro-appceth|appc|1.0E-6
+ARDRBTC|huobipro-ardrbtc|ardr|1.0E-8
+NULSUSDT|huobipro-nulsusdt|nuls|0.0001
+WXTBTC|huobipro-wxtbtc|wxt|1.0E-10
+SMTBTC|huobipro-smtbtc|smt|1.0E-10
+GTBTC|huobipro-gtbtc|gt|1.0E-8
+QTUMETH|huobipro-qtumeth|qtum|1.0E-6
+MTHT|huobipro-mtht|mt|1.0E-6
+VIDYHT|huobipro-vidyht|vidy|1.0E-6
+DBCETH|huobipro-dbceth|dbc|1.0E-8
+UUUBTC|huobipro-uuubtc|uuu|1.0E-10
+XLMETH|huobipro-xlmeth|xlm|1.0E-6
+THEMISETH|huobipro-themiseth|get|1.0E-8
+REQETH|huobipro-reqeth|req|1.0E-8
+PAIUSDT|huobipro-paiusdt|pai|1.0E-6
+FAIRETH|huobipro-faireth|fair|1.0E-8
+EDUETH|huobipro-edueth|edu|1.0E-10
+NKNBTC|huobipro-nknbtc|nkn|1.0E-8
+IOTAUSDT|huobipro-iotausdt|iota|0.0001
+QSPBTC|huobipro-qspbtc|qsp|1.0E-8
+MCOBTC|huobipro-mcobtc|mco|1.0E-6
+BIXUSDT|huobipro-bixusdt|bix|1.0E-6
+TNBETH|huobipro-tnbeth|tnb|1.0E-8
+NEWHT|huobipro-newht|new|1.0E-6
+PVTBTC|huobipro-pvtbtc|pvt|1.0E-10
+LENDETH|huobipro-lendeth|lend|1.0E-6
+RTEBTC|huobipro-rtebtc|rte|1.0E-10
+APPCBTC|huobipro-appcbtc|appc|1.0E-8
+LBAUSDT|huobipro-lbausdt|lba|1.0E-6
+AACBTC|huobipro-aacbtc|aac|1.0E-10
+CTXCBTC|huobipro-ctxcbtc|ctxc|1.0E-8
+EOSHT|huobipro-eosht|eos|1.0E-6
+LAMBUSDT|huobipro-lambusdt|lamb|1.0E-6
+STEEMETH|huobipro-steemeth|steem|1.0E-6
+IOSTBTC|huobipro-iostbtc|iost|1.0E-10
+ONTETH|huobipro-onteth|ont|1.0E-8
+USDTHUSD|huobipro-usdthusd|usdt|0.0001
+SNTBTC|huobipro-sntbtc|snt|1.0E-8
+SEELEETH|huobipro-seeleeth|seele|1.0E-8
+LOLBTC|huobipro-lolbtc|lol|1.0E-10
+XMRETH|huobipro-xmreth|xmr|1.0E-6
+ARPAHT|huobipro-arpaht|arpa|1.0E-6
+HCBTC|huobipro-hcbtc|hc|1.0E-8
+SRNETH|huobipro-srneth|srn|1.0E-8
+ELAETH|huobipro-elaeth|ela|1.0E-8
+GNTBTC|huobipro-gntbtc|gnt|1.0E-8
+MCOETH|huobipro-mcoeth|mco|1.0E-6
+SWFTCUSDT|huobipro-swftcusdt|swftc|1.0E-6
+SEELEBTC|huobipro-seelebtc|seele|1.0E-10
+WTCETH|huobipro-wtceth|wtc|1.0E-6
+ZECUSDT|huobipro-zecusdt|zec|0.01
+ACTUSDT|huobipro-actusdt|act|1.0E-6
+ATPHT|huobipro-atpht|atp|1.0E-6
+ETHUSDT|huobipro-ethusdt|eth|0.01
+LXTUSDT|huobipro-lxtusdt|lxt|1.0E-6
+ACHETH|huobipro-acheth|ach|1.0E-8
+UTKETH|huobipro-utketh|utk|1.0E-8
+ETNBTC|huobipro-etnbtc|etn|1.0E-10
+NEWUSDT|huobipro-newusdt|new|1.0E-6
+EDUBTC|huobipro-edubtc|edu|1.0E-10
+RENETH|huobipro-reneth|ren|1.0E-6
+KSMHT|huobipro-ksmht|ksm|1.0E-6
+MKRETH|huobipro-mkreth|mkr|0.0001
+DBCBTC|huobipro-dbcbtc|dbc|1.0E-10
+HTHUSD|huobipro-hthusd|ht|0.0001
+ETNETH|huobipro-etneth|etn|1.0E-8
+CTXCETH|huobipro-ctxceth|ctxc|1.0E-8
+KCASHUSDT|huobipro-kcashusdt|kcash|1.0E-6
+SMTETH|huobipro-smteth|smt|1.0E-8
+XEMUSDT|huobipro-xemusdt|xem|0.0001
+TRXUSDT|huobipro-trxusdt|trx|1.0E-6
+HIVEBTC|huobipro-hivebtc|hive|1.0E-8
+MTXETH|huobipro-mtxeth|mtx|1.0E-8
+AEETH|huobipro-aeeth|ae|1.0E-6
+IOSTETH|huobipro-iosteth|iost|1.0E-8
+MDSETH|huobipro-mdseth|mds|1.0E-8
+ANKRBTC|huobipro-ankrbtc|ankr|1.0E-10
+MKRBTC|huobipro-mkrbtc|mkr|1.0E-6
+UUUETH|huobipro-uuueth|uuu|1.0E-10
+WTCBTC|huobipro-wtcbtc|wtc|1.0E-8
+QTUMBTC|huobipro-qtumbtc|qtum|1.0E-6
+COMPUSDT|huobipro-compusdt|comp|0.01
+ELFUSDT|huobipro-elfusdt|elf|0.0001
+EOSHUSD|huobipro-eoshusd|eos|0.0001
+ACHBTC|huobipro-achbtc|ach|1.0E-10
+MXBTC|huobipro-mxbtc|mx|1.0E-8
 
 
-## Indodax Supported Symbols in Executium (updated: 26th August 2020)
+## Indodax Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -3701,7 +3943,7 @@ XLMBTC|indodax-xlmbtc|str|N/A
 XRPBTC|indodax-xrpbtc|xrp|N/A
 
 
-## Itbit Supported Symbols in Executium (updated: 26th August 2020)
+## Itbit Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -3713,7 +3955,7 @@ ETHEUR|itbit-etheur|ETH|N/A
 ETHSGD|itbit-ethsgd|ETH|N/A
 
 
-## Kraken Supported Symbols in Executium (updated: 26th August 2020)
+## Kraken Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -3874,7 +4116,7 @@ USDCAD|kraken-usdcad|ZUSD|1.0E-5
 USDJPY|kraken-usdjpy|ZUSD|0.001
 
 
-## Krakenfutures Supported Symbols in Executium (updated: 26th August 2020)
+## Krakenfutures Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -3892,14 +4134,14 @@ FIETHUSD200925|krakenfutures-fiethusd200925|fi|N/A
 FVXRPXBT200925|krakenfutures-fvxrpxbt200925|fv|N/A
 FIXBTUSD201225|krakenfutures-fixbtusd201225|fi|N/A
 FIETHUSD201225|krakenfutures-fiethusd201225|fi|N/A
-FIXRPUSD200828|krakenfutures-fixrpusd200828|fi|N/A
-FIBCHUSD200828|krakenfutures-fibchusd200828|fi|N/A
-FILTCUSD200828|krakenfutures-filtcusd200828|fi|N/A
-FIETHUSD200828|krakenfutures-fiethusd200828|fi|N/A
-FIXBTUSD200828|krakenfutures-fixbtusd200828|fi|N/A
+FIXRPUSD201225|krakenfutures-fixrpusd201225|fi|N/A
+FIBCHUSD201225|krakenfutures-fibchusd201225|fi|N/A
+FILTCUSD201225|krakenfutures-filtcusd201225|fi|N/A
+FIETHUSD210326|krakenfutures-fiethusd210326|fi|N/A
+FIXBTUSD210326|krakenfutures-fixbtusd210326|fi|N/A
 
 
-## Kucoin Supported Symbols in Executium (updated: 26th August 2020)
+## Kucoin Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -3923,6 +4165,7 @@ BCDETH|kucoin-bcdeth|BCD|1.0E-7
 KNCETH|kucoin-knceth|KNC|1.0E-7
 KNCBTC|kucoin-kncbtc|KNC|1.0E-8
 DACCBTC|kucoin-daccbtc|DACC|1.0E-10
+LENDBTC|kucoin-lendbtc|LEND|1.0E-8
 OMGETH|kucoin-omgeth|OMG|1.0E-7
 TFLBTC|kucoin-tflbtc|TFL|1.0E-8
 OMGBTC|kucoin-omgbtc|OMG|1.0E-8
@@ -4333,6 +4576,14 @@ DOTUSDT|kucoin-dotusdt|DOT|0.0001
 DOTBTC|kucoin-dotbtc|DOT|1.0E-8
 SHABTC|kucoin-shabtc|SHA|1.0E-9
 SHAUSDT|kucoin-shausdt|SHA|1.0E-6
+EWTUSDT|kucoin-ewtusdt|EWT|0.001
+USDJUSDT|kucoin-usdjusdt|USDJ|1.0E-8
+LENDUSDT|kucoin-lendusdt|LEND|1.0E-6
+EFXBTC|kucoin-efxbtc|EFX|1.0E-8
+CKBBTC|kucoin-ckbbtc|CKB|1.0E-10
+CKBUSDT|kucoin-ckbusdt|CKB|1.0E-6
+UMAUSDT|kucoin-umausdt|UMA|0.001
+ALEPHUSDT|kucoin-alephusdt|ALEPH|1.0E-6
 AERGOBTC|kucoin-aergobtc|AERGO|1.0E-8
 AERGOETH|kucoin-aergoeth|AERGO|1.0E-7
 XYOETH|kucoin-xyoeth|XYO|1.0E-7
@@ -4372,10 +4623,20 @@ GRINETH|kucoin-grineth|GRIN|1.0E-7
 GRINUSDT|kucoin-grinusdt|GRIN|1.0E-6
 
 
-## Liquid Supported Symbols in Executium (updated: 26th August 2020)
+## Liquid Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
+EWTUSD|liquid-ewtusd|EWT|1.0E-5
+XTZBTC|liquid-xtzbtc|XTZ|1.0E-8
+XTZUSDT|liquid-xtzusdt|XTZ|1.0E-6
+ATOMBTC|liquid-atombtc|ATOM|1.0E-8
+ATOMUSDT|liquid-atomusdt|ATOM|1.0E-6
+DASHUSDT|liquid-dashusdt|DASH|1.0E-6
+SGRUSD|liquid-sgrusd|SGR|1.0E-5
+SGRBTC|liquid-sgrbtc|SGR|1.0E-8
+CLRXUSD|liquid-clrxusd|CLRX|1.0E-5
+SGRETH|liquid-sgreth|SGR|1.0E-8
 LINKBTC|liquid-linkbtc|LINK|1.0E-8
 XRPUSD|liquid-xrpusd|XRP|1.0E-5
 LINKUSDT|liquid-linkusdt|LINK|1.0E-6
@@ -4383,13 +4644,14 @@ ETH3SUSDT|liquid-eth3susdt|ETH3S|1.0E-6
 BTCAUD|liquid-btcaud|BTC|1.0E-5
 BTCEUR|liquid-btceur|BTC|1.0E-5
 TFTBTC|liquid-tftbtc|TFT|1.0E-8
+MKRBTC|liquid-mkrbtc|MKR|1.0E-8
+MKRUSDT|liquid-mkrusdt|MKR|1.0E-6
 RSVBTC|liquid-rsvbtc|RSV|1.0E-8
 PCIBTC|liquid-pcibtc|PCI|1.0E-8
 WOMUSDT|liquid-womusdt|WOM|1.0E-6
 LINKETH|liquid-linketh|LINK|1.0E-8
 RSRBTC|liquid-rsrbtc|RSR|1.0E-8
 BTC3LUSDT|liquid-btc3lusdt|BTC3L|1.0E-6
-CLRXUSD|liquid-clrxusd|CLRX|1.0E-5
 RSVEUR|liquid-rsveur|RSV|1.0E-5
 RSVUSD|liquid-rsvusd|RSV|1.0E-5
 ETH3LUSDT|liquid-eth3lusdt|ETH3L|1.0E-6
@@ -4413,7 +4675,6 @@ BCHJPY|liquid-bchjpy|BCH|1.0E-5
 QASHETH|liquid-qasheth|QASH|1.0E-8
 BCHUSDC|liquid-bchusdc|BCH|1.0E-8
 BCHSGD|liquid-bchsgd|BCH|1.0E-5
-SGAUSD|liquid-sgausd|SGA|1.0E-5
 GETBTC|liquid-getbtc|GET|1.0E-8
 HBARUSD|liquid-hbarusd|HBAR|1.0E-5
 HBARETH|liquid-hbareth|HBAR|1.0E-8
@@ -4427,12 +4688,10 @@ ETHAUD|liquid-ethaud|ETH|1.0E-5
 MIOTAUSD|liquid-miotausd|MIOTA|1.0E-5
 ETHUSDC|liquid-ethusdc|ETH|1.0E-8
 ETHHKD|liquid-ethhkd|ETH|1.0E-5
-SGABTC|liquid-sgabtc|SGA|1.0E-8
-SGAETH|liquid-sgaeth|SGA|1.0E-8
 ETHUSD|liquid-ethusd|ETH|1.0E-5
 ETHSGD|liquid-ethsgd|ETH|1.0E-5
-BCHUSD|liquid-bchusd|BCH|1.0E-5
 BTCSHORTUSDT|liquid-btcshortusdt|BTCSHORT|1.0E-6
+BCHUSD|liquid-bchusd|BCH|1.0E-5
 BTCUSDT|liquid-btcusdt|BTC|1.0E-6
 BTCUSDC|liquid-btcusdc|BTC|1.0E-8
 XRPJPY|liquid-xrpjpy|XRP|1.0E-5
@@ -4444,13 +4703,11 @@ BTCJPY|liquid-btcjpy|BTC|1.0E-5
 BTCUSD|liquid-btcusd|BTC|1.0E-5
 BTCVUSDT|liquid-btcvusdt|BTCV|1.0E-6
 IDHETH|liquid-idheth|IDH|1.0E-8
-ORBSETH|liquid-orbseth|ORBS|1.0E-8
 DACSQASH|liquid-dacsqash|DACS|1.0E-8
 IDHQASH|liquid-idhqash|IDH|1.0E-8
 GETQASH|liquid-getqash|GET|1.0E-8
 QASHBTC|liquid-qashbtc|QASH|1.0E-8
 FLEXBTC|liquid-flexbtc|FLEX|1.0E-8
-EWTEUR|liquid-ewteur|EWT|1.0E-5
 LTCBTC|liquid-ltcbtc|LTC|1.0E-8
 EWTETH|liquid-ewteth|EWT|1.0E-8
 TRXBTC|liquid-trxbtc|TRX|1.0E-8
@@ -4493,7 +4750,6 @@ MTCBTC|liquid-mtcbtc|MTC|1.0E-8
 AREBTC|liquid-arebtc|ARE|1.0E-8
 GZEBTC|liquid-gzebtc|GZE|1.0E-8
 XPTUSDT|liquid-xptusdt|XPT|1.0E-6
-CANBTC|liquid-canbtc|CAN|1.0E-8
 HOT TOKENBTC|liquid-hot tokenbtc|HOT|1.0E-8
 FTXQASH|liquid-ftxqash|FTX|1.0E-8
 ILKBTC|liquid-ilkbtc|ILK|1.0E-8
@@ -4536,7 +4792,7 @@ PBTCJPY|liquid-pbtcjpy|P-BTC|1.0E-5
 PBTCUSD|liquid-pbtcusd|P-BTC|1.0E-5
 
 
-## Okex Supported Symbols in Executium (updated: 26th August 2020)
+## Okex Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -4562,16 +4818,56 @@ DOTETH|okex-doteth|DOT|1.0E-6
 DOTBTC|okex-dotbtc|DOT|1.0E-8
 OMUSDT|okex-omusdt|OM|0.0001
 OMETH|okex-ometh|OM|1.0E-6
+BANDUSDT|okex-bandusdt|BAND|0.01
+RENUSDT|okex-renusdt|REN|0.001
+BANDETH|okex-bandeth|BAND|0.0001
+BANDBTC|okex-bandbtc|BAND|1.0E-6
+JSTUSDT|okex-jstusdt|JST|0.0001
+JSTETH|okex-jsteth|JST|1.0E-7
+JSTBTC|okex-jstbtc|JST|1.0E-8
+YFIUSDT|okex-yfiusdt|YFI|0.1
+YFIETH|okex-yfieth|YFI|0.01
+YFIBTC|okex-yfibtc|YFI|0.0001
+RENETH|okex-reneth|REN|1.0E-6
+RENBTC|okex-renbtc|REN|1.0E-7
+TRBUSDT|okex-trbusdt|TRB|0.01
+TRBETH|okex-trbeth|TRB|0.0001
+TRBBTC|okex-trbbtc|TRB|1.0E-6
+YFIIUSDT|okex-yfiiusdt|YFII|0.01
+WNXMUSDT|okex-wnxmusdt|WNXM|0.01
+WNXMETH|okex-wnxmeth|WNXM|0.0001
+RSRUSDT|okex-rsrusdt|RSR|0.0001
+RSRETH|okex-rsreth|RSR|1.0E-7
+RSRBTC|okex-rsrbtc|RSR|1.0E-8
+UMAUSDT|okex-umausdt|UMA|0.01
+UMAETH|okex-umaeth|UMA|1.0E-5
+SUSHIUSDT|okex-sushiusdt|SUSHI|0.01
+YFVUSDT|okex-yfvusdt|YFV|0.01
+CVPUSDT|okex-cvpusdt|CVP|0.01
+CVPETH|okex-cvpeth|CVP|1.0E-5
+SUSHIETH|okex-sushieth|SUSHI|1.0E-5
+YFVETH|okex-yfveth|YFV|1.0E-5
+KSMUSDT|okex-ksmusdt|KSM|0.01
+KSMETH|okex-ksmeth|KSM|1.0E-5
+KSMBTC|okex-ksmbtc|KSM|1.0E-6
+TRADEUSDT|okex-tradeusdt|TRADE|0.01
+TRADEETH|okex-tradeeth|TRADE|1.0E-5
+TAIUSDT|okex-taiusdt|TAI|0.01
+JFIUSDT|okex-jfiusdt|JFI|0.01
+BOTUSDT|okex-botusdt|BOT|0.01
+SWRVUSDT|okex-swrvusdt|SWRV|0.01
+BOTETH|okex-boteth|BOT|1.0E-5
+SWRVETH|okex-swrveth|SWRV|1.0E-5
+KLAYUSDT|okex-klayusdt|KLAY|0.0001
+KLAYBTC|okex-klaybtc|KLAY|1.0E-8
 BCHBTC|okex-bchbtc|BCH|1.0E-5
 BSVBTC|okex-bsvbtc|BSV|1.0E-6
-ANTBTC|okex-antbtc|ANT|1.0E-7
-CRVBTC|okex-crvbtc|CRV|1.0E-8
-XPRBTC|okex-xprbtc|XPR|1.0E-8
 DASHBTC|okex-dashbtc|DASH|1.0E-5
 ADABTC|okex-adabtc|ADA|1.0E-8
 AETBTC|okex-aetbtc|AE|1.0E-8
 AERGOBTC|okex-aergobtc|AERGO|1.0E-8
 ALGOBTC|okex-algobtc|ALGO|1.0E-7
+ANTBTC|okex-antbtc|ANT|1.0E-7
 APIXBTC|okex-apixbtc|APIX|1.0E-8
 APMBTC|okex-apmbtc|APM|1.0E-8
 ARDRBTC|okex-ardrbtc|ARDR|1.0E-8
@@ -4583,6 +4879,7 @@ BTTBTC|okex-bttbtc|BTT|1.0E-10
 CELOBTC|okex-celobtc|CELO|1.0E-7
 COMPBTC|okex-compbtc|COMP|1.0E-6
 CROBTC|okex-crobtc|CRO|1.0E-8
+CRVBTC|okex-crvbtc|CRV|1.0E-8
 CTCBTC|okex-ctcbtc|CTC|1.0E-8
 CTXCBTC|okex-ctxcbtc|CTXC|1.0E-8
 CVTBTC|okex-cvtbtc|CVT|1.0E-9
@@ -4593,7 +4890,6 @@ GUSDBTC|okex-gusdbtc|GUSD|1.0E-7
 HBARBTC|okex-hbarbtc|HBAR|1.0E-8
 HYCBTC|okex-hycbtc|HYC|1.0E-9
 IQBTC|okex-iqbtc|IQ|1.0E-9
-KANBTC|okex-kanbtc|KAN|1.0E-9
 LBABTC|okex-lbabtc|LBA|1.0E-8
 LEOBTC|okex-leobtc|LEO|1.0E-8
 LETBTC|okex-letbtc|LET|1.0E-9
@@ -4610,6 +4906,7 @@ VITEBTC|okex-vitebtc|VITE|1.0E-8
 VSYSBTC|okex-vsysbtc|VSYS|1.0E-8
 WAVESBTC|okex-wavesbtc|WAVES|1.0E-6
 WXTBTC|okex-wxtbtc|WXT|1.0E-9
+XPRBTC|okex-xprbtc|XPR|1.0E-8
 XSRBTC|okex-xsrbtc|XSR|1.0E-8
 XTZBTC|okex-xtzbtc|XTZ|1.0E-8
 YOUBTC|okex-youbtc|YOU|1.0E-8
@@ -4652,7 +4949,6 @@ GNXBTC|okex-gnxbtc|GNX|1.0E-8
 ICXBTC|okex-icxbtc|ICX|1.0E-7
 XEMBTC|okex-xembtc|XEM|1.0E-8
 ARKBTC|okex-arkbtc|ARK|1.0E-7
-YOYOWBTC|okex-yoyowbtc|YOYO|1.0E-8
 FUNBTC|okex-funbtc|FUN|1.0E-9
 TRXBTC|okex-trxbtc|TRX|1.0E-9
 DGBBTC|okex-dgbbtc|DGB|1.0E-9
@@ -4662,7 +4958,6 @@ XLMBTC|okex-xlmbtc|XLM|1.0E-8
 KCASHBTC|okex-kcashbtc|KCASH|1.0E-9
 MDTBTC|okex-mdtbtc|MDT|1.0E-9
 NASBTC|okex-nasbtc|NAS|1.0E-7
-AACBTC|okex-aacbtc|AAC|1.0E-9
 VIBBTC|okex-vibbtc|VIB|1.0E-8
 QUNBTC|okex-qunbtc|QUN|1.0E-9
 INTBTC|okex-intbtc|INT|1.0E-8
@@ -4684,17 +4979,16 @@ ABTBTC|okex-abtbtc|ABT|1.0E-7
 TRIOBTC|okex-triobtc|TRIO|1.0E-9
 ONTBTC|okex-ontbtc|ONT|1.0E-7
 OKBBTC|okex-okbbtc|OKB|1.0E-7
-CRVETH|okex-crveth|CRV|1.0E-6
 ADAETH|okex-adaeth|ADA|1.0E-6
 AETETH|okex-aeteth|AE|1.0E-6
 ALGOETH|okex-algoeth|ALGO|1.0E-6
 ATOMETH|okex-atometh|ATOM|1.0E-6
 BTTETH|okex-btteth|BTT|1.0E-8
+CRVETH|okex-crveth|CRV|1.0E-6
 CTXCETH|okex-ctxceth|CTXC|1.0E-6
 EGTETH|okex-egteth|EGT|1.0E-8
 HYCETH|okex-hyceth|HYC|1.0E-8
 KANETH|okex-kaneth|KAN|1.0E-8
-LEOETH|okex-leoeth|LEO|1.0E-6
 ORSETH|okex-orseth|ORS|1.0E-7
 SCETH|okex-sceth|SC|1.0E-7
 SNXETH|okex-snxeth|SNX|1.0E-6
@@ -4734,7 +5028,6 @@ XLMETH|okex-xlmeth|XLM|1.0E-6
 KCASHETH|okex-kcasheth|KCASH|1.0E-7
 MDTETH|okex-mdteth|MDT|1.0E-8
 NASETH|okex-naseth|NAS|1.0E-5
-AACETH|okex-aaceth|AAC|1.0E-8
 FAIRETH|okex-faireth|FAIR|1.0E-8
 TOPCETH|okex-topceth|TOPC|1.0E-8
 INTETH|okex-inteth|INT|1.0E-7
@@ -4750,48 +5043,14 @@ ABTETH|okex-abteth|ABT|1.0E-6
 TRIOETH|okex-trioeth|TRIO|1.0E-8
 ONTETH|okex-onteth|ONT|1.0E-5
 OKBETH|okex-okbeth|OKB|1.0E-6
-BTCUSDK|okex-btcusdk|BTC|0.1
-LTCUSDK|okex-ltcusdk|LTC|0.01
-ETHUSDK|okex-ethusdk|ETH|0.01
-OKBUSDK|okex-okbusdk|OKB|0.0001
-ETCUSDK|okex-etcusdk|ETC|0.001
-BCHUSDK|okex-bchusdk|BCH|0.01
-EOSUSDK|okex-eosusdk|EOS|0.001
-XRPUSDK|okex-xrpusdk|XRP|0.0001
-TRXUSDK|okex-trxusdk|TRX|1.0E-5
-BSVUSDK|okex-bsvusdk|BSV|0.01
-USDTUSDK|okex-usdtusdk|USDT|0.0001
-ALGOUSDK|okex-algousdk|ALGO|0.001
-CROUSDK|okex-crousdk|CRO|0.0001
-DEPUSDK|okex-depusdk|DEP|1.0E-6
-DOGEUSDK|okex-dogeusdk|DOGE|1.0E-6
-ECUSDK|okex-ecusdk|EC|1.0E-5
-EMUSDK|okex-emusdk|EM|1.0E-5
-FSNUSDK|okex-fsnusdk|FSN|0.0001
-FTMUSDK|okex-ftmusdk|FTM|0.0001
-HBARUSDK|okex-hbarusdk|HBAR|0.0001
-LAMBUSDK|okex-lambusdk|LAMB|1.0E-5
-LEOUSDK|okex-leousdk|LEO|0.0001
-NDNUSDK|okex-ndnusdk|NDN|1.0E-6
-ORBSUSDK|okex-orbsusdk|ORBS|1.0E-6
-PLGUSDK|okex-plgusdk|PLG|1.0E-5
-PMAUSDK|okex-pmausdk|PMA|1.0E-7
-VSYSUSDK|okex-vsysusdk|VSYS|0.0001
-WGRTUSDK|okex-wgrtusdk|WGRT|1.0E-6
-WXTUSDK|okex-wxtusdk|WXT|1.0E-5
 BCHUSDT|okex-bchusdt|BCH|0.01
 BSVUSDT|okex-bsvusdt|BSV|0.01
-TRXOKB|okex-trxokb|TRX|1.0E-5
-BTCDAI|okex-btcdai|BTC|0.1
-ETHDAI|okex-ethdai|ETH|0.01
-ANTUSDT|okex-antusdt|ANT|0.001
-CRVUSDT|okex-crvusdt|CRV|0.01
-XPRUSDT|okex-xprusdt|XPR|1.0E-5
 ADAUSDT|okex-adausdt|ADA|1.0E-5
 AETUSDT|okex-aetusdt|AE|0.001
 AERGOUSDT|okex-aergousdt|AERGO|1.0E-5
 ALGOUSDT|okex-algousdt|ALGO|0.0001
 ALVUSDT|okex-alvusdt|ALV|1.0E-5
+ANTUSDT|okex-antusdt|ANT|0.001
 APIXUSDT|okex-apixusdt|APIX|1.0E-5
 APMUSDT|okex-apmusdt|APM|1.0E-5
 ATOMUSDT|okex-atomusdt|ATOM|0.001
@@ -4802,6 +5061,7 @@ BTTUSDT|okex-bttusdt|BTT|1.0E-6
 CELOUSDT|okex-celousdt|CELO|0.001
 COMPUSDT|okex-compusdt|COMP|0.01
 CROUSDT|okex-crousdt|CRO|0.0001
+CRVUSDT|okex-crvusdt|CRV|0.01
 CTCUSDT|okex-ctcusdt|CTC|0.0001
 CTXCUSDT|okex-ctxcusdt|CTXC|0.0001
 CVTUSDT|okex-cvtusdt|CVT|1.0E-5
@@ -4843,13 +5103,43 @@ VSYSUSDT|okex-vsysusdt|VSYS|0.0001
 WAVESUSDT|okex-wavesusdt|WAVES|0.01
 WGRTUSDT|okex-wgrtusdt|WGRT|1.0E-5
 WXTUSDT|okex-wxtusdt|WXT|1.0E-5
+XPRUSDT|okex-xprusdt|XPR|1.0E-5
 XSRUSDT|okex-xsrusdt|XSR|1.0E-5
 XTZUSDT|okex-xtzusdt|XTZ|0.0001
 YOUUSDT|okex-youusdt|YOU|1.0E-5
 ZILUSDT|okex-zilusdt|ZIL|1.0E-5
-EGTOKB|okex-egtokb|EGT|1.0E-6
-SCOKB|okex-scokb|SC|1.0E-6
-WXTOKB|okex-wxtokb|WXT|1.0E-6
+BTCUSDK|okex-btcusdk|BTC|0.1
+ETHUSDK|okex-ethusdk|ETH|0.01
+LTCUSDK|okex-ltcusdk|LTC|0.01
+OKBUSDK|okex-okbusdk|OKB|0.0001
+BCHUSDK|okex-bchusdk|BCH|0.01
+BSVUSDK|okex-bsvusdk|BSV|0.01
+ETCUSDK|okex-etcusdk|ETC|0.001
+EOSUSDK|okex-eosusdk|EOS|0.001
+XRPUSDK|okex-xrpusdk|XRP|0.0001
+TRXUSDK|okex-trxusdk|TRX|1.0E-5
+TRXOKB|okex-trxokb|TRX|1.0E-5
+BTCDAI|okex-btcdai|BTC|0.1
+ETHDAI|okex-ethdai|ETH|0.01
+USDTUSDK|okex-usdtusdk|USDT|0.0001
+ALGOUSDK|okex-algousdk|ALGO|0.001
+CROUSDK|okex-crousdk|CRO|0.0001
+DEPUSDK|okex-depusdk|DEP|1.0E-6
+DOGEUSDK|okex-dogeusdk|DOGE|1.0E-6
+ECUSDK|okex-ecusdk|EC|1.0E-5
+EMUSDK|okex-emusdk|EM|1.0E-5
+FSNUSDK|okex-fsnusdk|FSN|0.0001
+FTMUSDK|okex-ftmusdk|FTM|0.0001
+HBARUSDK|okex-hbarusdk|HBAR|0.0001
+LAMBUSDK|okex-lambusdk|LAMB|1.0E-5
+LEOUSDK|okex-leousdk|LEO|0.0001
+NDNUSDK|okex-ndnusdk|NDN|1.0E-6
+ORBSUSDK|okex-orbsusdk|ORBS|1.0E-6
+PLGUSDK|okex-plgusdk|PLG|1.0E-5
+PMAUSDK|okex-pmausdk|PMA|1.0E-7
+VSYSUSDK|okex-vsysusdk|VSYS|0.0001
+WGRTUSDK|okex-wgrtusdk|WGRT|1.0E-6
+WXTUSDK|okex-wxtusdk|WXT|1.0E-5
 ELFUSDT|okex-elfusdt|ELF|0.0001
 DASHUSDT|okex-dashusdt|DASH|0.01
 BTGUSDT|okex-btgusdt|BTG|0.01
@@ -4921,11 +5211,9 @@ MKRUSDT|okex-mkrusdt|MKR|0.1
 TRUEUSDT|okex-trueusdt|TRUE|0.001
 SOCUSDT|okex-socusdt|SOC|1.0E-5
 ZENUSDT|okex-zenusdt|ZEN|0.01
-ZIPUSDT|okex-zipusdt|ZIP|1.0E-6
 NANOUSDT|okex-nanousdt|NANO|0.001
 GTOUSDT|okex-gtousdt|GTO|0.0001
 CHATUSDT|okex-chatusdt|CHAT|1.0E-5
-BECUSDT|okex-becusdt|BEC|0.0001
 MITHUSDT|okex-mithusdt|MITH|1.0E-5
 ABTUSDT|okex-abtusdt|ABT|0.0001
 TRIOUSDT|okex-triousdt|TRIO|1.0E-5
@@ -4939,18 +5227,18 @@ ZECOKB|okex-zecokb|ZEC|0.01
 IOTAOKB|okex-iotaokb|IOTA|0.0001
 EOSOKB|okex-eosokb|EOS|0.001
 BTCUSDC|okex-btcusdc|BTC|0.1
-LTCUSDC|okex-ltcusdc|LTC|0.01
 ETHUSDC|okex-ethusdc|ETH|0.01
+LTCUSDC|okex-ltcusdc|LTC|0.01
 OKBUSDC|okex-okbusdc|OKB|0.001
-ETCUSDC|okex-etcusdc|ETC|0.001
 BCHUSDC|okex-bchusdc|BCH|0.01
+BSVUSDC|okex-bsvusdc|BSV|0.01
+ETCUSDC|okex-etcusdc|ETC|0.001
 EOSUSDC|okex-eosusdc|EOS|0.001
 XRPUSDC|okex-xrpusdc|XRP|0.0001
 TRXUSDC|okex-trxusdc|TRX|1.0E-5
-BSVUSDC|okex-bsvusdc|BSV|0.01
 
 
-## Okexfutures Supported Symbols in Executium (updated: 26th August 2020)
+## Okexfutures Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -5364,7 +5652,7 @@ TRXUSDC|okexfutures-trxusdc|TRX|1.0E-5
 BSVUSDC|okexfutures-bsvusdc|BSV|0.01
 
 
-## Okexswap Supported Symbols in Executium (updated: 26th August 2020)
+## Okexswap Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -5778,7 +6066,7 @@ TRXUSDC|okexswap-trxusdc|TRX|1.0E-5
 BSVUSDC|okexswap-bsvusdc|BSV|0.01
 
 
-## Poloniex Supported Symbols in Executium (updated: 26th August 2020)
+## Poloniex Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -6010,9 +6298,32 @@ DOTUSDT|poloniex-dotusdt|DOT|1.0E-8
 DMGBTC|poloniex-dmgbtc|DMG|1.0E-8
 DMGUSDT|poloniex-dmgusdt|DMG|1.0E-8
 DMGTRX|poloniex-dmgtrx|DMG|1.0E-8
+RSRUSDT|poloniex-rsrusdt|RSR|1.0E-8
+WNXMUSDT|poloniex-wnxmusdt|WNXM|1.0E-8
+FCT2USDT|poloniex-fct2usdt|FCT2|1.0E-8
+FCT2BTC|poloniex-fct2btc|FCT2|1.0E-8
+SUSHIUSDT|poloniex-sushiusdt|SUSHI|1.0E-8
+YFIIUSDT|poloniex-yfiiusdt|YFII|1.0E-8
+YFVUSDT|poloniex-yfvusdt|YFV|1.0E-8
+YFLUSDT|poloniex-yflusdt|YFL|1.0E-8
+TAIUSDT|poloniex-taiusdt|TAI|1.0E-8
+TAITRX|poloniex-taitrx|TAI|1.0E-8
+PEARLUSDT|poloniex-pearlusdt|PEARL|1.0E-8
+PEARLTRX|poloniex-pearltrx|PEARL|1.0E-8
+ANKUSDT|poloniex-ankusdt|ANK|1.0E-8
+JFIUSDT|poloniex-jfiusdt|JFI|1.0E-8
+CRTUSDT|poloniex-crtusdt|CRT|1.0E-8
+SALUSDT|poloniex-salusdt|SAL|1.0E-8
+CORNUSDT|poloniex-cornusdt|CORN|1.0E-8
+SWRVUSDT|poloniex-swrvusdt|SWRV|1.0E-8
+FSWUSDT|poloniex-fswusdt|FSW|1.0E-8
+FUNDUSDT|poloniex-fundusdt|FUND|1.0E-8
+FUNDTRX|poloniex-fundtrx|FUND|1.0E-8
+FUNDBTC|poloniex-fundbtc|FUND|1.0E-8
+CREAMUSDT|poloniex-creamusdt|CREAM|1.0E-8
 
 
-## Upbit Supported Symbols in Executium (updated: 26th August 2020)
+## Upbit Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -6284,9 +6595,16 @@ COMPBTC|upbit-compbtc|COMP|1.0E-8
 SXPBTC|upbit-sxpbtc|SXP|1.0E-8
 HUNTBTC|upbit-huntbtc|HUNT|1.0E-8
 TONKRW|upbit-tonkrw|TON|1.0E-8
+ONITBTC|upbit-onitbtc|ONIT|1.0E-8
+CRVBTC|upbit-crvbtc|CRV|1.0E-8
+ALGOBTC|upbit-algobtc|ALGO|1.0E-8
+RSRBTC|upbit-rsrbtc|RSR|1.0E-8
+SXPKRW|upbit-sxpkrw|SXP|1.0E-8
+OXTBTC|upbit-oxtbtc|OXT|1.0E-8
+PLABTC|upbit-plabtc|PLA|1.0E-8
 
 
-## Zb Supported Symbols in Executium (updated: 26th August 2020)
+## Zb Supported Symbols in Executium (updated: 11th September 2020)
 
 Symbol | Executium Symbol Code | Base | Minimum Order
 ------------ | ------------ | ------------ | ------------
@@ -6303,8 +6621,17 @@ USDTQC|zb-usdtqc|usdt|0.0001
 EOSUSDT|zb-eosusdt|eos|0.0001
 EOSQC|zb-eosqc|eos|0.001
 EOSBTC|zb-eosbtc|eos|1.0E-8
-DOTUSDT|zb-dotusdt|dot|0.01
+DOTUSDT|zb-dotusdt|dot|0.0001
+SUSHIUSDT|zb-sushiusdt|sushi|0.0001
+YFIUSDT|zb-yfiusdt|yfi|0.0001
+YFIIUSDT|zb-yfiiusdt|yfii|0.0001
+DMDUSDT|zb-dmdusdt|dmd|0.0001
+ULUUSDT|zb-uluusdt|ulu|0.0001
+SNXUSDT|zb-snxusdt|snx|0.0001
 LINKUSDT|zb-linkusdt|link|0.0001
+LENDUSDT|zb-lendusdt|lend|0.0001
+CENNZUSDT|zb-cennzusdt|cennz|0.0001
+TRUEUSDT|zb-trueusdt|true|0.0001
 SWFTCUSDT|zb-swftcusdt|swftc|1.0E-6
 XRPQC|zb-xrpqc|xrp|0.0001
 XRPUSDT|zb-xrpusdt|xrp|0.0001
@@ -6375,7 +6702,6 @@ VSYSQC|zb-vsysqc|vsys|0.0001
 VSYSBTC|zb-vsysbtc|vsys|1.0E-9
 EDOUSDT|zb-edousdt|edo|0.001
 GRINQC|zb-grinqc|grin|0.001
-TRUEUSDT|zb-trueusdt|true|0.0001
 TRUEQC|zb-trueqc|true|0.0001
 TRUEBTC|zb-truebtc|true|1.0E-10
 MTLUSDT|zb-mtlusdt|mtl|0.0001
@@ -6448,3 +6774,5 @@ VBTQC|zb-vbtqc|vbt|0.0001
 DSFQC|zb-dsfqc|dsf|0.0001
 DAWNQC|zb-dawnqc|dawn|0.0001
 UFCQC|zb-ufcqc|ufc|0.0001
+CENNZQC|zb-cennzqc|cennz|0.0001
+EPQC|zb-epqc|ep|0.0001
