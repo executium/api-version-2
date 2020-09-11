@@ -39,14 +39,17 @@
 - Exchange Api Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
 	- [Delete Exchange API Key](#delete-exchange-api-key) (exchange-api-keys/delete)
+	- [Update Exchange API Key](#update-exchange-api-key) (exchange-api-keys/edit)
 	- [List Exchange API Keys](#list-exchange-api-keys) (exchange-api-keys/list)
-	- [Check Specific Exchange Symbol Balance ](#check-specific-exchange-symbol-balance-) (exchange-api-keys/check-balances)
 - Strategy
-	- [Create New Strategy](#create-new-strategy) (strategy/create)
+	- [Create Profile Strategy](#create-profile-strategy) (strategy/create-profile)
+	- [Create Profile Strategy](#create-profile-strategy) (strategy/edit-profile)
+	- [Delete Profile Strategy](#delete-profile-strategy) (strategy/delete-profile)
 	- [Strategy High Level Overview](#strategy-high-level-overview) (strategy/high-level-overview)
 	- [User Strategy List](#user-strategy-list) (strategy/data/list)
 	- [List All Trading Algorithms](#list-all-trading-algorithms) (strategy/list-algorithms)
 	- [Exchange List](#exchange-list) (strategy/list-exchanges)
+	- [List Profiles](#list-profiles) (strategy/list-profiles)
 	- [Debug Data](#debug-data) (strategy/data/debug)
 	- [Save Template](#save-template) (strategy/save-template)
 	- [Strategy List Templates](#strategy-list-templates) (strategy/list-templates)
@@ -58,6 +61,8 @@
 	- [Strategy Update](#strategy-update) (strategy/update)
 	- [List Strategy Options](#list-strategy-options) (strategy/list-strategy-options)
 	- [List Watchlist](#list-watchlist) (strategy/list-watchlist)
+	- [Add to Watchlist](#add-to-watchlist) (strategy/add-watchlist-item)
+	- [Delete Watchlist Item](#delete-watchlist-item) (strategy/delete-watchlist-item)
 - Public
 	- [Spreads](#spreads) (public/spreads/data)
 	- [Fetch Symbol Price](#fetch-symbol-price) (public/fetch-symbol-price)
@@ -82,9 +87,9 @@
 	- [Supported Wallets](#supported-wallets) (public/supported-wallets)
 - Subaccounts
 	- [Create Sub Account](#create-sub-account) (subaccounts/subaccount-create)
-	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
-	- [Delete Subaccount](#delete-subaccount) (subaccounts/subaccount-delete)
 	- [Edit Subaccount](#edit-subaccount) (subaccounts/subaccount-edit)
+	- [Delete Subaccount](#delete-subaccount) (subaccounts/subaccount-delete)
+	- [List All Subaccounts](#list-all-subaccounts) (subaccounts/subaccount-list)
 	- [Send Broadcast](#send-broadcast) (subaccounts/broadcast-create)
 	- [Delete Broadcast](#delete-broadcast) (subaccounts/broadcast-delete)
 	- [Edit Broadcast](#edit-broadcast) (subaccounts/broadcast-edit)
@@ -98,6 +103,20 @@
 	- [User List Referrals](#user-list-referrals) (user/list-referrals)
 	- [User Active Sessions](#user-active-sessions) (user/active-sessions)
 	- [User Security Settings](#user-security-settings) (user/security-settings)
+	- [Create Support Ticket](#create-support-ticket) (user/create-support-ticket)
+	- [Delete Support Ticket](#delete-support-ticket) (user/delete-support-ticket)
+	- [Edit Support Ticket](#edit-support-ticket) (user/edit-support-ticket)
+	- [List Support Tickets](#list-support-tickets) (user/list-support-tickets)
+- Exchange Query
+	- [List of Exchange Queries](#list-of-exchange-queries) (exchange-query/list-exchange-queries)
+	- [Delete Exchange Query](#delete-exchange-query) (exchange-query/delete-exchange-query)
+	- [Create Query](#create-query) (exchange-query/create-query)
+	- [List Balances](#list-balances) (exchange-query/list-balances)
+	- [List Closed Orders](#list-closed-orders) (exchange-query/list-closed-orders)
+	- [Exchange Query List Open Orders](#exchange-query-list-open-orders) (exchange-query/list-open-orders)
+	- [Exchange Query Order Cancel](#exchange-query-order-cancel) (exchange-query/order-cancel)
+	- [Exchange Query Order Check](#exchange-query-order-check) (exchange-query/order-check)
+	- [Exchange Query Order Create](#exchange-query-order-create) (exchange-query/order-create)
 - Wallets
 	- [Wallets Fetch Deposit Address](#wallets-fetch-deposit-address) (wallets/fetch-deposit-address)
 	- [Wallets List Balances](#wallets-list-balances) (wallets/list-balances)
@@ -127,13 +146,6 @@
 - Calendar
 	- [Add Reminder](#add-reminder) (calendar/add-reminder)
 	- [List Schedule](#list-schedule) (calendar/list-schedule)
-- Exchange Query
-	- [List Balances](#list-balances) (exchange-query/list-balances)
-	- [List Closed Orders](#list-closed-orders) (exchange-query/list-closed-orders)
-	- [Exchange Query List Open Orders](#exchange-query-list-open-orders) (exchange-query/list-open-orders)
-	- [Exchange Query Order Cancel](#exchange-query-order-cancel) (exchange-query/order-cancel)
-	- [Exchange Query Order Check](#exchange-query-order-check) (exchange-query/order-check)
-	- [Exchange Query Order Create](#exchange-query-order-create) (exchange-query/order-create)
 - Algorithm Creator
 	- [Algorithm Add](#algorithm-add) (algorithm-creator/algorithm-add)
 	- [Algorithm Remove](#algorithm-remove) (algorithm-creator/algorithm-remove)
@@ -161,6 +173,16 @@
 	- [Create Signal Profile](#create-signal-profile) (marketplace/signals-add)
 	- [Delete Signal](#delete-signal) (marketplace/signal-delete)
 	- [Signals Iteration Price Movement](#signals-iteration-price-movement) (marketplace/signals-iteration-price-movement)
+- Backtesting
+	- [Orderbook Data](#orderbook-data) (backtesting/orderbook-data)
+	- [Technical Indicators](#technical-indicators) (backtesting/technical-indicators)
+	- [Availability Information](#availability-information) (backtesting/availability)
+- Articles
+	- [Create Article](#create-article) (articles/create)
+	- [List all of your articles](#list-all-of-your-articles) (articles/list)
+	- [Delete your article](#delete-your-article) (articles/delete)
+	- [Check earnings](#check-earnings) (articles/check-earnings)
+	- [Edit your article](#edit-your-article) (articles/edit)
 
 
 # Public REST API Version 2 for Executium (private beta)
@@ -175,7 +197,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`161 endpoints`** as part of version 2.
+* There are currently **`181 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -1142,6 +1164,20 @@ Name | MinLength | Required | Default | Description
 id |  | YES |  | Provide the ID of the key you wish to remove.
 
 
+## Update Exchange API Key
+
+
+```
+POST /api/v2/exchange-api-keys/edit
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID.
+label |  | NO |  | Provide the ID of the key you wish to remove.
+
+
 ## List Exchange API Keys
 A full list of accessible Exchange API Keys in your account. This will not show the API keys secrets. If a subaccount user is accessing the API key list they will only see according to their permissions.
 
@@ -1156,78 +1192,46 @@ limit |  | NO | 10 |
 pagenumber |  | NO | 1 | 
 
 
-## Check Specific Exchange Symbol Balance 
-Functions in a similar fashion to `list-balances`.
+## Create Profile Strategy
+The 
 
 ```
-GET /api/v2/exchange-api-keys/check-balances
-```
-
-**Parameters:**
-None
-
-## Create New Strategy
-Create a new strategy, you will be required to make additional modifications using other endpoints such as the algo selector and updating the information within.
-
-```
-POST /api/v2/strategy/create
+POST /api/v2/strategy/create-profile
 ```
 
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-label | 6 | YES |  | 
-algo |  | YES |  | 
+name | 1 | YES |  | 
+description |  | NO |  | 
 
 
-**Successful Response Formatted:**
+## Create Profile Strategy
+The 
 
-Name | Example Value
------------- | ------------
-status | 1
-id | See table 'Id'
-uid | 1
-label | Example of a strategy label
-message | New - Testing Credentials
-
-
-### Id
-
-Name | Example Value
------------- | ------------
-
-
-**Successful Response Payload:**
-```javascript
-{
-    "data": {
-        "status": true,
-        "id": [],
-        "uid": "1",
-        "label": "Example of a strategy label",
-        "message": "New - Testing Credentials"
-    },
-    "meta": {
-        "api_version": 2,
-        "system_version": "2.0.5",
-        "status": 200,
-        "auth_success": true,
-        "rateLimits": {
-            "minute": 60
-        },
-        "subscription": {
-            "id": "0",
-            "name": "Free"
-        },
-        "endpoint": "strategy/create",
-        "auth_required": true,
-        "ms": 1591778250176,
-        "time": 1591778250,
-        "uid": 1,
-        "process_time": "0.020210"
-    }
-}
 ```
+POST /api/v2/strategy/edit-profile
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID.
+name | 1 | YES |  | 
+description |  | NO |  | 
+
+
+## Delete Profile Strategy
+The 
+
+```
+POST /api/v2/strategy/delete-profile
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id | 1 | YES |  | Provide strategy `id`
 
 
 ## Strategy High Level Overview
@@ -1282,6 +1286,16 @@ A full list of exchanges that excutium support
 
 ```
 GET /api/v2/strategy/list-exchanges
+```
+
+**Parameters:**
+None
+
+## List Profiles
+A full list of profiles on your account.
+
+```
+GET /api/v2/strategy/list-profiles
 ```
 
 **Parameters:**
@@ -1463,6 +1477,32 @@ GET /api/v2/strategy/list-watchlist
 
 **Parameters:**
 None
+
+## Add to Watchlist
+Add code to watchlist.
+
+```
+POST /api/v2/strategy/add-watchlist-item
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+code | 1 | YES |  | Provide a executium code to add to your list.
+
+
+## Delete Watchlist Item
+Delete an item from your watchlist
+
+```
+POST /api/v2/strategy/delete-watchlist-item
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID of your watchlist item. This `id` can be found by reviewing `strategy/list-watchlist`. The code will not be acceptable input.
+
 
 ## Spreads
 Data which is served in a public manner and is obtainable via a public call. Additional restrictions may apply and tighter rate limiting. To upgrade your account for faster access please visit executium.
@@ -2392,15 +2432,43 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 name | 5 | YES |  | Provide the subaccount users name.
 email | 5 | YES |  | Provide the subaccount users e-mail address.
+active |  | YES |  | 
 parent_maximum |  | YES | 0.1 | Maximum parent in BTC that the subaccount can place per strategy
 child_maximum |  | YES | 0.01 | Maximum child in BTC that the subaccount can place per strategy
-exchanges_enabled |  | YES | All | Select which exchanges the subaccount has access too for strategy management.
 concurrent_strategies_maximum |  | YES |  | The amount of strategies that the subaccount can run concurrently.
 export_enabled |  | YES |  | The subaccount ability to export data (true/true)
-share_accounts_apikeys |  | YES |  | Allow or deny the subaccount to have access to all of the keys in the account (true/true).
-manage_own_apikeys |  | YES |  | Provide the subaccount the ability to manage their own api keys (true/true).
-force_twofactor |  | YES |  | Force the subaccount to setup two factor on their account (true/true)
+view_all_profiles |  | YES |  | Allow user to view all exchange keys
+add_exchange_keys |  | YES |  | Ability to add exchange api keys to the account.
 allow_api_access |  | YES |  | Allow or deny the subaccount access to the account API, in the event the account is given access new API keys for the subaccount will need to be generated (true/true).
+
+
+## Edit Subaccount
+You can edit all basic features about a subaccount but not the `password` or `active status` through the API. To change a subaccount password you must login to the website. If you wish to disable an account use the `subaccounts/subaccount-delete` endpoint,
+
+```
+POST /api/v2/subaccounts/subaccount-edit
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID of the subaccount.
+email | 5 | YES |  | Provide the subaccount users e-mail address.
+name | 5 | YES |  | Provide the subaccount users name.
+active | 1 | YES |  | 
+
+
+## Delete Subaccount
+You can delete any subaccount by providing the ID, which can be obtain by `list-subaccount`. When you delete a subaccount it will not remove any other related information such as `strategy` or `history`. All information will still eist with the primary account holder.
+
+```
+POST /api/v2/subaccounts/subaccount-delete
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID of the subaccount.
 
 
 ## List All Subaccounts
@@ -2408,26 +2476,6 @@ Available in subscrition packages. View ID and subaccount information.
 
 ```
 GET /api/v2/subaccounts/subaccount-list
-```
-
-**Parameters:**
-None
-
-## Delete Subaccount
-You can delete any subaccount by providing the ID, which can be obtain by `list-subaccount`. When you delete a subaccount it will not remove any other related information such as `strategy` or `history`. All information will still eist with the primary account holder.
-
-```
-GET /api/v2/subaccounts/subaccount-delete
-```
-
-**Parameters:**
-None
-
-## Edit Subaccount
-You can edit all basic features about a subaccount but not the `password` or `active status` through the API. To change a subaccount password you must login to the website. If you wish to disable an account use the `subaccounts/subaccount-delete` endpoint,
-
-```
-GET /api/v2/subaccounts/subaccount-edit
 ```
 
 **Parameters:**
@@ -2612,6 +2660,168 @@ List all of your security settings and current configuration. These settings app
 
 ```
 GET /api/v2/user/security-settings
+```
+
+**Parameters:**
+None
+
+## Create Support Ticket
+
+
+```
+POST /api/v2/user/create-support-ticket
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+name | 5 | YES |  | 
+email | 5 | YES |  | Provide a valid e-mail address
+subject | 5 | YES |  | 
+category |  | NO |  | 
+message | 20 | YES |  | Message must contain at least 20 characters
+
+
+## Delete Support Ticket
+
+
+```
+POST /api/v2/user/delete-support-ticket
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the support ID
+
+
+## Edit Support Ticket
+
+
+```
+POST /api/v2/user/edit-support-ticket
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the support ID
+name | 5 | YES |  | 
+email | 5 | YES |  | Provide a valid e-mail address
+subject | 5 | YES |  | 
+category |  | NO |  | 
+message | 20 | YES |  | Message must contain at least 20 characters
+
+
+## List Support Tickets
+
+
+```
+POST /api/v2/user/list-support-tickets
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+pagenumber |  | NO | 1 | 
+
+
+## List of Exchange Queries
+This endpoint lists all direct exchanges queries such as balances in a list.
+
+```
+POST /api/v2/exchange-query/list-exchange-queries
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+action |  | NO |  | Redefine based on the action
+
+
+## Delete Exchange Query
+Delete any historical exchange query made. Delete based on `id. This list can be obtained from `exchange-query/list-exchange-queries`
+
+```
+POST /api/v2/exchange-query/delete-exchange-query
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | 
+
+
+## Create Query
+Make a request from the exchange
+
+```
+POST /api/v2/exchange-query/create-query
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+apikey | 2 | YES |  | Provide API Key ID
+exchange_query | 4 | YES |  | Predefined type
+
+
+## List Balances
+
+
+```
+GET /api/v2/exchange-query/list-balances
+```
+
+**Parameters:**
+None
+
+## List Closed Orders
+
+
+```
+GET /api/v2/exchange-query/list-closed-orders
+```
+
+**Parameters:**
+None
+
+## Exchange Query List Open Orders
+
+
+```
+GET /api/v2/exchange-query/list-open-orders
+```
+
+**Parameters:**
+None
+
+## Exchange Query Order Cancel
+
+
+```
+GET /api/v2/exchange-query/order-cancel
+```
+
+**Parameters:**
+None
+
+## Exchange Query Order Check
+
+
+```
+GET /api/v2/exchange-query/order-check
+```
+
+**Parameters:**
+None
+
+## Exchange Query Order Create
+
+
+```
+GET /api/v2/exchange-query/order-create
 ```
 
 **Parameters:**
@@ -2892,66 +3102,6 @@ None
 
 ```
 GET /api/v2/calendar/list-schedule
-```
-
-**Parameters:**
-None
-
-## List Balances
-
-
-```
-GET /api/v2/exchange-query/list-balances
-```
-
-**Parameters:**
-None
-
-## List Closed Orders
-
-
-```
-GET /api/v2/exchange-query/list-closed-orders
-```
-
-**Parameters:**
-None
-
-## Exchange Query List Open Orders
-
-
-```
-GET /api/v2/exchange-query/list-open-orders
-```
-
-**Parameters:**
-None
-
-## Exchange Query Order Cancel
-
-
-```
-GET /api/v2/exchange-query/order-cancel
-```
-
-**Parameters:**
-None
-
-## Exchange Query Order Check
-
-
-```
-GET /api/v2/exchange-query/order-check
-```
-
-**Parameters:**
-None
-
-## Exchange Query Order Create
-
-
-```
-GET /api/v2/exchange-query/order-create
 ```
 
 **Parameters:**
@@ -3254,10 +3404,16 @@ POST /api/v2/marketplace/signals-add
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 name | 3 | YES |  | Label your strategy
-description | 10 | YES |  | Provide a description and outline of your signal. You should use this as an opportunity to upsell how your signal works. You are not required to let any user know how the strategy works but you should use this region as a means to promote your signal.
-codes | 3 | YES |  | Select the correct executium code, for example `bitfinex-btcusdt`
-maximum_qty |  | YES |  | The maximum quantity per iteration of your signal. This should align to your code focus quote base. This is the maximum quality per iteration of your signal running.
-private |  | NO |  | Is the signal public or private? Enter `true` for `private`. This cannot be changed later.
+code | 3 | YES |  | Executium code only acceptable
+script | 3 | YES |  | 
+scriptcheck |  | NO |  | 
+commissions | 1 | YES |  | 
+interval | 1 | YES |  | 
+position | 1 | YES |  | `long` or `short`
+takeprofit | 1 | YES |  | 
+takeloss | 1 | YES |  | 
+datefrom | 1 | YES |  | A valid date format, example `2020-09-01`
+dateto | 1 | YES |  | A valid date format, example `2020-09-01`
 
 
 ## Delete Signal
@@ -3285,4 +3441,124 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 id | 1 | YES |  | Signal ID
 iteration | 1 | YES |  | Signals Iteration ID
+
+
+## Orderbook Data
+
+
+```
+POST /api/v2/backtesting/orderbook-data
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+exchange | 1 | YES |  | 
+symbol | 1 | YES |  | Format for example `BTC/USDT`
+type | 2 | YES |  | Type defaults to `spot`
+timefrom | 1 | YES |  | Time from
+timeto | 1 | YES |  | Time to
+
+
+## Technical Indicators
+
+
+```
+POST /api/v2/backtesting/technical-indicators
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+exchange | 1 | YES |  | 
+symbol | 1 | YES |  | Format for example `BTC/USDT`
+type | 2 | YES |  | Type defaults to `spot`
+interval | 1 | YES |  | `1m`, `3m`, `5m`, `15m`, `30m`, `1h`, `2h` and `4h` 
+timefrom | 1 | YES |  | Time from
+timeto | 1 | YES |  | Time to
+
+
+## Availability Information
+Information related to what is available for backtesting
+
+```
+GET /api/v2/backtesting/availability
+```
+
+**Parameters:**
+None
+
+## Create Article
+
+
+```
+POST /api/v2/articles/create
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+title | 18 | YES |  | A title for your work
+brief | 30 | YES |  | Write an engaging article brief.
+body | 300 | YES |  | The minimum length for any article must be 300 characters
+publishdate | 6 | YES |  | Publish date must be measured in the number of seconds since the Unix Epoch. For example `1599615673` is `September 9th, 2020 8:41 AM`. You would submit `1599615673` as the `publishdate`
+image1 |  | NO |  | Image URL 1
+image2 |  | NO |  | Image URL 2
+image3 |  | NO |  | Image URL 3
+image4 |  | NO |  | Image URL 4
+image5 |  | NO |  | Image URL 5
+image6 |  | NO |  | Image URL 6
+
+
+## List all of your articles
+List all of your articles you have published on the platform.
+
+```
+POST /api/v2/articles/list
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+pagenumber |  | NO | 1 | 
+
+
+## Delete your article
+This gives you the ability to delete an article you published.
+
+```
+POST /api/v2/articles/delete
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID of the article.
+
+
+## Check earnings
+Check all of your earnings and related statistics in one place from your publications.
+
+```
+GET /api/v2/articles/check-earnings
+```
+
+**Parameters:**
+None
+
+## Edit your article
+
+
+```
+POST /api/v2/articles/edit
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the article ID
+title | 18 | YES |  | A title for your work
+brief | 30 | YES |  | Write an engaging article brief.
+body | 300 | YES |  | The minimum length for any article must be 300 characters
 
