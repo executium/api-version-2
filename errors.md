@@ -171,6 +171,9 @@ Any codes which fall in the 5000-5999 range are issues relating directory to the
 #### 5100 - Empty End point data
 - You requested an endpoint the server matched but did not pipe as expected. In this extrmeley rare/ near impossible event please contact support@executium.com
 
+#### 5200 - Internal network timeout
+- You requested an endpoint which is having temporary internal network issues. Please wait and try again. If the problem persists please report the issue.
+
 ## Unable to authorize with the executium version 2 API
 If you are unable to authorize we recommend you use our `php-api-sdk` for closer inspection where you can dig deeper into how we manage headers. The following messages will provide some potential help if you are having issues authorizing.
 
