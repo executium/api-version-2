@@ -36,8 +36,9 @@
 	- [Subscriptions Server Types](#subscriptions-server-types) (subscriptions/server-types)
 	- [Subscriptions Change Package](#subscriptions-change-package) (subscriptions/change-package)
 	- [Subscriptions Package Recommendation](#subscriptions-package-recommendation) (subscriptions/package-recommendation)
-- Exchange Api Keys
+- Exchange API Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
+	- [Test API Key Status](#test-api-key-status) (exchange-api-keys/test)
 	- [Delete Exchange API Key](#delete-exchange-api-key) (exchange-api-keys/delete)
 	- [Update Exchange API Key](#update-exchange-api-key) (exchange-api-keys/edit)
 	- [List Exchange API Keys](#list-exchange-api-keys) (exchange-api-keys/list)
@@ -109,8 +110,10 @@
 	- [List Support Tickets](#list-support-tickets) (user/list-support-tickets)
 - Exchange Query
 	- [List of Exchange Queries](#list-of-exchange-queries) (exchange-query/list-exchange-queries)
+	- [List of Exchange Requests](#list-of-exchange-requests) (exchange-query/list-exchange-requests)
 	- [Delete Exchange Query](#delete-exchange-query) (exchange-query/delete-exchange-query)
 	- [Create Query](#create-query) (exchange-query/create-query)
+	- [Create Order](#create-order) (exchange-query/order-create)
 	- [List Balances](#list-balances) (exchange-query/list-balances)
 	- [List Closed Orders](#list-closed-orders) (exchange-query/list-closed-orders)
 	- [Exchange Query List Open Orders](#exchange-query-list-open-orders) (exchange-query/list-open-orders)
@@ -129,8 +132,6 @@
 	- [List Withdraws](#list-withdraws) (finance/list-withdraws)
 	- [Import Orders List](#import-orders-list) (finance/import-orders-list)
 	- [Import Orders Settings](#import-orders-settings) (finance/import-orders-settings)
-- Exchange API Keys
-	- [Test API Key Status](#test-api-key-status) (exchange-api-keys/test)
 - Tests
 	- [Black Scholes Implied Volatility Calculator](#black-scholes-implied-volatility-calculator) (tests/black-scholes-implied-volatility-calculator)
 	- [Test Server Location Speed To Exchange](#test-server-location-speed-to-exchange) (tests/server-location-speed-to-exchange)
@@ -197,7 +198,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`181 endpoints`** as part of version 2.
+* There are currently **`183 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -1149,6 +1150,19 @@ label | 6 | YES |  | The label will appear when selecting your API keys for stra
 token | 5 | YES |  | API key/token
 secret | 4 | YES |  | API secret
 password |  | YES |  | Some exchanges, such as OKEx require a password to be provided.
+
+
+## Test API Key Status
+You must use the returned `id` for the keys you wish to test. From this we will run a test to determine if the keys are valid. If they are tested to be invalid then they will also be disabled for selection system-wide.
+
+```
+POST /api/v2/exchange-api-keys/test
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide ID of the API key from `exchange-api-keys/list`
 
 
 ## Delete Exchange API Key
@@ -2279,6 +2293,7 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 combination | 1 | YES |  | Provide a valid combination such as `binance-btcusdt+bitmax-btcusdc`. The `+` acts as a join for the combination. The order is ascending by time.
 latestonly |  | NO |  | Set as `true` to activate. Useful to pull when you are only looking to update the latest point
+date |  | NO |  | Date of the data. Example 2018-10-12
 
 
 **Successful Response Payload:**
@@ -2438,7 +2453,7 @@ child_maximum |  | YES | 0.01 | Maximum child in BTC that the subaccount can pla
 concurrent_strategies_maximum |  | YES |  | The amount of strategies that the subaccount can run concurrently.
 export_enabled |  | YES |  | The subaccount ability to export data (true/true)
 view_all_profiles |  | YES |  | Allow user to view all exchange keys
-add_exchange_keys |  | YES |  | Ability to add exchange api keys to the account.
+add_exchange_keys |  | YES |  | Ability to add Exchange API Keys to the account.
 allow_api_access |  | YES |  | Allow or deny the subaccount access to the account API, in the event the account is given access new API keys for the subaccount will need to be generated (true/true).
 
 
@@ -2731,14 +2746,21 @@ pagenumber |  | NO | 1 |
 This endpoint lists all direct exchanges queries such as balances in a list.
 
 ```
-POST /api/v2/exchange-query/list-exchange-queries
+GET /api/v2/exchange-query/list-exchange-queries
 ```
 
 **Parameters:**
-Name | MinLength | Required | Default | Description
------------- | ------------ | ------------ | ------------ | ------------
-action |  | NO |  | Redefine based on the action
+None
 
+## List of Exchange Requests
+
+
+```
+GET /api/v2/exchange-query/list-exchange-requests
+```
+
+**Parameters:**
+None
 
 ## Delete Exchange Query
 Delete any historical exchange query made. Delete based on `id. This list can be obtained from `exchange-query/list-exchange-queries`
@@ -2765,6 +2787,25 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 apikey | 2 | YES |  | Provide API Key ID
 exchange_query | 4 | YES |  | Predefined type
+
+
+## Create Order
+Make a request from the exchange
+
+```
+POST /api/v2/exchange-query/order-create
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+apikey | 2 | YES |  | Provide API Key ID
+ordertype | 4 | YES |  | `market` or `limit`
+code | 4 | YES |  | Specify a `executium-code`, for example `bitfinex-btcusdt`
+side | 3 | YES |  | `buy` or `sell`
+quantity | 1 | YES |  | Specify an order quantity
+price |  | NO |  | Related to `ordertype` `limit`.
+repeat | 1 | YES | 1 | Defaults to 1, repeat the same order rapid. Maximum 10.
 
 
 ## List Balances
@@ -2837,18 +2878,22 @@ POST /api/v2/wallets/fetch-deposit-address
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-type |  | YES | BTC | 
+wallet_currency |  | YES | BTC | 
 
 
 ## Wallets List Balances
 List all wallets related to your account for direct purpose of depositing subscription and commission fees too.
 
 ```
-GET /api/v2/wallets/list-balances
+POST /api/v2/wallets/list-balances
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+limit |  | NO | 10 | 
+pagenumber |  | NO | 1 | 
+
 
 ## Withdraw from wallet
 Request to withdraw from your executium wallet. You will need to provide the ID and address of the wallet you wish to withdraw from. Please note that only certain subscription levels may have access to this function. Fees apply to process transactions and they can take up to 24 hours as each withdraw request is manually reviewed.
@@ -2952,19 +2997,6 @@ GET /api/v2/finance/import-orders-settings
 
 **Parameters:**
 None
-
-## Test API Key Status
-You must use the returned `id` for the keys you wish to test. From this we will run a test to determine if the keys are valid. If they are tested to be invalid then they will also be disabled for selection system-wide.
-
-```
-POST /api/v2/exchange-api-keys/test
-```
-
-**Parameters:**
-Name | MinLength | Required | Default | Description
------------- | ------------ | ------------ | ------------ | ------------
-id |  | YES |  | Provide ID of the API key from `exchange-api-keys/list`
-
 
 ## Black Scholes Implied Volatility Calculator
 Black Scholes Implied Volatility Calculator
