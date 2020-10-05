@@ -17,40 +17,40 @@ Name | Description
 [exchanges-supported.md](./exchanges-supported.md) | Information related to the current supported exchanges by executium.
 
 ## Supported Exchanges in Version 2
-The following table is the status as of 26th August 2020.
+The following table is the status as of 5th October 2020.
 
 Exchange | Executium Code |Active | Symbols Count
 ------------ | ------------ | ------------ | ------------
-Binance|binance|Yes|706
+Binance|binance|Yes|811
 Binancefutures|binancefutures|Yes|41
-Bitfinex|bitfinex|Yes|292
+Bitfinex|bitfinex|Yes|314
 Bitflyer|bitflyer|Yes|10
-Bithumb|bithumb|Yes|106
+Bithumb|bithumb|Yes|111
 Bitmart|bitmart|Yes|5
-Bitmex|bitmex|Yes|15
+Bitmex|bitmex|Yes|19
 Bitstamp|bitstamp|Yes|32
-Bittrex|bittrex|Yes|506
+Bittrex|bittrex|Yes|548
 Bybit|bybit|Yes|5
 Coinbase|coinbase|Yes|169
-Coinbasepro|coinbasepro|Yes|82
+Coinbasepro|coinbasepro|Yes|97
 Coincheck|coincheck|Yes|1
 Deribit|deribit|Yes|8
-Ftx|ftx|Yes|372
-Gateio|gateio|Yes|500
-Hbdm|hbdm|Yes|44
-Huobipro|huobipro|Yes|624
+Ftx|ftx|Yes|409
+Gateio|gateio|Yes|612
+Hbdm|hbdm|Yes|52
+Huobipro|huobipro|Yes|751
 Indodax|indodax|Yes|68
 Itbit|itbit|Yes|6
 Kraken|kraken|Yes|155
-Krakenfutures|krakenfutures|Yes|19
-Kucoin|kucoin|Yes|467
-Liquid|liquid|Yes|158
-Okex|okex|Yes|408
+Krakenfutures|krakenfutures|Yes|17
+Kucoin|kucoin|Yes|479
+Liquid|liquid|Yes|172
+Okex|okex|Yes|481
 Okexfutures|okexfutures|Yes|408
 Okexswap|okexswap|Yes|408
-Poloniex|poloniex|Yes|228
-Upbit|upbit|Yes|268
-Zb|zb|Yes|158
+Poloniex|poloniex|Yes|267
+Upbit|upbit|Yes|280
+Zb|zb|Yes|177
 
 ## Supported Symbols in Version 2
 We have increased our symbols and exchange support with version 2, as of the 26th August 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
