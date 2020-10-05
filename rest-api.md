@@ -2805,7 +2805,10 @@ code | 4 | YES |  | Specify a `executium-code`, for example `bitfinex-btcusdt`
 side | 3 | YES |  | `buy` or `sell`
 quantity | 1 | YES |  | Specify an order quantity
 price |  | NO |  | Related to `ordertype` `limit`.
-repeat | 1 | YES | 1 | Defaults to 1, repeat the same order rapid. Maximum 10.
+order_send_time |  | NO |  | The time the first order will be sent. If not provided it will send immediately. Timestamp must be in milliseconds.
+repeat_times | 1 | YES | 1 | Defaults to 1. Amount of orders of same settings. The `repeat_interval` will be oberserved. Maximum 10.
+repeat_interval | 1 | YES | 10000 | Defaults to 10,000 milliseconds. The time between each order request.
+expire_after |  | NO | 0 | Set an expiry time for a `limit` ordertype. Set the milliseconds after the order has been entered in which you wish to cancel.
 
 
 ## List Balances
@@ -3143,11 +3146,14 @@ None
 
 
 ```
-GET /api/v2/algorithm-creator/algorithm-add
+POST /api/v2/algorithm-creator/algorithm-add
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+name |  | YES |  | Provide the name of your algo.
+
 
 ## Algorithm Remove
 
