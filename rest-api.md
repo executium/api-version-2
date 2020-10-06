@@ -1350,14 +1350,17 @@ GET /api/v2/strategy/list-templates
 None
 
 ## Strategy Start
-You must specifically call a strategy start event using this endpoint. If you execute this endpoint while a strategy is running nothing will happen.
+You must specifically call a strategy start event using this endpoint. If you execute this endpoint while a strategy is running nothing will happen. In the event a strategy is running and you request it to start, nothing will happen.
 
 ```
-GET /api/v2/strategy/start
+POST /api/v2/strategy/start
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide strategy `id`
+
 
 ## Strategy Stop
 This endpoint is to specifically tell the strategy to stop. When it has been executed it will attempt to clean up and cancel any pending orders before it fully stops. This can take an unspecified period of time to complete as the system works to confirm that anything pending is completed. You can consult the `force` parameter for a hard stop.
@@ -1369,6 +1372,7 @@ POST /api/v2/strategy/stop
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide trategy `id`
 force |  | NO |  | If you select to force the stop it will stop immediately and not check to see if the orders are still active at the exchanges. In the event this parameter is used you must cancel the orders yourself via the exchange(s). In the event you start the strategy after a forced stop, the strategy format will reconvene and check any pending orders.
 
 
@@ -3152,7 +3156,7 @@ POST /api/v2/algorithm-creator/algorithm-add
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-name |  | YES |  | Provide the name of your algo.
+name | 4 | YES |  | Provide the name of your algo.
 
 
 ## Algorithm Remove
