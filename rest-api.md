@@ -47,6 +47,7 @@
 	- [Create Profile Strategy](#create-profile-strategy) (strategy/edit-profile)
 	- [Delete Profile Strategy](#delete-profile-strategy) (strategy/delete-profile)
 	- [Strategy High Level Overview](#strategy-high-level-overview) (strategy/high-level-overview)
+	- [Strategy Hard Reset](#strategy-hard-reset) (strategy/hard-reset)
 	- [User Strategy List](#user-strategy-list) (strategy/data/list)
 	- [List All Trading Algorithms](#list-all-trading-algorithms) (strategy/list-algorithms)
 	- [Exchange List](#exchange-list) (strategy/list-exchanges)
@@ -59,7 +60,6 @@
 	- [List Strategies](#list-strategies) (strategy/list-strategies)
 	- [List Strategy Transactions](#list-strategy-transactions) (strategy/list-strategy-transactions)
 	- [Stop All Strategies](#stop-all-strategies) (strategy/stop-all-strategies)
-	- [Strategy Update](#strategy-update) (strategy/update)
 	- [List Strategy Options](#list-strategy-options) (strategy/list-strategy-options)
 	- [List Watchlist](#list-watchlist) (strategy/list-watchlist)
 	- [Add to Watchlist](#add-to-watchlist) (strategy/add-watchlist-item)
@@ -1231,12 +1231,19 @@ POST /api/v2/strategy/edit-profile
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 id |  | YES |  | Provide the ID.
+algorithm_id | 1 | YES |  | Review the `strategy/list-algorithms` endpoint for `id`.
 name | 1 | YES |  | 
 description |  | NO |  | 
+parent |  | NO |  | 
+condition_codes |  | NO |  | Provide an array.
+condition_values |  | NO |  | Provide an array.
+executable_values |  | NO |  | Provide an array.
+executable_codes |  | NO |  | Provide an array.
+executable_apikeys |  | NO |  | Provide an array.
 
 
 ## Delete Profile Strategy
-The 
+Delete an entire strategy, this will result in all strategies inside the profile being deleted. Once deleted they cannot be recovered.
 
 ```
 POST /api/v2/strategy/delete-profile
@@ -1257,6 +1264,19 @@ GET /api/v2/strategy/high-level-overview
 
 **Parameters:**
 None
+
+## Strategy Hard Reset
+This will allow you to permanently delete all data associated with this strategy. This does not impact the profile. When you hard reset a strategy you will remove all transaction requests, exechange transaction responses and reset all strategy variables to their default values. This endpoint is intended for users who do not wish to keep recreating strategies to test.
+
+```
+POST /api/v2/strategy/hard-reset
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id | 1 | YES |  | Provide strategy `id`
+
 
 ## User Strategy List
 A complete list of user created strategies
@@ -1465,16 +1485,6 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 force |  | NO |  | If you select to force the stop it will stop all strategies running immediately and not check to see if the orders are still active at the exchanges.
 
-
-## Strategy Update
-Strategies can only be updated when they are stopped. If the strategy is active the update attempt will not be processed.
-
-```
-GET /api/v2/strategy/update
-```
-
-**Parameters:**
-None
 
 ## List Strategy Options
 List all variables to a strategy. This is a complete set of options available to the executium strategy system,
