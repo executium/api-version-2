@@ -1,4 +1,4 @@
-![Executium API Version 2](https://i.imgur.com/nn0w8Eo.jpg)
+![Executium API Version 2](https://i.imgur.com/ZiU2oXw.png)
 
 # Executium API Version 2 Documentation
 Executium version 2 is currently in private beta mode as we look to launch our new version of executium which has hundreds of new options and an extensive API which can connect with your business. 
@@ -17,47 +17,48 @@ Name | Description
 [exchanges-supported.md](./exchanges-supported.md) | Information related to the current supported exchanges by executium.
 
 ## Supported Exchanges in Version 2
-The following table is the status as of 5th October 2020.
+The following table is the status as of 24th January 2021.
 
 Exchange | Executium Code |Active | Symbols Count
 ------------ | ------------ | ------------ | ------------
-Binance|binance|Yes|811
-Binancefutures|binancefutures|Yes|41
-Bitfinex|bitfinex|Yes|314
+Binance|binance|Yes|918
+Binancefutures|binancefutures|Yes|77
+Bitfinex|bitfinex|Yes|311
 Bitflyer|bitflyer|Yes|10
-Bithumb|bithumb|Yes|111
+Bithumb|bithumb|Yes|135
 Bitmart|bitmart|Yes|5
-Bitmex|bitmex|Yes|19
-Bitstamp|bitstamp|Yes|32
-Bittrex|bittrex|Yes|548
-Bybit|bybit|Yes|5
+Bitmex|bitmex|Yes|23
+Bitstamp|bitstamp|Yes|45
+Bittrex|bittrex|Yes|654
+Bybit|bybit|Yes|10
 Coinbase|coinbase|Yes|169
-Coinbasepro|coinbasepro|Yes|97
+Coinbasepro|coinbasepro|Yes|125
 Coincheck|coincheck|Yes|1
 Deribit|deribit|Yes|8
-Ftx|ftx|Yes|409
-Gateio|gateio|Yes|612
+Ftx|ftx|Yes|565
+Gateio|gateio|Yes|936
 Hbdm|hbdm|Yes|52
-Huobipro|huobipro|Yes|751
+Hitbtc|hitbtc|Yes|1012
+Huobipro|huobipro|Yes|845
 Indodax|indodax|Yes|68
 Itbit|itbit|Yes|6
 Kraken|kraken|Yes|155
 Krakenfutures|krakenfutures|Yes|17
-Kucoin|kucoin|Yes|479
-Liquid|liquid|Yes|172
-Okex|okex|Yes|481
+Kucoin|kucoin|Yes|537
+Liquid|liquid|Yes|193
+Okex|okex|Yes|523
 Okexfutures|okexfutures|Yes|408
 Okexswap|okexswap|Yes|408
-Poloniex|poloniex|Yes|267
-Upbit|upbit|Yes|280
+Poloniex|poloniex|Yes|304
+Upbit|upbit|Yes|295
 Zb|zb|Yes|177
 
 ## Supported Symbols in Version 2
 We have increased our symbols and exchange support with version 2, as of the 26th August 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
 
-Version | Exchanges | Markets | Market Spreads | Permutation 
+Version | Exchanges | Pairs | Combinations | Permutation 
 ------------ | ------------ | ------------  | ------------   | ------------
-Version 2|29|6,269|19,647,046|39,294,092
+Version 2|31|9,303|43,268,253|86,536,506
 Version 1|12|138|871 | 871
 
 ### Quote to Quote Permutation
