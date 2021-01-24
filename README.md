@@ -15,6 +15,7 @@ Name | Description
 [errors.md](./errors.md) | Details and descriptions of error messages from the Rest API
 [symbols-supported.md](./symbols-supported.md) | Information related to the current supported symbols by executium.
 [exchanges-supported.md](./exchanges-supported.md) | Information related to the current supported exchanges by executium.
+[executium-brand-guidelines.pdf](./executium-brand-guidelines.pdf) | Brand guidelines for executium version 2.
 
 ## Supported Exchanges in Version 2
 The following table is the status as of 24th January 2021.
