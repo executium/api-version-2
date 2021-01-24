@@ -7,7 +7,6 @@ Exchange | Executium Code |Active | Symbols Count
 Binance|binance|Yes|918
 Binancefutures|binancefutures|Yes|77
 Bitfinex|bitfinex|Yes|311
-Bitfinex2|bitfinex2|Yes|311
 Bitflyer|bitflyer|Yes|10
 Bithumb|bithumb|Yes|135
 Bitmart|bitmart|Yes|5
@@ -36,3 +35,4 @@ Okexswap|okexswap|Yes|408
 Poloniex|poloniex|Yes|304
 Upbit|upbit|Yes|295
 Zb|zb|Yes|177
+
