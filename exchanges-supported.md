@@ -1,3 +1,5 @@
+## Supported Exchanges in Version 2
+
 The following table is the status as of 24th January 2021.
 
 Exchange | Executium Code |Active | Symbols Count
