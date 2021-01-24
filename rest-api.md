@@ -12,6 +12,7 @@
 	- [Information](#information) (system/information)
 	- [List Validation Functions](#list-validation-functions) (system/list-validation-functions)
 	- [Symbols](#symbols) (system/symbols)
+	- [Symbols](#symbols) (system/unique-symbols)
 	- [System Status](#system-status) (system/status)
 	- [List Announcements](#list-announcements) (system/list-announcements)
 	- [Exchanges](#exchanges) (system/exchanges)
@@ -169,8 +170,10 @@
 - Marketplace
 	- [Signal Trigger](#signal-trigger) (marketplace/signals-trigger)
 	- [Edit Signal](#edit-signal) (marketplace/signals-edit)
+	- [Backtested Subscriptions](#backtested-subscriptions) (marketplace/backtested-subscriptions)
 	- [Reset Signal Statistics](#reset-signal-statistics) (marketplace/signal-reset)
 	- [Signals Feed](#signals-feed) (marketplace/signals-feed)
+	- [Subscription Information](#subscription-information) (marketplace/subscription-information)
 	- [Create Signal Profile](#create-signal-profile) (marketplace/signals-add)
 	- [Delete Signal](#delete-signal) (marketplace/signal-delete)
 	- [Signals Iteration Price Movement](#signals-iteration-price-movement) (marketplace/signals-iteration-price-movement)
@@ -198,7 +201,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`183 endpoints`** as part of version 2.
+* There are currently **`186 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -453,6 +456,16 @@ exchange |  | NO |  | Filter the data by exchange.
       
 ```
 
+
+## Symbols
+All unique symbols carried by executium
+
+```
+GET /api/v2/system/unique-symbols
+```
+
+**Parameters:**
+None
 
 ## System Status
 This provides information related to the current setup of the network and how it is performing. Any issues will be first reported here. We recommend checking this endpoint if you have any issues with any component of the system to check if it is a local issue or an issue with executium.
@@ -1235,11 +1248,27 @@ algorithm_id | 1 | YES |  | Review the `strategy/list-algorithms` endpoint for `
 name | 1 | YES |  | 
 description |  | NO |  | 
 parent |  | NO |  | 
+price_convert_conditions |  | NO |  | 
+price_convert_executions |  | NO |  | 
+noconditions |  | NO |  | `true` or `false`. IF set to true then conditions will be ignored.
 condition_codes |  | NO |  | Provide an array.
 condition_values |  | NO |  | Provide an array.
+condition_orderbooklevel_side1 |  | NO |  | Provide an array.
+condition_orderbooklevel_side2 |  | NO |  | Provide an array.
 executable_values |  | NO |  | Provide an array.
 executable_codes |  | NO |  | Provide an array.
 executable_apikeys |  | NO |  | Provide an array.
+executable_apikeysmarket |  | NO |  | Provide an array.
+executable_leverage |  | NO |  | Provide an array.
+executable_priceoffset |  | NO |  | Provide an array.
+executable_priceexact |  | NO |  | Provide an array.
+executable_priceoffsetside |  | NO |  | Provide an array.
+executable_priceoffsettype |  | NO |  | Empty defaults to orderbook level one (top of the book). Available `ob1`, `ob2`, `ob3`, `ob4` and `ob5`
+executable_pricereference |  | NO |  | Provide an array.
+executable_toleranceminimum |  | NO |  | Provide an array.
+executable_tolerancemaximum |  | NO |  | Provide an array.
+executable_maximumtimelive |  | NO |  | Provide an array.
+executable_obqtycumulativecheck |  | NO |  | Provide an array.
 
 
 ## Delete Profile Strategy
@@ -3167,6 +3196,9 @@ POST /api/v2/algorithm-creator/algorithm-add
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 name | 4 | YES |  | Provide the name of your algo.
+maximum_transactions_successful |  | NO |  | Single value
+maximum_transactions_canceled |  | NO |  | Single value
+comments |  | NO |  | 
 
 
 ## Algorithm Remove
@@ -3193,11 +3225,16 @@ None
 
 
 ```
-GET /api/v2/algorithm-creator/algorithm-update
+POST /api/v2/algorithm-creator/algorithm-update
 ```
 
 **Parameters:**
-None
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide the ID.
+name | 1 | YES |  | 
+comments |  | NO |  | 
+
 
 ## Condition Add
 
@@ -3370,7 +3407,19 @@ id |  | YES |  | Provide a Signal ID
 name |  | NO |  | Signal Name
 custom_1 |  | NO |  | Custom 1 Data
 custom_2 |  | NO |  | Custom 2 Data
+custom_3 |  | NO |  | Custom 3 Data
+custom_4 |  | NO |  | Custom 4 Data
 
+
+## Backtested Subscriptions
+All monitored subscriptions
+
+```
+GET /api/v2/marketplace/backtested-subscriptions
+```
+
+**Parameters:**
+None
 
 ## Reset Signal Statistics
 You must be the owner of the signal to reset the statistics. Please note, by resetting the data you will place your entire signal back to the start. All related logging data will be destroyed. This is not recommended.
@@ -3404,46 +3453,15 @@ from_iteration |  | NO |  | Display results of signals which contain a minimum o
 pagenumber |  | NO | 1 | Relevant to the `iteration_children` only.
 
 
-**Successful Response Payload:**
-```javascript
- "data":{
-      "signals":[
-         {
-            "id":"1",
-            "time_created":"1596609068",
-            "last_updated":"1596951846788",
-            "c_uid":0,
-            "c_name":"Volume Creator",
-            "c_status":"closed",
-            "c_iteration":"4678",
-            "c_profit":"-3185.01000000",
-            "c_order":"0.70231753",
-            "c_average":"-0.70231753",
-            "c_usdt_volume":"53017671.67",
-            "c_last_profit":"-4.05000000",
-            "c_last_runtime":"6827",
-            "c_direction":"short",
-            "c_codes":"binance-btcusdt",
-            "c_description":"",
-            "c_price":"0.00000000",
-            "c_subscribers_current":"0",
-            "c_subscribers_max":"0",
-            "c_success_rate":"0",
-            "c_current_success_streak":"0",
-            "c_action_direction_1":"sell",
-            "c_action_direction_2":"buy",
-            "c_action_maxtime_1":"1596951847419",
-            "c_action_maxtime_2":"1596951847788",
-            "c_action_maxamount_1":"0.002",
-            "c_action_maxamount_2":"0.002",
-            "iteration_children":[
+## Subscription Information
 
-            ]
-         }
-      ]
-   },
+
+```
+GET /api/v2/marketplace/subscription-information
 ```
 
+**Parameters:**
+None
 
 ## Create Signal Profile
 Creater a signal profile for your account.
