@@ -199,7 +199,7 @@ public function auth()
 ```
 
 ## Further help
-If you are having issues that you cannot resolve please reach out to us at support@executium.com.
+If you are having issues that you cannot resolve please reach out to us at support@executium.com or via live chat or ticketed support through platform.executium.com
 
 
     
