@@ -7,20 +7,19 @@
 - [General Information on Endpoints](#general-information-on-endpoints)
 - System
 	- [Check Server Time](#check-server-time) (system/timestamp)
+	- [USD Exchange Rate](#usd-exchange-rate) (system/rates)
+	- [Exchange Health](#exchange-health) (system/exchange-health)
 	- [Endpoints](#endpoints) (system/endpoints)
 	- [Ping REST API](#ping-rest-api) (system/ping)
 	- [Information](#information) (system/information)
 	- [List Validation Functions](#list-validation-functions) (system/list-validation-functions)
 	- [Symbols](#symbols) (system/symbols)
-	- [Symbols](#symbols) (system/unique-symbols)
 	- [System Status](#system-status) (system/status)
 	- [List Announcements](#list-announcements) (system/list-announcements)
 	- [Exchanges](#exchanges) (system/exchanges)
 - Subscriptions
 	- [Subscriptions Details](#subscriptions-details) (subscriptions/details)
 	- [Cancel Subscription](#cancel-subscription) (subscriptions/cancel)
-	- [Commissions Report](#commissions-report) (subscriptions/commissions-report)
-	- [Deposit Addresses](#deposit-addresses) (subscriptions/deposit)
 	- [Invoices](#invoices) (subscriptions/invoices)
 	- [Change Subscription Package](#change-subscription-package) (subscriptions/change-php-sdk)
 	- [Change Setting](#change-setting) (subscriptions/change-setting-request)
@@ -31,12 +30,10 @@
 	- [List Private Servers](#list-private-servers) (subscriptions/list-private-servers)
 	- [List Shared Servers](#list-shared-servers) (subscriptions/list-shared-servers)
 	- [Package Recommendation](#package-recommendation) (subscriptions/php-sdk-recommendation)
-	- [Commissions Rate](#commissions-rate) (subscriptions/commissions-rate)
 	- [List Packages](#list-packages) (subscriptions/list-packages)
 	- [Change Setting Confirm](#change-setting-confirm) (subscriptions/change-setting-confirm)
 	- [Subscriptions Server Types](#subscriptions-server-types) (subscriptions/server-types)
 	- [Subscriptions Change Package](#subscriptions-change-package) (subscriptions/change-package)
-	- [Subscriptions Package Recommendation](#subscriptions-package-recommendation) (subscriptions/package-recommendation)
 - Exchange API Keys
 	- [Add Exchange API Credentials](#add-exchange-api-credentials) (exchange-api-keys/add)
 	- [Test API Key Status](#test-api-key-status) (exchange-api-keys/test)
@@ -44,8 +41,10 @@
 	- [Update Exchange API Key](#update-exchange-api-key) (exchange-api-keys/edit)
 	- [List Exchange API Keys](#list-exchange-api-keys) (exchange-api-keys/list)
 - Strategy
+	- [Create Tab](#create-tab) (strategy/create-tab)
 	- [Create Profile Strategy](#create-profile-strategy) (strategy/create-profile)
-	- [Create Profile Strategy](#create-profile-strategy) (strategy/edit-profile)
+	- [Edit Strategy Component](#edit-strategy-component) (strategy/edit-component)
+	- [Edit Profile Strategy](#edit-profile-strategy) (strategy/edit-profile)
 	- [Delete Profile Strategy](#delete-profile-strategy) (strategy/delete-profile)
 	- [Strategy High Level Overview](#strategy-high-level-overview) (strategy/high-level-overview)
 	- [Strategy Hard Reset](#strategy-hard-reset) (strategy/hard-reset)
@@ -58,11 +57,14 @@
 	- [Strategy List Templates](#strategy-list-templates) (strategy/list-templates)
 	- [Strategy Start](#strategy-start) (strategy/start)
 	- [Strategy Stop](#strategy-stop) (strategy/stop)
+	- [Strategy Soft Stop](#strategy-soft-stop) (strategy/soft-stop)
 	- [List Strategies](#list-strategies) (strategy/list-strategies)
 	- [List Strategy Transactions](#list-strategy-transactions) (strategy/list-strategy-transactions)
 	- [Stop All Strategies](#stop-all-strategies) (strategy/stop-all-strategies)
 	- [List Strategy Options](#list-strategy-options) (strategy/list-strategy-options)
 	- [List Watchlist](#list-watchlist) (strategy/list-watchlist)
+	- [Duplicate Strategy](#duplicate-strategy) (strategy/duplicate-strategy)
+	- [Edit Strategy Order](#edit-strategy-order) (strategy/edit-order)
 	- [Add to Watchlist](#add-to-watchlist) (strategy/add-watchlist-item)
 	- [Delete Watchlist Item](#delete-watchlist-item) (strategy/delete-watchlist-item)
 - Public
@@ -97,18 +99,18 @@
 	- [Edit Broadcast](#edit-broadcast) (subaccounts/broadcast-edit)
 	- [List Broadcast](#list-broadcast) (subaccounts/broadcast-list)
 	- [Access History](#access-history) (subaccounts/subaccount-access-history)
+- Unique System
+	- [Symbols](#symbols) (system/unique-symbols)
 - User
 	- [Close Account](#close-account) (user/close-account)
 	- [User Account Balance](#user-account-balance) (user/account-balance)
+	- [User Account Settings](#user-account-settings) (user/settings)
 	- [User Access History](#user-access-history) (user/access-history)
 	- [User Account Details](#user-account-details) (user/account-details)
 	- [User List Referrals](#user-list-referrals) (user/list-referrals)
 	- [User Active Sessions](#user-active-sessions) (user/active-sessions)
 	- [User Security Settings](#user-security-settings) (user/security-settings)
 	- [Create Support Ticket](#create-support-ticket) (user/create-support-ticket)
-	- [Delete Support Ticket](#delete-support-ticket) (user/delete-support-ticket)
-	- [Edit Support Ticket](#edit-support-ticket) (user/edit-support-ticket)
-	- [List Support Tickets](#list-support-tickets) (user/list-support-tickets)
 - Exchange Query
 	- [List of Exchange Queries](#list-of-exchange-queries) (exchange-query/list-exchange-queries)
 	- [List of Exchange Requests](#list-of-exchange-requests) (exchange-query/list-exchange-requests)
@@ -121,6 +123,8 @@
 	- [Exchange Query Order Cancel](#exchange-query-order-cancel) (exchange-query/order-cancel)
 	- [Exchange Query Order Check](#exchange-query-order-check) (exchange-query/order-check)
 	- [Exchange Query Order Create](#exchange-query-order-create) (exchange-query/order-create)
+- Statistics
+	- [Account Profit and Loss](#account-profit-and-loss) (statistics/account-pnl)
 - Wallets
 	- [Wallets Fetch Deposit Address](#wallets-fetch-deposit-address) (wallets/fetch-deposit-address)
 	- [Wallets List Balances](#wallets-list-balances) (wallets/list-balances)
@@ -167,16 +171,34 @@
 	- [Publish Algorithm](#publish-algorithm) (algorithm-creator/publish-algorithm)
 	- [Unpublish Algorithm](#unpublish-algorithm) (algorithm-creator/unpublish-algorithm)
 	- [Validate Algorithm](#validate-algorithm) (algorithm-creator/validate-algorithm)
+- Support
+	- [Add Ticket](#add-ticket) (support/add-ticket)
+	- [Settings](#settings) (support/settings)
+	- [List Support Tickets](#list-support-tickets) (support/list-tickets)
+	- [Update Ticket](#update-ticket) (support/update-ticket)
+- Competition
+	- [List Competitions](#list-competitions) (competitions/list)
+	- [Join Competition](#join-competition) (competitions/join)
+	- [Leave Competition](#leave-competition) (competitions/leave)
+- Books
+	- [Manage Books](#manage-books) (strategy/books)
 - Marketplace
 	- [Signal Trigger](#signal-trigger) (marketplace/signals-trigger)
 	- [Edit Signal](#edit-signal) (marketplace/signals-edit)
+	- [Signals Position](#signals-position) (marketplace/signals-position)
 	- [Backtested Subscriptions](#backtested-subscriptions) (marketplace/backtested-subscriptions)
+	- [Signal Developer Profile](#signal-developer-profile) (marketplace/signal-developer)
 	- [Reset Signal Statistics](#reset-signal-statistics) (marketplace/signal-reset)
+	- [Manage Subscription](#manage-subscription) (marketplace/subscription-manage)
+	- [Featured](#featured) (marketplace/featured)
 	- [Signals Feed](#signals-feed) (marketplace/signals-feed)
 	- [Subscription Information](#subscription-information) (marketplace/subscription-information)
-	- [Create Signal Profile](#create-signal-profile) (marketplace/signals-add)
+	- [Add Signal](#add-signal) (marketplace/signals-add)
 	- [Delete Signal](#delete-signal) (marketplace/signal-delete)
 	- [Signals Iteration Price Movement](#signals-iteration-price-movement) (marketplace/signals-iteration-price-movement)
+- Subscription
+	- [Add Drivetime](#add-drivetime) (subscriptions/add-drivetime)
+	- [List Top-up or Deposit History](#list-top-up-or-deposit-history) (subscriptions/list-history)
 - Backtesting
 	- [Orderbook Data](#orderbook-data) (backtesting/orderbook-data)
 	- [Technical Indicators](#technical-indicators) (backtesting/technical-indicators)
@@ -201,7 +223,7 @@ Currently executium version 2 is in private beta mode as of 10th June 2020. We w
 * The `trending-news` base is : **`trendingnews.executium.com`**
 * The base for public `marketdata` is : **`marketdata.executium.com`**
 * All endpoints return either a JSON object or array.
-* There are currently **`186 endpoints`** as part of version 2.
+* There are currently **`210 endpoints`** as part of version 2.
 * Data returned is limited by default to 10 rows and page 1 in descending order (newest first).
 * Timestamp fields vary and are labeled to their corresponding contents of **milliseconds** or **time**
 
@@ -252,6 +274,40 @@ None
         "milliseconds ": 1591780920709
     },
 }
+```
+
+
+## USD Exchange Rate
+Exchnage rate used against the dollar.
+
+```
+GET /api/v2/system/rates
+```
+
+**Parameters:**
+None
+
+## Exchange Health
+The last time for when an exchange showed issues. Please see https://www.youtube.com/watch?v=_BVxMg99JM4 for more information
+
+```
+GET /api/v2/system/exchange-health
+```
+
+**Parameters:**
+None
+
+**Successful Response Formatted:**
+
+Name | Example Value
+------------ | ------------
+last_issue | 1623121352
+time_now | 1623121377
+
+
+**Successful Response Payload:**
+```javascript
+{"data":{"last_issue":1623121352,"time_now":1623121377}}
 ```
 
 
@@ -456,16 +512,6 @@ exchange |  | NO |  | Filter the data by exchange.
       
 ```
 
-
-## Symbols
-All unique symbols carried by executium
-
-```
-GET /api/v2/system/unique-symbols
-```
-
-**Parameters:**
-None
 
 ## System Status
 This provides information related to the current setup of the network and how it is performing. Any issues will be first reported here. We recommend checking this endpoint if you have any issues with any component of the system to check if it is a local issue or an issue with executium.
@@ -940,26 +986,6 @@ GET /api/v2/subscriptions/cancel
 **Parameters:**
 None
 
-## Commissions Report
-A full list based on date range of your recent commissions due to executium for services rendered. This commission report does not include those which you are paying to the exchanges.
-
-```
-GET /api/v2/subscriptions/commissions-report
-```
-
-**Parameters:**
-None
-
-## Deposit Addresses
-List all of your deposit addresses in your account
-
-```
-GET /api/v2/subscriptions/deposit
-```
-
-**Parameters:**
-None
-
 ## Invoices
 All of your subscription invoices for your period as an executium user. This includes invoices which have been generated where no fee is due. To exclude these please review the filter options.
 
@@ -1084,16 +1110,6 @@ GET /api/v2/subscriptions/php-sdk-recommendation
 **Parameters:**
 None
 
-## Commissions Rate
-Outputs the current commissions rate that the user is paying per successful transactions. The rate will vary from account to account dependant on their subscription.
-
-```
-GET /api/v2/subscriptions/commissions-rate
-```
-
-**Parameters:**
-None
-
 ## List Packages
 
 
@@ -1138,16 +1154,6 @@ GET /api/v2/subscriptions/change-package
 **Parameters:**
 None
 
-## Subscriptions Package Recommendation
-
-
-```
-GET /api/v2/subscriptions/package-recommendation
-```
-
-**Parameters:**
-None
-
 ## Add Exchange API Credentials
 Provide Exchange API credentials for usage with your executium strategies. Once added they will be confirmed and then be made available to strategies.
 
@@ -1159,10 +1165,10 @@ POST /api/v2/exchange-api-keys/add
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 exchange |  | YES |  | See the supported exchanges via the `strategy/list-exchanges` endpoint
-label | 6 | YES |  | The label will appear when selecting your API keys for strategies. 
+label | 2 | YES |  | The label will appear when selecting your API keys for strategies. 
 token | 5 | YES |  | API key/token
-secret | 4 | YES |  | API secret
-password |  | YES |  | Some exchanges, such as OKEx require a password to be provided.
+secret | 5 | YES |  | API secret
+password |  | NO |  | Some exchanges, such as OKEx require a password to be provided.
 
 
 ## Test API Key Status
@@ -1202,7 +1208,7 @@ POST /api/v2/exchange-api-keys/edit
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 id |  | YES |  | Provide the ID.
-label |  | NO |  | Provide the ID of the key you wish to remove.
+label | 3 | YES |  | A label is required
 
 
 ## List Exchange API Keys
@@ -1219,6 +1225,19 @@ limit |  | NO | 10 |
 pagenumber |  | NO | 1 | 
 
 
+## Create Tab
+The 
+
+```
+POST /api/v2/strategy/create-tab
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+name | 1 | YES |  | 
+
+
 ## Create Profile Strategy
 The 
 
@@ -1233,8 +1252,18 @@ name | 1 | YES |  |
 description |  | NO |  | 
 
 
-## Create Profile Strategy
-The 
+## Edit Strategy Component
+
+
+```
+GET /api/v2/strategy/edit-component
+```
+
+**Parameters:**
+None
+
+## Edit Profile Strategy
+
 
 ```
 POST /api/v2/strategy/edit-profile
@@ -1246,6 +1275,7 @@ Name | MinLength | Required | Default | Description
 id |  | YES |  | Provide the ID.
 algorithm_id | 1 | YES |  | Review the `strategy/list-algorithms` endpoint for `id`.
 name | 1 | YES |  | 
+slice_delay | 1 | YES |  | 
 description |  | NO |  | 
 parent |  | NO |  | 
 price_convert_conditions |  | NO |  | 
@@ -1255,6 +1285,7 @@ condition_codes |  | NO |  | Provide an array.
 condition_values |  | NO |  | Provide an array.
 condition_orderbooklevel_side1 |  | NO |  | Provide an array.
 condition_orderbooklevel_side2 |  | NO |  | Provide an array.
+executable_parents |  | NO |  | Provide an array.
 executable_values |  | NO |  | Provide an array.
 executable_codes |  | NO |  | Provide an array.
 executable_apikeys |  | NO |  | Provide an array.
@@ -1262,6 +1293,8 @@ executable_apikeysmarket |  | NO |  | Provide an array.
 executable_leverage |  | NO |  | Provide an array.
 executable_priceoffset |  | NO |  | Provide an array.
 executable_priceexact |  | NO |  | Provide an array.
+post_request_delay |  | NO |  | Provide an array.
+post_request_random |  | NO |  | Provide an array.
 executable_priceoffsetside |  | NO |  | Provide an array.
 executable_priceoffsettype |  | NO |  | Empty defaults to orderbook level one (top of the book). Available `ob1`, `ob2`, `ob3`, `ob4` and `ob5`
 executable_pricereference |  | NO |  | Provide an array.
@@ -1425,6 +1458,19 @@ id |  | YES |  | Provide trategy `id`
 force |  | NO |  | If you select to force the stop it will stop immediately and not check to see if the orders are still active at the exchanges. In the event this parameter is used you must cancel the orders yourself via the exchange(s). In the event you start the strategy after a forced stop, the strategy format will reconvene and check any pending orders.
 
 
+## Strategy Soft Stop
+This endpoint acts the same as strategy/stop but waits for certain events to finish and updates the data overviews on a profile level. This endpoint works more towards making sure data ic aligned, but may add time to your stop request.
+
+```
+POST /api/v2/strategy/soft-stop
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Provide trategy `id`
+
+
 ## List Strategies
 A complete list of strategies that are actively running on executium.
 
@@ -1530,6 +1576,26 @@ List all pairs on your watchlist.
 
 ```
 GET /api/v2/strategy/list-watchlist
+```
+
+**Parameters:**
+None
+
+## Duplicate Strategy
+Duplicate an existing strategy.
+
+```
+GET /api/v2/strategy/duplicate-strategy
+```
+
+**Parameters:**
+None
+
+## Edit Strategy Order
+This determines the order in whcih you want your strategies displayed
+
+```
+GET /api/v2/strategy/edit-order
 ```
 
 **Parameters:**
@@ -2490,14 +2556,10 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 name | 5 | YES |  | Provide the subaccount users name.
 email | 5 | YES |  | Provide the subaccount users e-mail address.
+username | 5 | YES |  | Username must be unique.
+password | 8 | YES |  | Password must meet the requirements.
 active |  | YES |  | 
-parent_maximum |  | YES | 0.1 | Maximum parent in BTC that the subaccount can place per strategy
-child_maximum |  | YES | 0.01 | Maximum child in BTC that the subaccount can place per strategy
-concurrent_strategies_maximum |  | YES |  | The amount of strategies that the subaccount can run concurrently.
-export_enabled |  | YES |  | The subaccount ability to export data (true/true)
-view_all_profiles |  | YES |  | Allow user to view all exchange keys
-add_exchange_keys |  | YES |  | Ability to add Exchange API Keys to the account.
-allow_api_access |  | YES |  | Allow or deny the subaccount access to the account API, in the event the account is given access new API keys for the subaccount will need to be generated (true/true).
+allow_api_key_usage |  | YES |  | Ability to add Exchange API Keys to the account.
 
 
 ## Edit Subaccount
@@ -2514,6 +2576,7 @@ id |  | YES |  | Provide the ID of the subaccount.
 email | 5 | YES |  | Provide the subaccount users e-mail address.
 name | 5 | YES |  | Provide the subaccount users name.
 active | 1 | YES |  | 
+allow_api_key_usage | 1 | YES |  | Allow API key creation/delete access
 
 
 ## Delete Subaccount
@@ -2600,6 +2663,16 @@ GET /api/v2/subaccounts/subaccount-access-history
 **Parameters:**
 None
 
+## Symbols
+All unique symbols carried by executium
+
+```
+GET /api/v2/system/unique-symbols
+```
+
+**Parameters:**
+None
+
 ## Close Account
 If you wish to close your account with executium this is the endpoint. We may require that you close your account via the website.
 
@@ -2657,6 +2730,16 @@ Show all account balances you have available with executium. This is just for ex
 
 ```
 GET /api/v2/user/account-balance
+```
+
+**Parameters:**
+None
+
+## User Account Settings
+Ability to update each setting so that your default settings in executium transend. 
+
+```
+GET /api/v2/user/settings
 ```
 
 **Parameters:**
@@ -2738,51 +2821,6 @@ email | 5 | YES |  | Provide a valid e-mail address
 subject | 5 | YES |  | 
 category |  | NO |  | 
 message | 20 | YES |  | Message must contain at least 20 characters
-
-
-## Delete Support Ticket
-
-
-```
-POST /api/v2/user/delete-support-ticket
-```
-
-**Parameters:**
-Name | MinLength | Required | Default | Description
------------- | ------------ | ------------ | ------------ | ------------
-id |  | YES |  | Provide the support ID
-
-
-## Edit Support Ticket
-
-
-```
-POST /api/v2/user/edit-support-ticket
-```
-
-**Parameters:**
-Name | MinLength | Required | Default | Description
------------- | ------------ | ------------ | ------------ | ------------
-id |  | YES |  | Provide the support ID
-name | 5 | YES |  | 
-email | 5 | YES |  | Provide a valid e-mail address
-subject | 5 | YES |  | 
-category |  | NO |  | 
-message | 20 | YES |  | Message must contain at least 20 characters
-
-
-## List Support Tickets
-
-
-```
-POST /api/v2/user/list-support-tickets
-```
-
-**Parameters:**
-Name | MinLength | Required | Default | Description
------------- | ------------ | ------------ | ------------ | ------------
-limit |  | NO | 10 | 
-pagenumber |  | NO | 1 | 
 
 
 ## List of Exchange Queries
@@ -2914,18 +2952,25 @@ GET /api/v2/exchange-query/order-create
 **Parameters:**
 None
 
+## Account Profit and Loss
+
+
+```
+GET /api/v2/statistics/account-pnl
+```
+
+**Parameters:**
+None
+
 ## Wallets Fetch Deposit Address
 Select the wallet `type`  you would like to depsoit too. By default it is set to Bitcoin (`BTC`).
 
 ```
-POST /api/v2/wallets/fetch-deposit-address
+GET /api/v2/wallets/fetch-deposit-address
 ```
 
 **Parameters:**
-Name | MinLength | Required | Default | Description
------------- | ------------ | ------------ | ------------ | ------------
-wallet_currency |  | YES | BTC | 
-
+None
 
 ## Wallets List Balances
 List all wallets related to your account for direct purpose of depositing subscription and commission fees too.
@@ -2945,17 +2990,11 @@ pagenumber |  | NO | 1 |
 Request to withdraw from your executium wallet. You will need to provide the ID and address of the wallet you wish to withdraw from. Please note that only certain subscription levels may have access to this function. Fees apply to process transactions and they can take up to 24 hours as each withdraw request is manually reviewed.
 
 ```
-POST /api/v2/wallets/withdraw
+GET /api/v2/wallets/withdraw
 ```
 
 **Parameters:**
-Name | MinLength | Required | Default | Description
------------- | ------------ | ------------ | ------------ | ------------
-wallet_id |  | YES |  | Find the wallet `id` from the list wallet endpoint
-wallet_address |  | YES |  | Find the wallet `address` from the list wallet endpoint
-address_to |  | YES |  | Provide the wallet address you wish to transfer too
-amount |  | YES |  | Specify the amount to transfer
-
+None
 
 ## List Commissions Paid
 This is inclusive of your subaccounts in your account if you have them. All commissions relate directly to executium and not the exchanges commissions taken.
@@ -3195,10 +3234,15 @@ POST /api/v2/algorithm-creator/algorithm-add
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-name | 4 | YES |  | Provide the name of your algo.
+name | 4 | YES |  | Provide the name of your algorithm.
+group_name | 4 | YES |  | Provide the group name of the algorithm
+reverse_id |  | NO |  | Provide the reverse ID if exists
 maximum_transactions_successful |  | NO |  | Single value
 maximum_transactions_canceled |  | NO |  | Single value
 comments |  | NO |  | 
+status |  | NO |  | 
+package_minimum |  | NO |  | 
+monthly_fee |  | NO |  | 
 
 
 ## Algorithm Remove
@@ -3233,7 +3277,16 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 id |  | YES |  | Provide the ID.
 name | 1 | YES |  | 
+group_name | 1 | YES |  | 
+reverse_id |  | NO |  | Provide the reverse ID if exists
+status |  | NO |  | 
 comments |  | NO |  | 
+maximum_transactions_successful |  | NO |  | 
+maximum_transactions_canceled |  | NO |  | 
+cpa_successful |  | NO |  | 
+cpa_canceled |  | NO |  | 
+package_minimum |  | NO |  | 
+monthly_fee |  | NO |  | 
 
 
 ## Condition Add
@@ -3376,22 +3429,95 @@ GET /api/v2/algorithm-creator/validate-algorithm
 **Parameters:**
 None
 
+## Add Ticket
+
+
+```
+GET /api/v2/support/add-ticket
+```
+
+**Parameters:**
+None
+
+## Settings
+
+
+```
+GET /api/v2/support/settings
+```
+
+**Parameters:**
+None
+
+## List Support Tickets
+
+
+```
+GET /api/v2/support/list-tickets
+```
+
+**Parameters:**
+None
+
+## Update Ticket
+
+
+```
+GET /api/v2/support/update-ticket
+```
+
+**Parameters:**
+None
+
+## List Competitions
+List all competitions and check if you are currently enrolled.
+
+```
+GET /api/v2/competitions/list
+```
+
+**Parameters:**
+None
+
+## Join Competition
+
+
+```
+GET /api/v2/competitions/join
+```
+
+**Parameters:**
+None
+
+## Leave Competition
+
+
+```
+GET /api/v2/competitions/leave
+```
+
+**Parameters:**
+None
+
+## Manage Books
+Create, edit, delete and manage your books.
+
+```
+GET /api/v2/strategy/books
+```
+
+**Parameters:**
+None
+
 ## Signal Trigger
 Send your trigger conditions to this endpoint. You must send both a signal (buy or sell) and a corresponding action (open or close). This is required as a double verification prevention method.
 
 ```
-POST /api/v2/marketplace/signals-trigger
+GET /api/v2/marketplace/signals-trigger
 ```
 
 **Parameters:**
-Name | MinLength | Required | Default | Description
------------- | ------------ | ------------ | ------------ | ------------
-id |  | YES |  | Provide a Signal ID
-signal |  | YES |  | `buy` or `sell`. If this is the closing portion of the `signal` then you must do the opposite to what occured in the opening signal.
-action |  | YES |  | Indicate if you are `open` or `close` with this signal. It must correlate to the current status. Both `signal` and `action` must exist and be correct as a confirmation that you are performing the correct actions.
-execute_within |  | YES |  | Determine in milliseconds in which the window to execute the `signal`.
-maximum_amount |  | YES |  | Maximum amount to buy/sell
-
+None
 
 ## Edit Signal
 
@@ -3411,6 +3537,16 @@ custom_3 |  | NO |  | Custom 3 Data
 custom_4 |  | NO |  | Custom 4 Data
 
 
+## Signals Position
+Show the signals position chart data based on kline data. These data points are then used to map your signal position
+
+```
+GET /api/v2/marketplace/signals-position
+```
+
+**Parameters:**
+None
+
 ## Backtested Subscriptions
 All monitored subscriptions
 
@@ -3420,6 +3556,19 @@ GET /api/v2/marketplace/backtested-subscriptions
 
 **Parameters:**
 None
+
+## Signal Developer Profile
+All information and signals retaining to the signal developer. Provide the signal developers `id` to return information regarding what is available.
+
+```
+POST /api/v2/marketplace/signal-developer
+```
+
+**Parameters:**
+Name | MinLength | Required | Default | Description
+------------ | ------------ | ------------ | ------------ | ------------
+id |  | YES |  | Signal Developer ID
+
 
 ## Reset Signal Statistics
 You must be the owner of the signal to reset the statistics. Please note, by resetting the data you will place your entire signal back to the start. All related logging data will be destroyed. This is not recommended.
@@ -3433,6 +3582,26 @@ Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 id |  | YES |  | Provide a Signal ID
 
+
+## Manage Subscription
+Manage your subscription
+
+```
+GET /api/v2/marketplace/subscription-manage
+```
+
+**Parameters:**
+None
+
+## Featured
+A list of all the latest signals and subscriptions
+
+```
+GET /api/v2/marketplace/featured
+```
+
+**Parameters:**
+None
 
 ## Signals Feed
 The REST endpoint to receive signal instructions and information. We recommend using the websocket for the signal endpoint if you are intending polling. Please note that there is a delay in these signals in the `public` domain. The true speed for `signals` is only available by using the executium trading system. This endpoint is provided as a means to give delayed, yet accurate information on how a signal is performing. If you are looking to utilize these signals as part of your trading strategy then you should use the executium trading system strategy engine to leverage the signal data.
@@ -3463,8 +3632,8 @@ GET /api/v2/marketplace/subscription-information
 **Parameters:**
 None
 
-## Create Signal Profile
-Creater a signal profile for your account.
+## Add Signal
+Add your signal to the system providing your developer key.
 
 ```
 POST /api/v2/marketplace/signals-add
@@ -3473,17 +3642,8 @@ POST /api/v2/marketplace/signals-add
 **Parameters:**
 Name | MinLength | Required | Default | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-name | 3 | YES |  | Label your strategy
-code | 3 | YES |  | Executium code only acceptable
-script | 3 | YES |  | 
-scriptcheck |  | NO |  | 
-commissions | 1 | YES |  | 
-interval | 1 | YES |  | 
-position | 1 | YES |  | `long` or `short`
-takeprofit | 1 | YES |  | 
-takeloss | 1 | YES |  | 
-datefrom | 1 | YES |  | A valid date format, example `2020-09-01`
-dateto | 1 | YES |  | A valid date format, example `2020-09-01`
+key | 3 | YES |  | Your developer key
+payload | 100 | YES |  | Encrypted payload
 
 
 ## Delete Signal
@@ -3512,6 +3672,26 @@ Name | MinLength | Required | Default | Description
 id | 1 | YES |  | Signal ID
 iteration | 1 | YES |  | Signals Iteration ID
 
+
+## Add Drivetime
+
+
+```
+GET /api/v2/subscriptions/add-drivetime
+```
+
+**Parameters:**
+None
+
+## List Top-up or Deposit History
+
+
+```
+GET /api/v2/subscriptions/list-history
+```
+
+**Parameters:**
+None
 
 ## Orderbook Data
 
