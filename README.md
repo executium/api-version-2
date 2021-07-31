@@ -18,171 +18,197 @@ Name | Description
 [executium-brand-guidelines.pdf](./executium-brand-guidelines.pdf) | Brand guidelines for executium version 2.
 
 ## Supported Exchanges in Version 2
-The following table is the status as of 24th January 2021.
+The following table is the status as of 31st July 2021.
 
 Exchange | Executium Code |Active | Symbols Count
 ------------ | ------------ | ------------ | ------------
-Binance|binance|Yes|918
-Binancefutures|binancefutures|Yes|77
-Bitfinex|bitfinex|Yes|311
-Bitflyer|bitflyer|Yes|10
-Bithumb|bithumb|Yes|135
+Binance|binance|Yes|1177
+Binancecoinm|binancecoinm|Yes|36
+Binanceusdm|binanceusdm|Yes|122
+Bitfinex2|bitfinex version 2|Yes|340
+Bitflyer|bitflyer|Yes|13
+Bithumb|bithumb|Yes|248
 Bitmart|bitmart|Yes|5
-Bitmex|bitmex|Yes|23
-Bitstamp|bitstamp|Yes|45
-Bittrex|bittrex|Yes|654
-Bybit|bybit|Yes|10
-Coinbase|coinbase|Yes|169
-Coinbasepro|coinbasepro|Yes|125
-Coincheck|coincheck|Yes|1
-Deribit|deribit|Yes|8
-Ftx|ftx|Yes|565
-Gateio|gateio|Yes|936
-Hbdm|hbdm|Yes|52
-Hitbtc|hitbtc|Yes|1012
-Huobipro|huobipro|Yes|845
-Indodax|indodax|Yes|68
-Itbit|itbit|Yes|6
-Kraken|kraken|Yes|155
+Bitmex|bitmex|Yes|34
+Bitstamp|bitstamp|Yes|96
+Bittrex|bittrex|Yes|948
+Bybit|bybit|Yes|28
+Coinbase|coinbase|Yes|166
+Coinbasepro|coinbasepro|Yes|244
+Coincheck|coincheck|Yes|5
+Deribit|deribit|Yes|16
+Ftx|ftx|Yes|693
+Gateio|gateio|Yes|1644
+Hitbtc|hitbtc|Yes|1248
+Huobipro|huobipro|Yes|908
+Indodax|indodax|Yes|150
+Kraken|kraken|Yes|364
 Krakenfutures|krakenfutures|Yes|17
-Kucoin|kucoin|Yes|537
-Liquid|liquid|Yes|193
-Okex|okex|Yes|523
-Okexfutures|okexfutures|Yes|408
-Okexswap|okexswap|Yes|408
-Poloniex|poloniex|Yes|304
-Upbit|upbit|Yes|295
-Zb|zb|Yes|177
+Kucoin|kucoin|Yes|790
+Liquid|liquid|Yes|217
+Okex|okex|Yes|478
+Okex5|okex version 5|Yes|478
+Poloniex|poloniex|Yes|349
+
 
 ## Supported Symbols in Version 2
-We have increased our symbols and exchange support with version 2, as of the 26th August 2020 (https://executium.com/symbols-exchanges-marketspreads/). 
+We have increased our symbols and exchange support with version 2, as of the 31st July 2021
 
 Version | Exchanges | Pairs | Combinations | Permutation 
 ------------ | ------------ | ------------  | ------------   | ------------
 Version 2|31|9,303|43,268,253|86,536,506
 Version 1|12|138|871 | 871
-
 ### Quote to Quote Permutation
 
 Quote | Markets | Permutation | Exchanges
 ------------ | ------------ | ------------ | ------------
-BTC|1782|3,175,524|Binance, Bitfinex, Bitflyer, Bitmart, Bittrex, Coinbasepro, Ftx, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-ETH|864|746,496|Binance, Bitfinex, Bittrex, Coinbasepro, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex
-USDT|1548|2,396,304|Binance, Binancefutures, Bitmart, Bittrex, Bybit, Ftx, Kraken, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-BNB|97|9,409|Binance, Poloniex
-TUSD|17|289|Binance, Kucoin
-PAX|18|324|Binance, Bitmart, Kucoin, Poloniex
-USDC|87|7,569|Binance, Bitmart, Coinbasepro, Kraken, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex
-TRX|28|784|Binance, Kucoin, Poloniex
-BUSD|83|6,889|Binance, Poloniex
-NGN|4|16|Binance, Coinbase
-RUB|7|49|Binance, Coinbase
-TRY|7|49|Binance, Coinbase
-EUR|56|3,136|Binance, Bitfinex, Bitflyer, Bittrex, Coinbase, Coinbasepro, Itbit, Liquid
-ZAR|6|36|Binance, Coinbase
-BKRW|7|49|Binance
-IDRT|5|25|Binance, Liquid
-GBP|31|961|Binance, Bitfinex, Coinbase, Coinbasepro
-UAH|3|9|Binance, Coinbase
-BIDR|5|25|Binance
-AUD|8|64|Binance, Coinbase, Liquid
-DAI|22|484|Binance, Coinbasepro, Kraken, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex
-USD|565|319,225|Bitfinex, Bitflyer, Bittrex, Bybit, Coinbase, Coinbasepro, Deribit, Ftx, Itbit, Liquid
-JPY|19|361|Bitfinex, Bitflyer, Coinbase, Liquid
-EOS|2|4|Bitfinex
-UST|23|529|Bitfinex
-CNHT|3|9|Bitfinex
-USTF0|5|25|Bitfinex
-KRW|205|42,025|Bithumb, Coinbase, Upbit
+BTC|2447|5,987,809|Binance, Bitflyer, Bithumb, Bitmart, Bittrex, Coinbasepro, Ftx, Hitbtc, Kucoin, Liquid, Okex, Okex5, Poloniex
+ETH|1534|2,353,156|Binance, Bittrex, Coinbasepro, Hitbtc, Kucoin, Liquid, Okex, Okex5, Poloniex
+USDT|3224|10,394,176|Binance, Binanceusdm, Bitmart, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+BNB|130|16,900|Binance, Poloniex
+TUSD|28|784|Binance, Hitbtc, Kucoin, Poloniex
+PAX|18|324|Binance, Bitmart, Hitbtc, Kucoin, Poloniex
+USDC|94|8,836|Binance, Bitmart, Coinbasepro, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+TRX|35|1,225|Binance, Kucoin, Poloniex
+BUSD|211|44,521|Binance, Binanceusdm, Hitbtc, Poloniex
+NGN|3|9|Binance, Coinbase
+RUB|15|225|Binance, Coinbase
+TRY|27|729|Binance, Coinbase
+EUR|143|20,449|Binance, Bitflyer, Bitmex, Bittrex, Coinbase, Coinbasepro, Ftx, Liquid
+IDRT|5|25|Binance, Hitbtc, Liquid
+GBP|66|4,356|Binance, Coinbase, Coinbasepro
+UAH|6|36|Binance, Coinbase
+BIDR|12|144|Binance
+AUD|16|256|Binance, Coinbase, Liquid
+DAI|34|1,156|Binance, Coinbasepro, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+BRL|22|484|Binance, Coinbase
+BVND|2|4|Binance
+VAI|2|4|Binance
+USD|1245|1,550,025|Binancecoinm, Bitflyer, Bitmex, Bittrex, Bybit, Coinbase, Coinbasepro, Deribit, Ftx, Hitbtc, Liquid
+JPY|20|400|Bitflyer, Coinbase, Liquid
+KRW|178|31,684|Bithumb, Coinbase
 XBT|7|49|Bitmex
-CUSTOM1|8|64|Bitmex
-BRL|2|4|Coinbase, Ftx
 CHF|6|36|Coinbase, Kraken
 HKD|3|9|Coinbase, Liquid
-IDR|58|3,364|Coinbase
-SGD|8|64|Coinbase, Itbit, Liquid
-XETH|23|529|Kraken
-ZEUR|33|1,089|Kraken
-ZUSD|35|1,225|Kraken
-XXBT|29|841|Kraken
-ZGBP|7|49|Kraken
+IDR|142|20,164|Coinbase
+SGD|10|100|Coinbase, Liquid
+BRZ|2|4|Ftx
+HIT|23|529|Hitbtc
+EOS|15|225|Hitbtc
+DDRST|4|16|Hitbtc
+EURS|11|121|Hitbtc
+BCH|25|625|Hitbtc
+EOSDT|7|49|Hitbtc
+GUSD|4|16|Hitbtc
+ZAUD|20|400|Kraken
+XETH|44|1,936|Kraken
+ZEUR|77|5,929|Kraken
+ZGBP|39|1,521|Kraken
+ZUSD|82|6,724|Kraken, Liquid
+XXBT|67|4,489|Kraken
+ZJPY|9|81|Kraken
 ZCAD|6|36|Kraken
-ZJPY|6|36|Kraken
-NEO|7|49|Kucoin
-KCS|7|49|Kucoin
-QASH|13|169|Liquid
-USDK|93|8,649|Okex, Okexfutures, Okexswap
-OKB|36|1,296|Okex, Okexfutures, Okexswap
+KCS|27|729|Kucoin
+UST|12|144|Kucoin
+GYEN|3|9|Liquid
+OKB|6|36|Okex, Okex5
+USDK|30|900|Okex, Okex5
 USDJ|3|9|Poloniex
-
 
 ### Base to Base Permutation
 
 Base | Markets | Permutation | Exchanges
 ------------ | ------------ | ------------ | ------------
-ETH|112|12,544|Binance, Binancefutures, Bitfinex, Bitflyer, Bithumb, Bitmart, Bitmex, Bittrex, Bybit, Coinbasepro, Deribit, Ftx, Hbdm, Itbit, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-LTC|75|5,625|Binance, Binancefutures, Bitfinex, Bithumb, Bitmex, Bittrex, Coinbasepro, Ftx, Hbdm, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-BNB|30|900|Binance, Binancefutures, Ftx, Kucoin, Poloniex
-NEO|44|1,936|Binance, Binancefutures, Bitfinex, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-QTUM|37|1,369|Binance, Binancefutures, Bithumb, Bittrex, Kraken, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-EOS|76|5,776|Binance, Binancefutures, Bitfinex, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hbdm, Kraken, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-SNT|24|576|Binance, Bitfinex, Bithumb, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-BTC|278|77,284|Binance, Binancefutures, Bitfinex, Bitflyer, Bithumb, Bitmart, Bittrex, Bybit, Coinbase, Coinbasepro, Deribit, Ftx, Hbdm, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-MCO|20|400|Binance, Bithumb, Bittrex, Okex, Okexfutures, Okexswap
-LRC|23|529|Binance, Bitfinex, Bithumb, Bittrex, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-OMG|44|1,936|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Coinbasepro, Kraken, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-ZRX|41|1,681|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Coinbasepro, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-KNC|30|900|Binance, Binancefutures, Bitfinex, Bithumb, Coinbasepro, Ftx, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-IOTA|26|676|Binance, Binancefutures, Bittrex, Okex, Okexfutures, Okexswap, Upbit
-LINK|56|3,136|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Coinbasepro, Ftx, Hbdm, Kraken, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-ETC|62|3,844|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Coinbasepro, Ftx, Hbdm, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-ZEC|40|1,600|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Coinbasepro, Kucoin, Okex, Okexfutures, Okexswap, Poloniex
-DASH|44|1,936|Binance, Binancefutures, Bithumb, Bittrex, Coinbasepro, Kraken, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex
-TRX|72|5,184|Binance, Binancefutures, Bitfinex, Bithumb, Bitmex, Bittrex, Ftx, Hbdm, Kraken, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-XRP|91|8,281|Binance, Binancefutures, Bitfinex, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hbdm, Kucoin, Liquid, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-XMR|33|1,089|Binance, Binancefutures, Bitfinex, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Poloniex
-BAT|41|1,681|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Coinbasepro, Kraken, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-LSK|24|576|Binance, Bittrex, Kraken, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-MANA|28|784|Binance, Bittrex, Coinbasepro, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-ADA|52|2,704|Binance, Binancefutures, Bitfinex, Bithumb, Bitmex, Bittrex, Ftx, Hbdm, Kraken, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-XLM|47|2,209|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Coinbasepro, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-LEND|21|441|Binance, Binancefutures, Okex, Okexfutures, Okexswap, Poloniex
-WAVES|32|1,024|Binance, Binancefutures, Bithumb, Bittrex, Kraken, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-ICX|24|576|Binance, Bithumb, Bittrex, Kraken, Okex, Okexfutures, Okexswap, Upbit
-ELF|23|529|Binance, Bitfinex, Bithumb, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-IOST|24|576|Binance, Binancefutures, Bithumb, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-NANO|25|625|Binance, Kraken, Kucoin, Okex, Okexfutures, Okexswap
-ZIL|27|729|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-ONT|27|729|Binance, Binancefutures, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-XEM|25|625|Binance, Bithumb, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-GNT|25|625|Binance, Bitfinex, Bithumb, Bittrex, Coinbasepro, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-CVC|24|576|Binance, Bittrex, Coinbasepro, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-THETA|20|400|Binance, Binancefutures, Bithumb, Ftx, Okex, Okexfutures, Okexswap, Upbit
-SC|31|961|Binance, Bittrex, Kraken, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-VET|23|529|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Ftx, Kucoin, Upbit
-HC|22|484|Binance, Kucoin, Okex, Okexfutures, Okexswap
-PAX|20|400|Binance, Bitfinex, Bittrex, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-RVN|20|400|Binance, Bittrex, Okex, Okexfutures, Okexswap, Upbit
-DCR|23|529|Binance, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-BCH|65|4,225|Binance, Binancefutures, Bitflyer, Bithumb, Bitmex, Bittrex, Coinbasepro, Ftx, Hbdm, Kraken, Liquid, Okex, Okexfutures, Okexswap, Upbit
-BTT|37|1,369|Binance, Bitfinex, Bithumb, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-ATOM|41|1,681|Binance, Binancefutures, Bittrex, Coinbasepro, Ftx, Kraken, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-ALGO|38|1,444|Binance, Binancefutures, Bithumb, Bittrex, Coinbasepro, Ftx, Kraken, Kucoin, Okex, Okexfutures, Okexswap
-DOGE|31|961|Binance, Binancefutures, Bittrex, Ftx, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-XTZ|43|1,849|Binance, Binancefutures, Bitfinex, Bithumb, Bittrex, Coinbasepro, Ftx, Kraken, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-HBAR|22|484|Binance, Bittrex, Liquid, Okex, Okexfutures, Okexswap, Upbit
-USDT|31|961|Binance, Bittrex, Ftx, Kraken, Kucoin, Okex, Okexfutures, Okexswap, Poloniex
-MDT|20|400|Binance, Bittrex, Okex, Okexfutures, Okexswap, Poloniex
-DGB|23|529|Binance, Bitfinex, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-COMP|29|841|Binance, Binancefutures, Bittrex, Coinbasepro, Ftx, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-SNX|21|441|Binance, Binancefutures, Kucoin, Okex, Okexfutures, Okexswap, Poloniex
-MKR|35|1,225|Binance, Binancefutures, Bitfinex, Coinbasepro, Ftx, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-BAL|20|400|Binance, Ftx, Okex, Okexfutures, Okexswap, Poloniex
-ANT|20|400|Binance, Bitfinex, Bittrex, Okex, Okexfutures, Okexswap, Upbit
-DOT|31|961|Binance, Binancefutures, Bitfinex, Bittrex, Ftx, Kucoin, Okex, Okexfutures, Okexswap, Poloniex, Upbit
-BSV|31|961|Bitfinex, Bithumb, Bittrex, Ftx, Hbdm, Okex, Okexfutures, Okexswap, Upbit
-LEO|22|484|Bitfinex, Ftx, Okex, Okexfutures, Okexswap
-OKB|21|441|Bitfinex, Ftx, Okex, Okexfutures, Okexswap
-CRO|27|729|Bithumb, Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-BTM|20|400|Bittrex, Kucoin, Okex, Okexfutures, Okexswap, Upbit
-
+ETH|118|13,924|Binance, Binancecoinm, Binanceusdm, Bitflyer, Bithumb, Bitmart, Bitmex, Bittrex, Bybit, Coinbasepro, Deribit, Ftx, Hitbtc, Kucoin, Liquid, Okex, Okex5, Poloniex
+LTC|74|5,476|Binance, Binancecoinm, Binanceusdm, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kucoin, Liquid, Okex, Okex5, Poloniex
+BNB|44|1,936|Binance, Binancecoinm, Binanceusdm, Bithumb, Bitmex, Bybit, Ftx, Hitbtc, Kucoin, Poloniex
+NEO|39|1,521|Binance, Binanceusdm, Bittrex, Ftx, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+QTUM|35|1,225|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+EOS|70|4,900|Binance, Binancecoinm, Binanceusdm, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+SNT|20|400|Binance, Bithumb, Bittrex, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+BNT|30|900|Binance, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Okex, Okex5, Poloniex
+BTC|287|82,369|Binance, Binancecoinm, Binanceusdm, Bitflyer, Bithumb, Bitmart, Bittrex, Bybit, Coinbase, Coinbasepro, Deribit, Ftx, Hitbtc, Kucoin, Liquid, Okex, Okex5, Poloniex
+LRC|27|729|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+OMG|46|2,116|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+ZRX|45|2,025|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+KNC|39|1,521|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+IOTA|23|529|Binance, Binanceusdm, Bittrex, Ftx, Hitbtc, Okex, Okex5
+LINK|72|5,184|Binance, Binancecoinm, Binanceusdm, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+ETC|54|2,916|Binance, Binancecoinm, Binanceusdm, Bithumb, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+ZEC|37|1,369|Binance, Binanceusdm, Coinbasepro, Ftx, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+DASH|42|1,764|Binance, Binanceusdm, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+TRX|62|3,844|Binance, Binancecoinm, Binanceusdm, Bithumb, Bitmex, Bittrex, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+XRP|84|7,056|Binance, Binancecoinm, Binanceusdm, Bitflyer, Bithumb, Bitmex, Bittrex, Bybit, Ftx, Hitbtc, Kucoin, Liquid, Okex, Okex5, Poloniex
+ENJ|38|1,444|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5
+STORJ|24|576|Binance, Binanceusdm, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Okex, Okex5, Poloniex
+XMR|34|1,156|Binance, Binanceusdm, Ftx, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+BAT|43|1,849|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+LSK|25|625|Binance, Bittrex, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+MANA|39|1,521|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+ADA|64|4,096|Binance, Binancecoinm, Binanceusdm, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5
+XLM|50|2,500|Binance, Binancecoinm, Binanceusdm, Bitflyer, Bithumb, Bitmex, Bittrex, Coinbasepro, Ftx, Hitbtc, Kucoin, Liquid, Okex, Okex5
+WAVES|32|1,024|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5
+ICX|25|625|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kraken, Okex, Okex5
+IOST|27|729|Binance, Binanceusdm, Bithumb, Bittrex, Hitbtc, Kucoin, Okex, Okex5
+NANO|24|576|Binance, Hitbtc, Kraken, Kucoin, Okex, Okex5
+ZIL|29|841|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kucoin, Okex, Okex5
+ONT|31|961|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kucoin, Okex, Okex5
+XEM|32|1,024|Binance, Binanceusdm, Bithumb, Bittrex, Bybit, Ftx, Hitbtc, Kucoin, Liquid, Okex, Okex5, Poloniex
+ZEN|20|400|Binance, Binanceusdm, Bittrex, Hitbtc, Kucoin, Okex, Okex5
+CVC|20|400|Binance, Binanceusdm, Bittrex, Coinbasepro, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+THETA|25|625|Binance, Binancecoinm, Binanceusdm, Bithumb, Ftx, Hitbtc, Kucoin, Okex, Okex5
+SC|27|729|Binance, Binanceusdm, Bittrex, Ftx, Hitbtc, Kraken, Okex, Okex5, Poloniex
+VET|28|784|Binance, Binanceusdm, Bithumb, Bitmex, Bittrex, Ftx, Hitbtc, Kucoin
+DCR|20|400|Binance, Bittrex, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+BCH|76|5,776|Binance, Binancecoinm, Binanceusdm, Bitflyer, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+REN|35|1,225|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+USDC|27|729|Binance, Bittrex, Coinbasepro, Kraken, Kucoin, Liquid, Okex, Okex5
+BTT|37|1,369|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+MATIC|47|2,209|Binance, Binanceusdm, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+ATOM|47|2,209|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+ALGO|40|1,600|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5
+DOGE|58|3,364|Binance, Binancecoinm, Binanceusdm, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kucoin, Liquid, Okex, Okex5, Poloniex
+ANKR|24|576|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Hitbtc, Kraken, Kucoin
+CHZ|36|1,296|Binance, Binanceusdm, Bithumb, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5
+BAND|26|676|Binance, Binanceusdm, Bittrex, Coinbasepro, Ftx, Hitbtc, Okex, Okex5, Poloniex
+XTZ|47|2,209|Binance, Binanceusdm, Bithumb, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+HBAR|26|676|Binance, Binanceusdm, Bittrex, Ftx, Hitbtc, Liquid, Okex, Okex5
+USDT|41|1,681|Binance, Bittrex, Coinbasepro, Ftx, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+OGN|20|400|Binance, Binanceusdm, Bittrex, Coinbasepro, Hitbtc, Kraken, Kucoin
+SOL|39|1,521|Binance, Binanceusdm, Bitmex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Okex, Okex5
+CHR|20|400|Binance, Binanceusdm, Bithumb, Ftx, Hitbtc, Kucoin, Poloniex
+DGB|23|529|Binance, Binanceusdm, Bittrex, Hitbtc, Kucoin, Okex, Okex5
+COMP|40|1,600|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+SXP|26|676|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kucoin, Poloniex
+SNX|48|2,304|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+MKR|47|2,209|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+BAL|34|1,156|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Okex, Okex5, Poloniex
+YFI|41|1,681|Binance, Binanceusdm, Bithumb, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+SRM|22|484|Binance, Binanceusdm, Bithumb, Ftx, Hitbtc, Kraken, Okex, Okex5, Poloniex
+ANT|20|400|Binance, Bittrex, Hitbtc, Kraken, Okex, Okex5
+CRV|40|1,600|Binance, Binanceusdm, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+SAND|28|784|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+DOT|61|3,721|Binance, Binancecoinm, Binanceusdm, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+LUNA|25|625|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kucoin, Okex, Okex5
+RSR|27|729|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Liquid, Okex, Okex5, Poloniex
+WBTC|28|784|Binance, Bittrex, Coinbasepro, Ftx, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+SUSHI|38|1,444|Binance, Binanceusdm, Bithumb, Bitmex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+KSM|34|1,156|Binance, Binanceusdm, Bithumb, Bittrex, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5
+UMA|26|676|Binance, Bithumb, Bittrex, Coinbasepro, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+UNI|50|2,500|Binance, Binancecoinm, Binanceusdm, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+OXT|21|441|Binance, Bithumb, Bittrex, Coinbasepro, Hitbtc, Kraken, Okex, Okex5
+AVAX|25|625|Binance, Binanceusdm, Bittrex, Ftx, Kucoin, Okex, Okex5
+AAVE|57|3,249|Binance, Binanceusdm, Bithumb, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+NEAR|21|441|Binance, Binanceusdm, Ftx, Hitbtc, Kucoin, Okex, Okex5
+FIL|44|1,936|Binance, Binancecoinm, Binanceusdm, Bitmex, Bittrex, Bybit, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+AXS|20|400|Binance, Binanceusdm, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+GRT|44|1,936|Binance, Binanceusdm, Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Kucoin, Okex, Okex5, Poloniex
+1INCH|27|729|Binance, Binanceusdm, Bittrex, Coinbasepro, Ftx, Hitbtc, Kucoin, Okex, Okex5
+MIR|20|400|Binance, Coinbasepro, Hitbtc, Kucoin, Okex, Okex5, Poloniex
+ICP|25|625|Binance, Binanceusdm, Coinbasepro, Ftx, Hitbtc, Kucoin, Okex, Okex5
+LPT|21|441|Binance, Bithumb, Coinbasepro, Hitbtc, Kraken, Kucoin, Liquid, Okex, Okex5, Poloniex
+NU|21|441|Binance, Bithumb, Coinbasepro, Hitbtc, Okex, Okex5, Poloniex
+FLOW|23|529|Binance, Ftx, Hitbtc, Kraken, Okex, Okex5
+DAI|23|529|Bithumb, Bittrex, Coinbasepro, Ftx, Hitbtc, Kraken, Okex, Okex5, Poloniex
+BSV|25|625|Bithumb, Bittrex, Ftx, Hitbtc, Okex, Okex5
+CRO|22|484|Bithumb, Bittrex, Ftx, Kucoin, Okex, Okex5
